@@ -1,0 +1,18 @@
+root = true
+
+[*]
+max_line_length = 100
+end_of_line = lf
+indent_style = space
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.html]
+indent_size = 2
+
+[*.{js,json,ts,tsx,jsx}]
+indent_size = 2
+
+[*.{css,styl,scss,less,sass}]
+indent_size = 2
