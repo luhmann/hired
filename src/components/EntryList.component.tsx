@@ -16,7 +16,7 @@ class EntryList extends React.Component<EntryListProps, {}> {
       <div>
         {
           this.props.entryList.entries.map((entry: EntryStore, index: number) => (
-            <Entry key={index} start={entry.start} end={entry.end} duration={entry.duration} />
+            <Entry key={index} start={entry.startTime} end={entry.endTime} duration={entry.duration} />
           ))
         }
       </div>

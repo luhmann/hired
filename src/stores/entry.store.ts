@@ -6,6 +6,7 @@ class EntryStore {
   @observable endTime: Date;
   @observable running: Boolean;
   @observable seconds = 0;
+  tickInterval: any;
 
   @computed get duration() {
     let start = moment(this.startTime);
@@ -18,17 +19,9 @@ class EntryStore {
     }
   }
 
-  @computed get start() {
-    return moment(this.startTime).format('hh:mm');
-  }
-
-  @computed get end() {
-    if (!this.running) {
-      return moment(this.endTime).format('hh:mm');
-    } else {
-      return '';
-    }
-
+  @action
+  private tick() {
+    this.seconds += 1;
   }
 
   @action
@@ -36,8 +29,8 @@ class EntryStore {
     this.startTime = start;
     this.running = true;
 
-    setInterval(() => {
-      this.seconds += 1;
+    this.tickInterval = setInterval(() => {
+      this.tick();
     }, 1000);
   }
 
@@ -45,6 +38,7 @@ class EntryStore {
   stopTimer(end: Date = new Date()) {
     this.endTime = end;
     this.running = false;
+    clearInterval(this.tickInterval);
   }
 }
 

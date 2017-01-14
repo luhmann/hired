@@ -4,17 +4,29 @@ import { EntryStore } from './entry.store';
 
 class EntryListStore {
   @observable entries: EntryStore[] = [];
+  @observable active: EntryStore|null = null;
 
   @action
-  pushEntry(entry: EntryStore) {
-    this.entries.push(entry);
+  addEntry(entry: EntryStore) {
+    this.entries.unshift(entry);
   }
 
   @action
   startNewEntry() {
-    let entry = new EntryStore();
-    this.pushEntry(entry);
-    entry.startTimer();
+    if(!this.active) {
+      let entry = new EntryStore();
+      this.active = entry;
+      this.addEntry(entry);
+      entry.startTimer();
+    }
+  }
+
+  @action
+  stopCurrentTimer() {
+    if(this.active) {
+      this.active.stopTimer();
+      this.active = null;
+    }
   }
 }
 
