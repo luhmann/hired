@@ -6,7 +6,7 @@ import entryListStore from '../stores/entryList.store';
 class ClockIn extends React.Component<{}, {}> {
   render() {
     return(
-      <button onClick={ (!entryListStore.active) ? this.startEntry : this.stopEntry }>
+      <button onClick={(!entryListStore.active) ? this.startEntry : this.stopEntry}>
         {`Clock ${(entryListStore.active ? 'Out' : 'In')}`}
        </button>
     );
@@ -17,7 +17,7 @@ class ClockIn extends React.Component<{}, {}> {
   }
 
   stopEntry() {
-    entryListStore.stopCurrentTimer()
+    entryListStore.stopCurrentTimer();
   }
 }
 
