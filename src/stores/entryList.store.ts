@@ -2,28 +2,15 @@ import { observable, action } from 'mobx';
 import { sortBy } from 'lodash';
 
 import { EntryStore } from './entry.store';
-import { Fb } from '../storage/firebase';
 
 class EntryListStore {
   @observable entries: EntryStore[] = [];
-  @observable active: EntryStore|null = null;
+  @observable active: EntryStore | null = null;
 
-  constructor() {
-    Fb.entries.once('value').then((snapshot) => {
-      const firebaseEntries = snapshot.val();
-      if (firebaseEntries) {
-        let unsortedEntries = []
-
-        for (let id in firebaseEntries) {
-          unsortedEntries.push(EntryStore.fromStorage(id, firebaseEntries[id]))
-        }
-
-        let sortedEntries = sortBy(unsortedEntries, ['startTime']).reverse();
-        console.log(snapshot.val(), sortedEntries);
-        this.setEntries(sortedEntries);
-        this.isFirstActive();
-      }
-    });
+  constructor(entries = {}) {
+    if (entries) {
+      this.hydrate(entries);
+    }
   }
 
   @action
@@ -55,15 +42,28 @@ class EntryListStore {
   }
 
   @action
-  private isFirstActive() {
+  private checkFirstActive() {
     if (this.entries[0].running) {
       this.active = this.entries[0];
     }
   }
+
+  private hydrate(storageObjects: Object) {
+    let unsortedEntries = []
+
+    for (let id in storageObjects) {
+      unsortedEntries.push(EntryStore.fromStorage(id, storageObjects[id]))
+    }
+
+    let sortedEntries = sortBy(unsortedEntries, ['startTime']).reverse();
+
+    this.setEntries(sortedEntries);
+    this.checkFirstActive();
+  }
 }
 
-const entryListStore = new EntryListStore();
+// const entryListStore = new EntryListStore();
 
-export default entryListStore;
+// export default entryListStore;
 
 export { EntryListStore };

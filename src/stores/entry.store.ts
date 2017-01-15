@@ -2,26 +2,23 @@ import { observable, computed, action, reaction} from 'mobx';
 import * as moment from 'moment';
 import * as uuid from 'node-uuid';
 
-import { Fb, IStorageObject } from '../storage/firebase';
+import { Fb, StorageEntryInterface } from '../storage/firebase';
 
 class EntryStore {
   @observable startTime: Date;
   @observable endTime: Date;
-  @observable running: Boolean;
   @observable seconds = 0;
   tickInterval: any;
   id: String;
 
-  constructor(id = uuid.v4(), startTime?:any, endTime?:any, running:Boolean = false) {
+  constructor(id = uuid.v4(), startTime?:number, endTime?:number|null) {
     this.id = id;
 
     if (startTime) this.startTime = new Date(startTime);
     if (endTime) this.endTime = new Date(endTime);
-    this.running = running;
-
 
     reaction(
-      () => ([this.startTime, this.endTime, this.running]),
+      () => ([this.startTime, this.endTime]),
       (changes) => {
         console.log('in entry reaction', changes);
         Fb.database.ref(`entries/${this.id}`).set(this.toStorage());
@@ -30,6 +27,10 @@ class EntryStore {
         fireImmediately: true
       }
     );
+  }
+
+  @computed get running() {
+    return !this.endTime;
   }
 
   @computed get duration() {
@@ -46,7 +47,6 @@ class EntryStore {
   @action
   startTimer(start: Date = new Date()) {
     this.startTime = start;
-    this.running = true;
 
     this.tickInterval = setInterval(() => {
       this.tick();
@@ -56,20 +56,18 @@ class EntryStore {
   @action
   stopTimer(end: Date = new Date()) {
     this.endTime = end;
-    this.running = false;
     clearInterval(this.tickInterval);
   }
 
-  toStorage(): IStorageObject {
+  toStorage(): StorageEntryInterface {
     return {
       startTime: moment(this.startTime).valueOf(),
-      endTime: (this.endTime) ? moment(this.endTime).valueOf() :  null,
-      running: this.running
+      endTime: (this.endTime) ? moment(this.endTime).valueOf() : null
     }
   }
 
-  static fromStorage(id: string, storageObject: IStorageObject) {
-    return new this(id, storageObject.startTime, storageObject.endTime, storageObject.running);
+  static fromStorage(id: string, storageObject: StorageEntryInterface) {
+    return new this(id, storageObject.startTime, storageObject.endTime);
   }
 
   @action

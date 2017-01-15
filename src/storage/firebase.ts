@@ -19,8 +19,7 @@ const Fb = {
 
 export { Fb };
 
-export interface IStorageObject {
+export interface StorageEntryInterface {
   startTime: number;
-  endTime: number|null;
-  running: Boolean;
+  endTime: number|null
 }

@@ -1,23 +1,33 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
-import entryListStore from '../stores/entryList.store';
+import { EntryListStore } from '../stores/entryList.store';
+
+interface ClockInProps {
+  entryListStore: EntryListStore;
+}
 
 @observer
-class ClockIn extends React.Component<{}, {}> {
+class ClockIn extends React.Component<ClockInProps, {}> {
+  constructor(props: ClockInProps) {
+    super(props)
+
+    this.startEntry = this.startEntry.bind(this);
+    this.stopEntry = this.stopEntry.bind(this);
+  }
   render() {
     return(
-      <button onClick={(!entryListStore.active) ? this.startEntry : this.stopEntry}>
-        {`Clock ${(entryListStore.active ? 'Out' : 'In')}`}
+      <button onClick={(!this.props.entryListStore.active) ? this.startEntry : this.stopEntry}>
+        {`Clock ${(this.props.entryListStore.active ? 'Out' : 'In')}`}
        </button>
     );
   }
 
   startEntry() {
-    entryListStore.startNewEntry();
+    this.props.entryListStore.startNewEntry();
   }
 
   stopEntry() {
-    entryListStore.stopCurrentTimer();
+    this.props.entryListStore.stopCurrentTimer();
   }
 }
 

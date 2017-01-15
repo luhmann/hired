@@ -1,17 +1,18 @@
 import * as React from 'react';
 import './App.css';
 import DevTools from 'mobx-react-devtools';
+import { fromPromise } from 'mobx-utils';
 
-import EntryList from './components/EntryList.component';
-import ClockIn from './components/ClockIn.component';
-import entryListStore from './stores/entryList.store';
+
+import Main from './components/Main.component';
+import { Fb } from './storage/firebase';
 
 class App extends React.Component<null, null> {
   render() {
+    let storedEntries = fromPromise(Fb.entries.once('value'))
     return (
       <div className="App">
-        <ClockIn />
-        <EntryList entryList={entryListStore} />
+        <Main storedEntries={storedEntries} />
         <DevTools />
       </div>
     );
