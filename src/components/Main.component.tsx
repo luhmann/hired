@@ -15,16 +15,18 @@ class Main extends React.Component<MainProps, any> {
   render() {
     return this.props.storedEntries.case({
         pending: () => <div>Loading…</div>,
-        rejected: (error: any) => <div>Error… {error}</div>,
+        rejected: (error: any) => {
+          console.log('Error retrieving items', error);
+          return (<div>Error…</div>);
+        },
         fulfilled: (snapshot: any) => {
-          console.log('in fulfilled', snapshot);
           const entryListStore = new EntryListStore(snapshot.val());
           return (
              <div>
                 <ClockIn entryListStore={entryListStore} />
                 <EntryList entryList={entryListStore} />
               </div>
-          )
+          );
         }
     })
   }

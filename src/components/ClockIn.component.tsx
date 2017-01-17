@@ -14,6 +14,7 @@ class ClockIn extends React.Component<ClockInProps, {}> {
     this.startEntry = this.startEntry.bind(this);
     this.stopEntry = this.stopEntry.bind(this);
   }
+
   render() {
     return(
       <button onClick={(!this.props.entryListStore.active) ? this.startEntry : this.stopEntry}>
