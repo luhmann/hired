@@ -12,14 +12,12 @@ const uid = 'me';
 
 /* GET home page. */
 router.get('/auth', function(req, res, next) {
-  admin.auth().createCustomToken(uid)
+  return admin.auth().createCustomToken(uid)
     .then(function(customToken) {
       res.json({ token: customToken });
-      next();
     })
     .catch(function(error) {
       res.json({ error: true })
-      next();
     });
 });
 
