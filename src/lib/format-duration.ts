@@ -1,5 +1,9 @@
 import * as moment from 'moment';
 
-export function formatDuration(duration: number): string {
-  return moment().startOf('day').seconds(duration).format('HH:mm:ss');
+const ONE_HOUR = 3600;
+
+export function formatDuration(seconds: number): string {
+  let format = (seconds < ONE_HOUR) ? 'mm:ss' : 'HH:mm:ss';
+
+  return moment().startOf('day').seconds(seconds).format(format);
 }
