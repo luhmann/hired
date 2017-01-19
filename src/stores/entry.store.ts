@@ -11,15 +11,25 @@ class EntryStore {
   tickInterval: any;
   id: String;
 
-  constructor(id = uuid.v4(), startTime?:number, endTime?:number|null) {
+  static fromStorage(id: string, storageObject: StorageEntryInterface) {
+    return new this(id, storageObject.startTime, storageObject.endTime);
+  }
+
+  constructor(id: string = uuid.v4(), startTime?: number, endTime?: number|null) {
     this.id = id;
 
-    if (startTime) this.startTime = new Date(startTime);
-    if (endTime) this.endTime = new Date(endTime);
+    if (startTime) {
+      this.startTime = new Date(startTime);
+    }
+
+    if (endTime) {
+      this.endTime = new Date(endTime);
+    }
 
     reaction(
       () => ([this.startTime, this.endTime]),
       (changes) => {
+        // tslint:disable-next-line
         console.log('in entry reaction', changes);
         Fb.database.ref(`entries/${this.id}`).set(this.toStorage());
       },
@@ -48,9 +58,12 @@ class EntryStore {
   startTimer(start: Date = new Date()) {
     this.startTime = start;
 
-    this.tickInterval = setInterval(() => {
-      this.tick();
-    }, 1000);
+    this.tickInterval = setInterval(
+      () => {
+        this.tick();
+      },
+      1000
+    );
   }
 
   @action
@@ -63,11 +76,7 @@ class EntryStore {
     return {
       startTime: moment(this.startTime).valueOf(),
       endTime: (this.endTime) ? moment(this.endTime).valueOf() : null
-    }
-  }
-
-  static fromStorage(id: string, storageObject: StorageEntryInterface) {
-    return new this(id, storageObject.startTime, storageObject.endTime);
+    };
   }
 
   @action

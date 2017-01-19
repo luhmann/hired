@@ -17,7 +17,8 @@ const authenticate = () => {
     .then((res) => res.json())
     .then((json: any) => firebase.auth().signInWithCustomToken(json.token))
     .catch((error) => {
-      console.log('Failure in auth, check it', error)
+      // tslint:disable-next-line
+      console.log('Failure in auth, check it', error);
     });
 };
 
@@ -31,5 +32,5 @@ export { Fb };
 
 export interface StorageEntryInterface {
   startTime: number;
-  endTime: number|null
+  endTime: number|null;
 }

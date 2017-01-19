@@ -11,7 +11,7 @@ interface ClockInProps {
 @observer
 class ClockIn extends React.Component<ClockInProps, {}> {
   constructor(props: ClockInProps) {
-    super(props)
+    super(props);
 
     this.startEntry = this.startEntry.bind(this);
     this.stopEntry = this.stopEntry.bind(this);
@@ -25,9 +25,12 @@ class ClockIn extends React.Component<ClockInProps, {}> {
     });
 
     return(
-      <button className={btnClassNames} onClick={(!this.props.entryListStore.active) ? this.startEntry : this.stopEntry}>
+      <button
+        className={btnClassNames}
+        onClick={(!this.props.entryListStore.active) ? this.startEntry : this.stopEntry}
+      >
         {`Clock ${(this.props.entryListStore.active ? 'Out' : 'In')}`}
-       </button>
+      </button>
     );
   }
 

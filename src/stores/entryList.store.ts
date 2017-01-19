@@ -49,10 +49,10 @@ class EntryListStore {
   }
 
   private hydrate(storageObjects: Object) {
-    let unsortedEntries = []
+    let unsortedEntries = [];
 
     for (let id in storageObjects) {
-      unsortedEntries.push(EntryStore.fromStorage(id, storageObjects[id]))
+      unsortedEntries.push(EntryStore.fromStorage(id, storageObjects[id]));
     }
 
     let sortedEntries = sortBy(unsortedEntries, ['startTime']).reverse();
