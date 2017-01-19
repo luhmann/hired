@@ -24,6 +24,7 @@ class Main extends React.Component<MainProps, {}> {
           return (
              <div>
                 <ClockIn entryListStore={entryListStore} />
+                <hr />
                 <EntryList entryList={entryListStore} />
               </div>
           );

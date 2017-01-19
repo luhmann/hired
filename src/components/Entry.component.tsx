@@ -5,7 +5,7 @@ import * as moment from 'moment';
 import { formatDuration } from '../lib/format-duration';
 
 const Entry = observer(({start, end, duration}: {start: Date, end: Date, duration: number}) => (
-  <div>
+  <div className="cell -12of12">
     {moment(start).format('HH:mm')} - {(end) ? (moment(end).format('HH:mm')) : null} - {formatDuration(duration)}
   </div>
 ));

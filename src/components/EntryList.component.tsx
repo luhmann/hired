@@ -13,7 +13,7 @@ interface EntryListProps {
 class EntryList extends React.Component<EntryListProps, {}> {
   render() {
     return (
-      <div>
+      <div className="grid">
         {
           this.props.entryList.entries.map((entry: EntryStore, index: number) => (
             <Entry key={index} start={entry.startTime} end={entry.endTime} duration={entry.duration} />
