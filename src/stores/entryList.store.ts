@@ -43,6 +43,7 @@ class EntryListStore {
 
   @action
   private checkFirstActive() {
+    console.log('in checkFirstActive', this.entries);
     if (this.entries[0].running) {
       this.active = this.entries[0];
     }
@@ -61,9 +62,5 @@ class EntryListStore {
     this.checkFirstActive();
   }
 }
-
-// const entryListStore = new EntryListStore();
-
-// export default entryListStore;
 
 export { EntryListStore };

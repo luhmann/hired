@@ -26,6 +26,10 @@ class EntryStore {
       this.endTime = new Date(endTime);
     }
 
+    if (startTime && !endTime) {
+      this.startTimer(this.startTime);
+    }
+
     reaction(
       () => ([this.startTime, this.endTime]),
       (changes) => {
@@ -44,26 +48,18 @@ class EntryStore {
   }
 
   @computed get duration() {
-    let start = moment(this.startTime);
-
     if (this.running) {
       return this.seconds;
     } else {
-      let end = moment(this.endTime);
-      return moment.duration(end.diff(start)).asSeconds();
+      return this.calculateSeconds();
     }
   }
 
   @action
   startTimer(start: Date = new Date()) {
     this.startTime = start;
-
-    this.tickInterval = setInterval(
-      () => {
-        this.tick();
-      },
-      1000
-    );
+    this.seconds = this.calculateSeconds();
+    this.startTicking();
   }
 
   @action
@@ -77,6 +73,20 @@ class EntryStore {
       startTime: moment(this.startTime).valueOf(),
       endTime: (this.endTime) ? moment(this.endTime).valueOf() : null
     };
+  }
+
+  private startTicking() {
+    this.tickInterval = setInterval(
+      () => {
+        this.tick();
+      },
+      1000
+    );
+  }
+
+  private calculateSeconds():number {
+    let end = moment((this.endTime) ? this.endTime : +Date.now());
+    return moment.duration(end.diff(moment(this.startTime))).asSeconds();
   }
 
   @action
