@@ -1,12 +1,13 @@
 import * as React from 'react';
-import './App.css';
 import DevTools from 'mobx-react-devtools';
 import { fromPromise } from 'mobx-utils';
 import { observer } from 'mobx-react';
 
+import './styles/reset.ts';
 import Bootstrap from './components/Bootstrap.component';
 import Main from './components/Main.component';
 import { Fb } from './storage/firebase';
+
 
 @observer
 class App extends React.Component<{}, {}> {
@@ -18,7 +19,7 @@ class App extends React.Component<{}, {}> {
 
   render() {
     return (
-      <div className="App container">
+      <div>
         {
           this.authPromise.case({
             pending: () => <Bootstrap />,

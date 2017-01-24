@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
-import * as classNames from 'classnames';
 
 import { EntryListStore } from '../stores/entryList.store';
+import { Button } from './atoms/'
 
 interface ClockInProps {
   entryListStore: EntryListStore;
@@ -18,19 +18,14 @@ class ClockIn extends React.Component<ClockInProps, {}> {
   }
 
   render() {
-    let btnClassNames = classNames({
-      'btn': true,
-      'btn-success': !this.props.entryListStore.active,
-      'btn-error': !!this.props.entryListStore.active
-    });
-
     return(
-      <button
-        className={btnClassNames}
+      <Button
+        success={(!this.props.entryListStore.active)}
+        error={(!!this.props.entryListStore.active)}
         onClick={(!this.props.entryListStore.active) ? this.startEntry : this.stopEntry}
       >
         {`Clock ${(this.props.entryListStore.active ? 'Out' : 'In')}`}
-      </button>
+      </Button>
     );
   }
 

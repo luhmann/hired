@@ -1,6 +1,6 @@
 import { observable, computed, action, reaction} from 'mobx';
 import * as moment from 'moment';
-import * as uuid from 'node-uuid';
+import * as uuid from 'uuid';
 
 import { Fb, StorageEntryInterface } from '../storage/firebase';
 
