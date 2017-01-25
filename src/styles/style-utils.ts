@@ -10,21 +10,21 @@ export function color(name: string):string {
     successHover: '#43a047',
     error: '#f44336',
     errorHover: '#e53935'
-  };
+  }
 
-  return map[name] || '#000';
-};
+  return map[name] || '#000'
+}
 
 export function gridCell(cols: number):string {
   return `
     flex: 0 0 ${cols * 8.3}%
-  `;
+  `
 }
 
 export function center():string {
   return `
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  `;
+    align-items: center
+    display: flex
+    justify-content: center
+  `
 }

@@ -111,7 +111,7 @@ my-app/
 
 For the project to build, **these files must exist with exact filenames**:
 
-* `public/index.html` is the page template;
+* `public/index.html` is the page template
 * `src/index.js` is the JavaScript entry point.
 
 You can delete or rename the other files.
@@ -204,7 +204,7 @@ For example:
 ### `Button.js`
 
 ```js
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class Button extends Component {
   render() {
@@ -212,23 +212,23 @@ class Button extends Component {
   }
 }
 
-export default Button; // Don’t forget to use export default!
+export default Button // Don’t forget to use export default!
 ```
 
 ### `DangerButton.js`
 
 
 ```js
-import React, { Component } from 'react';
-import Button from './Button'; // Import a component from another file
+import React, { Component } from 'react'
+import Button from './Button' // Import a component from another file
 
 class DangerButton extends Component {
   render() {
-    return <Button color="red" />;
+    return <Button color="red" />
   }
 }
 
-export default DangerButton;
+export default DangerButton
 ```
 
 Be aware of the [difference between default and named exports](http://stackoverflow.com/questions/36795819/react-native-es-6-when-should-i-use-curly-braces-for-import/36796281#36796281). It is a common source of mistakes.
@@ -251,20 +251,20 @@ This project setup uses [Webpack](https://webpack.github.io/) for handling all a
 
 ```css
 .Button {
-  padding: 20px;
+  padding: 20px
 }
 ```
 
 ### `Button.js`
 
 ```js
-import React, { Component } from 'react';
-import './Button.css'; // Tell Webpack that Button.js uses these styles
+import React, { Component } from 'react'
+import './Button.css' // Tell Webpack that Button.js uses these styles
 
 class Button extends Component {
   render() {
     // You can use them as regular CSS styles
-    return <div className="Button" />;
+    return <div className="Button" />
   }
 }
 ```
@@ -283,9 +283,9 @@ For example, this:
 
 ```css
 .App {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  display: flex
+  flex-direction: row
+  align-items: center
 }
 ```
 
@@ -293,16 +293,16 @@ becomes this:
 
 ```css
 .App {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-orient: horizontal
+  -webkit-box-direction: normal
+      -ms-flex-direction: row
+          flex-direction: row
+  -webkit-box-align: center
+      -ms-flex-align: center
+          align-items: center
 }
 ```
 
@@ -317,17 +317,17 @@ You can **`import` an image right in a JavaScript module**. This tells Webpack t
 Here is an example:
 
 ```js
-import React from 'react';
-import logo from './logo.png'; // Tell Webpack this JS file uses this image
+import React from 'react'
+import logo from './logo.png' // Tell Webpack this JS file uses this image
 
-console.log(logo); // /logo.84287d09.png
+console.log(logo) // /logo.84287d09.png
 
 function Header() {
   // Import result is the URL of your image
-  return <img src={logo} alt="Logo" />;
+  return <img src={logo} alt="Logo" />
 }
 
-export default Header;
+export default Header
 ```
 
 This ensures that when the project is built, Webpack will correctly move the images into the build folder, and provide us with correct paths.
@@ -336,7 +336,7 @@ This works in CSS too:
 
 ```css
 .Logo {
-  background-image: url(./logo.png);
+  background-image: url(./logo.png)
 }
 ```
 
@@ -389,7 +389,7 @@ render() {
   // Note: this is an escape hatch and should be used sparingly!
   // Normally we recommend using `import` for getting asset URLs
   // as described in “Adding Images and Fonts” above this section.
-  return <img src={process.env.PUBLIC_URL + '/img/logo.png'} />;
+  return <img src={process.env.PUBLIC_URL + '/img/logo.png'} />
 }
 ```
 
@@ -418,7 +418,7 @@ When you include a script in the HTML file that defines global variables and try
 You can avoid this by reading the global variable explicitly from the `window` object, for example:
 
 ```js
-const $ = window.$;
+const $ = window.$
 ```
 
 This makes it obvious you are using a global variable intentionally rather than because of a typo.
@@ -439,14 +439,14 @@ npm install bootstrap@3 --save
 Import Bootstrap CSS and optionally Bootstrap theme CSS in the ```src/index.js``` file:
 
 ```js
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap-theme.css'
 ```
 
 Import required React Bootstrap components within ```src/App.js``` file or your custom component files:
 
 ```js
-import { Navbar, Jumbotron, Button } from 'react-bootstrap';
+import { Navbar, Jumbotron, Button } from 'react-bootstrap'
 ```
 
 Now you are ready to use the imported React Bootstrap components within your component hierarchy defined in the render method. Here is an example [`App.js`](https://gist.githubusercontent.com/gaearon/85d8c067f6af1e56277c82d19fd4da7b/raw/6158dd991b67284e9fc8d70b9d973efe87659d72/App.js) redone using React Bootstrap.
@@ -496,7 +496,7 @@ render() {
         <input type="hidden" defaultValue={process.env.REACT_APP_SECRET_CODE} />
       </form>
     </div>
-  );
+  )
 }
 ```
 
@@ -517,7 +517,7 @@ Having access to the `NODE_ENV` is also useful for performing actions conditiona
 
 ```js
 if (process.env.NODE_ENV !== 'production') {
-  analytics.disable();
+  analytics.disable()
 }
 ```
 
@@ -706,12 +706,12 @@ To create tests, add `it()` (or `test()`) blocks with the name of the test and i
 Jest provides a built-in `expect()` global function for making assertions. A basic test could look like this:
 
 ```js
-import sum from './sum';
+import sum from './sum'
 
 it('sums numbers', () => {
-  expect(sum(1, 2)).toEqual(3);
-  expect(sum(2, 2)).toEqual(4);
-});
+  expect(sum(1, 2)).toEqual(3)
+  expect(sum(2, 2)).toEqual(4)
+})
 ```
 
 All `expect()` matchers supported by Jest are [extensively documented here](http://facebook.github.io/jest/docs/api.html#expect-value).<br>
@@ -724,14 +724,14 @@ There is a broad spectrum of component testing techniques. They range from a “
 Different projects choose different testing tradeoffs based on how often components change, and how much logic they contain. If you haven’t decided on a testing strategy yet, we recommend that you start with creating simple smoke tests for your components:
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
 
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-});
+  const div = document.createElement('div')
+  ReactDOM.render(<App />, div)
+})
 ```
 
 This test mounts a component and makes sure that it didn’t throw during rendering. Tests like this provide a lot value with very little effort so they are great as a starting point, and this is the test you will find in `src/App.test.js`.
@@ -745,13 +745,13 @@ npm install --save-dev enzyme react-addons-test-utils
 ```
 
 ```js
-import React from 'react';
-import { shallow } from 'enzyme';
-import App from './App';
+import React from 'react'
+import { shallow } from 'enzyme'
+import App from './App'
 
 it('renders without crashing', () => {
-  shallow(<App />);
-});
+  shallow(<App />)
+})
 ```
 
 Unlike the previous smoke test using `ReactDOM.render()`, this test only renders `<App>` and doesn’t go deeper. For example, even if `<App>` itself renders a `<Button>` that throws, this test will pass. Shallow rendering is great for isolated unit tests, but you may still want to create some full rendering tests to ensure the components integrate correctly. Enzyme supports [full rendering with `mount()`](http://airbnb.io/enzyme/docs/api/mount.html), and you can also use it for testing state changes and component lifecycle.
@@ -761,16 +761,16 @@ You can read the [Enzyme documentation](http://airbnb.io/enzyme/) for more testi
 Here is an example from Enzyme documentation that asserts specific output, rewritten to use Jest matchers:
 
 ```js
-import React from 'react';
-import { shallow } from 'enzyme';
-import App from './App';
+import React from 'react'
+import { shallow } from 'enzyme'
+import App from './App'
 
 it('renders welcome message', () => {
-  const wrapper = shallow(<App />);
-  const welcome = <h2>Welcome to React</h2>;
-  // expect(wrapper.contains(welcome)).to.equal(true);
-  expect(wrapper.contains(welcome)).toEqual(true);
-});
+  const wrapper = shallow(<App />)
+  const welcome = <h2>Welcome to React</h2>
+  // expect(wrapper.contains(welcome)).to.equal(true)
+  expect(wrapper.contains(welcome)).toEqual(true)
+})
 ```
 
 All Jest matchers are [extensively documented here](http://facebook.github.io/jest/docs/api.html#expect-value).<br>
@@ -783,8 +783,8 @@ We recommend that you use `expect()` for assertions and `jest.fn()` for spies. I
 However, if you are used to other libraries, such as [Chai](http://chaijs.com/) and [Sinon](http://sinonjs.org/), or if you have existing code using them that you’d like to port over, you can import them normally like this:
 
 ```js
-import sinon from 'sinon';
-import { expect } from 'chai';
+import sinon from 'sinon'
+import { expect } from 'chai'
 ```
 
 and then use them in your tests like you normally do.
@@ -803,7 +803,7 @@ const localStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
   clear: jest.fn()
-};
+}
 global.localStorage = localStorageMock
 ```
 
@@ -973,17 +973,17 @@ python -m SimpleHTTPServer 9000
 If you're using [Node](https://nodejs.org/) and [Express](http://expressjs.com/) as a server, it might look like this:
 
 ```javascript
-const express = require('express');
-const path = require('path');
-const app = express();
+const express = require('express')
+const path = require('path')
+const app = express()
 
-app.use(express.static('./build'));
+app.use(express.static('./build'))
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, './build', 'index.html'));
-});
+  res.sendFile(path.join(__dirname, './build', 'index.html'))
+})
 
-app.listen(9000);
+app.listen(9000)
 ```
 
 Create React App is not opinionated about your choice of web server. Any static file server will do. The `build` folder with static assets is the only output produced by Create React App.
@@ -997,12 +997,12 @@ If you use routers that use the HTML5 [`pushState` history API](https://develope
 This is because when there is a fresh page load for a `/todos/42`, the server looks for the file `build/todos/42` and does not find it. The server needs to be configured to respond to a request to `/todos/42` by serving `index.html`. For example, we can amend our Express example above to serve `index.html` for any unknown paths:
 
 ```diff
- app.use(express.static('./build'));
+ app.use(express.static('./build'))
 
 -app.get('/', function (req, res) {
 +app.get('/*', function (req, res) {
-   res.sendFile(path.join(__dirname, './build', 'index.html'));
- });
+   res.sendFile(path.join(__dirname, './build', 'index.html'))
+ })
 ```
 
 Now requests to `/todos/42` will be handled correctly both in development and in production.

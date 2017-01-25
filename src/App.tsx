@@ -1,20 +1,20 @@
-import * as React from 'react';
-import DevTools from 'mobx-react-devtools';
-import { fromPromise } from 'mobx-utils';
-import { observer } from 'mobx-react';
+import * as React from 'react'
+import DevTools from 'mobx-react-devtools'
+import { fromPromise } from 'mobx-utils'
+import { observer } from 'mobx-react'
 
-import './styles/reset.ts';
-import Bootstrap from './components/Bootstrap.component';
-import Main from './components/Main.component';
-import { Fb } from './storage/firebase';
+import './styles/reset.ts'
+import Bootstrap from './components/Bootstrap.component'
+import Main from './components/Main.component'
+import { Fb } from './storage/firebase'
 
 
 @observer
 class App extends React.Component<{}, {}> {
-  authPromise: any;
+  authPromise: any
 
   componentWillMount() {
-    this.authPromise = fromPromise(Fb.authenticate());
+    this.authPromise = fromPromise(Fb.authenticate())
   }
 
   render() {
@@ -25,15 +25,15 @@ class App extends React.Component<{}, {}> {
             pending: () => <Bootstrap />,
             rejected: (error: any) => <div>Something went horribly wrong</div>,
             fulfilled: () => {
-              let storedEntries = fromPromise(Fb.entries.once('value'));
-              return (<Main storedEntries={storedEntries} />);
+              let storedEntries = fromPromise(Fb.entries.once('value'))
+              return (<Main storedEntries={storedEntries} />)
             }
           })
         }
         <DevTools />
       </div>
-     );
+     )
   }
 }
 
-export default App;
+export default App
