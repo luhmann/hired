@@ -2,6 +2,11 @@ import styled from 'styled-components'
 
 import { color } from '../../styles/style-utils'
 
+interface ButtonTypes {
+  success?: boolean,
+  error?: boolean
+}
+
 export const Button = styled.button`
   display: inline-flex
   align-items: center
@@ -18,7 +23,7 @@ export const Button = styled.button`
     box-shadow: inset 0 1px 3px rgba(0,0,0,.12)
   }
 
-  ${(props:any) => props.success ? `
+  ${(props: ButtonTypes) => props.success ? `
     color: ${color('white')}
     background-color: ${color('success')}
     border: 1px solid ${color('success')}
@@ -29,7 +34,7 @@ export const Button = styled.button`
     }
    ` : ''}
 
-   ${(props:any) => props.error ? `
+   ${(props: ButtonTypes) => props.error ? `
     color: ${color('white')}
     background-color: ${color('error')}
     border: 1px solid ${color('error')}

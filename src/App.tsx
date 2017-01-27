@@ -8,7 +8,6 @@ import Bootstrap from './components/Bootstrap.component'
 import Main from './components/Main.component'
 import { Fb } from './storage/firebase'
 
-
 @observer
 class App extends React.Component<{}, {}> {
   authPromise: any

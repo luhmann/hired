@@ -23,10 +23,15 @@ const Total = styled.div`
   ${ gridCell(4) }
 `
 
+interface TimeProps {
+  begin?: Boolean
+  end?: Boolean
+}
+
 const Time = styled.div`
   ${ gridCell(2) }
-  ${ (props:boolean) => props.start ? `color: ${color('darkBlue')}` : ''}
-  ${ (props:boolean) => props.end ? `color: ${color('red')}` : ''}
+  ${ (props: TimeProps) => props.begin ? `color: ${color('darkBlue')}` : ''}
+  ${ (props: TimeProps) => props.end ? `color: ${color('red')}` : ''}
 `
 
 const Duration = styled.div`
@@ -42,7 +47,7 @@ interface EntryProps {
   duration: number
 }
 
-const Entry: React.StatelessComponent<EntryProps> = observer(({start, end, duration}) => (
+const Entry = observer(({start, end, duration}: EntryProps) => (
     <Row>
         <Root>
             <Day>
@@ -51,7 +56,7 @@ const Entry: React.StatelessComponent<EntryProps> = observer(({start, end, durat
             <Total>{/* total will live here*/}</Total>
         </Root>
         <Root>
-          <Time start>
+          <Time begin>
              {moment(start).format('HH:mm')}
           </Time>
           <Time end>
