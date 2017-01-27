@@ -7,12 +7,12 @@ import { formatDuration } from '../lib/format-duration'
 import { gridCell, color } from '../styles/style-utils'
 
 const Row = styled.div`
-  border-top: 1px solid #f3f3f3
-  padding: 6px 0
+  border-top: 1px solid #f3f3f3;
+  padding: 6px 0;
 `
 
 const Root = styled.div`
-  display: flex
+  display: flex;
 `
 
 const Day = styled.div`
@@ -30,14 +30,14 @@ interface TimeProps {
 
 const Time = styled.div`
   ${ gridCell(2) }
-  ${ (props: TimeProps) => props.begin ? `color: ${color('darkBlue')}` : ''}
-  ${ (props: TimeProps) => props.end ? `color: ${color('red')}` : ''}
+  ${ (props: TimeProps) => props.begin ? `color: ${color('darkBlue')};` : ''}
+  ${ (props: TimeProps) => props.end ? `color: ${color('red')};` : ''}
 `
 
 const Duration = styled.div`
   ${ gridCell(8) }
-  color: ${color('darkBlue')}
-  text-align: right
+  color: ${color('darkBlue')};
+  text-align: right;
 `
 
 interface EntryProps {
