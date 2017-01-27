@@ -12,7 +12,7 @@ export function color(name: string):string {
     errorHover: '#e53935'
   }
 
-  return map[name] || '#000'
+  return map[name] || '#000'
 }
 
 export function gridCell(cols: number):string {

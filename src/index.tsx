@@ -1,10 +1,10 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-// import { useStrict } from 'mobx'
+import { useStrict } from 'mobx'
 
 import App from './App'
 
-// useStrict(true)
+useStrict(true)
 
 ReactDOM.render(
   <App />,
