@@ -1,20 +1,20 @@
-import * as React from 'react';
-import { observer } from 'mobx-react';
+import * as React from 'react'
+import { observer } from 'mobx-react'
 
-import { EntryListStore } from '../stores/entryList.store';
+import { EntryListStore } from '../stores/entryList.store'
 import { Button } from './atoms/'
 
 interface ClockInProps {
-  entryListStore: EntryListStore;
+  entryListStore: EntryListStore
 }
 
 @observer
 class ClockIn extends React.Component<ClockInProps, {}> {
   constructor(props: ClockInProps) {
-    super(props);
+    super(props)
 
-    this.startEntry = this.startEntry.bind(this);
-    this.stopEntry = this.stopEntry.bind(this);
+    this.startEntry = this.startEntry.bind(this)
+    this.stopEntry = this.stopEntry.bind(this)
   }
 
   render() {
@@ -26,16 +26,16 @@ class ClockIn extends React.Component<ClockInProps, {}> {
       >
         {`Clock ${(this.props.entryListStore.active ? 'Out' : 'In')}`}
       </Button>
-    );
+    )
   }
 
   startEntry() {
-    this.props.entryListStore.startNewEntry();
+    this.props.entryListStore.startNewEntry()
   }
 
   stopEntry() {
-    this.props.entryListStore.stopCurrentTimer();
+    this.props.entryListStore.stopCurrentTimer()
   }
 }
 
-export default ClockIn;
+export default ClockIn

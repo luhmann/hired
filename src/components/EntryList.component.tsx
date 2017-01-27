@@ -1,17 +1,17 @@
-import * as React from 'react';
-import { observer } from 'mobx-react';
-import styled from 'styled-components';
+import * as React from 'react'
+import { observer } from 'mobx-react'
+import styled from 'styled-components'
 
-import { EntryListStore } from '../stores/entryList.store';
-import { EntryStore } from '../stores/entry.store';
-import Entry from './Entry.component';
+import { EntryListStore } from '../stores/entryList.store'
+import { EntryStore } from '../stores/entry.store'
+import Entry from './Entry.component'
 
 interface EntryListProps {
-  entryList: EntryListStore;
+  entryList: EntryListStore
 }
 
 const Root = styled.div`
-  margin-top: 20px;
+  margin-top: 20px
 `
 
 @observer
@@ -25,8 +25,8 @@ class EntryList extends React.Component<EntryListProps, {}> {
           ))
         }
       </Root>
-    );
+    )
   }
 }
 
-export default EntryList;
+export default EntryList
