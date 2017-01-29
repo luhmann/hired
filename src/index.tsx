@@ -6,7 +6,20 @@ import App from './App'
 
 useStrict(true)
 
+const rootEl = document.getElementById('root') as HTMLElement
+
 ReactDOM.render(
   <App />,
-  document.getElementById('root') as HTMLElement
+  rootEl
 )
+
+declare var module: { hot: any };
+if (module.hot) {
+  module.hot.accept('./App', () => {
+    const NextApp = require('./App').default;
+    ReactDOM.render(
+      <NextApp />,
+      rootEl
+    );
+  });
+}

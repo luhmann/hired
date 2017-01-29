@@ -4,18 +4,26 @@ import * as uuid from 'uuid'
 
 import { Fb, StorageEntryInterface } from '../storage/firebase'
 
+const STANDARD_RATE = 67.5
+
 class EntryStore {
   @observable startTime: Date
   @observable endTime: Date
   @observable seconds = 0
+  rate: number
   tickInterval: any
   id: String
 
   static fromStorage(id: string, storageObject: StorageEntryInterface) {
-    return new this(id, storageObject.startTime, storageObject.endTime)
+    return new this(id, storageObject.startTime, storageObject.endTime, storageObject.rate)
   }
 
-  constructor(id: string = uuid.v4(), startTime?: number, endTime?: number|null) {
+  constructor(
+    id: string = uuid.v4(),
+    startTime?: number,
+    endTime?: number|null,
+    rate: number = STANDARD_RATE
+  ) {
     this.id = id
 
     if (startTime) {
@@ -29,6 +37,8 @@ class EntryStore {
     if (startTime && !endTime) {
       this.startTimer(this.startTime)
     }
+
+    this.rate = rate
 
     reaction(
       () => ([this.startTime, this.endTime]),
@@ -55,6 +65,10 @@ class EntryStore {
     }
   }
 
+  @computed get total() {
+    return (this.rate/3600) * this.duration
+  }
+
   @action
   startTimer(start: Date = new Date()) {
     this.startTime = start
@@ -71,7 +85,8 @@ class EntryStore {
   toStorage(): StorageEntryInterface {
     return {
       startTime: moment(this.startTime).valueOf(),
-      endTime: (this.endTime) ? moment(this.endTime).valueOf() : null
+      endTime: (this.endTime) ? moment(this.endTime).valueOf() : null,
+      rate: this.rate
     }
   }
 
@@ -84,7 +99,7 @@ class EntryStore {
     )
   }
 
-  private calculateSeconds():number {
+  private calculateSeconds(): number {
     let end = moment((this.endTime) ? this.endTime : +Date.now())
     return moment.duration(end.diff(moment(this.startTime))).asSeconds()
   }

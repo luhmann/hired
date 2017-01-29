@@ -32,5 +32,6 @@ export { Fb }
 
 export interface StorageEntryInterface {
   startTime: number
-  endTime: number|null
+  endTime: number|null,
+  rate?: number
 }
