@@ -2,7 +2,7 @@ import * as React from 'react'
 import { observer } from 'mobx-react'
 import styled from 'styled-components'
 
-import { EntryListStore } from '../stores/entryList.store'
+import { EntryListStore } from '../stores/entryListStore'
 import { Button } from './atoms/'
 
 interface ClockInProps {

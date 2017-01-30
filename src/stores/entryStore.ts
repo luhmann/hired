@@ -66,7 +66,7 @@ class EntryStore {
   }
 
   @computed get total() {
-    return (this.rate/3600) * this.duration
+    return (this.rate / 3600) * this.duration
   }
 
   @action

@@ -5,21 +5,21 @@ import { IPromiseBasedObservable } from 'mobx-utils'
 import ClockIn from './ClockIn.component'
 import EntryList from './EntryList.component'
 import Bootstrap from './Bootstrap.component'
-import { EntryListStore } from '../stores/entryList.store'
+import { EntryListStore } from '../stores/entryListStore'
 
 interface MainProps {
     storedEntries: IPromiseBasedObservable<{}>
 }
 
 @observer
-class Main extends React.Component<MainProps, {}> {
+class Project extends React.Component<MainProps, {}> {
   render() {
     return this.props.storedEntries.case({
         pending: () => <Bootstrap />,
-        rejected: (error: any) => {
+        rejected: (error: Object) => {
           return (<div>Error… ${error}</div>)
         },
-        fulfilled: (snapshot: any) => {
+        fulfilled: (snapshot: { val: Function }) => {
           const entryListStore = new EntryListStore(snapshot.val())
           return (
              <div>
@@ -32,4 +32,4 @@ class Main extends React.Component<MainProps, {}> {
   }
 }
 
-export default Main
+export default Project

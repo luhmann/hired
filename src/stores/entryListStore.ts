@@ -1,7 +1,7 @@
 import { observable, action } from 'mobx'
 import { sortBy } from 'lodash'
 
-import { EntryStore } from './entry.store'
+import { EntryStore } from './entryStore'
 
 class EntryListStore {
   @observable entries: EntryStore[] = []
