@@ -3,18 +3,16 @@ import { Fb } from '../storage/firebase'
 
 class UiStore {
   @observable isAuthenticated: boolean = false
-
-  constructor() {
-    this.authenticate = this.authenticate.bind(this)
-  }
+  @observable uid: string = 'me'
 
   @action
-  authenticate() {
+  authenticate(uid: string = 'me') {
     if (this.isAuthenticated) {
       return Promise.resolve()
     } else {
+      this.uid = uid
       return Fb
-        .authenticate()
+        .authenticate(uid)
         .then(action('auth-callback', () => {
           this.isAuthenticated = true
           return Promise.resolve()

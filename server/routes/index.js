@@ -8,11 +8,10 @@ admin.initializeApp({
   databaseURL: 'https://mobx-time-tracking-cbeca.firebaseio.com'
 })
 
-const uid = 'me'
 
 /* GET home page. */
-router.get('/auth', function(req, res, next) {
-  return admin.auth().createCustomToken(uid)
+router.get('/auth/:uid', function(req, res, next) {
+  return admin.auth().createCustomToken(req.params.uid)
     .then(function(customToken) {
       res.json({ token: customToken })
     })

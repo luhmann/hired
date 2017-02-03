@@ -1,4 +1,6 @@
 import * as firebase from 'firebase'
+import uiStore from '../stores/uiStore'
+import projectStore from '../stores/projectStore'
 
 const config = {
   apiKey: 'AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI',
@@ -10,10 +12,12 @@ const config = {
 
 firebase.initializeApp(config)
 
-const database = firebase.database()
-const entries = firebase.database().ref('entries')
-const authenticate = () => {
-  return fetch('http://localhost:8000/auth')
+const database = () => firebase.database().ref(`${uiStore.uid}`)
+const entries = (project: string) => firebase.database().ref(`${uiStore.uid}/entries/${project}`)
+const currentProjectEntries = () => entries(projectStore.currentProject.id)
+
+const authenticate = (uid = 'me') => {
+  return fetch(`http://localhost:8000/auth/${uid}`)
     .then((res) => res.json())
     .then((json: any) => firebase.auth().signInWithCustomToken(json.token))
     .catch((error) => {
@@ -25,6 +29,7 @@ const authenticate = () => {
 const Fb = {
   database,
   entries,
+  currentProjectEntries,
   authenticate
 }
 

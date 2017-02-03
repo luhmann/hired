@@ -1,4 +1,4 @@
-export function color(name: string):string {
+export function color(name: string): string {
   const map = {
     darkBlue: '#364756',
     lightBlue: '#65A6A4',
@@ -15,13 +15,13 @@ export function color(name: string):string {
   return map[name] || '#000'
 }
 
-export function gridCell(cols: number):string {
+export function gridCell(cols: number): string {
   return `
     flex: 0 0 ${cols * 8.3}%
   `
 }
 
-export function center():string {
+export function center(): string {
   return `
     align-items: center
     display: flex

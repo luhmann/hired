@@ -4,7 +4,7 @@ import * as uuid from 'uuid'
 
 import { Fb, StorageEntryInterface } from '../storage/firebase'
 
-const STANDARD_RATE = 67.5
+const STANDARD_RATE = 20
 
 class EntryStore {
   @observable startTime: Date
@@ -15,15 +15,20 @@ class EntryStore {
   id: String
 
   static fromStorage(id: string, storageObject: StorageEntryInterface) {
-    return new this(id, storageObject.startTime, storageObject.endTime, storageObject.rate)
+    return new this({
+      id,
+      startTime: storageObject.startTime,
+      endTime: storageObject.endTime,
+      rate: storageObject.rate
+    })
   }
 
-  constructor(
-    id: string = uuid.v4(),
-    startTime?: number,
-    endTime?: number|null,
-    rate: number = STANDARD_RATE
-  ) {
+  constructor({
+    id = uuid.v4(),
+    startTime,
+    endTime,
+    rate = STANDARD_RATE
+  }: { id?: string, startTime?: number, endTime?: number | null, rate?: number }) {
     this.id = id
 
     if (startTime) {
@@ -45,7 +50,7 @@ class EntryStore {
       (changes) => {
         // tslint:disable-next-line
         console.log('in entry reaction', changes)
-        Fb.database.ref(`entries/${this.id}`).set(this.toStorage())
+        Fb.currentProjectEntries().child(`${this.id}`).set(this.toStorage())
       },
       {
         fireImmediately: true

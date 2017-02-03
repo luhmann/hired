@@ -1,6 +1,6 @@
 import * as React from 'react'
 import DevTools from 'mobx-react-devtools'
-import { fromPromise } from 'mobx-utils'
+import { fromPromise, IPromiseBasedObservable } from 'mobx-utils'
 import { observer, inject } from 'mobx-react'
 
 import './styles/reset.ts'
@@ -10,13 +10,13 @@ import Bootstrap from './components/Bootstrap.component'
 import Project from './components/Project.component'
 
 interface AppProps {
-  uiStore: UiStore | undefined 
+  uiStore?: UiStore
 }
 
 @inject('uiStore')
 @observer
 class App extends React.Component<AppProps, {}> {
-  authPromise: any
+  authPromise: IPromiseBasedObservable<void>
 
   componentWillMount() {
     if (this.props.uiStore) {
@@ -33,8 +33,7 @@ class App extends React.Component<AppProps, {}> {
             pending: () => <Bootstrap />,
             rejected: (error: Object) => <div>Something went horribly wrong</div>,
             fulfilled: () => {
-              console.log(this.props.uiStore.isAuthenticated)
-              let storedEntries = fromPromise(Fb.entries.once('value'))
+              let storedEntries = fromPromise(Fb.currentProjectEntries().once('value'))
               return (<Project storedEntries={storedEntries} />)
             }
           })

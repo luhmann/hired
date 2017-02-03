@@ -2,6 +2,7 @@ import { observable, action } from 'mobx'
 import { sortBy } from 'lodash'
 
 import { EntryStore } from './entryStore'
+import projectStore from './projectStore'
 
 class EntryListStore {
   @observable entries: EntryStore[] = []
@@ -21,7 +22,9 @@ class EntryListStore {
   @action
   startNewEntry() {
     if (!this.active) {
-      let entry = new EntryStore()
+      let entry = new EntryStore({
+        rate: projectStore.currentProject.rate
+      })
       this.active = entry
       this.addEntry(entry)
       entry.startTimer()
@@ -43,7 +46,6 @@ class EntryListStore {
 
   @action
   private checkFirstActive() {
-    console.log('in checkFirstActive', this.entries)
     if (this.entries[0].running) {
       this.active = this.entries[0]
     }
@@ -53,7 +55,9 @@ class EntryListStore {
     let unsortedEntries = []
 
     for (let id in storageObjects) {
-      unsortedEntries.push(EntryStore.fromStorage(id, storageObjects[id]))
+      if (storageObjects.hasOwnProperty(id)) {
+        unsortedEntries.push(EntryStore.fromStorage(id, storageObjects[id]))
+      }
     }
 
     let sortedEntries = sortBy(unsortedEntries, ['startTime']).reverse()
