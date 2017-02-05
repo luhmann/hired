@@ -13,7 +13,7 @@ const config = {
 firebase.initializeApp(config)
 
 const database = () => firebase.database().ref(`${uiStore.uid}`)
-const entries = (project: string) => firebase.database().ref(`${uiStore.uid}/entries/${project}`)
+const entries = (project: string) => firebase.database().ref(`${uiStore.uid}/${project}/entries`)
 const currentProjectEntries = () => entries(projectStore.currentProject.id)
 
 const authenticate = (uid = 'me') => {
