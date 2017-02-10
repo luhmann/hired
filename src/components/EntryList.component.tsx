@@ -2,8 +2,8 @@ import * as React from 'react'
 import { observer } from 'mobx-react'
 import styled from 'styled-components'
 
-import { EntryListStore } from '../stores/entryList.store'
-import { EntryStore } from '../stores/entry.store'
+import EntryListStore from '../stores/entryListStore'
+import { EntryStore } from '../stores/entryStore'
 import Entry from './Entry.component'
 
 interface EntryListProps {
@@ -24,7 +24,8 @@ class EntryList extends React.Component<EntryListProps, {}> {
             <Entry
               key={index}
               start={entry.startTime}
-              end={entry.endTime} duration={entry.duration}
+              end={entry.endTime}
+              duration={entry.duration}
               total={entry.total}
             />
           ))
