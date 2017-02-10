@@ -1,14 +1,21 @@
-import { observable, action } from 'mobx'
+import { observable, action, computed } from 'mobx'
+
+import RootStore from './rootStore'
 
 class ProjectStore {
-  @observable isFetched: boolean = false
-  @observable projects: Object = {}
-  @observable currentProject: ProjectInterface
+  @observable projects: ProjectInterface[] = []
+  @observable currentProjectId: string
 
-  // @action
-  // fetchProjects() {
+  private rootStore: RootStore
 
-  // }
+  constructor(rootStore: RootStore) {
+    this.rootStore = rootStore
+  }
+
+  @action
+  setProjects(projects: ProjectInterface[]) {
+    this.projects = projects
+  }
 
   @action
   add(id: string, name: string, rate: number, description: string = '') {
@@ -23,12 +30,12 @@ class ProjectStore {
   }
 
   @action
-  setCurrent(id: string) {
-    if (this.projects[id]) {
-      this.currentProject = this.projects[id]
-    } else {
-      throw new Error(`Project with ${id} does not exist`)
-    }
+  setCurrentProjectId(id: string) {
+    this.currentProjectId = id
+  }
+
+  @computed get currentProject() {
+    return this.projects.filter((item) => (item.id === this.currentProjectId))[0]
   }
 
 }
@@ -40,12 +47,5 @@ export interface ProjectInterface {
   description: string
 }
 
-const projectStore = new ProjectStore()
 
-// TODO: dummy
-projectStore.add('neusta', 'Neusta', 67.50, 'A super cool project')
-projectStore.setCurrent('neusta')
-
-
-export { ProjectStore }
-export default projectStore
+export default ProjectStore

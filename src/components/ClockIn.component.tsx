@@ -2,12 +2,13 @@ import * as React from 'react'
 import { observer } from 'mobx-react'
 import styled from 'styled-components'
 
-import { EntryListStore } from '../stores/entryListStore'
 import { Button } from './atoms/'
 
 interface ClockInProps {
   className?: string
-  entryListStore: EntryListStore
+  running: boolean,
+  startEntry: Function,
+  stopEntry: Function
 }
 
 const ClockInButton = styled(Button)`
@@ -27,21 +28,21 @@ class ClockIn extends React.Component<ClockInProps, {}> {
   render() {
     return(
       <ClockInButton
-        success={(!this.props.entryListStore.active)}
-        error={(!!this.props.entryListStore.active)}
-        onClick={(!this.props.entryListStore.active) ? this.startEntry : this.stopEntry}
+        success={(!this.props.running)}
+        error={(!!this.props.running)}
+        onClick={(!this.props.running) ? this.startEntry : this.stopEntry}
       >
-        {`Clock ${(this.props.entryListStore.active ? 'Out' : 'In')}`}
+        {`Clock ${(this.props.running ? 'Out' : 'In')}`}
       </ClockInButton>
     )
   }
 
   startEntry() {
-    this.props.entryListStore.startNewEntry()
+    this.props.startEntry()
   }
 
   stopEntry() {
-    this.props.entryListStore.stopCurrentTimer()
+    this.props.stopEntry()
   }
 }
 

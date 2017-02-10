@@ -1,8 +1,8 @@
-import { observable, computed, action, reaction} from 'mobx'
+import { observable, computed, action } from 'mobx'
 import * as moment from 'moment'
 import * as uuid from 'uuid'
 
-import { Fb, StorageEntryInterface } from '../storage/firebase'
+import { StorageEntryInterface } from '../storage/firebaseRepository'
 
 const STANDARD_RATE = 20
 
@@ -12,14 +12,16 @@ class EntryStore {
   @observable seconds = 0
   rate: number
   tickInterval: any
-  id: String
+  id: string
+  projectId: string
 
   static fromStorage(id: string, storageObject: StorageEntryInterface) {
     return new this({
       id,
       startTime: storageObject.startTime,
       endTime: storageObject.endTime,
-      rate: storageObject.rate
+      rate: storageObject.rate,
+      projectId: storageObject.projectId
     })
   }
 
@@ -27,8 +29,9 @@ class EntryStore {
     id = uuid.v4(),
     startTime,
     endTime,
-    rate = STANDARD_RATE
-  }: { id?: string, startTime?: number, endTime?: number | null, rate?: number }) {
+    rate = STANDARD_RATE,
+    projectId
+  }: { id?: string, startTime?: number, endTime?: number | null, rate: number, projectId: string }) {
     this.id = id
 
     if (startTime) {
@@ -45,17 +48,7 @@ class EntryStore {
 
     this.rate = rate
 
-    reaction(
-      () => ([this.startTime, this.endTime]),
-      (changes) => {
-        // tslint:disable-next-line
-        console.log('in entry reaction', changes)
-        Fb.currentProjectEntries().child(`${this.id}`).set(this.toStorage())
-      },
-      {
-        fireImmediately: true
-      }
-    )
+    this.projectId = projectId
   }
 
   @computed get running() {
@@ -89,9 +82,11 @@ class EntryStore {
 
   toStorage(): StorageEntryInterface {
     return {
+      id: this.id,
       startTime: moment(this.startTime).valueOf(),
       endTime: (this.endTime) ? moment(this.endTime).valueOf() : null,
-      rate: this.rate
+      rate: this.rate,
+      projectId: this.projectId
     }
   }
 

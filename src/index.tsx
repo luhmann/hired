@@ -3,18 +3,23 @@ import * as ReactDOM from 'react-dom'
 import { useStrict } from 'mobx'
 import { Provider } from 'mobx-react'
 
-import uiStore from './stores/uiStore'
-import projectStore from './stores/projectStore'
+import RootStore from './stores/rootStore'
+import FirebaseRepository from './storage/firebaseRepository'
+
 
 import App from './App'
 
 useStrict(true)
 
-const stores = { uiStore, projectStore }
+const repository = new FirebaseRepository()
+const rootStore = new RootStore(repository, 'me')
+
+window['rootStore'] = rootStore
+
 const rootEl = document.getElementById('root') as HTMLElement
 
 ReactDOM.render(
-  <Provider {...stores}>
+  <Provider rootStore={rootStore} repository={repository}>
     <App />
   </Provider>,
   rootEl

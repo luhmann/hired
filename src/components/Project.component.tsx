@@ -1,34 +1,29 @@
 import * as React from 'react'
-import { observer } from 'mobx-react'
-import { IPromiseBasedObservable } from 'mobx-utils'
+import { observer, inject } from 'mobx-react'
+// import { IPromiseBasedObservable } from 'mobx-utils'
 
 import ClockIn from './ClockIn.component'
 import EntryList from './EntryList.component'
-import Bootstrap from './Bootstrap.component'
-import { EntryListStore } from '../stores/entryListStore'
+// import EntryListStore from '../stores/entryListStore'
 
-interface MainProps {
-    storedEntries: IPromiseBasedObservable<{}>
-}
+// interface MainProps {
+//     storedEntries: IPromiseBasedObservable<{}>
+// }
 
+@inject('rootStore')
 @observer
-class Project extends React.Component<MainProps, {}> {
+class Project extends React.Component<any, {}> {
   render() {
-    return this.props.storedEntries.case({
-        pending: () => <Bootstrap />,
-        rejected: (error: Object) => {
-          return (<div>Error… ${error}</div>)
-        },
-        fulfilled: (snapshot: { val: Function }) => {
-          const entryListStore = new EntryListStore(snapshot.val())
-          return (
-             <div>
-                <ClockIn entryListStore={entryListStore} />
-                <EntryList entryList={entryListStore} />
-              </div>
-          )
-        }
-    })
+    return (
+      <div>
+        <ClockIn
+          running={this.props.rootStore.entryListStore.active}
+          startEntry={this.props.rootStore.entryListStore.startNewEntry}
+          stopEntry={this.props.rootStore.entryListStore.stopCurrentTimer}
+        />
+        <EntryList entryList={this.props.rootStore.entryListStore} />
+      </div>
+    )
   }
 }
 

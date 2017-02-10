@@ -1,28 +1,21 @@
 import { observable, action } from 'mobx'
-import { Fb } from '../storage/firebase'
+
+import RootStore from './rootStore'
 
 class UiStore {
-  @observable isAuthenticated: boolean = false
-  @observable uid: string = 'me'
+  @observable isLoaded: boolean = false
+  @observable hasError: boolean = false
 
-  @action
-  authenticate(uid: string = 'me') {
-    if (this.isAuthenticated) {
-      return Promise.resolve()
-    } else {
-      this.uid = uid
-      return Fb
-        .authenticate(uid)
-        .then(action('auth-callback', () => {
-          this.isAuthenticated = true
-          return Promise.resolve()
-        }))
-    }
+  private rootStore: RootStore
+
+  constructor(rootStore: RootStore) {
+    this.rootStore = rootStore
   }
 
+  @action
+  setLoaded (isLoaded: boolean) {
+    this.isLoaded = isLoaded
+  }
 }
 
-const singleton = new UiStore()
-
-export { UiStore }
-export default singleton
+export default UiStore

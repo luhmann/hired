@@ -1,46 +1,46 @@
 import * as React from 'react'
 import DevTools from 'mobx-react-devtools'
-import { fromPromise, IPromiseBasedObservable } from 'mobx-utils'
 import { observer, inject } from 'mobx-react'
 
 import './styles/reset.ts'
-import { UiStore } from './stores/uiStore'
-import { Fb } from './storage/firebase'
+import RootStore from './stores/rootStore'
 import Bootstrap from './components/Bootstrap.component'
+import ProjectList from './components/ProjectList.component'
 import Project from './components/Project.component'
 
 interface AppProps {
-  uiStore?: UiStore
+  rootStore?: RootStore
 }
 
-@inject('uiStore')
+@inject('rootStore')
 @observer
 class App extends React.Component<AppProps, {}> {
-  authPromise: IPromiseBasedObservable<void>
-
-  componentWillMount() {
-    if (this.props.uiStore) {
-      this.authPromise = fromPromise(this.props.uiStore.authenticate())
+  render() {
+    if (!this.props.rootStore) {
+      return null
     }
 
-  }
+    if (!this.props.rootStore.uiStore.isLoaded) {
+      return (<Bootstrap />)
+    }
 
-  render() {
+    if (this.props.rootStore.uiStore.hasError) {
+      return (<div>Error error error</div>)
+    }
+
+    let renderTarget = null
+    if (this.props.rootStore.projectStore.currentProject) {
+      renderTarget = <Project />
+    } else {
+      renderTarget = <ProjectList projects={this.props.rootStore.projectStore.projects} />
+    }
+
     return (
       <div>
-        {
-          this.authPromise.case({
-            pending: () => <Bootstrap />,
-            rejected: (error: Object) => <div>Something went horribly wrong</div>,
-            fulfilled: () => {
-              let storedEntries = fromPromise(Fb.currentProjectEntries().once('value'))
-              return (<Project storedEntries={storedEntries} />)
-            }
-          })
-        }
+        { renderTarget }
         <DevTools />
       </div>
-     )
+    )
   }
 }
 

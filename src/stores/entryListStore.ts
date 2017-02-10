@@ -1,17 +1,17 @@
-import { observable, action } from 'mobx'
+import { observable, action, computed } from 'mobx'
 import { sortBy } from 'lodash'
 
+import RootStore from './rootStore'
 import { EntryStore } from './entryStore'
-import projectStore from './projectStore'
 
 class EntryListStore {
   @observable entries: EntryStore[] = []
   @observable active: EntryStore | null = null
 
-  constructor(entries = {}) {
-    if (entries) {
-      this.hydrate(entries)
-    }
+  rootStore: RootStore
+
+  constructor(rootStore: RootStore) {
+    this.rootStore = rootStore
   }
 
   @action
@@ -19,11 +19,12 @@ class EntryListStore {
     this.entries.unshift(entry)
   }
 
-  @action
+  @action.bound
   startNewEntry() {
     if (!this.active) {
       let entry = new EntryStore({
-        rate: projectStore.currentProject.rate
+        projectId: this.rootStore.projectStore.currentProject.id,
+        rate: this.rootStore.projectStore.currentProject.rate
       })
       this.active = entry
       this.addEntry(entry)
@@ -31,7 +32,7 @@ class EntryListStore {
     }
   }
 
-  @action
+  @action.bound
   stopCurrentTimer() {
     if (this.active) {
       this.active.stopTimer()
@@ -39,19 +40,12 @@ class EntryListStore {
     }
   }
 
-  @action
-  private setEntries(entries: any[]) {
-    this.entries = entries
+  @computed get toStorage() {
+    return this.entries.map((entry) => entry.toStorage())
   }
 
-  @action
-  private checkFirstActive() {
-    if (this.entries[0].running) {
-      this.active = this.entries[0]
-    }
-  }
-
-  private hydrate(storageObjects: Object) {
+  @action.bound
+  hydrate(storageObjects: Object) {
     let unsortedEntries = []
 
     for (let id in storageObjects) {
@@ -65,6 +59,20 @@ class EntryListStore {
     this.setEntries(sortedEntries)
     this.checkFirstActive()
   }
+
+  @action.bound
+  private setEntries(entries: any[]) {
+    this.entries = entries
+  }
+
+  @action.bound
+  private checkFirstActive() {
+    if (this.entries[0].running) {
+      this.active = this.entries[0]
+    }
+  }
+
+
 }
 
-export { EntryListStore }
+export default EntryListStore
