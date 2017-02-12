@@ -2,10 +2,10 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { useStrict } from 'mobx'
 import { Provider } from 'mobx-react'
+import { RouterProvider } from 'react-router5'
 
 import RootStore from './stores/rootStore'
 import FirebaseRepository from './storage/firebaseRepository'
-
 
 import App from './App'
 
@@ -20,7 +20,9 @@ const rootEl = document.getElementById('root') as HTMLElement
 
 ReactDOM.render(
   <Provider rootStore={rootStore} repository={repository}>
-    <App />
+    <RouterProvider router={rootStore.router.instance}>
+      <App />
+    </RouterProvider>
   </Provider>,
   rootEl
 )

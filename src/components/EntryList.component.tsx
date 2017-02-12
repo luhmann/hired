@@ -7,7 +7,8 @@ import { EntryStore } from '../stores/entryStore'
 import Entry from './Entry.component'
 
 interface EntryListProps {
-  entryList: EntryListStore
+  entryList: EntryListStore,
+  projectId: string
 }
 
 const Root = styled.div`
@@ -20,7 +21,7 @@ class EntryList extends React.Component<EntryListProps, {}> {
     return (
       <Root>
         {
-          this.props.entryList.entries.map((entry: EntryStore, index: number) => (
+          this.props.entryList.getEntriesForProject(this.props.projectId).map((entry: EntryStore, index: number) => (
             <Entry
               key={index}
               start={entry.startTime}

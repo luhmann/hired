@@ -12,7 +12,8 @@
     "@types/react-dom": "^0.14.20",
     "@types/whatwg-fetch": "^0.0.33",
     "mobx-react-devtools": "^4.2.11",
-    "react-scripts-ts": "1.0.4"
+    "react-scripts-ts": "1.0.4",
+    "router5": "^4.4.1"
   },
   "dependencies": {
     "@types/numeral": "^0.0.19",
@@ -34,6 +35,7 @@
     "numeral": "^2.0.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-router5": "^4.0.1",
     "serve-favicon": "^2.3.2",
     "styled-components": "^1.3.1",
     "uuid": "^3.0.1"

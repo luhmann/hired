@@ -40,6 +40,10 @@ class EntryListStore {
     }
   }
 
+  getEntriesForProject(projectId: string): EntryStore[] {
+    return this.entries.filter((entry: EntryStore) => (entry.projectId === projectId))
+  }
+
   @computed get toStorage() {
     return this.entries.map((entry) => entry.toStorage())
   }
@@ -61,7 +65,7 @@ class EntryListStore {
   }
 
   @action.bound
-  private setEntries(entries: any[]) {
+  private setEntries(entries: EntryStore[]) {
     this.entries = entries
   }
 
@@ -71,8 +75,6 @@ class EntryListStore {
       this.active = this.entries[0]
     }
   }
-
-
 }
 
 export default EntryListStore

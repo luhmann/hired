@@ -4,7 +4,6 @@ import RootStore from './rootStore'
 
 class ProjectStore {
   @observable projects: ProjectInterface[] = []
-  @observable currentProjectId: string
 
   private rootStore: RootStore
 
@@ -29,13 +28,8 @@ class ProjectStore {
     this.projects[id] = project
   }
 
-  @action
-  setCurrentProjectId(id: string) {
-    this.currentProjectId = id
-  }
-
   @computed get currentProject() {
-    return this.projects.filter((item) => (item.id === this.currentProjectId))[0]
+    return this.projects.filter((item) => (item.id === this.rootStore.uiStore.currentView.projectId))[0]
   }
 
 }
@@ -46,6 +40,5 @@ export interface ProjectInterface {
   rate: number,
   description: string
 }
-
 
 export default ProjectStore

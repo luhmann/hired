@@ -1,18 +1,18 @@
-import { observable, action, reaction, autorun } from 'mobx'
+import { observable, action, reaction } from 'mobx'
 
 import EntryListStore from './entryListStore'
 import ProjectStore from './projectStore'
 import UserStore from './userStore'
 import UiStore from './uiStore'
 import FirebaseRepository from '../storage/firebaseRepository'
-
+import Router from '../lib/router'
 
 class RootStore {
   @observable entryListStore: EntryListStore
   @observable projectStore: ProjectStore
   @observable userStore: UserStore
   @observable uiStore: UiStore
-
+  router: Router
   repository: FirebaseRepository
 
   constructor(repository: FirebaseRepository, uid: string) {
@@ -21,12 +21,9 @@ class RootStore {
     this.entryListStore = new EntryListStore(this)
     this.projectStore = new ProjectStore(this)
     this.uiStore = new UiStore(this)
+    this.router = new Router(this)
 
     this.fetchData()
-
-    autorun(() => {
-      console.log(this.entryListStore)
-    });
 
     reaction(
       () => this.entryListStore.toStorage,
@@ -45,7 +42,7 @@ class RootStore {
     this.userStore.authenticated
       .then(() => (this.repository.database(this.userStore.uid).once('value')))
       .then((snapshot) => {
-        const data = snapshot.val();
+        const data = snapshot.val()
 
         if (data.projects && data.projects.length) {
           this.projectStore.setProjects(data.projects)
@@ -56,7 +53,7 @@ class RootStore {
         }
 
         this.uiStore.setLoaded(true)
-      });
+      })
   }
 }
 

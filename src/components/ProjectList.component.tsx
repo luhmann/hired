@@ -1,26 +1,21 @@
 import * as React from 'react'
-import { observer, inject } from 'mobx-react'
+import { observer } from 'mobx-react'
+import { Link } from 'react-router5'
 
 import { ProjectInterface } from '../stores/projectStore'
 import RootStore from '../stores/rootStore'
+import { ROUTE_NAMES } from '../lib/router'
 
 interface ProjectListProps {
   projects: ProjectInterface[]
-  rootStore?: RootStore
+  rootStore: RootStore
 }
 
-@inject('rootStore')
 @observer
 class ProjectList extends React.Component<ProjectListProps, {}> {
   constructor(props: ProjectListProps) {
     super(props)
 
-  }
-
-  handleClick(event: React.SyntheticEvent<any>, id: string): void {
-    if (this.props.rootStore) {
-      this.props.rootStore.projectStore.setCurrentProjectId(id)
-    }
   }
 
   render() {
@@ -29,9 +24,12 @@ class ProjectList extends React.Component<ProjectListProps, {}> {
         {
           this.props.projects.map((project, index) => {
             return (
-              <div key={index} onClick={(e) => this.handleClick(e, project.id )}>
-                {project.id} - {project.name} - {project.rate}
-                </div>)
+              <div key={index}>
+                <Link routeName={ROUTE_NAMES.projectOverview} routeParams={{projectId: project.id}} >
+                  {project.id} - {project.name} - {project.rate}
+                </Link>
+              </div>
+              )
           })
         }
       </div>
