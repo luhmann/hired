@@ -1,7 +1,7 @@
 import { observable, action, reaction } from 'mobx'
 
 import EntryListStore from './entryListStore'
-import ProjectStore from './projectStore'
+import ProjectListStore from './projectListStore'
 import UserStore from './userStore'
 import UiStore from './uiStore'
 import FirebaseRepository from '../storage/firebaseRepository'
@@ -9,7 +9,7 @@ import Router from '../lib/router'
 
 class RootStore {
   @observable entryListStore: EntryListStore
-  @observable projectStore: ProjectStore
+  @observable projectListStore: ProjectListStore
   @observable userStore: UserStore
   @observable uiStore: UiStore
   router: Router
@@ -19,7 +19,7 @@ class RootStore {
     this.repository = repository
     this.userStore = new UserStore(this, uid)
     this.entryListStore = new EntryListStore(this)
-    this.projectStore = new ProjectStore(this)
+    this.projectListStore = new ProjectListStore(this)
     this.uiStore = new UiStore(this)
     this.router = new Router(this)
 
@@ -45,7 +45,7 @@ class RootStore {
         const data = snapshot.val()
 
         if (data.projects && data.projects.length) {
-          this.projectStore.setProjects(data.projects)
+          this.projectListStore.hydrate(data.projects)
         }
 
         if (data.entries && data.entries.length) {

@@ -1,6 +1,5 @@
 import * as firebase from 'firebase'
 
-
 class FirebaseRepository {
   private config = {
     apiKey: 'AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI',
@@ -13,7 +12,7 @@ class FirebaseRepository {
   private app: firebase.app.App
 
   constructor() {
-    this.app = firebase.initializeApp(this.config);
+    this.app = firebase.initializeApp(this.config)
   }
 
   database(uid: string): firebase.database.Reference {
@@ -36,7 +35,7 @@ class FirebaseRepository {
       .catch((error) => {
         // tslint:disable-next-line
         console.log('Failure in auth, check it', error)
-        return Promise.reject('Error in firebase request');
+        return Promise.reject('Error in firebase request')
       })
   }
 }

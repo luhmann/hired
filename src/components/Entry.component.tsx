@@ -2,17 +2,13 @@ import * as React from 'react'
 import { observer } from 'mobx-react'
 import * as moment from 'moment'
 import styled from 'styled-components'
-import * as numeral from 'numeral'
-import 'numeral/locales/de'
-numeral.locale('de')
 
+import { formatCurrency } from '../lib/format-currency'
 import { formatDuration } from '../lib/format-duration'
 import { gridCell, color } from '../styles/style-utils'
 
-const Row = styled.div`
-  border-top: 1px solid #f3f3f3;
-  padding: 6px 0;
-`
+import { Row } from './atoms/Row'
+import { Total as GlobalTotal } from './atoms/Text'
 
 const Root = styled.div`
   display: flex;
@@ -23,10 +19,8 @@ const Day = styled.div`
   ${ gridCell(8) }
 `
 
-const Total = styled.div`
+const Total = styled(GlobalTotal)`
   ${ gridCell(4) }
-  color: ${color('lightGreen')}
-  text-align: right;
 `
 
 interface TimeProps {
@@ -60,7 +54,7 @@ const Entry = observer(({start, end, duration, total}: EntryProps) => (
             <Day>
                 {moment(start).format('dd. DD. MMMM YYYY')}
             </Day>
-            <Total>{numeral(total).format('$0,0.00')}</Total>
+            <Total>{formatCurrency(total)}</Total>
         </Root>
         <Root>
           <Time begin>

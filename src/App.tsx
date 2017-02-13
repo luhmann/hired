@@ -1,5 +1,5 @@
 import * as React from 'react'
-import DevTools from 'mobx-react-devtools'
+// import DevTools from 'mobx-react-devtools'
 import { observer, inject } from 'mobx-react'
 
 import './styles/reset.ts'
@@ -10,6 +10,7 @@ import Bootstrap from './components/Bootstrap.component'
 import Error from './components/Error'
 import ProjectList from './components/ProjectList.component'
 import Project from './components/Project.component'
+import ProjectNew from './components/ProjectNew.component'
 
 interface AppProps {
   rootStore?: RootStore
@@ -23,7 +24,7 @@ class App extends React.Component<AppProps, {}> {
       switch (this.props.rootStore.uiStore.currentView.name) {
         case (ROUTE_NAMES.projectList):
           return <ProjectList
-            projects={this.props.rootStore.projectStore.projects}
+            projects={this.props.rootStore.projectListStore.projects}
             rootStore={this.props.rootStore}
           />
         case (ROUTE_NAMES.projectOverview):
@@ -34,6 +35,8 @@ class App extends React.Component<AppProps, {}> {
             projectId={this.props.rootStore.uiStore.currentView.projectId}
             entryListStore={this.props.rootStore.entryListStore}
           />
+        case (ROUTE_NAMES.projectNew):
+          return <ProjectNew />
         default:
           return <Error />
       }
@@ -59,7 +62,7 @@ class App extends React.Component<AppProps, {}> {
     return (
       <div>
         {this.renderCurrentView()}
-        <DevTools />
+        {/*<DevTools />*/}
       </div>
     )
   }

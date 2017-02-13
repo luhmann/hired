@@ -3,6 +3,7 @@ import { observer } from 'mobx-react'
 import styled from 'styled-components'
 
 import { Button } from './atoms/'
+import { standardHPadding } from '../styles/style-utils'
 
 interface ClockInProps {
   className?: string
@@ -13,7 +14,8 @@ interface ClockInProps {
 
 const ClockInButton = styled(Button)`
   height: 46px;
-  width: 100%;
+  margin: 20px ${standardHPadding} 0;
+  width: calc(100vw - 2*${standardHPadding});
 `
 
 @observer

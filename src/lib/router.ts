@@ -7,12 +7,14 @@ import listenersPlugin from 'router5/plugins/listeners'
 
 const ROUTE_NAMES = {
   projectList: 'PROJECT_LIST',
-  projectOverview: 'PROJECT_OVERVIEW'
+  projectOverview: 'PROJECT_OVERVIEW',
+  projectNew: 'PROJECT_NEW'
 }
 
 const ROUTES = [
   { name: ROUTE_NAMES.projectList, path: '/' },
-  { name: ROUTE_NAMES.projectOverview, path: '/project/:projectId' }
+  { name: ROUTE_NAMES.projectOverview, path: '/project/:projectId' },
+  { name: ROUTE_NAMES.projectNew, path: '/project/new' },
 ]
 
 interface RouterStateInterface {
@@ -55,6 +57,9 @@ class Router {
           break
         case (ROUTE_NAMES.projectOverview):
           this.rootStore.uiStore.showProject(toState.params.projectId)
+          break
+        case (ROUTE_NAMES.projectNew):
+          this.rootStore.uiStore.showNewProject()
           break
         default:
           this.rootStore.uiStore.setError(true)

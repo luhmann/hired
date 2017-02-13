@@ -37,6 +37,13 @@ class UiStore {
   }
 
   @action
+  showNewProject(): void {
+    this.currentView = {
+      name: ROUTE_NAMES.projectNew
+    }
+  }
+
+  @action
   setLoaded (isLoaded: boolean) {
     this.isLoaded = isLoaded
   }

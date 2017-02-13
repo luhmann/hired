@@ -29,8 +29,13 @@ declare module 'router5-link-interceptor' {
   export default linkInterceptor
 }
 
+interface LinkComponent {
+  routeName: any,
+  routeParams?: any
+}
+
 declare module 'react-router5' {
   const RouterProvider: any
-  const Link: any
+  const Link: React.StatelessComponent<LinkComponent>
   export { RouterProvider, Link }
 }

@@ -13,7 +13,10 @@
     "@types/whatwg-fetch": "^0.0.33",
     "mobx-react-devtools": "^4.2.11",
     "react-scripts-ts": "1.0.4",
-    "router5": "^4.4.1"
+    "router5": "^4.4.1",
+    "stylelint": "^7.8.0",
+    "stylelint-config-standard": "^16.0.0",
+    "stylelint-processor-styled-components": "^0.0.4"
   },
   "dependencies": {
     "@types/numeral": "^0.0.19",
@@ -38,6 +41,7 @@
     "react-router5": "^4.0.1",
     "serve-favicon": "^2.3.2",
     "styled-components": "^1.3.1",
+    "svg-inline-react": "^1.0.3",
     "uuid": "^3.0.1"
   },
   "scripts": {
@@ -46,6 +50,7 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-    "start:server": "node ./server/bin/www"
+    "start:server": "node ./server/bin/www",
+    "lint:css": "stylelint \"./src/components/**/*.tsx\""
   }
 }

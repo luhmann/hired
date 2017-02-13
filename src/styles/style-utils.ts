@@ -9,7 +9,8 @@ export function color(name: string): string {
     success: '#4caf50',
     successHover: '#43a047',
     error: '#f44336',
-    errorHover: '#e53935'
+    errorHover: '#e53935',
+    gray: '#999'
   }
 
   return map[name] || '#000'
@@ -23,8 +24,10 @@ export function gridCell(cols: number): string {
 
 export function center(): string {
   return `
-    align-items: center
-    display: flex
-    justify-content: center
+    align-items: center;
+    display: flex;
+    justify-content: center;
   `
 }
+
+export const standardHPadding = '12px'

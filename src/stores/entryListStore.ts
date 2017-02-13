@@ -26,8 +26,8 @@ class EntryListStore {
     }
 
     let entry = new EntryStore({
-      projectId: this.rootStore.projectStore.currentProject.id,
-      rate: this.rootStore.projectStore.currentProject.rate
+      projectId: this.rootStore.projectListStore.currentProject.id,
+      rate: this.rootStore.projectListStore.currentProject.standardRate
     })
     this.active = entry
     this.addEntry(entry)
