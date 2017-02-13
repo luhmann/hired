@@ -21,15 +21,17 @@ class EntryListStore {
 
   @action.bound
   startNewEntry() {
-    if (!this.active) {
-      let entry = new EntryStore({
-        projectId: this.rootStore.projectStore.currentProject.id,
-        rate: this.rootStore.projectStore.currentProject.rate
-      })
-      this.active = entry
-      this.addEntry(entry)
-      entry.startTimer()
+    if (this.active) {
+      this.stopCurrentTimer()
     }
+
+    let entry = new EntryStore({
+      projectId: this.rootStore.projectStore.currentProject.id,
+      rate: this.rootStore.projectStore.currentProject.rate
+    })
+    this.active = entry
+    this.addEntry(entry)
+    entry.startTimer()
   }
 
   @action.bound

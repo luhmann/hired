@@ -17,7 +17,9 @@ class Project extends React.Component<any, {}> {
     return (
       <div>
         <ClockIn
-          running={this.props.entryListStore.active}
+          running={
+            this.props.entryListStore.active && this.props.entryListStore.active.projectId === this.props.projectId
+          }
           startEntry={this.props.entryListStore.startNewEntry}
           stopEntry={this.props.entryListStore.stopCurrentTimer}
         />
