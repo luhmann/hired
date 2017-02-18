@@ -1,15 +1,15 @@
 export function color(name: string): string {
   const map = {
-    darkBlue: '#364756',
-    lightBlue: '#65A6A4',
-    darkGreen: '#4E8566',
-    lightGreen: '#65BF6B',
-    red: '#BF4F45',
+    charcoral: '#364756',
+    cadetBlue: '#65A6A4',
+    hookersGreen: '#4E8566',
+    mantis: '#65BF6B',
+    deepChestnut: '#BF4F45',
     white: '#fff',
-    success: '#4caf50',
-    successHover: '#43a047',
-    error: '#f44336',
-    errorHover: '#e53935',
+    middleGreen: '#4caf50',
+    mayGreen: '#43a047',
+    vermilion: '#f44336',
+    cgRed: '#e53935',
 
     turquoiseSurf: '#00BCD4',
 

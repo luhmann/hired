@@ -26,23 +26,23 @@ export const Button = styled.button`
 
   ${(props: ButtonTypes) => props.success ? `
     color: ${color('white')};
-    background-color: ${color('success')};
-    border: 1px solid ${color('success')};
+    background-color: ${color('middleGreen')};
+    border: 1px solid ${color('middleGreen')};
 
     &:hover {
-      background-color: ${color('successHover')};
-      border: 1px solid ${color('successHover')};
+      background-color: ${color('mayGreen')};
+      border: 1px solid ${color('mayGreen')};
     }
    ` : ''}
 
    ${(props: ButtonTypes) => props.error ? `
     color: ${color('white')};
-    background-color: ${color('error')};
-    border: 1px solid ${color('error')};
+    background-color: ${color('vermillion')};
+    border: 1px solid ${color('vermillion')};
 
     &:hover {
-      background-color: ${color('errorHover')};
-      border: 1px solid ${color('errorHover')};
+      background-color: ${color('cgRed')};
+      border: 1px solid ${color('cgRed')};
     }
    ` : ''}
 `
