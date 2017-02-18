@@ -1,10 +1,11 @@
 declare module 'router5' {
   export interface RouterInterface {
-    usePlugin: Function,
+    usePlugin: Function
     addListener: Function
     start: Function
     buildPath: Function
     buildUrl: Function
+    navigate: Function
   }
 
   export function loggerPlugin(): void

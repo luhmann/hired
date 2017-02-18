@@ -10,7 +10,7 @@ import Bootstrap from './components/Bootstrap.component'
 import Error from './components/Error'
 import ProjectList from './components/ProjectList.component'
 import Project from './components/Project.component'
-import ProjectNew from './components/ProjectNew.component'
+import ProjectNew from './containers/ProjectNew'
 
 interface AppProps {
   rootStore?: RootStore

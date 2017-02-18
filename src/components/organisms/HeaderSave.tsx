@@ -15,13 +15,15 @@ const DistributedHeader = styled(Header)`
 
 interface HeaderSaveProps {
   title: string
+  saveHandler: React.EventHandler<any>
+  cancelHandler: React.EventHandler<any>
 }
 
-const HeaderSave = ({title}: HeaderSaveProps) => (
+const HeaderSave = ({ title, cancelHandler, saveHandler}: HeaderSaveProps) => (
   <DistributedHeader>
-    <TextButton text="Cancel" />
+    <TextButton text="Cancel" clickHandler={cancelHandler} />
     <HeaderTitle>{title}</HeaderTitle>
-    <TextButton text="Save" />
+    <TextButton text="Save" clickHandler={saveHandler} />
   </DistributedHeader>
 )
 
