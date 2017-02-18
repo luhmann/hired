@@ -7,11 +7,11 @@ import RootStore from '../stores/rootStore'
 import { ROUTE_NAMES } from '../lib/router'
 import { formatCurrency } from '../lib/format-currency'
 
-import { Row } from './atoms/Row'
+import { Row } from './atoms/Containers'
 import { Total as GlobalTotal } from './atoms/Text'
 import { gridCell } from '../styles/style-utils'
 import { Link } from './atoms/Links'
-import ProjectListHeader from './ProjectListHeader.component'
+import ProjectListHeader from './organisms/HeaderProjectList'
 
 const RowLink = styled(Link) `
   display: flex;

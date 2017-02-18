@@ -1,6 +1,7 @@
+import * as React from 'react'
 import styled from 'styled-components'
 
-import { color } from '../../styles/style-utils'
+import { color, standardFontSize } from '../../styles/style-utils'
 
 interface ButtonTypes {
   success?: boolean,
@@ -45,3 +46,27 @@ export const Button = styled.button`
     }
    ` : ''}
 `
+
+
+
+const StyledTextButton = styled.button`
+  align-self: stretch;
+  background-color: transparent
+  color: ${ color('turquoiseSurf') };
+  cursor: pointer;
+  font-size: ${ standardFontSize };
+  padding: 0;
+  border: none;
+
+  &:focus {
+    outline: none
+  }
+`
+
+interface TextButtonProps {
+  text: string
+}
+
+export const TextButton = ({text}: TextButtonProps) => (
+  <StyledTextButton>{text}</StyledTextButton>
+)

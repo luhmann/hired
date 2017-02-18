@@ -10,7 +10,17 @@ export function color(name: string): string {
     successHover: '#43a047',
     error: '#f44336',
     errorHover: '#e53935',
-    gray: '#999'
+
+    turquoiseSurf: '#00BCD4',
+
+    darkMediumGray: '#a7a7ab',
+    spanishGray: '#999',
+    whiteSmoke: '#f5f5f5'
+  }
+
+  if (!map[name]) {
+    /* tslint:disable-next-line */
+    console.error(`Warning no color "${name}" found.`)
   }
 
   return map[name] || '#000'
@@ -30,4 +40,12 @@ export function center(): string {
   `
 }
 
-export const standardHPadding = '12px'
+export const gridBaseUnit = 8
+
+export function cells(amount: number): string {
+  return `${gridBaseUnit * amount}px`
+}
+
+export const standardHPadding = cells(2)
+
+export const standardFontSize = '1rem'

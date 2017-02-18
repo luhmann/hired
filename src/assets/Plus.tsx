@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import { color, standardHPadding } from '../styles/style-utils'
+import { color } from '../styles/style-utils'
 
 const Icon = ({className}: {className?: 'string'}) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="12 12 26 26" className={className}>
@@ -11,11 +11,11 @@ const Icon = ({className}: {className?: 'string'}) => (
 
 const PlusIcon = styled(Icon)`
   height: 40px;
-  padding: ${ standardHPadding };
+  padding: 12px;
   width: 40px;
 
   & path {
-    fill: ${color('gray')};
+    fill: ${color('spanishGray')};
   }
 `
 
