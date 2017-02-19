@@ -47,8 +47,6 @@ export const Button = styled.button`
    ` : ''}
 `
 
-
-
 const StyledTextButton = styled.button`
   align-self: stretch;
   background-color: transparent
