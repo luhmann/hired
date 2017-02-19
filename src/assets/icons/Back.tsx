@@ -24,7 +24,7 @@ const BackIcon = styled(Icon)`
   height: ${cells(3)};
 
   & path {
-    fill: ${color.turquoiseSurf};
+    fill: ${color.brilliantAzure};
   }
 `
 

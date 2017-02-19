@@ -50,7 +50,7 @@ export const Button = styled.button`
 const StyledTextButton = styled.button`
   align-self: stretch;
   background-color: transparent
-  color: ${ color.turquoiseSurf };
+  color: ${ color.brilliantAzure };
   cursor: pointer;
   font-size: ${ standardFontSize };
   padding: 0;
