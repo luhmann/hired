@@ -30,13 +30,13 @@ interface TimeProps {
 
 const Time = styled.div`
   ${ gridCell(2) }
-  ${ (props: TimeProps) => props.begin ? `color: ${color('charcoral')};` : ''}
-  ${ (props: TimeProps) => props.end ? `color: ${color('deepChestnut')};` : ''}
+  ${ (props: TimeProps) => props.begin ? `color: ${color.charcoral};` : ''}
+  ${ (props: TimeProps) => props.end ? `color: ${color.deepChestnut};` : ''}
 `
 
 const Duration = styled.div`
   ${ gridCell(8) }
-  color: ${color('charcoral')};
+  color: ${color.charcoral};
   text-align: right;
 `
 
