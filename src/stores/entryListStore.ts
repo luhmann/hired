@@ -1,4 +1,4 @@
-import { observable, action, computed } from 'mobx'
+import { observable, action, computed, reaction } from 'mobx'
 import { sortBy } from 'lodash'
 
 import RootStore from './rootStore'
@@ -12,6 +12,8 @@ class EntryListStore {
 
   constructor(rootStore: RootStore) {
     this.rootStore = rootStore
+
+    this.setupSync()
   }
 
   @action
@@ -76,6 +78,17 @@ class EntryListStore {
     if (this.entries[0].running) {
       this.active = this.entries[0]
     }
+  }
+
+  private setupSync(): void {
+    reaction(
+      () => this.toStorage,
+      (entries) => {
+        if (entries) {
+          this.rootStore.repository.entries(this.rootStore.userStore.uid).set(entries)
+        }
+      }
+    )
   }
 }
 

@@ -1,4 +1,4 @@
-import { observable, action, reaction } from 'mobx'
+import { observable, action } from 'mobx'
 
 import EntryListStore from './entryListStore'
 import ProjectListStore from './projectListStore'
@@ -24,17 +24,6 @@ class RootStore {
     this.router = new Router(this)
 
     this.fetchData()
-
-    reaction(
-      () => this.entryListStore.toStorage,
-      (entries) => {
-        if (entries) {
-          // tslint:disable-next-line
-          console.log('in entry reaction', entries)
-          this.repository.entries(this.userStore.uid).set(entries)
-        }
-      }
-    )
   }
 
   @action.bound

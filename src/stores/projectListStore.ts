@@ -12,7 +12,7 @@ class ProjectListStore {
   constructor(rootStore: RootStore) {
     this.rootStore = rootStore
 
-    this.setupSaveHandler()
+    this.setupSync()
   }
 
   @action
@@ -31,7 +31,7 @@ class ProjectListStore {
     return this.projects.filter((item) => (item.id === this.rootStore.uiStore.currentView.projectId))[0]
   }
 
-  private setupSaveHandler() {
+  private setupSync() {
     reaction(
       () => this.projects.map((project) => project.toStorage),
       (projects) => {
