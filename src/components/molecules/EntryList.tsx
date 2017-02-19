@@ -2,9 +2,9 @@ import * as React from 'react'
 import { observer } from 'mobx-react'
 import styled from 'styled-components'
 
-import EntryListStore from '../stores/entryListStore'
-import { EntryStore } from '../stores/entryStore'
-import Entry from './Entry.component'
+import EntryListStore from '../../stores/entryListStore'
+import { EntryStore } from '../../stores/entryStore'
+import Entry from './Entry'
 
 interface EntryListProps {
   entryList: EntryListStore,

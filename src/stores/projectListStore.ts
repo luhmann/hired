@@ -31,6 +31,10 @@ class ProjectListStore {
     return this.projects.filter((item) => (item.id === this.rootStore.uiStore.currentView.projectId))[0]
   }
 
+  getById(id: string): ProjectStore {
+    return this.projects.filter((item) => (item.id === id))[0]
+  }
+
   private setupSync() {
     reaction(
       () => this.projects.map((project) => project.toStorage),

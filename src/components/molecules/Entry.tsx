@@ -3,12 +3,12 @@ import { observer } from 'mobx-react'
 import * as moment from 'moment'
 import styled from 'styled-components'
 
-import { formatCurrency } from '../lib/format-currency'
-import { formatDuration } from '../lib/format-duration'
-import { gridCell, color } from '../styles/style-utils'
+import { formatCurrency } from '../../lib/format-currency'
+import { formatDuration } from '../../lib/format-duration'
+import { gridCell, color } from '../../styles/style-utils'
 
-import { Row } from './atoms/Containers'
-import { Total as GlobalTotal } from './atoms/Text'
+import { Row } from '../atoms/Containers'
+import { Total as GlobalTotal } from '../atoms/Text'
 
 const Root = styled.div`
   display: flex;

@@ -1,17 +1,7 @@
 import * as React from 'react'
-import styled from 'styled-components'
-
-import { standardHPadding } from '../../styles/style-utils'
 
 import { TextButton } from '../atoms/Buttons'
-import { Header, HeaderTitle } from '../atoms/Headers'
-
-const DistributedHeader = styled(Header)`
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 ${ standardHPadding };
-`
+import { DistributedHeader, HeaderTitle } from '../atoms/Headers'
 
 interface HeaderSaveProps {
   title: string

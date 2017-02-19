@@ -7,7 +7,7 @@ import { RouterProvider } from 'react-router5'
 import RootStore from './stores/rootStore'
 import FirebaseRepository from './storage/firebaseRepository'
 
-import App from './App'
+import App from './containers/App'
 
 useStrict(true)
 

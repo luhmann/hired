@@ -4,7 +4,7 @@ import { ROUTE_NAMES } from '../../lib/router'
 
 import { Link } from '../atoms/Links'
 import { Header } from '../atoms/Headers'
-import PlusIcon from '../../assets/Plus'
+import PlusIcon from '../../assets/icons/Plus'
 
 
 

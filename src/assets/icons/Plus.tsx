@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import { color } from '../styles/style-utils'
+import { color } from '../../styles/style-utils'
 
 const Icon = ({className}: {className?: 'string'}) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="12 12 26 26" className={className}>

@@ -2,15 +2,15 @@ import * as React from 'react'
 // import DevTools from 'mobx-react-devtools'
 import { observer, inject } from 'mobx-react'
 
-import './styles/reset.ts'
-import RootStore from './stores/rootStore'
-import { ROUTE_NAMES } from './lib/router'
+import '../styles/reset.ts'
+import RootStore from '../stores/rootStore'
+import { ROUTE_NAMES } from '../lib/router'
 
-import Bootstrap from './components/Bootstrap.component'
-import Error from './components/Error'
-import ProjectList from './components/ProjectList.component'
-import Project from './components/Project.component'
-import ProjectNew from './containers/ProjectNew'
+import Bootstrap from '../components/Bootstrap.component'
+import Error from '../components/Error'
+import ProjectList from '../components/ProjectList.component'
+import Project from '../containers/Project'
+import ProjectNew from '../containers/ProjectNew'
 
 interface AppProps {
   rootStore?: RootStore
@@ -28,13 +28,7 @@ class App extends React.Component<AppProps, {}> {
             rootStore={this.props.rootStore}
           />
         case (ROUTE_NAMES.projectOverview):
-          if (!this.props.rootStore || !this.props.rootStore.uiStore.currentView.projectId) {
-            return <Error />
-          }
-          return <Project
-            projectId={this.props.rootStore.uiStore.currentView.projectId}
-            entryListStore={this.props.rootStore.entryListStore}
-          />
+          return <Project />
         case (ROUTE_NAMES.projectNew):
           return <ProjectNew />
         default:

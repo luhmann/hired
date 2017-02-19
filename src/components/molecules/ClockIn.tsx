@@ -2,8 +2,8 @@ import * as React from 'react'
 import { observer } from 'mobx-react'
 import styled from 'styled-components'
 
-import { Button } from './atoms/'
-import { standardHPadding } from '../styles/style-utils'
+import { Button } from '../atoms/'
+import { standardHPadding } from '../../styles/style-utils'
 
 interface ClockInProps {
   className?: string

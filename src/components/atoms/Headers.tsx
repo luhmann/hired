@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { color } from '../../styles/style-utils'
+import { color, standardHPadding } from '../../styles/style-utils'
 
 export const Header = styled.header`
   background-color: ${color.whiteSmoke};
@@ -10,6 +10,13 @@ export const Header = styled.header`
   margin-bottom: 16px;
   position: sticky;
   top: 0;
+`
+
+export const DistributedHeader = styled(Header) `
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 ${ standardHPadding};
 `
 
 export const HeaderTitle = styled.div`
