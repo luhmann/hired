@@ -23,6 +23,15 @@ class ProjectStore {
       .reduce((previousValue, entry) => (previousValue + entry.total), 0)
   }
 
+  @computed get toStorage() {
+    return {
+      id: this.id,
+      name: this.name,
+      standardRate: this.standardRate,
+      description: this.description
+    }
+  }
+
 }
 
 export interface ProjectInterface {

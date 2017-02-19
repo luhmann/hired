@@ -27,8 +27,8 @@ interface RouterStateInterface {
 }
 
 class Router {
-  instance: RouterInterface
   rootStore: RootStore
+  instance: RouterInterface
 
   constructor(rootStore: RootStore) {
     this.rootStore = rootStore
@@ -68,6 +68,11 @@ class Router {
 
     this.instance.start()
   }
+
+  navigate(route: string): Function {
+    return this.instance.navigate(route)
+  }
+
 }
 
 export { ROUTE_NAMES }

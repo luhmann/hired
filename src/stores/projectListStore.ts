@@ -1,4 +1,5 @@
-import { observable, action, computed } from 'mobx'
+import { observable, action, computed, reaction } from 'mobx'
+import * as uuid from 'uuid'
 
 import RootStore from './rootStore'
 import ProjectStore, { ProjectInterface } from './projectStore'
@@ -10,6 +11,8 @@ class ProjectListStore {
 
   constructor(rootStore: RootStore) {
     this.rootStore = rootStore
+
+    this.setupSaveHandler()
   }
 
   @action
@@ -20,12 +23,23 @@ class ProjectListStore {
   }
 
   @action
-  add(id: string, name: string, standardRate: number, description: string = '') {
-    this.projects[id] = new ProjectStore(this.rootStore, id, name, standardRate, description)
+  add(name: string, standardRate: number, description: string = '', id: string = uuid.v4()) {
+    this.projects = [...this.projects, new ProjectStore(this.rootStore, id, name, standardRate, description)]
   }
 
   @computed get currentProject() {
     return this.projects.filter((item) => (item.id === this.rootStore.uiStore.currentView.projectId))[0]
+  }
+
+  private setupSaveHandler() {
+    reaction(
+      () => this.projects.map((project) => project.toStorage),
+      (projects) => {
+        if (projects) {
+          this.rootStore.repository.projects(this.rootStore.userStore.uid).set(projects)
+        }
+      }
+    )
   }
 
 }

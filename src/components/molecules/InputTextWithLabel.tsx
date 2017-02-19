@@ -13,12 +13,13 @@ interface InputTextWithLabelProps {
   id: string
   label: string
   placeholder: string
+  changeHandler: React.EventHandler<any>
 }
 
-const InputTextWithLabel = ({id, label, placeholder}: InputTextWithLabelProps) => (
+const InputTextWithLabel = ({id, label, placeholder, changeHandler}: InputTextWithLabelProps) => (
   <Fieldset>
     <Label htmlFor={id}>{label}</Label>
-    <IndentedTextInput id={id} type="text" placeholder={placeholder} />
+    <IndentedTextInput id={id} type="text" placeholder={placeholder} onChange={changeHandler} />
   </Fieldset>
 )
 

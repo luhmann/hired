@@ -17,12 +17,13 @@ interface InputTextWithLabelProps {
   label: string
   placeholder: string
   unit: string
+  changeHandler: React.EventHandler<any>
 }
 
-const InputTextWithLabel = ({id, label, placeholder, unit}: InputTextWithLabelProps) => (
+const InputTextWithLabel = ({id, label, placeholder, unit, changeHandler}: InputTextWithLabelProps) => (
   <Fieldset>
     <Label htmlFor={id}>{label}</Label>
-    <TextInput id={id} type="number" placeholder={placeholder} />
+    <TextInput id={id} type="number" placeholder={placeholder} onChange={changeHandler} />
     <Unit>{unit}</Unit>
   </Fieldset>
 )
