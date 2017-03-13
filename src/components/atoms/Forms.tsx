@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { color, standardFontSize } from '../../styles/style-utils'
+import { color, fontSizes } from '../../styles/style-utils'
 
 export const Fieldset = styled.div`
   align-items: center;
@@ -10,7 +10,7 @@ export const Fieldset = styled.div`
 `
 export const TextInput = styled.input`
   border: none;
-  font-size: ${standardFontSize};
+  font-size: ${fontSizes.standard};
   margin: 0;
   padding: 0;
   flex-grow: 1;

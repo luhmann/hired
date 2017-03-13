@@ -13,8 +13,7 @@ interface ClockInProps {
 }
 
 const ClockInButton = styled(Button)`
-  height: 46px;
-  margin: 20px ${standardHPadding} 0;
+  margin: 0 ${standardHPadding};
   width: calc(100vw - 2*${standardHPadding});
 `
 

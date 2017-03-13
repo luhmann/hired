@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import { color, standardFontSize } from '../../styles/style-utils'
+import { cells, color, fontSizes } from '../../styles/style-utils'
 
 interface ButtonTypes {
   success?: boolean,
@@ -9,16 +9,12 @@ interface ButtonTypes {
 }
 
 export const Button = styled.button`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
   outline: none;
-  padding: .65rem 2rem;
-  font-size: 1rem;
+  height: ${ cells(6) }
+  padding: ${ cells(1) } ${ cells(2) };
+  font-size: ${ fontSizes.standard };
   user-select: none;
-  position: relative;
-  z-index: 1;
 
   &:active {
     box-shadow: inset 0 1px 3px rgba(0,0,0,.12);
@@ -48,11 +44,10 @@ export const Button = styled.button`
 `
 
 const StyledTextButton = styled.button`
-  align-self: stretch;
   background-color: transparent
   color: ${ color.azure };
   cursor: pointer;
-  font-size: ${ standardFontSize };
+  font-size: ${ fontSizes.standard };
   padding: 0;
   border: none;
 

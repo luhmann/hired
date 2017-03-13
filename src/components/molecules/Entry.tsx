@@ -5,14 +5,16 @@ import styled from 'styled-components'
 
 import { formatCurrency } from '../../lib/format-currency'
 import { formatDuration } from '../../lib/format-duration'
-import { gridCell, color } from '../../styles/style-utils'
+import { cells, gridCell, color, fontSizes } from '../../styles/style-utils'
 
 import { Row } from '../atoms/Containers'
 import { Total as GlobalTotal } from '../atoms/Text'
 
 const Root = styled.div`
   display: flex;
-  margin-bottom: 3px;
+  font-size: ${fontSizes.standard};
+  height: ${cells(2)}
+  line-height: ${cells(2)}
 `
 
 const Day = styled.div`

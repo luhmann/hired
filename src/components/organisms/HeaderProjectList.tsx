@@ -2,17 +2,16 @@ import * as React from 'react'
 
 import { ROUTE_NAMES } from '../../lib/router'
 
-import { Link } from '../atoms/Links'
+import { ButtonLink } from '../atoms/Links'
 import { DistributedHeader, HeaderTitle } from '../atoms/Headers'
 import PlusIcon from '../../assets/icons/Plus'
 
 
-
 const ProjectListHeader = () => (
   <DistributedHeader>
-    <Link routeName={ROUTE_NAMES.projectNew}>
+    <ButtonLink routeName={ROUTE_NAMES.projectNew}>
      <PlusIcon />
-    </Link>
+    </ButtonLink>
     <HeaderTitle>Projects</HeaderTitle>
     <div>&nbsp;</div>
   </DistributedHeader>

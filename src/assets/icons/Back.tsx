@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import { color, cells } from '../../styles/style-utils'
+import { color } from '../../styles/style-utils'
 
 const Icon = ({className}: {className?: 'string'}) => (
   <svg
@@ -21,7 +21,8 @@ const Icon = ({className}: {className?: 'string'}) => (
 )
 
 const BackIcon = styled(Icon)`
-  height: ${cells(3)};
+  height: 100%;
+  width: 100%;
 
   & path {
     fill: ${color.azure};

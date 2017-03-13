@@ -4,7 +4,6 @@ export const color = Object.freeze({
   hookersGreen: '#4E8566',
   mantis: '#65BF6B',
   deepChestnut: '#BF4F45',
-  white: '#fff',
   middleGreen: '#4caf50',
   mayGreen: '#43a047',
   vermilion: '#f44336',
@@ -12,8 +11,10 @@ export const color = Object.freeze({
 
   azure: '#007aff',
 
+  black: '#000',
   silver: '#BFBFC1',
   spanishGray: '#999',
+  white: '#fff',
   whiteSmoke: '#f5f5f5'
 
 })
@@ -40,4 +41,7 @@ export function cells(amount: number): string {
 
 export const standardHPadding = cells(2)
 
-export const standardFontSize = '1rem'
+export const fontSizes = Object.freeze({
+  standard: '1rem'
+})
+
