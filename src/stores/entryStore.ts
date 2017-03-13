@@ -1,4 +1,5 @@
 import { observable, computed, action } from 'mobx'
+import { now } from 'mobx-utils'
 import * as moment from 'moment'
 import * as uuid from 'uuid'
 
@@ -56,11 +57,8 @@ class EntryStore {
   }
 
   @computed get duration() {
-    if (this.running) {
-      return this.seconds
-    } else {
-      return this.calculateSeconds()
-    }
+    let end = (this.endTime) ? this.endTime.getTime() : now()
+    return (end - this.startTime.getTime()) / 1000
   }
 
   @computed get total() {
@@ -70,8 +68,6 @@ class EntryStore {
   @action
   startTimer(start: Date = new Date()) {
     this.startTime = start
-    this.seconds = this.calculateSeconds()
-    this.startTicking()
   }
 
   @action
@@ -88,25 +84,6 @@ class EntryStore {
       rate: this.rate,
       projectId: this.projectId
     }
-  }
-
-  private startTicking() {
-    this.tickInterval = setInterval(
-      () => {
-        this.tick()
-      },
-      1000
-    )
-  }
-
-  private calculateSeconds(): number {
-    let end = moment((this.endTime) ? this.endTime : +Date.now())
-    return moment.duration(end.diff(moment(this.startTime))).asSeconds()
-  }
-
-  @action
-  private tick() {
-    this.seconds += 1
   }
 
 }
