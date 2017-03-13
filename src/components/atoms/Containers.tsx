@@ -9,7 +9,7 @@ interface RowProps {
 }
 
 const BaseRow: React.StatelessComponent<RowProps> = (props) =>
-  <div className={props.className}>{props.children}</div>;
+  <div className={props.className}>{props.children}</div>
 
 export const Row = styled(BaseRow)`
     border-bottom: 1px solid ${color.whiteSmoke};

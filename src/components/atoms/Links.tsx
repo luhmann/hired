@@ -15,6 +15,7 @@ export const ButtonLink = styled(BaseLink)`
 `
 
 export const RowLink = styled(BaseLink)`
+  align-items: center;
   display: flex;
   justify-content: space-between;
 `
