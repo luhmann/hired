@@ -15,7 +15,7 @@ const PlusIcon = styled(Icon)`
   width: 40px;
 
   & path {
-    fill: ${color.brilliantAzure};
+    fill: ${color.azure};
   }
 `
 

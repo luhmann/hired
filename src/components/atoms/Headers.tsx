@@ -12,7 +12,7 @@ export const Header = styled.header`
   top: 0;
 `
 
-export const DistributedHeader = styled(Header) `
+export const DistributedHeader = styled(Header)`
   align-items: center;
   display: flex;
   justify-content: space-between;

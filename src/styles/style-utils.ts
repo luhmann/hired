@@ -10,7 +10,7 @@ export const color = Object.freeze({
   vermilion: '#f44336',
   cgRed: '#e53935',
 
-  brilliantAzure: '#2da8f7',
+  azure: '#007aff',
 
   silver: '#BFBFC1',
   spanishGray: '#999',

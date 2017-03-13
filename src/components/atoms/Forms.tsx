@@ -17,7 +17,7 @@ export const TextInput = styled.input`
   text-align: right;
 
   &:focus {
-    color: ${ color.brilliantAzure };
+    color: ${ color.azure };
     outline: none;
   };
 `
