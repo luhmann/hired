@@ -9,8 +9,8 @@ import { DistributedHeader, HeaderTitle } from '../atoms/Headers'
 import BackIcon from '../../assets/icons/Back'
 
 const BackLink = styled(BackIcon)`
-  height: ${cells(5)}
-  width: ${cells(2)}
+  height: ${cells(5)};
+  width: ${cells(2)};
 `
 
 interface EntriesListHeaderProps {

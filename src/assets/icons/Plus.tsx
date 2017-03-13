@@ -11,8 +11,7 @@ const Icon = ({className}: {className?: 'string'}) => (
 
 const PlusIcon = styled(Icon)`
   height: 100%;
-  padding: 12px;
-  width: 40px;
+  width: 100%;
 
   & path {
     fill: ${color.azure};

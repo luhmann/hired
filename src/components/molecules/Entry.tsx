@@ -13,8 +13,8 @@ import { Total as GlobalTotal } from '../atoms/Text'
 const Root = styled.div`
   display: flex;
   font-size: ${fontSizes.standard};
-  height: ${cells(2)}
-  line-height: ${cells(2)}
+  height: ${cells(2)};
+  line-height: ${cells(2)};
 `
 
 const Day = styled.div`
@@ -51,7 +51,7 @@ interface EntryProps {
 }
 
 const Entry = observer(({start, end, duration, total}: EntryProps) => (
-    <Row>
+    <Row contentCells={4}>
         <Root>
             <Day>
                 {moment(start).format('dd. DD. MMMM YYYY')}

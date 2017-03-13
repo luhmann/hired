@@ -10,15 +10,8 @@ import { formatCurrency } from '../lib/format-currency'
 import { Row } from './atoms/Containers'
 import { Total as GlobalTotal } from './atoms/Text'
 import { gridCell } from '../styles/style-utils'
-import { ButtonLink } from './atoms/Links'
+import { RowLink } from './atoms/Links'
 import ProjectListHeader from './organisms/HeaderProjectList'
-
-const RowLink = styled(ButtonLink) `
-  display: flex;
-  justify-content: space-between;
-  padding-top: 10px;
-  padding-bottom: 10px;
-`
 
 const Total = styled(GlobalTotal) `
   ${ gridCell(4)}
