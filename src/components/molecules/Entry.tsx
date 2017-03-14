@@ -20,10 +20,11 @@ const Root = styled.div`
 `
 
 const Day = styled.div`
-  grid-column: col / span 5;
+  grid-column: col / span 4;
 `
 
 const Total = styled(GlobalTotal)`
+  grid-column: col 5 / span 2;
 `
 
 interface TimeProps {

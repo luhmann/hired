@@ -21,6 +21,6 @@ export const DistributedHeader = styled(Header)`
 export const HeaderTitle = styled.h1`
   ${ center }
   font-size: ${fontSizes.standard};
-  font-weight: bold;
+  font-weight: 900;
   margin: 0;
 `
