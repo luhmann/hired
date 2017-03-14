@@ -10,13 +10,12 @@ const BaseLink = styled(RouterLink)`
 
 export const ButtonLink = styled(BaseLink)`
   align-items: center;
-  color: ${color.black};
   display: flex;
-  text-decoration: none
 `
 
 export const RowLink = styled(BaseLink)`
   align-items: center;
   display: flex;
+  height: 100%;
   justify-content: space-between;
 `

@@ -14,7 +14,7 @@ const Root = styled.div`
   font-size: ${fontSizes.standard};
   display: grid;
   grid-template-columns: repeat(6, [col] 1fr);
-  grid-column-gap: ${cells(1)}M
+  grid-column-gap: ${cells(1)};
   grid-row-gap: 3px;
   height: ${cells(2)};
 `

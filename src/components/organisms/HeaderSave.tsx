@@ -1,4 +1,5 @@
 import * as React from 'react'
+import styled from 'styled-components'
 
 import { TextButton } from '../atoms/Buttons'
 import { DistributedHeader, HeaderTitle } from '../atoms/Headers'
@@ -9,11 +10,19 @@ interface HeaderSaveProps {
   cancelHandler: React.EventHandler<any>
 }
 
+const CancelButton = styled(TextButton)`
+  text-align: left;
+`
+
+const SaveButton = styled(TextButton)`
+  text-align: right;
+`
+
 const HeaderSave = ({ title, cancelHandler, saveHandler}: HeaderSaveProps) => (
   <DistributedHeader>
-    <TextButton text="Cancel" clickHandler={cancelHandler} />
+    <CancelButton text="Cancel" clickHandler={cancelHandler} />
     <HeaderTitle>{title}</HeaderTitle>
-    <TextButton text="Save" clickHandler={saveHandler} />
+    <SaveButton text="Save" clickHandler={saveHandler} />
   </DistributedHeader>
 )
 

@@ -1,12 +1,13 @@
 import styled from 'styled-components'
-import { color, fontSizes } from '../../styles/style-utils'
 
-export const Fieldset = styled.div`
+import { cells, color, fontSizes } from '../../styles/style-utils'
+import { Row } from '../atoms/Containers'
+
+export const Fieldset = styled(Row)`
   align-items: center;
-  border-bottom: 1px solid #c4c4c4;
   display: flex;
+  height: ${cells(5)};
   justify-content: space-between;
-  height: 40px;
 `
 export const TextInput = styled.input`
   border: none;

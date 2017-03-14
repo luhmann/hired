@@ -4,7 +4,6 @@ import { inject, observer } from 'mobx-react'
 import RootStore from '../stores/rootStore'
 import { ROUTE_NAMES } from '../lib/router'
 
-import { Body } from '../components/atoms/Containers'
 import InputTextWithLabel from '../components/molecules/InputTextWithLabel'
 import InputNumberWithLabel from '../components/molecules/InputNumberWithLabel'
 import HeaderSave from '../components/organisms/HeaderSave'
@@ -63,9 +62,9 @@ class NewProject extends React.Component<NewProjectProps, NewProjectState> {
         <HeaderSave
           cancelHandler={this.cancelHandler}
           saveHandler={this.saveHandler}
-          title="Add new Project"
+          title="Add Project"
         />
-        <Body>
+        <section>
           <InputTextWithLabel
             id="project-name"
             label="Name"
@@ -85,7 +84,7 @@ class NewProject extends React.Component<NewProjectProps, NewProjectState> {
             placeholder="Description is optional"
             changeHandler={this.changeHandler('description')}
           />
-        </Body>
+        </section>
       </div>
     )
   }
