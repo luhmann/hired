@@ -1,9 +1,13 @@
-import * as numeral from 'numeral'
-import 'numeral/locales/de'
-numeral.locale('de')
+import * as accounting from 'accounting'
 
 const formatCurrency = (amount: number): string => (
-  numeral(amount).format('$0,0.00')
+  accounting.formatMoney(amount, {
+    symbol: 'EUR',
+    format: '%v %s',
+    decimal: ',',
+    thousand: '.',
+    precision: 2
+  })
 )
 
 export { formatCurrency }
