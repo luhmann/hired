@@ -42,6 +42,7 @@ export function cells(amount: number): string {
 export const standardHPadding = cells(2)
 
 export const fontSizes = Object.freeze({
+  headline: '1.333rem',
   standard: '1rem'
 })
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { cells, color, standardHPadding } from '../../styles/style-utils'
+import { center, cells, color, fontSizes, standardHPadding } from '../../styles/style-utils'
 
 export const Header = styled.header`
   background-color: ${color.whiteSmoke};
@@ -13,12 +13,14 @@ export const Header = styled.header`
 `
 
 export const DistributedHeader = styled(Header)`
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 0 ${standardHPadding};
 `
 
-export const HeaderTitle = styled.div`
+export const HeaderTitle = styled.h1`
+  ${ center }
+  font-size: ${fontSizes.standard};
   font-weight: bold;
+  margin: 0;
 `

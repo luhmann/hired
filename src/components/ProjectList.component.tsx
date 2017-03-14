@@ -40,7 +40,6 @@ class ProjectList extends React.Component<ProjectListProps, {}> {
                 <Row key={index}>
                   <RowLink routeName={ROUTE_NAMES.projectOverview} routeParams={{ projectId: project.id }} >
                     {project.name}
-
                     <Total>{formatCurrency(project.totalRevenue)}</Total>
                   </RowLink>
                 </Row>
