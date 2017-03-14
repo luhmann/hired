@@ -9,8 +9,8 @@ injectGlobal`
   html {
     font-size: 12px;
     font-style: normal;
-    font-family: Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,
-      Courier New,monospace,serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
   }
 
   body {
