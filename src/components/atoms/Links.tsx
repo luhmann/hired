@@ -9,8 +9,9 @@ const BaseLink = styled(RouterLink)`
 `
 
 export const ButtonLink = styled(BaseLink)`
+  align-items: center;
   color: ${color.black};
-  line-height: 0;
+  display: flex;
   text-decoration: none
 `
 

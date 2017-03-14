@@ -45,4 +45,3 @@ export const fontSizes = Object.freeze({
   headline: '1.333rem',
   standard: '1rem'
 })
-

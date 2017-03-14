@@ -37,7 +37,7 @@ class ProjectList extends React.Component<ProjectListProps, {}> {
           {
             this.props.projects.map((project, index) => {
               return (
-                <Row key={index}>
+                <Row contentCells={4} key={index}>
                   <RowLink routeName={ROUTE_NAMES.projectOverview} routeParams={{ projectId: project.id }} >
                     {project.name}
                     <Total>{formatCurrency(project.totalRevenue)}</Total>
