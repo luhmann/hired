@@ -1,6 +1,8 @@
 import * as React from 'react'
 import styled, { keyframes } from 'styled-components'
 
+import { color } from '../../styles/style-utils'
+
 const a = keyframes`
   0% {
         transform: rotate(0deg);
@@ -23,14 +25,14 @@ const Root = styled.div`
   position: relative;
   z-index: 1;
 
-  border: 1px solid #00bcd4;
-  border-color: #00bcd4;
-  color: #00bcd4;
+  border: 1px solid ${color.cadetBlue};
+  border-color: ${color.cadetBlue};
+  color: ${color.cadetBlue};
 `
 
 const Spinner = styled.div`
   animation: ${a} .6s infinite linear;
-  border: 2px solid #e91e63;
+  border: 2px solid #F79F79;
   border-right-color: transparent;
   border-radius: 50%;
   display: inline-block;
