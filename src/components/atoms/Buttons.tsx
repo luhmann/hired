@@ -15,7 +15,7 @@ export const Button = styled.button`
   padding: ${ cells(1) } ${ cells(2) };
   font-size: ${ fontSizes.standard };
   user-select: none;
-  transition: background-color 1s;
+  transition: background-color 0.4s;
 
   &:active {
     box-shadow: inset 0 1px 3px rgba(0,0,0,.12);
