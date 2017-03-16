@@ -1,5 +1,6 @@
 import { injectGlobal } from 'styled-components'
 
+/* tslint:disable no-unused-expression  */
 injectGlobal`
 * {
     box-sizing: border-box;
@@ -8,9 +9,10 @@ injectGlobal`
   html {
     font-size: 12px;
     font-style: normal;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+      "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: subpixel-antialiased;
-    text-rendering: optimizeLegibility;
+    text-rendering: geometricPrecision;
   }
 
   body {

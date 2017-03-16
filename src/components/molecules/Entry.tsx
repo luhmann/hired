@@ -11,8 +11,7 @@ import { Row } from '../atoms/Containers'
 import { Total as GlobalTotal } from '../atoms/Text'
 
 const Root = styled.div`
-  ${(props: { active: boolean }) => props.active ? '' : ''
-  }
+  width: 100vw;
 `
 
 const Container = styled.div`
@@ -58,7 +57,7 @@ interface EntryProps {
 }
 
 const Entry = observer(({ start, end, duration, total, running }: EntryProps) => (
-  <Root active={running}>
+  <Root>
     <Row contentCells={4}>
       <Container>
         <Day>
