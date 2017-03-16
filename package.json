@@ -1,8 +1,16 @@
 {
-  "name": "my-app",
+  "name": "mobx-time-tracker",
+  "description": "A demo application showcasing different technologies",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luhmann/mobx-time-tracker.git"
+  },
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "@types/accounting": "^0.3.31",
+    "@types/numeral": "^0.0.19",
+    "@types/uuid": "^2.0.29",
     "@types/classnames": "^0.0.32",
     "@types/jest": "^16.0.4",
     "@types/lodash": "^4.14.50",
@@ -20,9 +28,6 @@
     "stylelint-processor-styled-components": "^0.0.4"
   },
   "dependencies": {
-    "@types/accounting": "^0.3.31",
-    "@types/numeral": "^0.0.19",
-    "@types/uuid": "^2.0.29",
     "accounting": "^0.4.1",
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
