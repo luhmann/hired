@@ -2,7 +2,7 @@ import * as React from 'react'
 import { observer } from 'mobx-react'
 import styled from 'styled-components'
 
-import { color } from '../../styles/style-utils'
+import { cells, color } from '../../styles/style-utils'
 import { Button } from '../atoms/'
 import { standardHPadding } from '../../styles/style-utils'
 
@@ -16,6 +16,7 @@ interface ClockInProps {
 const Root = styled.div`
   background-color: ${color.white};
   padding: 0 ${standardHPadding};
+  margin-bottom: ${cells(3)}
   width: 100vw;
 `
 

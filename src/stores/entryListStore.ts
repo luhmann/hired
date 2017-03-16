@@ -48,6 +48,10 @@ class EntryListStore {
     return this.entries.filter((entry: EntryStore) => (entry.projectId === projectId))
   }
 
+  getFinishedEntriesForProject(projectId: string): EntryStore[] {
+    return this.getEntriesForProject(projectId).filter((entry: EntryStore) => (!entry.running))
+  }
+
   @computed get toStorage() {
     return this.entries.map((entry) => entry.toStorage())
   }

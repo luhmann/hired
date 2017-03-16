@@ -7,18 +7,18 @@ import RootStore from '../stores/rootStore'
 import { cells } from '../styles/style-utils'
 import ClockIn from '../components/molecules/ClockIn'
 import EntryList from '../components/molecules/EntryList'
+import Entry from '../components/molecules/Entry'
 import Error from '../components/Error'
 import HeaderEntriesList from '../components/organisms/HeaderEntriesList'
 
 const Root = styled.section`
   display: grid;
   height: 100vmax;
-  grid-template-rows: ${cells(8)} ${cells(6)} 1fr;
-`
+  grid-template-rows: ${cells(8)} ${cells(9)} 1fr;
 
-const PositionedEntryList = styled(EntryList)`
-  margin-top: ${ cells(3)};
-  overflow: auto;
+  ${({hasRunningTimer}: {hasRunningTimer: boolean}) => (hasRunningTimer) ? `
+    grid-template-rows: ${cells(8)} ${cells(9)} ${cells(6)} 1fr
+  ` : ''}
 `
 
 interface ProjectProps {
@@ -33,22 +33,32 @@ class Project extends React.Component<ProjectProps, {}> {
       return <Error />
     }
 
+    const hasRunningTimer = !!this.props.rootStore.entryListStore.active &&
+      this.props.rootStore.entryListStore.active.projectId === this.props.rootStore.uiStore.currentView.projectId
+
+    const activeEntry = (hasRunningTimer) ? this.props.rootStore.entryListStore.active : null
+
     return (
-      <Root>
+      <Root hasRunningTimer={hasRunningTimer}>
         <HeaderEntriesList
           project={
             this.props.rootStore.projectListStore.getById(this.props.rootStore.uiStore.currentView.projectId).name
           }
         />
         <ClockIn
-          running={
-            !!this.props.rootStore.entryListStore.active &&
-            this.props.rootStore.entryListStore.active.projectId === this.props.rootStore.uiStore.currentView.projectId
-          }
+          running={hasRunningTimer}
           startEntry={this.props.rootStore.entryListStore.startNewEntry}
           stopEntry={this.props.rootStore.entryListStore.stopCurrentTimer}
         />
-        <PositionedEntryList
+        {activeEntry && <Entry
+          key={activeEntry.id}
+          start={activeEntry.startTime}
+          end={activeEntry.endTime}
+          duration={activeEntry.duration}
+          running={true}
+          total={activeEntry.total}
+        />}
+        <EntryList
           entryList={this.props.rootStore.entryListStore}
           projectId={this.props.rootStore.uiStore.currentView.projectId}
         />

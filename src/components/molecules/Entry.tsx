@@ -11,6 +11,11 @@ import { Row } from '../atoms/Containers'
 import { Total as GlobalTotal } from '../atoms/Text'
 
 const Root = styled.div`
+  ${(props: { active: boolean }) => props.active ? '' : ''
+  }
+`
+
+const Container = styled.div`
   font-size: ${fontSizes.standard};
   display: grid;
   grid-template-columns: repeat(6, [col] 1fr);
@@ -23,7 +28,7 @@ const Day = styled.div`
   grid-column: col / span 4;
 `
 
-const Total = styled(GlobalTotal)`
+const Total = styled(GlobalTotal) `
   grid-column: col 5 / span 2;
 `
 
@@ -48,18 +53,20 @@ interface EntryProps {
   start: Date
   end: Date
   duration: number
+  running: boolean
   total: number
 }
 
-const Entry = observer(({start, end, duration, total}: EntryProps) => (
+const Entry = observer(({ start, end, duration, total, running }: EntryProps) => (
+  <Root active={running}>
     <Row contentCells={4}>
-      <Root>
+      <Container>
         <Day>
-            {moment(start).format('dd. DD. MMMM YYYY')}
+          {moment(start).format('dd. DD. MMMM YYYY')}
         </Day>
         <Total>{formatCurrency(total)}</Total>
         <Time begin>
-            {moment(start).format('HH:mm')}
+          {moment(start).format('HH:mm')}
         </Time>
         <Time end>
           {(end) ? (moment(end).format('HH:mm')) : null}
@@ -67,8 +74,9 @@ const Entry = observer(({start, end, duration, total}: EntryProps) => (
         <Duration>
           {formatDuration(duration)}
         </Duration>
-      </Root>
+      </Container>
     </Row>
+  </Root>
 ))
 
 export default Entry
