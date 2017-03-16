@@ -3546,6 +3546,10 @@ plur@^2.0.0, plur@^2.1.2:
   dependencies:
     irregular-plurals "^1.0.0"
 
+polished@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/polished/-/polished-0.0.0.tgz#eb66382b1c1dbde5fac7c2c5886282361cd12940"
+
 postcss-calc@^5.2.0:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-5.3.1.tgz#77bae7ca928ad85716e2fda42f261bf7c1d65b5e"

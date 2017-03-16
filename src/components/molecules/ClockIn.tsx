@@ -2,6 +2,7 @@ import * as React from 'react'
 import { observer } from 'mobx-react'
 import styled from 'styled-components'
 
+import { color } from '../../styles/style-utils'
 import { Button } from '../atoms/'
 import { standardHPadding } from '../../styles/style-utils'
 
@@ -12,9 +13,14 @@ interface ClockInProps {
   stopEntry: Function
 }
 
+const Root = styled.div`
+  background-color: ${color.white};
+  padding: 0 ${standardHPadding};
+  width: 100vw;
+`
+
 const ClockInButton = styled(Button)`
-  margin: 0 ${standardHPadding};
-  width: calc(100vw - 2*${standardHPadding});
+  width: 100%;
 `
 
 @observer
@@ -28,13 +34,15 @@ class ClockIn extends React.Component<ClockInProps, {}> {
 
   render() {
     return(
-      <ClockInButton
-        success={(!this.props.running)}
-        error={(!!this.props.running)}
-        onClick={(!this.props.running) ? this.startEntry : this.stopEntry}
-      >
-        {`Clock ${(this.props.running ? 'Out' : 'In')}`}
-      </ClockInButton>
+      <Root>
+        <ClockInButton
+          success={(!this.props.running)}
+          error={(!!this.props.running)}
+          onClick={(!this.props.running) ? this.startEntry : this.stopEntry}
+        >
+          {`Clock ${(this.props.running ? 'Out' : 'In')}`}
+        </ClockInButton>
+      </Root>
     )
   }
 

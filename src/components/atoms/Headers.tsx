@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+// import { ellipsis } from '../../styles/style-utils'
 
 import { center, cells, color, fontSizes, standardHPadding } from '../../styles/style-utils'
 
@@ -23,4 +24,5 @@ export const HeaderTitle = styled.h1`
   font-size: ${fontSizes.standard};
   font-weight: 900;
   margin: 0;
+  white-space: nowrap;
 `

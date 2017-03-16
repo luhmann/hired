@@ -57,8 +57,9 @@ class EntryStore {
   }
 
   @computed get duration() {
-    let end = (this.endTime) ? this.endTime.getTime() : now()
-    return (end - this.startTime.getTime()) / 1000
+    let end = (this.endTime) ? moment(this.endTime).valueOf() : now()
+    let duration = (end - moment(this.startTime).valueOf()) / 1000
+    return (duration > 0) ? duration : 0
   }
 
   @computed get total() {

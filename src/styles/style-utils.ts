@@ -45,3 +45,13 @@ export const fontSizes = Object.freeze({
   headline: '1.333rem',
   standard: '1rem'
 })
+
+export function ellipsis(width: string = '100%'): string {
+  return`
+    max-width: ${width};
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+  `
+}
