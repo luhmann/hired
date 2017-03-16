@@ -1,12 +1,25 @@
 import * as React from 'react'
+import styled from 'styled-components'
 import { observer, inject } from 'mobx-react'
 
 import RootStore from '../stores/rootStore'
 
+import { cells } from '../styles/style-utils'
 import ClockIn from '../components/molecules/ClockIn'
 import EntryList from '../components/molecules/EntryList'
 import Error from '../components/Error'
 import HeaderEntriesList from '../components/organisms/HeaderEntriesList'
+
+const Root = styled.section`
+  display: grid;
+  height: 100vmax;
+  grid-template-rows: ${cells(8)} ${cells(6)} 1fr;
+`
+
+const PositionedEntryList = styled(EntryList)`
+  margin-top: ${ cells(3)};
+  overflow: auto;
+`
 
 interface ProjectProps {
   rootStore?: RootStore
@@ -21,7 +34,7 @@ class Project extends React.Component<ProjectProps, {}> {
     }
 
     return (
-      <div>
+      <Root>
         <HeaderEntriesList
           project={
             this.props.rootStore.projectListStore.getById(this.props.rootStore.uiStore.currentView.projectId).name
@@ -35,14 +48,13 @@ class Project extends React.Component<ProjectProps, {}> {
           startEntry={this.props.rootStore.entryListStore.startNewEntry}
           stopEntry={this.props.rootStore.entryListStore.stopCurrentTimer}
         />
-        <EntryList
+        <PositionedEntryList
           entryList={this.props.rootStore.entryListStore}
           projectId={this.props.rootStore.uiStore.currentView.projectId}
         />
-      </div>
+      </Root>
     )
   }
 }
-
 
 export default Project

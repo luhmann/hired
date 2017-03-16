@@ -1,14 +1,14 @@
 import * as React from 'react'
 import * as ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import { observer } from 'mobx-react'
-import styled, { injectGlobal } from 'styled-components'
+import { injectGlobal } from 'styled-components'
 
-import { cells } from '../../styles/style-utils'
 import EntryListStore from '../../stores/entryListStore'
 import { EntryStore } from '../../stores/entryStore'
 import Entry from './Entry'
 
 interface EntryListProps {
+  className?: string
   entryList: EntryListStore,
   projectId: string
 }
@@ -42,16 +42,11 @@ injectGlobal`
   }
 `
 
-
-const Root = styled.div`
-  margin-top: ${ cells(3)};
-`
-
 @observer
 class EntryList extends React.Component<EntryListProps, {}> {
   render() {
     return (
-      <Root>
+      <div className={this.props.className}>
         <ReactCSSTransitionGroup
           transitionName="entry"
           transitionEnterTimeout={500}
@@ -71,7 +66,7 @@ class EntryList extends React.Component<EntryListProps, {}> {
             ))
           }
         </ReactCSSTransitionGroup>
-      </Root>
+      </div>
     )
   }
 }
