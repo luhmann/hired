@@ -6,11 +6,11 @@ import '../styles/reset.ts'
 import RootStore from '../stores/rootStore'
 import { ROUTE_NAMES } from '../lib/router'
 
-import Bootstrap from '../components/Bootstrap.component'
-import Error from '../components/Error'
-import ProjectList from '../components/ProjectList.component'
-import Project from '../containers/Project'
-import ProjectNew from '../containers/ProjectNew'
+import Bootstrap from './Bootstrap'
+import Error from './Error'
+import ProjectList from './ProjectList'
+import Project from './Project'
+import ProjectNew from './ProjectNew'
 
 interface AppProps {
   rootStore?: RootStore

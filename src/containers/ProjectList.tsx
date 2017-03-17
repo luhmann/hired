@@ -7,13 +7,13 @@ import RootStore from '../stores/rootStore'
 import { ROUTE_NAMES } from '../lib/router'
 import { formatCurrency } from '../lib/format-currency'
 
-import { Row } from './atoms/Containers'
-import { Total as GlobalTotal } from './atoms/Text'
+import { Row } from '../components/atoms/Containers'
+import { Total as GlobalTotal } from '../components/atoms/Text'
 import { gridCell } from '../styles/style-utils'
-import { RowLink } from './atoms/Links'
-import ProjectListHeader from './organisms/HeaderProjectList'
+import { RowLink } from '../components/atoms/Links'
+import ProjectListHeader from '../components/organisms/HeaderProjectList'
 
-const Total = styled(GlobalTotal) `
+const Total = styled(GlobalTotal)`
   ${ gridCell(4)}
 `
 

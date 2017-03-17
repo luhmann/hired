@@ -5,7 +5,7 @@ import styled, { injectGlobal } from 'styled-components'
 
 import EntryListStore from '../../stores/entryListStore'
 import { EntryStore } from '../../stores/entryStore'
-import Entry from './Entry'
+import Entry from '../molecules/Entry'
 
 interface EntryListProps {
   entryList: EntryListStore,

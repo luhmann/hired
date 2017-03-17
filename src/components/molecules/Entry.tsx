@@ -5,10 +5,10 @@ import styled from 'styled-components'
 
 import { formatCurrency } from '../../lib/format-currency'
 import { formatDuration } from '../../lib/format-duration'
-import { cells, color, fontSizes } from '../../styles/style-utils'
+import { cells, fontSizes } from '../../styles/style-utils'
 
 import { Row } from '../atoms/Containers'
-import { Total as GlobalTotal } from '../atoms/Text'
+import { Duration as GlobalDuration, Time, Total as GlobalTotal } from '../atoms/Text'
 
 const Root = styled.div``
 
@@ -25,24 +25,12 @@ const Day = styled.div`
   grid-column: col / span 4;
 `
 
-const Total = styled(GlobalTotal) `
+const Total = styled(GlobalTotal)`
   grid-column: col 5 / span 2;
 `
 
-interface TimeProps {
-  begin?: Boolean
-  end?: Boolean
-}
-
-const Time = styled.div`
-  ${ (props: TimeProps) => props.begin ? `color: ${color.indigo};` : ''}
-  ${ (props: TimeProps) => props.end ? `color: ${color.red.g_900};` : ''}
-`
-
-const Duration = styled.div`
-  color: ${color.indigo};
+const Duration = styled(GlobalDuration)`
   grid-column: col 3 / span 4;
-  text-align: right;
 `
 
 interface EntryProps {

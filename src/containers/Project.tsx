@@ -6,9 +6,9 @@ import RootStore from '../stores/rootStore'
 
 import { cells, maxWidth, shadow } from '../styles/style-utils'
 import ClockIn from '../components/molecules/ClockIn'
-import EntryList from '../components/molecules/EntryList'
+import EntryList from '../components/organisms/EntryList'
 import Entry from '../components/molecules/Entry'
-import Error from '../components/Error'
+import Error from './Error'
 import HeaderEntriesList from '../components/organisms/HeaderEntriesList'
 
 const Root = styled.section`
