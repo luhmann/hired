@@ -12,7 +12,7 @@ const BaseRow: React.StatelessComponent<RowProps> = (props) =>
   <div className={props.className}>{props.children}</div>
 
 export const Row = styled(BaseRow)`
-    border-bottom: 1px solid ${color.whiteSmoke};
+    border-bottom: 1px solid ${color.gray.g_100};
     height: ${({contentCells = 2}) => cells(contentCells + 2)};
     padding: ${cells(1)} ${standardHPadding};
   `

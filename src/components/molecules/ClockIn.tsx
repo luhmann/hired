@@ -9,12 +9,12 @@ import { standardHPadding } from '../../styles/style-utils'
 interface ClockInProps {
   className?: string
   running: boolean,
-  startEntry: Function,
-  stopEntry: Function
+  startEntry(): void,
+  stopEntry(): void
 }
 
 const Root = styled.div`
-  background-color: ${color.white};
+  background-color: ${color.gray.g_50};
   padding: 0 ${standardHPadding};
   margin-bottom: ${cells(3)}
   width: 100%;

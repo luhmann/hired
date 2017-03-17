@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { center, cells, color, fontSizes, shadow, standardHPadding } from '../../styles/style-utils'
 
 export const Header = styled.header`
-  background-color: ${color.whiteSmoke};
+  background-color: ${color.gray.g_100};
   box-shadow: ${shadow.subtle};
   height: ${cells(6)};
   left: 0;
