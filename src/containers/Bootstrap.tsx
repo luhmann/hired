@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import { Loading } from '../components/atoms/'
+import { Loading } from '../components/atoms/Indicators'
 import { center } from '../styles/style-utils'
 
 const Root = styled.div`

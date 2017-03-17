@@ -28,6 +28,33 @@ injectGlobal`
     margin: 0;
     padding: 0;
   }
+
+  .entry-enter {
+    opacity: 0.01;
+  }
+
+  .entry-enter.entry-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+
+  .entry-leave {
+    opacity: 1;
+  }
+
+  .entry-leave.entry-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }
+
+  .entry-appear {
+    opacity: 0.01;
+  }
+
+  .entry-appear.entry-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+  }
 `
 
 export const rotate = keyframes`

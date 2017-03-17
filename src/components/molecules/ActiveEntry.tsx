@@ -1,4 +1,5 @@
 import * as React from 'react'
+import * as ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import { observer } from 'mobx-react'
 import styled from 'styled-components'
 
@@ -16,6 +17,7 @@ const Root = styled(EntryRoot)`
   border-top: 1px solid ${color.gray.g_300};
   background-color: ${color.gray.g_50};
   border-bottom: 1px solid ${color.gray.g_300};
+  height: ${cells(6)}
 `
 
 const StyledFinishInfo = styled(FinishInfo)`
@@ -29,7 +31,7 @@ const StyledProgressBar = styled(ProgressBar)`
 `
 
 const Duration = styled(GlobalDuration)`
-  grid-column: col 6 / span 2;
+  grid-column: col 5 / span 2;
 `
 
 export interface ActiveEntryProps {
@@ -41,18 +43,26 @@ export interface ActiveEntryProps {
 }
 
 const ActiveEntry = observer(({ start, duration, standardHours, total }: ActiveEntryProps) => (
-  <Root>
-    <Row contentCells={4}>
-      <Container>
-        <StyledFinishInfo startTime={start} workHours={standardHours} />
-        <Total>{formatCurrency(total)}</Total>
-        <StyledProgressBar finished={getPercent(duration, standardHours)} />
-        <Duration>
-          {formatDuration(duration)}
-        </Duration>
-      </Container>
-    </Row>
-  </Root>
+  <ReactCSSTransitionGroup
+    transitionName="entry"
+    transitionEnterTimeout={500}
+    transitionLeaveTimeout={500}
+    transitionAppear={true}
+    transitionAppearTimeout={500}
+  >
+    <Root key="activeEntry">
+      <Row contentCells={4}>
+        <Container>
+          <StyledFinishInfo startTime={start} workHours={standardHours} />
+          <Total>{formatCurrency(total)}</Total>
+          <StyledProgressBar finished={getPercent(duration, standardHours)} />
+          <Duration>
+            {formatDuration(duration)}
+          </Duration>
+        </Container>
+      </Row>
+    </Root>
+  </ReactCSSTransitionGroup>
 ))
 
 export default ActiveEntry

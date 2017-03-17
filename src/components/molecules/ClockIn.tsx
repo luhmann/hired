@@ -3,7 +3,7 @@ import { observer } from 'mobx-react'
 import styled from 'styled-components'
 
 import { cells, color, shadow } from '../../styles/style-utils'
-import { Button } from '../atoms/'
+import { Button } from '../atoms/Buttons'
 import { standardHPadding } from '../../styles/style-utils'
 
 interface ClockInProps {

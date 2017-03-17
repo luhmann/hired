@@ -1,7 +1,7 @@
 import * as React from 'react'
 import * as ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import { observer } from 'mobx-react'
-import styled, { injectGlobal } from 'styled-components'
+import styled from 'styled-components'
 
 import EntryListStore from '../../stores/entryListStore'
 import { EntryStore } from '../../stores/entryStore'
@@ -11,36 +11,6 @@ interface EntryListProps {
   entryList: EntryListStore,
   projectId: string
 }
-
-/* tslint:disable no-unused-expression  */
-injectGlobal`
-  .entry-enter {
-    opacity: 0.01;
-  }
-
-  .entry-enter.entry-enter-active {
-    opacity: 1;
-    transition: opacity 500ms ease-in;
-  }
-
-  .entry-leave {
-    opacity: 1;
-  }
-
-  .entry-leave.entry-leave-active {
-    opacity: 0.01;
-    transition: opacity 300ms ease-in;
-  }
-
-  .entry-appear {
-    opacity: 0.01;
-  }
-
-  .entry-appear.entry-appear-active {
-    opacity: 1;
-    transition: opacity .5s ease-in;
-  }
-`
 
 const Root = styled.section`
   overflow: auto;
