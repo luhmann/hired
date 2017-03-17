@@ -10,6 +10,7 @@ import BackIcon from '../../assets/icons/Back'
 
 const BackLink = styled(BackIcon)`
   height: ${cells(5)};
+  padding: ${cells(1)} 0;
   width: ${cells(2)};
 `
 

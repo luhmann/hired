@@ -19,6 +19,15 @@ export const color = Object.freeze({
 
 })
 
+export const shadow = Object.freeze({
+  subtle: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
+  medium: '0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2)',
+  strong: '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)',
+  distant: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)'
+})
+
+export const maxWidth = '800px'
+
 export function gridCell(cols: number): string {
   return `
     flex: 0 0 ${cols * 8.3}%

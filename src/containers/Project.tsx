@@ -4,7 +4,7 @@ import { observer, inject } from 'mobx-react'
 
 import RootStore from '../stores/rootStore'
 
-import { cells } from '../styles/style-utils'
+import { cells, maxWidth, shadow } from '../styles/style-utils'
 import ClockIn from '../components/molecules/ClockIn'
 import EntryList from '../components/molecules/EntryList'
 import Entry from '../components/molecules/Entry'
@@ -12,9 +12,13 @@ import Error from '../components/Error'
 import HeaderEntriesList from '../components/organisms/HeaderEntriesList'
 
 const Root = styled.section`
+  box-shadow: ${shadow.subtle};
   display: grid;
   height: 100vmax;
   grid-template-rows: ${cells(8)} ${cells(9)} 1fr;
+  grid-template-columns: minmax(auto, ${maxWidth}); /* max-width for tracks */
+  margin: 0 auto;
+  max-width: ${maxWidth}; /* max-width for grid-container */
 
   ${({hasRunningTimer}: {hasRunningTimer: boolean}) => (hasRunningTimer) ? `
     grid-template-rows: ${cells(8)} ${cells(9)} ${cells(6)} 1fr

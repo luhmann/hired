@@ -10,6 +10,7 @@ interface ButtonTypes {
 
 export const Button = styled.button`
   cursor: pointer;
+  color: ${color.white};
   outline: none;
   height: ${ cells(6) }
   padding: ${ cells(1) } ${ cells(2) };
@@ -22,7 +23,6 @@ export const Button = styled.button`
   }
 
   ${(props: ButtonTypes) => props.success ? `
-    color: ${color.white};
     background-color: ${color.middleGreen};
     border: 1px solid ${color.middleGreen};
 
@@ -33,7 +33,6 @@ export const Button = styled.button`
    ` : ''}
 
    ${(props: ButtonTypes) => props.error ? `
-    color: ${color.white};
     background-color: ${color.vermilion};
     border: 1px solid ${color.vermilion};
 

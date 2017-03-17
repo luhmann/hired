@@ -10,9 +10,7 @@ import { cells, color, fontSizes } from '../../styles/style-utils'
 import { Row } from '../atoms/Containers'
 import { Total as GlobalTotal } from '../atoms/Text'
 
-const Root = styled.div`
-  width: 100vw;
-`
+const Root = styled.div``
 
 const Container = styled.div`
   font-size: ${fontSizes.standard};

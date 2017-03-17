@@ -9,11 +9,9 @@ import { DistributedHeader, HeaderTitle } from '../atoms/Headers'
 import PlusIcon from '../../assets/icons/Plus'
 
 const AddLink = styled(PlusIcon)`
-  display: flex;
-  align-items: center;
   height: ${cells(6)};
-  padding: ${cells(1.5)} ${cells(1.5)} ${cells(2)} 0;
-  width: ${cells(5)};
+  padding: ${cells(1.5)} 0 ${cells(1.5)};
+  width: ${cells(4)};
 `
 
 const ProjectListHeader = () => (

@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 // import { ellipsis } from '../../styles/style-utils'
 
-import { center, cells, color, fontSizes, standardHPadding } from '../../styles/style-utils'
+import { center, cells, color, fontSizes, shadow, standardHPadding } from '../../styles/style-utils'
 
 export const Header = styled.header`
   background-color: ${color.whiteSmoke};
-  border-bottom: 1px solid ${ color.silver };
+  box-shadow: ${shadow.subtle};
   height: ${cells(6)};
   left: 0;
   margin-bottom: ${cells(2)};
@@ -20,7 +20,7 @@ export const DistributedHeader = styled(Header)`
 `
 
 export const HeaderTitle = styled.h1`
-  ${ center }
+  ${center}
   font-size: ${fontSizes.standard};
   font-weight: 900;
   margin: 0;

@@ -2,7 +2,7 @@ import * as React from 'react'
 import { observer } from 'mobx-react'
 import styled from 'styled-components'
 
-import { cells, color } from '../../styles/style-utils'
+import { cells, color, shadow } from '../../styles/style-utils'
 import { Button } from '../atoms/'
 import { standardHPadding } from '../../styles/style-utils'
 
@@ -17,10 +17,12 @@ const Root = styled.div`
   background-color: ${color.white};
   padding: 0 ${standardHPadding};
   margin-bottom: ${cells(3)}
-  width: 100vw;
+  width: 100%;
 `
 
 const ClockInButton = styled(Button)`
+  box-shadow: ${shadow.medium};
+  text-transform: uppercase;
   width: 100%;
 `
 
