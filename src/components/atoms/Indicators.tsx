@@ -40,7 +40,7 @@ export const Loading = () => (
 )
 
 const ProgressRoot = styled.div`
-  background-color: ${color.green.g_100};
+  background-color: ${color.gray.g_300};
   height: ${cells(0.5)};
 `
 
