@@ -23,29 +23,29 @@ export const Button = styled.button`
   }
 
   ${(props: ButtonTypes) => props.success ? `
-    background-color: ${color.middleGreen};
-    border: 1px solid ${color.middleGreen};
+    background-color: ${color.green.g_500};
+    border: 1px solid ${color.green.g_500};
 
     &:hover {
-      background-color: ${color.mayGreen};
-      border: 1px solid ${color.mayGreen};
+      background-color: ${color.green.g_600};
+      border: 1px solid ${color.green.g_600};
     }
    ` : ''}
 
    ${(props: ButtonTypes) => props.error ? `
-    background-color: ${color.vermilion};
-    border: 1px solid ${color.vermilion};
+    background-color: ${color.red.g_500};
+    border: 1px solid ${color.red.g_500};
 
     &:hover {
-      background-color: ${color.cgRed};
-      border: 1px solid ${color.cgRed};
+      background-color: ${color.red.g_600};
+      border: 1px solid ${color.red.g_600};
     }
    ` : ''}
 `
 
 const StyledTextButton = styled.button`
   background-color: transparent
-  color: ${ color.azure };
+  color: ${ color.blue };
   cursor: pointer;
   font-size: ${ fontSizes.standard };
   padding: 0;

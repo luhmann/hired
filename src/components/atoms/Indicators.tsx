@@ -25,14 +25,14 @@ const Root = styled.div`
   position: relative;
   z-index: 1;
 
-  border: 1px solid ${color.cadetBlue};
-  border-color: ${color.cadetBlue};
-  color: ${color.cadetBlue};
+  border: 1px solid ${color.blue};
+  border-color: ${color.blue};
+  color: ${color.blue};
 `
 
 const Spinner = styled.div`
   animation: ${a} .6s infinite linear;
-  border: 2px solid #F79F79;
+  border: 2px solid ${color.red.g_500};
   border-right-color: transparent;
   border-radius: 50%;
   display: inline-block;

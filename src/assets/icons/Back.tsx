@@ -25,7 +25,7 @@ const BackIcon = styled(Icon)`
   width: 100%;
 
   & path {
-    fill: ${color.azure};
+    fill: ${color.blue};
   }
 `
 

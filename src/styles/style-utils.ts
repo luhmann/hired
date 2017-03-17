@@ -1,31 +1,33 @@
 export const color = Object.freeze({
-  charcoral: '#364756',
-  cadetBlue: '#65A6A4',
-  hookersGreen: '#4E8566',
-  mantis: '#65BF6B',
-  deepChestnut: '#BF4F45',
-  middleGreen: '#4caf50',
-  mayGreen: '#43a047',
-  vermilion: '#f44336',
-  cgRed: '#e53935',
+  indigo: '#37474f',
+  green: {
+    g_400: '#66bb6a',
+    g_500: '#4caf50',
+    g_600: '#43a047'
+  },
+  red: {
+    g_500: '#f44336',
+    g_600: '##e53935',
+    g_900: '#b71c1c'
+  },
 
-  azure: '#007aff',
+  blue: '#2196f3',
 
   black: '#000',
   white: '#fff',
 
-  gray: Object.freeze({
-    'g_50': '#faafa',
-    'g_100': '#f5f5f5',
-    'g_200': '#eeeeee',
-    'g_300': '#e0e0e0',
-    'g_400': '#bdbdbd',
-    'g_500': '#9e9e9e',
-    'g_600': '#757575',
-    'g_700': '#616161',
-    'g_800': '#424242',
-    'g_900': '#212121'
-  })
+  gray: {
+    g_50: '#faafa',
+    g_100: '#f5f5f5',
+    g_200: '#eeeeee',
+    g_300: '#e0e0e0',
+    g_400: '#bdbdbd',
+    g_500: '#9e9e9e',
+    g_600: '#757575',
+    g_700: '#616161',
+    g_800: '#424242',
+    g_900: '#212121'
+  }
 })
 
 export const shadow = Object.freeze({
@@ -65,7 +67,7 @@ export const fontSizes = Object.freeze({
 })
 
 export function ellipsis(width: string = '100%'): string {
-  return`
+  return `
     max-width: ${width};
     overflow: hidden;
     text-overflow: ellipsis;
