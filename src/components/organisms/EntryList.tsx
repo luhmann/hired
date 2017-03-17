@@ -67,7 +67,6 @@ class EntryList extends React.Component<EntryListProps, {}> {
                   start={entry.startTime}
                   end={entry.endTime}
                   duration={entry.duration}
-                  running={entry.running}
                   total={entry.total}
                 />
             ))

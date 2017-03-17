@@ -1,5 +1,6 @@
 import { observable, action, computed, reaction } from 'mobx'
 import { sortBy } from 'lodash'
+import * as uuid from 'uuid'
 
 import RootStore from './rootStore'
 import { EntryStore } from './entryStore'
@@ -28,6 +29,7 @@ class EntryListStore {
     }
 
     let entry = new EntryStore({
+      id: uuid.v4(),
       projectId: this.rootStore.projectListStore.currentProject.id,
       rate: this.rootStore.projectListStore.currentProject.standardRate
     })

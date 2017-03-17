@@ -1,17 +1,8 @@
 import * as React from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
 import { color } from '../../styles/style-utils'
-
-const a = keyframes`
-  0% {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(1turn);
-    }
-`
+import { rotate } from '../../styles/globals'
 
 const Root = styled.div`
   display: inline-flex;
@@ -31,7 +22,7 @@ const Root = styled.div`
 `
 
 const Spinner = styled.div`
-  animation: ${a} .6s infinite linear;
+  animation: ${rotate} .6s infinite linear;
   border: 2px solid ${color.red.g_500};
   border-right-color: transparent;
   border-radius: 50%;

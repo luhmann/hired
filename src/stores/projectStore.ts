@@ -7,14 +7,23 @@ class ProjectStore {
   @observable name: string
   standardRate: number
   description: string
+  standardHours: number
   rootStore: RootStore
 
-  constructor(rootStore: RootStore, id: string, name: string, standardRate: number, description: string = '') {
+  constructor(
+    rootStore: RootStore,
+    id: string,
+    name: string,
+    standardRate: number,
+    description: string = '',
+    standardHours: number = 8
+  ) {
     this.rootStore = rootStore
     this.id = id
     this.name = name
     this.standardRate = standardRate
     this.description = description
+    this.standardHours = standardHours
   }
 
   @computed get totalRevenue() {
@@ -28,6 +37,7 @@ class ProjectStore {
       id: this.id,
       name: this.name,
       standardRate: this.standardRate,
+      standardHours: this.standardHours,
       description: this.description
     }
   }

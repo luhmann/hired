@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { ProjectInterface } from '../stores/projectStore'
 import RootStore from '../stores/rootStore'
 import { ROUTE_NAMES } from '../lib/router'
-import { formatCurrency } from '../lib/format-currency'
+import { formatCurrency } from '../lib/currency'
 
 import { Row } from '../components/atoms/Containers'
 import { Total as GlobalTotal } from '../components/atoms/Text'

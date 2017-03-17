@@ -1,4 +1,4 @@
-import { formatDuration } from './format-duration'
+import { formatDuration } from './dateTime'
 
 describe('Utils: Format-Duration', () => {
   it('should render values shorter than an hour without leading zeroes', () => {

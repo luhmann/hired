@@ -2,7 +2,7 @@ import * as React from 'react'
 // import DevTools from 'mobx-react-devtools'
 import { observer, inject } from 'mobx-react'
 
-import '../styles/reset.ts'
+import '../styles/globals.ts'
 import RootStore from '../stores/rootStore'
 import { ROUTE_NAMES } from '../lib/router'
 

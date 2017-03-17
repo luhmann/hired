@@ -19,12 +19,17 @@ export const Button = styled.button`
   transition: background-color 0.4s;
 
   &:active {
+    background-color: inherit;
     box-shadow: inset 0 1px 3px rgba(0,0,0,.12);
   }
 
   ${(props: ButtonTypes) => props.success ? `
     background-color: ${color.green.g_500};
     border: 1px solid ${color.green.g_500};
+
+    &:active {
+      background-color: ${color.green.g_600}
+    }
 
     &:hover {
       background-color: ${color.green.g_600};
@@ -35,6 +40,10 @@ export const Button = styled.button`
    ${(props: ButtonTypes) => props.error ? `
     background-color: ${color.red.g_500};
     border: 1px solid ${color.red.g_500};
+
+    &:active {
+      background-color: ${color.red.g_600}
+    }
 
     &:hover {
       background-color: ${color.red.g_600};

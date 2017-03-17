@@ -17,7 +17,7 @@ export const color = Object.freeze({
   white: '#fff',
 
   gray: {
-    g_50: '#faafa',
+    g_50: '#fafafa',
     g_100: '#f5f5f5',
     g_200: '#eeeeee',
     g_300: '#e0e0e0',

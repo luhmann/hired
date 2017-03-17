@@ -4,14 +4,15 @@ import { observer, inject } from 'mobx-react'
 
 import RootStore from '../stores/rootStore'
 
-import { cells, maxWidth, shadow } from '../styles/style-utils'
+import { cells, color, maxWidth, shadow } from '../styles/style-utils'
+import ActiveEntry from '../components/molecules/ActiveEntry'
 import ClockIn from '../components/molecules/ClockIn'
 import EntryList from '../components/organisms/EntryList'
-import Entry from '../components/molecules/Entry'
 import Error from './Error'
 import HeaderEntriesList from '../components/organisms/HeaderEntriesList'
 
 const Root = styled.section`
+  background-color: ${color.gray.g_50}
   box-shadow: ${shadow.subtle};
   display: grid;
   height: 100vmax;
@@ -54,12 +55,11 @@ class Project extends React.Component<ProjectProps, {}> {
           startEntry={this.props.rootStore.entryListStore.startNewEntry}
           stopEntry={this.props.rootStore.entryListStore.stopCurrentTimer}
         />
-        {activeEntry && <Entry
+        {activeEntry && <ActiveEntry
           key={activeEntry.id}
           start={activeEntry.startTime}
-          end={activeEntry.endTime}
           duration={activeEntry.duration}
-          running={true}
+          standardHours={this.props.rootStore.projectListStore.currentProject.standardHours}
           total={activeEntry.total}
         />}
         <EntryList
