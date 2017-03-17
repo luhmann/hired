@@ -16,9 +16,9 @@ const Root = styled.div`
   position: relative;
   z-index: 1;
 
-  border: 1px solid ${color.blue};
-  border-color: ${color.blue};
-  color: ${color.blue};
+  border: 1px solid ${color.white};
+  border-color: ${color.white};
+  color: ${color.white};
 `
 
 const Spinner = styled.div`
