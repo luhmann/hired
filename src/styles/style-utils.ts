@@ -1,13 +1,14 @@
 export const color = Object.freeze({
   indigo: '#37474f',
   green: {
+    g_100: '#c8e6c9',
     g_400: '#66bb6a',
     g_500: '#4caf50',
     g_600: '#43a047'
   },
   red: {
     g_500: '#f44336',
-    g_600: '##e53935',
+    g_600: '#e53935',
     g_900: '#b71c1c'
   },
 

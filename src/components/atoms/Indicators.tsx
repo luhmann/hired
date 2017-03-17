@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import { color } from '../../styles/style-utils'
+import { cells, color } from '../../styles/style-utils'
 import { rotate } from '../../styles/globals'
 
 const Root = styled.div`
@@ -37,4 +37,22 @@ export const Loading = () => (
   <Root>
     <Spinner /> Loading…
   </Root>
+)
+
+const ProgressRoot = styled.div`
+  background-color: ${color.green.g_100};
+  height: ${cells(0.5)};
+`
+
+const ProgressFill = styled.div`
+  background-color: ${color.green.g_500};
+  height: ${cells(0.5)}
+`
+
+export const ProgressBar = ({ className, finished }: { className?: string, finished: number }) => (
+  <div className={className}>
+    <ProgressRoot>
+      <ProgressFill style={{width: `${finished}%`}}>&nbsp;</ProgressFill>
+    </ProgressRoot>
+  </div>
 )

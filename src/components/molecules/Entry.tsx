@@ -19,7 +19,7 @@ export const Container = styled.div`
   grid-template-columns: repeat(6, [col] 1fr);
   grid-column-gap: ${cells(1)};
   grid-row-gap: 3px;
-  height: ${cells(2)};
+  height: ${cells(4)};
 `
 
 export const Day = styled.div`
