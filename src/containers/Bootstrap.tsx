@@ -20,9 +20,9 @@ const Bootstrap = () => (
     transitionAppear={true}
     transitionAppearTimeout={500}
   >
-  <Root>
-    <Loading />
-  </Root>
+    <Root>
+      <Loading />
+    </Root>
   </ReactCSSTransitionGroup>
 )
 

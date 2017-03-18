@@ -17,7 +17,8 @@ export function formatTime(date: Date): string {
 }
 
 export function getPercent(secondsDone: number, hoursToDo: number): number {
-  return (secondsDone / (hoursToDo * ONE_HOUR)) * 100;
+  const percent = (secondsDone / (hoursToDo * ONE_HOUR)) * 100
+  return percent <= 100 ? percent : 100
 }
 
 export function addHours(start: Date, numHours: number): Date {

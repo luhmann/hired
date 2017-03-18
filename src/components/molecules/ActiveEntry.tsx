@@ -26,7 +26,8 @@ const StyledFinishInfo = styled(FinishInfo)`
 
 const StyledProgressBar = styled(ProgressBar)`
   grid-column: col / span 4;
-  height: ${cells(2)}
+  height: ${cells(2)};
+  overflow: hidden;
   padding: 6px 0;
 `
 
