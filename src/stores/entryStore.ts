@@ -10,9 +10,7 @@ const STANDARD_RATE = 20
 class EntryStore {
   @observable startTime: Date
   @observable endTime: Date
-  @observable seconds = 0
   rate: number
-  tickInterval: any
   id: string
   projectId: string
 
@@ -74,7 +72,6 @@ class EntryStore {
   @action
   stopTimer(end: Date = new Date()) {
     this.endTime = end
-    clearInterval(this.tickInterval)
   }
 
   toStorage(): StorageEntryInterface {

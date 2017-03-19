@@ -12,7 +12,7 @@ injectGlobal`
     color: ${color.black};
     font-size: 12px;
     font-style: normal;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    font-family: -apple-system, BlinkMacSystemFont, "Noto", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
       "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: subpixel-antialiased;
     text-rendering: geometricPrecision;

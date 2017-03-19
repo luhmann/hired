@@ -20,6 +20,7 @@ export const Container = styled.div`
   grid-column-gap: ${cells(1)};
   grid-row-gap: 3px;
   height: ${cells(4)};
+  line-height: 1;
 `
 
 export const Day = styled.div`
