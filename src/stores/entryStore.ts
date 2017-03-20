@@ -11,7 +11,7 @@ class EntryStore {
   @observable startTime: Date
   @observable endTime: Date
   rate: number
-  id: string
+  readonly id: string
   projectId: string
 
   static fromStorage(id: string, storageObject: StorageEntryInterface) {

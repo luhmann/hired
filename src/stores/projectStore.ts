@@ -3,7 +3,7 @@ import { observable, computed } from 'mobx'
 import RootStore from './rootStore'
 
 class ProjectStore {
-  id: string
+  readonly id: string
   @observable name: string
   standardRate: number
   description: string
