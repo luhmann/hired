@@ -33,11 +33,11 @@ class RootStore {
       .then((snapshot) => {
         const data = snapshot.val()
 
-        if (data.projects && data.projects.length) {
+        if (data.projects) {
           this.projectListStore.hydrate(data.projects)
         }
 
-        if (data.entries && data.entries.length) {
+        if (data.entries) {
           this.entryListStore.hydrate(data.entries)
         }
 

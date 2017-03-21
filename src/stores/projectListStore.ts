@@ -35,9 +35,19 @@ class ProjectListStore {
     return this.projects.filter((item) => (item.id === id))[0]
   }
 
+  @computed get toStorage() {
+    return this.projects.reduce(
+      (map, entry) => (
+        Object.assign({}, map, { [entry.id]: entry.toStorage })
+      ),
+      {}
+    )
+  }
+
+
   private setupSync() {
     reaction(
-      () => this.projects.map((project) => project.toStorage),
+      () => this.toStorage,
       (projects) => {
         if (projects) {
           this.rootStore.repository.projects(this.rootStore.userStore.uid).set(projects)

@@ -74,7 +74,7 @@ class EntryStore {
     this.endTime = end
   }
 
-  toStorage(): StorageEntryInterface {
+  @computed get toStorage(): StorageEntryInterface {
     return {
       id: this.id,
       startTime: moment(this.startTime).valueOf(),

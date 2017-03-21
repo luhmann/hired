@@ -55,7 +55,12 @@ class EntryListStore {
   }
 
   @computed get toStorage() {
-    return this.entries.map((entry) => entry.toStorage())
+    return this.entries.reduce(
+      (map, entry) => (
+        Object.assign({}, map, { [entry.id]: entry.toStorage })
+      ),
+      {}
+    )
   }
 
   @action.bound
