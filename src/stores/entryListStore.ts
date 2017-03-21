@@ -2,6 +2,7 @@ import { observable, action, computed, reaction } from 'mobx'
 import { sortBy } from 'lodash'
 import * as uuid from 'uuid'
 
+import { StorageEntryInterface } from '../storage/firebaseRepository'
 import RootStore from './rootStore'
 import { EntryStore } from './entryStore'
 
@@ -64,16 +65,9 @@ class EntryListStore {
   }
 
   @action.bound
-  hydrate(storageObjects: Object) {
-    let unsortedEntries = []
-
-    for (let id in storageObjects) {
-      if (storageObjects.hasOwnProperty(id)) {
-        unsortedEntries.push(EntryStore.fromStorage(id, storageObjects[id]))
-      }
-    }
-
-    let sortedEntries = sortBy(unsortedEntries, ['startTime']).reverse()
+  hydrate(storageObjects: StorageEntryInterface[]) {
+    const unsortedEntries = storageObjects.map((item) => EntryStore.fromStorage(item))
+    const sortedEntries = sortBy(unsortedEntries, ['startTime']).reverse()
 
     this.setEntries(sortedEntries)
     this.checkFirstActive()

@@ -1,4 +1,5 @@
 import { observable, action } from 'mobx'
+const values = require('object.values')
 
 import EntryListStore from './entryListStore'
 import ProjectListStore from './projectListStore'
@@ -34,11 +35,11 @@ class RootStore {
         const data = snapshot.val()
 
         if (data.projects) {
-          this.projectListStore.hydrate(data.projects)
+          this.projectListStore.hydrate(values(data.projects))
         }
 
         if (data.entries) {
-          this.entryListStore.hydrate(data.entries)
+          this.entryListStore.hydrate(values(data.entries))
         }
 
         this.uiStore.setLoaded(true)

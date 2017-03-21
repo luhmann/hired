@@ -14,9 +14,9 @@ class EntryStore {
   readonly id: string
   projectId: string
 
-  static fromStorage(id: string, storageObject: StorageEntryInterface) {
+  static fromStorage(storageObject: StorageEntryInterface) {
     return new this({
-      id,
+      id: storageObject.id,
       startTime: storageObject.startTime,
       endTime: storageObject.endTime,
       rate: storageObject.rate,
