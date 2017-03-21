@@ -38,7 +38,7 @@ class Router {
         trailingSlash: false,
         useTrailingSlash: undefined,
         autoCleanUp: true,
-        strictQueryParams: true,
+        strictQueryParams: false,
         allowNotFound: true
       }
     )
