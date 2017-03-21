@@ -12,8 +12,8 @@ class UserStore {
     this.rootStore = rootStore
     this.uid = uid
 
-    // this.authenticate()
-    this.authenticated = Promise.resolve(true)
+    this.authenticate()
+    // this.authenticated = Promise.resolve(true)
   }
 
   @action
