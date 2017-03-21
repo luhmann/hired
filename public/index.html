@@ -13,10 +13,62 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Mobx Time Tracker</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      a {
+        color: white;
+      }
+
+      .no-js {
+        font-family: Courier New, Courier, monospace;
+        align-items: center;
+        background-color: #b71c1c;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .no-js__icon {
+        height: 60px;
+        margin-bottom: 16px;
+        width: 60px;
+      }
+
+      .no-js__text {
+        max-width: 450px;
+        padding: 0 16px;
+        text-align: center;
+      }
+    </style>
   </head>
   <body >
     <div id="root"></div>
+    <noscript class="no-js">
+      <svg class="no-js__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"
+        version="1.1" x="0px" y="0px">
+        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g fill="#fff">
+            <path d="M18.707,16.707 C18.316,17.098 17.684,17.098 17.293,16.707 C16.094,15.507 13.906,15.507 12.707,16.707 C11.729,17.685 10.413,18.224 9,18.224 C7.587,18.224 6.27,17.685 5.293,16.707 C4.902,16.316 4.902,15.683 5.293,15.293 C5.684,14.902 6.316,14.902 6.707,15.293 C7.906,16.493 10.094,16.493 11.293,15.293 C12.27,14.315 13.587,13.776 15,13.776 C16.413,13.776 17.729,14.315 18.707,15.293 C19.098,15.684 19.098,16.317 18.707,16.707 M8,6 C9.105,6 10,6.895 10,8 C10,9.105 9.105,10 8,10 C6.895,10 6,9.105 6,8 C6,6.895 6.895,6 8,6 M16,6 C17.105,6 18,6.895 18,8 C18,9.105 17.105,10 16,10 C14.895,10 14,9.105 14,8 C14,6.895 14.895,6 16,6 M12,0 C5.383,0 0,5.383 0,12 C0,18.617 5.383,24 12,24 C18.617,24 24,18.617 24,12 C24,5.383 18.617,0 12,0"></path>
+          </g>
+        </g>
+      </svg>
+
+      <section class="no-js__text">
+        <p>This page requires JavaScript to work.</p>
+        <p>Sadly your device does not support it.</p>
+        <p>Please consider turning on JavaScript if you switched it off before
+        or use another browser.</p>
+        <p>You can find a selection on <a href="http://browsehappy.com/" title="Browsehappy">browsehappy.com</a></p>
+      </section>
+    </noscript>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
