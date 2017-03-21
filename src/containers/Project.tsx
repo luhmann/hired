@@ -32,7 +32,7 @@ interface ProjectProps {
 
 @inject('rootStore')
 @observer
-class Project extends React.Component<ProjectProps, {}> {
+class Project extends React.PureComponent<ProjectProps, {}> {
   render() {
     if (!this.props.rootStore || !this.props.rootStore.uiStore.currentView.projectId) {
       return <Error />
