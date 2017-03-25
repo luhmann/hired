@@ -55,13 +55,15 @@ class Project extends React.Component<ProjectProps, {}> {
           startEntry={this.props.rootStore.entryListStore.startNewEntry}
           stopEntry={this.props.rootStore.entryListStore.stopCurrentTimer}
         />
-        {activeEntry && <ActiveEntry
-          key={activeEntry.id}
-          start={activeEntry.startTime}
-          duration={activeEntry.duration}
-          standardHours={this.props.rootStore.projectListStore.currentProject.standardHours}
-          total={activeEntry.total}
-        />}
+        {activeEntry && (
+          <ActiveEntry
+            key={activeEntry.id}
+            start={activeEntry.startTime}
+            duration={activeEntry.duration}
+            standardHours={this.props.rootStore.projectListStore.currentProject.standardHours}
+            total={activeEntry.total}
+          />
+        )}
         <EntryList
           entryList={this.props.rootStore.entryListStore}
           projectId={this.props.rootStore.uiStore.currentView.projectId}

@@ -51,10 +51,10 @@ const Entry = observer(({ start, end, duration, total }: EntryProps) => (
           {formatDate(start)}
         </Day>
         <Total>{formatCurrency(total)}</Total>
-        <Time begin>
+        <Time begin={true}>
           {formatTime(start)}
         </Time>
-        <Time end>
+        <Time end={true}>
           {(end) ? (formatTime(end)) : null}
         </Time>
         <Duration>

@@ -44,7 +44,6 @@ class ProjectListStore {
     )
   }
 
-
   private setupSync() {
     reaction(
       () => this.toStorage,
@@ -55,7 +54,6 @@ class ProjectListStore {
       }
     )
   }
-
 }
 
 export default ProjectListStore

@@ -49,7 +49,6 @@ class NewProject extends React.Component<NewProjectProps, NewProjectState> {
     }
   }
 
-
   cancelHandler(event: React.MouseEvent<any>) {
     if (this.props.rootStore) {
       this.props.rootStore.router.navigate(ROUTE_NAMES.projectList)

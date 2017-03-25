@@ -43,7 +43,7 @@ class EntryList extends React.Component<EntryListProps, {}> {
   render() {
     const entries = this.props.entryList.getEntriesForProject(this.props.projectId)
 
-    let content = null
+    let content: JSX.Element[] | JSX.Element | null = null
     if (entries.length) {
       content = entries
         .filter(entry => entry.endTime)

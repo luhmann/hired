@@ -6,7 +6,6 @@ import { addHours, formatTime } from '../../lib/dateTime'
 import { color } from '../../styles/style-utils'
 import { flip } from '../../styles/globals'
 
-
 const Root = styled.div`
   animation: ${flip} 5s ease-in-out 2s infinite alternate both;
   position: relative;

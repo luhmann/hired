@@ -23,10 +23,12 @@ class App extends React.Component<AppProps, {}> {
     if (this.props.rootStore) {
       switch (this.props.rootStore.uiStore.currentView.name) {
         case (ROUTE_NAMES.projectList):
-          return <ProjectList
-            projects={this.props.rootStore.projectListStore.projects}
-            rootStore={this.props.rootStore}
-          />
+          return (
+            <ProjectList
+              projects={this.props.rootStore.projectListStore.projects}
+              rootStore={this.props.rootStore}
+            />
+          )
         case (ROUTE_NAMES.projectOverview):
           return <Project />
         case (ROUTE_NAMES.projectNew):
