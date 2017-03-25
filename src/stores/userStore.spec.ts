@@ -1,23 +1,26 @@
-// import { RepositoryInterface } from '../storage/firebaseRepository'
-// // import mockFirebaseRepository from '../test/mocks/mockFirebaseRepository'
+import * as TypeMoq from 'typemoq';
+import firebaseRepository from '../storage/firebaseRepository'
+import UserStore from './userStore'
 
-// import RootStore from './rootStore'
-// import UserStore from './userStore'
+describe('UserStore', () => {
+  let firebaseRepositoryMock
 
-// describe('UserStore', () => {
-//   it('should authenticate', async () => {
-//     const RootStoreMock = <RootStore>{}
-//     RootStoreMock.repository = <RepositoryInterface>{
-//       entries: jest.fn(),
-//       database: jest.fn(),
-//       projects: jest.fn(),
-//       authenticate: jest.fn().mockReturnValue(Promise.resolve(true))
-//     }
+  beforeEach(() => {
+    firebaseRepositoryMock = TypeMoq.Mock.ofType(firebaseRepository)
+})
 
-//     const subject = new UserStore(RootStoreMock, 'me')
-//     expect(subject.uid).toBe('me')
-//     expect(RootStoreMock.repository.authenticate.mock.calls.length).toBe(1)
-//     console.log(RootStoreMock.repository.authenticate.mock)
-//     expect(await subject.authenticated).toBe(true)
-//   })
-// })
+  it('should authenticate', async () => {
+    // given
+    firebaseRepositoryMock
+      .setup((frm => frm.authenticate(TypeMoq.It.isAnyString())))
+      .returns(() => Promise.resolve(true))
+
+    // when
+    const subject = new UserStore(firebaseRepositoryMock.object, 'me')
+
+    // then
+    expect(subject.uid).toBe('me')
+    expect(await subject.authenticated).toBe(true)
+    firebaseRepositoryMock.verify((frm) => frm.authenticate(TypeMoq.It.isValue('me')), TypeMoq.Times.once())
+  })
+})
