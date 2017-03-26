@@ -1,6 +1,6 @@
 import { observable, computed } from 'mobx'
 
-import RootStore from './rootStore'
+import EntryListStore from './entryListStore'
 
 class ProjectStore {
   readonly id: string
@@ -8,17 +8,17 @@ class ProjectStore {
   standardRate: number
   description: string
   standardHours: number
-  rootStore: RootStore
+  entryListStore: EntryListStore
 
   constructor(
-    rootStore: RootStore,
+    entryListStore: EntryListStore,
     id: string,
     name: string,
     standardRate: number,
     description: string = '',
     standardHours: number = 8
   ) {
-    this.rootStore = rootStore
+    this.entryListStore = entryListStore
     this.id = id
     this.name = name
     this.standardRate = standardRate
@@ -27,8 +27,8 @@ class ProjectStore {
   }
 
   @computed get totalRevenue() {
-    return this.rootStore.entryListStore.entries
-      .filter((entry) => (entry.projectId === this.id))
+    return this.entryListStore
+      .getEntriesForProject(this.id)
       .reduce((previousValue, entry) => (previousValue + entry.total), 0)
   }
 

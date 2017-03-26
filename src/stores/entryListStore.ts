@@ -85,7 +85,7 @@ class EntryListStore {
     }
   }
 
-  private setupSync(): void {
+ private setupSync(): void {
     reaction(
       () => this.toStorage,
       (entries) => {
