@@ -5,7 +5,10 @@ const ONE_HOUR = 3600
 export function formatDuration(seconds: number): string {
   let format = (seconds < ONE_HOUR) ? 'mm:ss' : 'HH:mm:ss'
 
-  return moment().startOf('day').seconds(seconds).format(format)
+  // NOTE: Do not use startOf('day')
+  // it will fail on the days when daylight savings is changed
+  // TODO: this function is not "correct" in this way, reconsider it
+  return moment().startOf('year').seconds(seconds).format(format)
 }
 
 export function formatDate(date: Date): string {
