@@ -17,7 +17,6 @@ class UserStore {
     // this.authenticated = Promise.resolve(true)
   }
 
-  // @action
   authenticate() {
     this.authenticated = this.repository.authenticate(this.uid)
 
