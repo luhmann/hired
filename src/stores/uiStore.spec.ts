@@ -25,7 +25,7 @@ describe('UiStore', () => {
     subject.showNewProject()
 
     expect(subject.currentView.name).toBe(ROUTE_NAMES.projectNew)
-  });
+  })
 
   it('should set loaded-state', () => {
     subject.setLoaded(true)

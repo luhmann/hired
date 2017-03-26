@@ -12,7 +12,7 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "noFallthroughCasesInSwitch": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,

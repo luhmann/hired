@@ -1,9 +1,9 @@
-import * as TypeMoq from 'typemoq';
+import * as TypeMoq from 'typemoq'
 import firebaseRepository from '../storage/firebaseRepository'
 import UserStore from './userStore'
 
 describe('UserStore', () => {
-  let firebaseRepositoryMock
+  let firebaseRepositoryMock: TypeMoq.IMock<firebaseRepository>
 
   beforeEach(() => {
     firebaseRepositoryMock = TypeMoq.Mock.ofType(firebaseRepository)
