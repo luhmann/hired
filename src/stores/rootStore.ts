@@ -20,7 +20,7 @@ class RootStore {
     this.repository = repository
     this.userStore = new UserStore(this.repository, uid)
     this.entryListStore = new EntryListStore(this)
-    this.projectListStore = new ProjectListStore(this.entryListStore)
+    this.projectListStore = new ProjectListStore(this)
     this.uiStore = new UiStore()
     this.router = new Router(this)
 

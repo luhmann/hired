@@ -14,20 +14,14 @@ class UiStore {
     name: ROUTE_NAMES.projectList
   }
 
-  constructor() {
-    this.showProjectList = action(this.showProjectList)
-    this.showProject = action(this.showProject)
-    this.showNewProject = action(this.showNewProject)
-    this.setLoaded = action(this.setLoaded)
-    this.setError = action(this.setError)
-  }
-
+  @action
   showProjectList(): void {
     this.currentView = {
       name: ROUTE_NAMES.projectList
     }
   }
 
+  @action
   showProject(projectId: string): void {
     this.currentView = {
       name: ROUTE_NAMES.projectOverview,
@@ -35,16 +29,19 @@ class UiStore {
     }
   }
 
+  @action
   showNewProject(): void {
     this.currentView = {
       name: ROUTE_NAMES.projectNew
     }
   }
 
+  @action
   setLoaded (isLoaded: boolean): void {
     this.isLoaded = isLoaded
   }
 
+  @action
   setError (status: boolean): void {
     this.hasError = status
   }

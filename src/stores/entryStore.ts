@@ -86,4 +86,4 @@ class EntryStore {
 
 }
 
-export { EntryStore }
+export default EntryStore
