@@ -4,7 +4,7 @@ import * as uuid from 'uuid'
 
 import { StorageEntryInterface } from '../storage/firebaseRepository'
 import RootStore from './rootStore'
-import { EntryStore } from './entryStore'
+import EntryStore from './entryStore'
 
 class EntryListStore {
   @observable entries: EntryStore[] = []
