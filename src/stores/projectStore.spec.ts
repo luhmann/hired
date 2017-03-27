@@ -34,7 +34,7 @@ describe('ProjectStore', () => {
   })
 
   it('should calculate the total revenue for a project', () => {
-    let entryMock: TypeMoq.IMock<EntryStore> = TypeMoq.Mock.ofType(EntryStore)
+    let entryMock: TypeMoq.IMock<EntryStore> = TypeMoq.Mock.ofType(EntryStore, TypeMoq.MockBehavior.Loose, {})
 
     entryMock.setup(em => em.total).returns(() => 200.52)
     entryMock.setup(em => em.total).returns(() => 20000.81)
