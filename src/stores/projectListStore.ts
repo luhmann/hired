@@ -19,23 +19,31 @@ class ProjectListStore {
   hydrate(projects: ProjectInterface[]) {
     this.projects = projects.map((project) => {
       return new ProjectStore(
-        this.rootStore.entryListStore,
+        this.rootStore,
         project.id,
         project.name,
         project.standardRate,
-        project.description
+        project.description,
+        project.standardHours
       )
     })
   }
 
   @action
-  add(name: string, standardRate: number, description: string = '', id: string = uuid.v4()) {
+  add(
+    name: string,
+    standardRate: number,
+    description: string = '',
+    id: string = uuid.v4(),
+    standardHours: number = 8
+  ) {
     this.projects = [...this.projects, new ProjectStore(
-        this.rootStore.entryListStore,
+        this.rootStore,
         id,
         name,
         standardRate,
-        description
+        description,
+        standardHours
       )
     ]
   }

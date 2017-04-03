@@ -1,24 +1,24 @@
 import { observable, action } from 'mobx'
 
-import firebaseRepository from '../storage/firebaseRepository'
+import RootStore from './rootStore'
 
 class UserStore {
   @observable authenticated: Promise<boolean>
   uid: string = 'me'
 
-  repository: firebaseRepository
+  private rootStore: RootStore
 
-  constructor(repository: firebaseRepository, uid: string) {
-    this.repository = repository
+  constructor(rootStore: RootStore, uid: string) {
+    this.rootStore = rootStore
     this.uid = uid
-    this.authenticate = action(this.authenticate)
 
     this.authenticate()
     // this.authenticated = Promise.resolve(true)
   }
 
+  @action.bound
   authenticate() {
-    this.authenticated = this.repository.authenticate(this.uid)
+    this.authenticated = this.rootStore.repository.authenticate(this.uid)
 
     return this.authenticated
   }

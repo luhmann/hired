@@ -1,26 +1,29 @@
 import * as TypeMoq from 'typemoq'
-import firebaseRepository from '../storage/firebaseRepository'
+
+import FirebaseRepository from '../storage/firebaseRepository'
+import RootStore from './rootStore'
+import { firebaseSignInWithCustomTokenMock } from './__mocks__/firebase'
+
 import UserStore from './userStore'
 
 describe('UserStore', () => {
-  let firebaseRepositoryMock: TypeMoq.IMock<firebaseRepository>
+  let rootStoreMock: TypeMoq.IMock<RootStore>
 
   beforeEach(() => {
-    firebaseRepositoryMock = TypeMoq.Mock.ofType(firebaseRepository)
-})
+    jest.mock('firebase')
+    firebaseSignInWithCustomTokenMock.mockReset()
+
+    const repository = new FirebaseRepository()
+    rootStoreMock = TypeMoq.Mock.ofType(RootStore, TypeMoq.MockBehavior.Loose, repository, 'me')
+  })
 
   it('should authenticate', async () => {
-    // given
-    firebaseRepositoryMock
-      .setup((frm => frm.authenticate(TypeMoq.It.isAnyString())))
-      .returns(() => Promise.resolve(true))
-
     // when
-    const subject = new UserStore(firebaseRepositoryMock.object, 'me')
+    const subject = new UserStore(rootStoreMock.object, 'me')
 
     // then
     expect(subject.uid).toBe('me')
     expect(await subject.authenticated).toBe(true)
-    firebaseRepositoryMock.verify((frm) => frm.authenticate(TypeMoq.It.isValue('me')), TypeMoq.Times.once())
+    expect(firebaseSignInWithCustomTokenMock.mock.calls.length).toBe(2)
   })
 })

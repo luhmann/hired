@@ -18,7 +18,7 @@ class RootStore {
 
   constructor(repository: FirebaseRepository, uid: string) {
     this.repository = repository
-    this.userStore = new UserStore(this.repository, uid)
+    this.userStore = new UserStore(this, uid)
     this.entryListStore = new EntryListStore(this)
     this.projectListStore = new ProjectListStore(this)
     this.uiStore = new UiStore()

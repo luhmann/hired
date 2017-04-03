@@ -46,7 +46,8 @@ class Router {
     this.instance.usePlugin(browserPlugin({
       useHash: false
     }))
-    this.instance.usePlugin(loggerPlugin)
+    
+    process.env.NODE_ENV === 'dev' && this.instance.usePlugin(loggerPlugin)
     this.instance.usePlugin(listenersPlugin())
 
     this.instance.addListener((toState: RouterStateInterface, fromState: RouterStateInterface) => {
