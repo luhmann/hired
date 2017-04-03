@@ -1,6 +1,6 @@
 import FirebaseRepository from '../../storage/firebaseRepository'
 import RootStore from '../rootStore'
-import { firebaseSignInWithCustomTokenMock, setCustomTokenMock } from '../__mocks__/firebase'
+import { firebaseSignInWithCustomTokenMock, setCustomTokenMock } from '../../storage/__mocks__/firebase'
 
 import UserStore from '../userStore'
 

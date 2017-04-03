@@ -1,7 +1,7 @@
 import * as mobx from 'mobx'
 
-import { mockProjects } from '../../test/mockData'
-import { firebaseSetMock } from '../__mocks__/firebase'
+import { MOCK_PROJECTS } from '../../test/mockData'
+import { firebaseSetMock } from '../../storage/__mocks__/firebase'
 
 import FirebaseRepository from '../../storage/firebaseRepository'
 import RootStore from '../rootStore'
@@ -33,31 +33,31 @@ describe('ProjectListStore', () => {
   })
 
   it('should hydrate from data structure', () => {
-    subject.hydrate(mockProjects)
+    subject.hydrate(MOCK_PROJECTS)
 
     expect(subject.toStorage).toMatchSnapshot()
   })
 
   it('should add projects', () => {
-    mockProjects.forEach((item) => {
+    MOCK_PROJECTS.forEach((item) => {
       subject.add(item.name, item.standardRate, item.description, item.id, item.standardHours)
       expect(subject.toStorage).toMatchSnapshot()
     })
 
-    expect(firebaseSetMock.mock.calls.length).toBe(mockProjects.length)
+    expect(firebaseSetMock.mock.calls.length).toBe(MOCK_PROJECTS.length)
     expect(firebaseSetMock.mock.calls).toMatchSnapshot()
   })
 
   it('should return the current project', () => {
     rootStoreMock.uiStore.showProject('2345-9384-324523')
-    subject.hydrate(mockProjects)
+    subject.hydrate(MOCK_PROJECTS)
     
-    expect(subject.currentProject.toStorage).toEqual(mockProjects[1])
+    expect(subject.currentProject.toStorage).toEqual(MOCK_PROJECTS[1])
   })
 
   it('should get a project by id', () => {
-    subject.hydrate(mockProjects)
+    subject.hydrate(MOCK_PROJECTS)
 
-    expect(subject.getById('2345-9384-324523').toStorage).toEqual(mockProjects[1])
+    expect(subject.getById('2345-9384-324523').toStorage).toEqual(MOCK_PROJECTS[1])
   })
 })

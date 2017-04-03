@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { inject, observer } from 'mobx-react'
 
-import RootStore from '../stores/rootStore'
+import { RootStore } from '../stores/'
 import { ROUTE_NAMES } from '../stores/routerStore'
 
 import InputTextWithLabel from '../components/molecules/InputTextWithLabel'

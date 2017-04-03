@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EntryStore Derivations should calculate duration - finished timer 1`] = `27360`;
+
+exports[`EntryStore Derivations should calculate duration - running timer 1`] = `25140`;
+
+exports[`EntryStore Derivations should calculate total 1`] = `269.79999999999995`;
+
+exports[`EntryStore Derivations should serialize the data 1`] = `
+Object {
+  "endTime": 1487084340000,
+  "id": "2342-6552-5345",
+  "projectId": "1234-5678-9012",
+  "rate": 35.5,
+  "startTime": 1487056980000,
+}
+`;
