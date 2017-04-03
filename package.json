@@ -19,6 +19,7 @@
     "@types/react": "^15.0.0",
     "@types/react-addons-css-transition-group": "^15.0.1",
     "@types/react-dom": "^0.14.20",
+    "@types/fetch-mock": "^5.8.2",
     "@types/uuid": "^2.0.29",
     "app-root-path": "^2.0.1",
     "autoprefixer": "6.7.2",
@@ -55,7 +56,6 @@
     "tslint": "^4.0.2",
     "tslint-loader": "^3.3.0",
     "tslint-react": "^2.0.0",
-    "typemoq": "^1.4.1",
     "typescript": "^2.1.4",
     "url-loader": "0.5.7",
     "webpack": "1.14.0",
@@ -64,7 +64,6 @@
     "whatwg-fetch": "2.0.2"
   },
   "dependencies": {
-    "@types/fetch-mock": "^5.8.2",
     "accounting": "^0.4.1",
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",

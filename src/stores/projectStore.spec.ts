@@ -1,8 +1,5 @@
 import * as mobx from 'mobx'
-import * as TypeMoq from 'typemoq'
 
-import EntryStore from './entryStore'
-import EntryListStore from './entryListStore'
 import FirebaseRepository from '../storage/firebaseRepository'
 import ProjectStore from './projectStore'
 import RootStore from './rootStore'
@@ -12,18 +9,19 @@ import { mockProjects } from '../test/mockData'
 describe('ProjectStore', () => {
   const TEST_DATA = mockProjects[0]
 
-  let entryListStoreMock: TypeMoq.IMock<EntryListStore>
-  let repository = new FirebaseRepository()
-  let rootStoreMock: TypeMoq.IMock<RootStore>
+  let repository: FirebaseRepository   
+  let rootStoreMock: RootStore 
   let subject: ProjectStore
 
   beforeEach(() => {
     mobx.extras.resetGlobalState()
     jest.mock('firebase')
-    rootStoreMock = TypeMoq.Mock.ofType(RootStore, TypeMoq.MockBehavior.Loose, repository, 'me')
+    
+    repository = new FirebaseRepository()
+    rootStoreMock = new RootStore(repository, 'me')
 
     subject = new ProjectStore(
-      rootStoreMock.object,
+      rootStoreMock,
       TEST_DATA.id,
       TEST_DATA.name,
       TEST_DATA.standardRate,
@@ -41,25 +39,17 @@ describe('ProjectStore', () => {
   })
 
   it('should calculate the total revenue for a project', () => {
-    entryListStoreMock = TypeMoq.Mock.ofType(EntryListStore)
-
-    let entryMock: TypeMoq.IMock<EntryStore> = TypeMoq.Mock.ofType(EntryStore, TypeMoq.MockBehavior.Loose, {})
-
-    entryMock.setup(em => em.total).returns(() => 200.52)
-    entryMock.setup(em => em.total).returns(() => 20000.81)
-    entryMock.setup(em => em.total).returns(() => 50.99)
-
-    entryListStoreMock
-      .setup(els => els.getEntriesForProject(TEST_DATA.id))
-      .returns(() => [
-        entryMock.object,
-        entryMock.object,
-        entryMock.object
-      ])
-
-    rootStoreMock
-      .setup(rsm => rsm.entryListStore)
-      .returns(() => entryListStoreMock.object)
+    rootStoreMock.entryListStore.getEntriesForProject = jest.fn(() => [
+      {
+        total: 200.52
+      },
+      {
+        total: 20000.81
+      },
+      {
+        total: 50.99
+      }
+    ])
 
     expect(subject.totalRevenue).toBe(20252.320000000003)
   })

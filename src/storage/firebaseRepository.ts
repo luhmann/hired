@@ -35,7 +35,7 @@ class FirebaseRepository {
       .catch((error) => {
         // tslint:disable-next-line
         console.log('Failure in auth, check it', error)
-        return Promise.reject('Error in firebase request')
+        return Promise.reject(false)
       })
   }
 }

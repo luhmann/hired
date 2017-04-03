@@ -1,5 +1,4 @@
 import * as mobx from 'mobx'
-import * as TypeMoq from 'typemoq'
 
 import { mockProjects } from '../test/mockData'
 import { firebaseSetMock } from './__mocks__/firebase'
@@ -12,7 +11,7 @@ describe('ProjectListStore', () => {
   global.console.group = jest.fn()
   global.console.groupEnd = jest.fn()
 
-  let rootStoreMock: TypeMoq.IMock<RootStore>
+  let rootStoreMock: RootStore
   let subject: ProjectListStore
 
   beforeEach(() => {
@@ -21,11 +20,10 @@ describe('ProjectListStore', () => {
     firebaseSetMock.mockReset()
 
     const repository = new FirebaseRepository()
-    rootStoreMock = TypeMoq.Mock.ofType(RootStore, TypeMoq.MockBehavior.Loose, repository, 'me')
-    rootStoreMock.callBase = true
+    rootStoreMock = new RootStore(repository, 'me')
 
     subject = new ProjectListStore(
-      rootStoreMock.object
+      rootStoreMock
     )
   })
 
@@ -51,7 +49,7 @@ describe('ProjectListStore', () => {
   })
 
   it('should return the current project', () => {
-    rootStoreMock.object.uiStore.showProject('2345-9384-324523')
+    rootStoreMock.uiStore.showProject('2345-9384-324523')
     subject.hydrate(mockProjects)
     
     expect(subject.currentProject.toStorage).toEqual(mockProjects[1])
