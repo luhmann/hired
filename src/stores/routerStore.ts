@@ -1,6 +1,6 @@
-/// <reference path="customTypings.d.ts"/>
+/// <reference path="../lib/customTypings.d.ts"/>
 
-import RootStore from '../stores/rootStore'
+import RootStore from './rootStore'
 import Router5, { RouterInterface, loggerPlugin } from 'router5'
 import browserPlugin from 'router5/plugins/browser'
 import listenersPlugin from 'router5/plugins/listeners'
@@ -26,7 +26,7 @@ interface RouterStateInterface {
   path: string
 }
 
-class Router {
+class RouterStore {
   rootStore: RootStore
   instance: RouterInterface
 
@@ -77,4 +77,4 @@ class Router {
 }
 
 export { ROUTE_NAMES }
-export default Router
+export default RouterStore

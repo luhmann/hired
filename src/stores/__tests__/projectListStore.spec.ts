@@ -1,11 +1,11 @@
 import * as mobx from 'mobx'
 
-import { mockProjects } from '../test/mockData'
-import { firebaseSetMock } from './__mocks__/firebase'
+import { mockProjects } from '../../test/mockData'
+import { firebaseSetMock } from '../__mocks__/firebase'
 
-import FirebaseRepository from '../storage/firebaseRepository'
-import RootStore from './rootStore'
-import ProjectListStore from './projectListStore'
+import FirebaseRepository from '../../storage/firebaseRepository'
+import RootStore from '../rootStore'
+import ProjectListStore from '../projectListStore'
 
 describe('ProjectListStore', () => {
   global.console.group = jest.fn()

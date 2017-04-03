@@ -1,10 +1,10 @@
 import * as mobx from 'mobx'
 
-import FirebaseRepository from '../storage/firebaseRepository'
-import ProjectStore from './projectStore'
-import RootStore from './rootStore'
+import FirebaseRepository from '../../storage/firebaseRepository'
+import ProjectStore from '../projectStore'
+import RootStore from '../rootStore'
 
-import { mockProjects } from '../test/mockData'
+import { mockProjects } from '../../test/mockData'
 
 describe('ProjectStore', () => {
   const TEST_DATA = mockProjects[0]

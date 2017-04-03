@@ -1,6 +1,6 @@
 import { observable, action } from 'mobx'
 
-import { ROUTE_NAMES } from '../lib/router'
+import { ROUTE_NAMES } from './routerStore'
 
 interface CurrentViewInterface {
   name: string,

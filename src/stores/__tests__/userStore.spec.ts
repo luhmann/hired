@@ -1,8 +1,8 @@
-import FirebaseRepository from '../storage/firebaseRepository'
-import RootStore from './rootStore'
-import { firebaseSignInWithCustomTokenMock, setCustomTokenMock } from './__mocks__/firebase'
+import FirebaseRepository from '../../storage/firebaseRepository'
+import RootStore from '../rootStore'
+import { firebaseSignInWithCustomTokenMock, setCustomTokenMock } from '../__mocks__/firebase'
 
-import UserStore from './userStore'
+import UserStore from '../userStore'
 
 describe('UserStore', () => {
   let rootStoreMock: RootStore

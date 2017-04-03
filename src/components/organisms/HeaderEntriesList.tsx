@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import { ROUTE_NAMES } from '../../lib/router'
+import { ROUTE_NAMES } from '../../stores/routerStore'
 
 import { cells } from '../../styles/style-utils'
 import { ButtonLink } from '../atoms/Links'

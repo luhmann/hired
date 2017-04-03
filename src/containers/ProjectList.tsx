@@ -2,9 +2,8 @@ import * as React from 'react'
 import { observer } from 'mobx-react'
 import styled from 'styled-components'
 
-import ProjectStore from '../stores/projectStore'
-import RootStore from '../stores/rootStore'
-import { ROUTE_NAMES } from '../lib/router'
+import { ProjectStore, RootStore } from '../stores/'
+import { ROUTE_NAMES } from '../stores/routerStore'
 import { formatCurrency } from '../lib/currency'
 
 import { color } from '../styles/style-utils'

@@ -1,5 +1,5 @@
-import UiStore from './uiStore'
-import { ROUTE_NAMES } from '../lib/router'
+import UiStore from '../uiStore'
+import { ROUTE_NAMES } from '../routerStore'
 
 describe('UiStore', () => {
   let subject: UiStore
