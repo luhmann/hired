@@ -4,7 +4,7 @@ import RootStore from './rootStore'
 
 class UserStore {
   @observable authenticated: Promise<boolean>
-  uid: string = 'me'
+  uid: string
 
   private rootStore: RootStore
 

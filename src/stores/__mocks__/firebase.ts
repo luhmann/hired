@@ -2,14 +2,15 @@ import * as fetchMock from 'fetch-mock'
 
 fetchMock.get('http://localhost:8000/auth/me', {token: '1234-5678'})
 
-export const firebaseSetMock = jest.fn()
+let firebaseSignInWithCustomTokenMock = jest.fn(() => true)
 
-export const firebaseSignInWithCustomTokenMock = jest.fn(() => Promise.resolve(true))
+const firebaseSetMock = jest.fn()
 
-export function initializeApp() {
+const initializeApp = () => {
   return {
     database() {
       return {
+        once: jest.fn(),
         ref() {
           return {
             set: firebaseSetMock
@@ -20,8 +21,20 @@ export function initializeApp() {
   }
 }
 
-export function auth() {
+const auth = () => {
   return {
     signInWithCustomToken: firebaseSignInWithCustomTokenMock
   }
+}
+
+const setCustomTokenMock = (returnValue: boolean) => {
+  firebaseSignInWithCustomTokenMock = jest.fn(() => returnValue)
+}
+
+export {
+  auth,
+  firebaseSetMock,
+  firebaseSignInWithCustomTokenMock,
+  initializeApp,
+  setCustomTokenMock
 }

@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`ProjectListStore should add projects 1`] = `
 Object {
   "1234-5678-9012": Object {
