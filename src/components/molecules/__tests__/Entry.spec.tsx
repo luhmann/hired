@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { mount } from 'enzyme'
 
-import Entry from './Entry'
+import { Entry } from '../'
 
 describe('Component: Entry', () => {
   const startDateMock = new Date(2015, 1, 1, 10, 22)
