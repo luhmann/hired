@@ -6,7 +6,7 @@ import { cells, color, shadow } from '../../styles/style-utils'
 import { Button } from '../atoms/Buttons'
 import { standardHPadding } from '../../styles/style-utils'
 
-interface ClockInProps {
+export interface ClockInProps {
   className?: string
   running: boolean,
   startEntry(): void,

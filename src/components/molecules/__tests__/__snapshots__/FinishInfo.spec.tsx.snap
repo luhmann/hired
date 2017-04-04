@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FinishInfo should render 1`] = `
+<FinishInfo
+  startTime={2017-02-14T09:22:00.000Z}
+  workHours={8}
+>
+  <styled.div>
+    <div
+      className="icEpLt"
+    >
+      <styled.div>
+        <div
+          className="inEzxg"
+        >
+          started at 
+          10:22
+        </div>
+      </styled.div>
+      <styled.div>
+        <div
+          className="dmDyDa"
+        >
+          done at 
+          18:22
+        </div>
+      </styled.div>
+    </div>
+  </styled.div>
+</FinishInfo>
+`;

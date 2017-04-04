@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClockIn should render in idle-state 1`] = `
+<ClockIn
+  running={false}
+  startEntry={[Function]}
+  stopEntry={[Function]}
+>
+  <styled.div>
+    <div
+      className="frIlRZ"
+    >
+      <styled.button
+        error={false}
+        onClick={[Function]}
+        success={true}
+      >
+        <button
+          className="hvWpBV"
+          onClick={[Function]}
+        >
+          Clock In
+        </button>
+      </styled.button>
+    </div>
+  </styled.div>
+</ClockIn>
+`;
+
+exports[`ClockIn should render in running-state 1`] = `
+<ClockIn
+  running={true}
+  startEntry={[Function]}
+  stopEntry={[Function]}
+>
+  <styled.div>
+    <div
+      className="frIlRZ"
+    >
+      <styled.button
+        error={true}
+        onClick={[Function]}
+        success={false}
+      >
+        <button
+          className="etMWMq"
+          onClick={[Function]}
+        >
+          Clock Out
+        </button>
+      </styled.button>
+    </div>
+  </styled.div>
+</ClockIn>
+`;

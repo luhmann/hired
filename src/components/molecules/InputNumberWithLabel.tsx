@@ -12,7 +12,7 @@ const Unit = styled.div`
   text-align: right;
 `
 
-interface InputTextWithLabelProps {
+export interface InputTextWithLabelProps {
   id: string
   label: string
   placeholder: string

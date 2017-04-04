@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputNumberWithLabel should render 1`] = `
+<InputTextWithLabel
+  changeHandler={[Function]}
+  id="rate"
+  label="Rate"
+  placeholder="Enter the current rate for the project"
+  unit="EUR"
+>
+  <Styled(BaseRow)>
+    <BaseRow
+      className="dHOzQD"
+    >
+      <div
+        className="dHOzQD"
+      >
+        <styled.label
+          htmlFor="rate"
+        >
+          <label
+            className="fPhlMm"
+            htmlFor="rate"
+          >
+            Rate
+          </label>
+        </styled.label>
+        <styled.input
+          id="rate"
+          onChange={[Function]}
+          placeholder="Enter the current rate for the project"
+          type="number"
+        >
+          <input
+            className="gGJqti"
+            id="rate"
+            onChange={[Function]}
+            placeholder="Enter the current rate for the project"
+            type="number"
+          />
+        </styled.input>
+        <styled.div>
+          <div
+            className="dlMZJJ"
+          >
+            EUR
+          </div>
+        </styled.div>
+      </div>
+    </BaseRow>
+  </Styled(BaseRow)>
+</InputTextWithLabel>
+`;

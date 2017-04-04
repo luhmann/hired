@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputTextWithLabel should render 1`] = `
+<InputTextWithLabel
+  changeHandler={[Function]}
+  id="description"
+  label="Description"
+  placeholder="Enter a description for the current project"
+>
+  <Styled(BaseRow)>
+    <BaseRow
+      className="dHOzQD"
+    >
+      <div
+        className="dHOzQD"
+      >
+        <styled.label
+          htmlFor="description"
+        >
+          <label
+            className="fPhlMm"
+            htmlFor="description"
+          >
+            Description
+          </label>
+        </styled.label>
+        <styled.input
+          id="description"
+          onChange={[Function]}
+          placeholder="Enter a description for the current project"
+          type="text"
+        >
+          <input
+            className="iERWm"
+            id="description"
+            onChange={[Function]}
+            placeholder="Enter a description for the current project"
+            type="text"
+          />
+        </styled.input>
+      </div>
+    </BaseRow>
+  </Styled(BaseRow)>
+</InputTextWithLabel>
+`;
