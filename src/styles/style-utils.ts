@@ -54,6 +54,16 @@ export function center(): string {
   `
 }
 
+export function maxWidthContainer(): string {
+  return `
+    background-color: ${color.gray.g_50};
+    box-shadow: ${shadow.subtle};
+    max-width: ${maxWidth};
+    margin: 0 auto;
+    min-height: 100vh;
+  `
+}
+
 export const gridBaseUnit = 8
 
 export function cells(amount: number): string {

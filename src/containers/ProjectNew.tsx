@@ -1,5 +1,8 @@
 import * as React from 'react'
 import { inject, observer } from 'mobx-react'
+import styled from 'styled-components'
+
+import { color, maxWidthContainer } from '../styles/style-utils'
 
 import { RootStore } from '../stores/'
 import { ROUTE_NAMES } from '../stores/routerStore'
@@ -17,6 +20,14 @@ interface NewProjectState {
   rate: number
   description?: string
 }
+
+const Root = styled.div`
+  ${ maxWidthContainer() }
+`
+
+const Form = styled.section`
+  background-color: ${color.white};
+`
 
 @inject('rootStore')
 @observer
@@ -57,13 +68,13 @@ class NewProject extends React.Component<NewProjectProps, NewProjectState> {
 
   render() {
     return (
-      <div>
+      <Root>
         <HeaderSave
           cancelHandler={this.cancelHandler}
           saveHandler={this.saveHandler}
           title="Add Project"
         />
-        <section>
+        <Form>
           <InputTextWithLabel
             id="project-name"
             label="Name"
@@ -83,8 +94,8 @@ class NewProject extends React.Component<NewProjectProps, NewProjectState> {
             placeholder="Description is optional"
             changeHandler={this.changeHandler('description')}
           />
-        </section>
-      </div>
+        </Form>
+      </Root>
     )
   }
 }
