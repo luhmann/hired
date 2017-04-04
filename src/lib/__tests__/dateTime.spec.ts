@@ -1,4 +1,4 @@
-import { addHours, formatDate, formatDuration, formatTime, getPercent } from './dateTime'
+import { addHours, formatDate, formatDuration, formatTime, getPercent } from '../dateTime'
 
 describe('Lib: dateTime', () => {
   describe('formatDuration', () => {

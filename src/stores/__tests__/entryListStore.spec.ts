@@ -60,6 +60,6 @@ describe('EntryListStore', () => {
 
       expect(subject.active).not.toBe(null)
       expect(subject.active.id).toBe('5555-6666-7777')
-    })    
+    })
   })
 })

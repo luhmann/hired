@@ -1,4 +1,4 @@
-import { formatCurrency } from './currency'
+import { formatCurrency } from '../currency'
 
 describe('Lib: currentcy', () => {
   it('should format an integer to a currency-string with two decimal zeroes', () => {
