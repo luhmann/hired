@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActiveEntry should render 1`] = `
+<Component
+  duration={7340}
+  standardHours={8}
+  start={2017-02-14T09:21:00.000Z}
+  total={85.789}
+>
+  <ReactCSSTransitionGroup
+    transitionAppear={true}
+    transitionAppearTimeout={500}
+    transitionEnter={true}
+    transitionEnterTimeout={500}
+    transitionLeave={true}
+    transitionLeaveTimeout={500}
+    transitionName="entry"
+  >
+    <ReactTransitionGroup
+      childFactory={[Function]}
+      component="span"
+      transitionAppear={true}
+      transitionAppearTimeout={500}
+      transitionEnter={true}
+      transitionEnterTimeout={500}
+      transitionLeave={true}
+      transitionLeaveTimeout={500}
+      transitionName="entry"
+    >
+      <span>
+        <ReactCSSTransitionGroupChild
+          appear={true}
+          appearTimeout={500}
+          enter={true}
+          enterTimeout={500}
+          leave={true}
+          leaveTimeout={500}
+          name="entry"
+        >
+          <styled.div>
+            <div
+              className="bUPhYf"
+            >
+              <Styled(BaseRow)
+                contentCells={4}
+              >
+                <BaseRow
+                  className="gOOxWv"
+                  contentCells={4}
+                >
+                  <div
+                    className="gOOxWv"
+                  >
+                    <styled.div>
+                      <div
+                        className="dzshZu"
+                      >
+                        <Styled(FinishInfo)
+                          startTime={2017-02-14T09:21:00.000Z}
+                          workHours={8}
+                        >
+                          <FinishInfo
+                            className="iwOXrP"
+                            startTime={2017-02-14T09:21:00.000Z}
+                            workHours={8}
+                          >
+                            <styled.div
+                              className="iwOXrP"
+                            >
+                              <div
+                                className="iwOXrP icEpLt"
+                              >
+                                <styled.div>
+                                  <div
+                                    className="inEzxg"
+                                  >
+                                    started at 
+                                    10:21
+                                  </div>
+                                </styled.div>
+                                <styled.div>
+                                  <div
+                                    className="dmDyDa"
+                                  >
+                                    done at 
+                                    18:21
+                                  </div>
+                                </styled.div>
+                              </div>
+                            </styled.div>
+                          </FinishInfo>
+                        </Styled(FinishInfo)>
+                        <styled.div>
+                          <div
+                            className="bwPZOZ"
+                          >
+                            85,79 EUR
+                          </div>
+                        </styled.div>
+                        <Styled(Component)
+                          finished={25.48611111111111}
+                        >
+                          <Component
+                            className="cxxjnL"
+                            finished={25.48611111111111}
+                          >
+                            <div
+                              className="cxxjnL"
+                            >
+                              <styled.div>
+                                <div
+                                  className="iQkOFr"
+                                >
+                                  <styled.div
+                                    style={
+                                      Object {
+                                        "width": "25.48611111111111%",
+                                      }
+                                    }
+                                  >
+                                    <div
+                                      className="ijuzDq"
+                                      style={
+                                        Object {
+                                          "width": "25.48611111111111%",
+                                        }
+                                      }
+                                    >
+                                       
+                                    </div>
+                                  </styled.div>
+                                </div>
+                              </styled.div>
+                            </div>
+                          </Component>
+                        </Styled(Component)>
+                        <styled.div>
+                          <div
+                            className="bAbayt"
+                          >
+                            02:02:20
+                          </div>
+                        </styled.div>
+                      </div>
+                    </styled.div>
+                  </div>
+                </BaseRow>
+              </Styled(BaseRow)>
+            </div>
+          </styled.div>
+        </ReactCSSTransitionGroupChild>
+      </span>
+    </ReactTransitionGroup>
+  </ReactCSSTransitionGroup>
+</Component>
+`;
