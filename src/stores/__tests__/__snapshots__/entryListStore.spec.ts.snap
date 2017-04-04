@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EntryListStore Hydration should hydrate from stored data 1`] = `
+Array [
+  Object {
+    "endTime": 2017-02-17T10:22:00.000Z,
+    "id": "5346-1234-1243",
+    "projectId": "1234-5678-9012",
+    "rate": 35.5,
+    "startTime": 2017-02-17T02:45:00.000Z,
+  },
+  Object {
+    "endTime": 2017-02-16T19:59:00.000Z,
+    "id": "3456-3456-3244",
+    "projectId": "1234-5678-9012",
+    "rate": 35.5,
+    "startTime": 2017-02-16T10:22:00.000Z,
+  },
+  Object {
+    "endTime": 2017-02-15T17:21:00.000Z,
+    "id": "9786-2345-1234",
+    "projectId": "1234-5678-9012",
+    "rate": 35.5,
+    "startTime": 2017-02-15T09:59:00.000Z,
+  },
+  Object {
+    "endTime": 2017-02-14T14:59:00.000Z,
+    "id": "2342-6552-5345",
+    "projectId": "2345-9384-324523",
+    "rate": 100.5,
+    "startTime": 2017-02-14T07:23:00.000Z,
+  },
+  Object {
+    "endTime": 2017-02-14T14:59:00.000Z,
+    "id": "4567-2341-2369-7684",
+    "projectId": "2345-9384-324523",
+    "rate": 15.5,
+    "startTime": 2017-02-14T07:23:00.000Z,
+  },
+  Object {
+    "endTime": 2017-02-14T14:59:00.000Z,
+    "id": "2342-6552-5345",
+    "projectId": "1234-5678-9012",
+    "rate": 35.5,
+    "startTime": 2017-02-14T07:23:00.000Z,
+  },
+]
+`;

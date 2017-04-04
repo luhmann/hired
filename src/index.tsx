@@ -20,7 +20,7 @@ const rootEl = document.getElementById('root') as HTMLElement
 
 ReactDOM.render(
   <Provider rootStore={rootStore} repository={repository}>
-    <RouterProvider router={rootStore.router.instance}>
+    <RouterProvider router={rootStore.routerStore.instance}>
       <App />
     </RouterProvider>
   </Provider>,

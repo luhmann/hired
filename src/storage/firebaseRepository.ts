@@ -45,7 +45,7 @@ export default FirebaseRepository
 export interface StorageEntryInterface {
   id: string,
   startTime: number
-  endTime: number|null,
+  endTime: number|null, // endTime has to be null to better store in firebase
   rate: number,
   projectId: string
 }

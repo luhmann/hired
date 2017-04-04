@@ -1,5 +1,6 @@
 import { observable, action } from 'mobx'
 const values = require('object.values')
+import { isDev } from '../lib/env'
 
 import EntryListStore from './entryListStore'
 import ProjectListStore from './projectListStore'
@@ -13,7 +14,7 @@ class RootStore {
   @observable projectListStore: ProjectListStore
   @observable userStore: UserStore
   @observable uiStore: UiStore
-  router: RouterStore
+  routerStore: RouterStore
   repository: FirebaseRepository
 
   constructor(repository: FirebaseRepository, uid: string) {
@@ -22,28 +23,31 @@ class RootStore {
     this.entryListStore = new EntryListStore(this)
     this.projectListStore = new ProjectListStore(this)
     this.uiStore = new UiStore()
-    this.router = new RouterStore(this)
+    this.routerStore = new RouterStore(this)
 
     this.fetchData()
   }
 
   @action.bound
-  fetchData() {
-    this.userStore.authenticated
-      .then(() => (this.repository.database(this.userStore.uid).once('value')))
-      .then((snapshot) => {
-        const data = snapshot.val()
+  async fetchData() {
+    try {
+      await this.userStore.authenticated
+      const snapshot = await this.repository.database(this.userStore.uid).once('value')
+      const data = snapshot.val()
 
-        if (data.projects) {
-          this.projectListStore.hydrate(values(data.projects))
-        }
+      if (data.projects) {
+        this.projectListStore.hydrate(values(data.projects))
+      }
 
-        if (data.entries) {
-          this.entryListStore.hydrate(values(data.entries))
-        }
+      if (data.entries) {
+        this.entryListStore.hydrate(values(data.entries))
+      }
 
-        this.uiStore.setLoaded(true)
-      })
+      this.uiStore.setLoaded(true)
+    } catch (error) {
+      isDev() && console.error('Error while fetching initial data occured', error)
+      this.uiStore.setError(true)
+    }
   }
 }
 

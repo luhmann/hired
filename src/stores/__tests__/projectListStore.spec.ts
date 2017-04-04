@@ -4,8 +4,7 @@ import { MOCK_PROJECTS } from '../../test/mockData'
 import { firebaseSetMock } from '../../storage/__mocks__/firebase'
 
 import FirebaseRepository from '../../storage/firebaseRepository'
-import RootStore from '../rootStore'
-import ProjectListStore from '../projectListStore'
+import { RootStore, ProjectListStore } from '../'
 
 describe('ProjectListStore', () => {
   global.console.group = jest.fn()

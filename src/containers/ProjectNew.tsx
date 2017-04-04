@@ -56,13 +56,13 @@ class NewProject extends React.Component<NewProjectProps, NewProjectState> {
   saveHandler(event: React.MouseEvent<any>) {
     if (this.props.rootStore) {
       this.props.rootStore.projectListStore.add(this.state.name, this.state.rate, this.state.description)
-      this.props.rootStore.router.navigate(ROUTE_NAMES.projectList)
+      this.props.rootStore.routerStore.navigate(ROUTE_NAMES.projectList)
     }
   }
 
   cancelHandler(event: React.MouseEvent<any>) {
     if (this.props.rootStore) {
-      this.props.rootStore.router.navigate(ROUTE_NAMES.projectList)
+      this.props.rootStore.routerStore.navigate(ROUTE_NAMES.projectList)
     }
   }
 
