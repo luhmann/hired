@@ -1,9 +1,9 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
-import FirebaseRepository from '../storage/firebaseRepository'
-import RootStore from '../stores/rootStore'
-import App from './App'
+import { FirebaseRepository } from '../../storage/'
+import { RootStore } from '../../stores/'
+import App from '../App'
 
 // FIXME: Test is not done yet
 xit('renders without crashing', async () => {

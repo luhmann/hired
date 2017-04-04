@@ -41,10 +41,6 @@ class EntryStore {
       this.endTime = new Date(endTime)
     }
 
-    // if (startTime && !endTime) {
-    //   this.startTimer(this.startTime)
-    // }
-
     this.rate = rate
 
     this.projectId = projectId

@@ -4,13 +4,11 @@ import styled from 'styled-components'
 
 import { cells, color } from '../../styles/style-utils'
 import ArrowIcon from '../../assets/icons/Arrow'
-import EntryListStore from '../../stores/entryListStore'
 import EntryStore from '../../stores/entryStore'
 import Entry from '../molecules/Entry'
 
-interface EntryListProps {
-  entryList: EntryListStore,
-  projectId: string
+export interface EntryListProps {
+  entryList: EntryStore[]
 }
 
 const Root = styled.section`
@@ -41,11 +39,9 @@ const StyledArrowIcon = styled(ArrowIcon)`
 @observer
 class EntryList extends React.Component<EntryListProps, {}> {
   render() {
-    const entries = this.props.entryList.getEntriesForProject(this.props.projectId)
-
     let content: JSX.Element[] | JSX.Element | null = null
-    if (entries.length) {
-      content = entries
+    if (this.props.entryList.length) {
+      content = this.props.entryList
         .filter(entry => entry.endTime)
         .map((entry: EntryStore) => (
           <Entry

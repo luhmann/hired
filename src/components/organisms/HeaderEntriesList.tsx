@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { ROUTE_NAMES } from '../../stores/routerStore'
 
 import { cells } from '../../styles/style-utils'
-import { ButtonLink } from '../atoms/Links'
+import { ButtonLink } from '../molecules/Links'
 import { DistributedHeader, HeaderTitle } from '../atoms/Headers'
 import BackIcon from '../../assets/icons/Back'
 
@@ -14,7 +14,7 @@ const BackLink = styled(BackIcon)`
   width: ${cells(2)};
 `
 
-interface EntriesListHeaderProps {
+export interface EntriesListHeaderProps {
   project: string
 }
 

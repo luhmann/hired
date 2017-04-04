@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { ROUTE_NAMES } from '../../stores/routerStore'
 
 import { cells } from '../../styles/style-utils'
-import { ButtonLink } from '../atoms/Links'
+import { ButtonLink } from '../molecules/Links'
 import { DistributedHeader, HeaderTitle } from '../atoms/Headers'
 import PlusIcon from '../../assets/icons/Plus'
 

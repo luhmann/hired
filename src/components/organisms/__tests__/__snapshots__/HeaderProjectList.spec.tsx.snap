@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderProjectList should render 1`] = `
+<styled.header>
+  <Styled(WithRoute[BaseLink])
+    routeName="PROJECT_NEW"
+  >
+    <Styled(Icon) />
+  </Styled(WithRoute[BaseLink])>
+  <styled.h1>
+    Projects
+  </styled.h1>
+</styled.header>
+`;

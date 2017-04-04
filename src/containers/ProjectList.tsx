@@ -10,7 +10,7 @@ import { color, maxWidthContainer } from '../styles/style-utils'
 import { Row } from '../components/atoms/Containers'
 import { Total as GlobalTotal } from '../components/atoms/Text'
 import { gridCell } from '../styles/style-utils'
-import { RowLink } from '../components/atoms/Links'
+import { RowLink } from '../components/molecules/Links'
 import ProjectListHeader from '../components/organisms/HeaderProjectList'
 
 const Root = styled.section`

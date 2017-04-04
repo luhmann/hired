@@ -41,6 +41,9 @@ class Project extends React.Component<ProjectProps, {}> {
 
     const activeEntry = (hasRunningTimer) ? this.props.rootStore.entryListStore.active : null
 
+    const entryListForProject = this.props.rootStore.entryListStore
+      .getEntriesForProject(this.props.rootStore.uiStore.currentView.projectId)
+
     return (
       <Root hasRunningTimer={hasRunningTimer}>
         <HeaderEntriesList
@@ -63,8 +66,7 @@ class Project extends React.Component<ProjectProps, {}> {
           />
         )}
         <EntryList
-          entryList={this.props.rootStore.entryListStore}
-          projectId={this.props.rootStore.uiStore.currentView.projectId}
+          entryList={entryListForProject}
         />
       </Root>
     )

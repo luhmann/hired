@@ -1,0 +1,551 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EntryList should render empty-state no entries are available 1`] = `
+<EntryList
+  entryList={Array []}
+>
+  <styled.section>
+    <section
+      className="fzSavm"
+    >
+      <styled.section>
+        <section
+          className="jzBYvT"
+        >
+          <Styled(Icon)>
+            <Icon
+              className="ikntkz"
+            >
+              <svg
+                className="ikntkz"
+                version="1.1"
+                viewBox="0 0 100 125"
+                x="0px"
+                xmlSpace="preserve"
+                y="0px"
+              >
+                <g>
+                  <path
+                    d="M67.893,30.153c-0.917,2.462-2.189,4.596-3.746,6.559c-1.688,2.128-3.433,4.209-5.149,6.314   c-5.109,6.268-10.981,11.746-17.363,16.692c-2.229,1.728-4.531,3.37-6.683,5.189c-3.531,2.989-7.377,5.472-11.411,7.712   c-3.29,1.826-6.502,3.788-9.741,5.705c-0.307,0.182-0.552,0.468-0.841,0.718c0.779,0.624,1.362,0.175,1.916,0.013   c4.726-1.383,9.28-3.221,13.72-5.34c3.773-1.801,7.554-3.59,11.301-5.446c1.496-0.742,2.973-1.553,4.343-2.502   c3.349-2.322,6.707-4.641,9.92-7.144c5.523-4.305,10.953-8.73,16.388-13.145c1.518-1.234,3.184-2.355,4.193-4.34   c2.952,5.735,3.087,11.997,4.657,18.137c0.355-0.391,0.709-0.63,0.856-0.962c2.906-6.605,5.672-13.252,7.262-20.339   c1.052-4.69,2.357-9.325,3.536-13.988c0.353-1.399,0.771-2.792,0.95-4.494c-10.038,0.72-19.892,1.427-30.033,2.155   C63.867,24.659,65.842,27.413,67.893,30.153z"
+                    fill="none"
+                  />
+                  <path
+                    className="outline"
+                    d="M93.62,17.428c-2.187,0.146-4.378,0.242-6.563,0.405   c-3.123,0.232-6.259,0.386-9.361,0.785c-6.13,0.79-12.255,1.129-18.412,0.4c-0.312-0.037-0.653-0.145-0.927-0.055   c-0.356,0.118-0.74,0.34-0.95,0.634c-0.129,0.18-0.056,0.65,0.1,0.866c0.972,1.354,1.976,2.685,3.003,3.999   c1.863,2.386,3.749,4.753,5.729,7.259c-0.312,0.554-0.421,0.856-0.617,1.08c-3.101,3.539-6.19,7.087-9.325,10.596   c-6.299,7.049-13.293,13.321-21.158,18.591c-1.573,1.055-2.962,2.291-4.267,3.669c-0.921,0.972-2,1.854-3.151,2.537   c-5.127,3.042-10.284,6.033-15.479,8.96c-1.068,0.603-2.318,0.924-3.521,1.233C7.406,78.723,6.074,78.964,5,79.856   c0.255,2.169,0.527,2.639,2.181,2.73c1.337,0.073,2.721-0.049,4.033-0.325c5.239-1.102,10.274-2.868,15.171-5.006   c4.313-1.884,8.596-3.842,12.844-5.871c1.88-0.899,3.716-1.939,5.438-3.113c6.395-4.367,12.674-8.893,18.293-14.264   c0.83-0.793,1.745-1.498,2.635-2.228c2.823-2.312,5.652-4.617,8.657-7.071c0.28,0.703,0.592,1.224,0.692,1.784   c0.822,4.627,1.584,9.265,2.415,13.89c0.255,1.416,0.667,2.804,1.09,4.542c0.612-0.589,1.083-0.851,1.27-1.247   c1.791-3.774,3.585-7.549,5.284-11.365c3.603-8.093,5.196-16.758,7.078-25.337c0.426-1.941,0.85-3.885,1.212-5.838   c0.234-1.266,0.674-2.392,1.707-3.14C94.663,17.243,94.138,17.393,93.62,17.428z M91.051,23.986   c-1.179,4.663-2.485,9.298-3.536,13.988c-1.59,7.087-4.356,13.734-7.262,20.339c-0.146,0.332-0.5,0.572-0.856,0.962   c-1.57-6.14-1.705-12.401-4.657-18.137c-1.009,1.985-2.674,3.106-4.193,4.34c-5.436,4.416-10.865,8.841-16.388,13.145   c-3.213,2.503-6.571,4.822-9.92,7.144c-1.369,0.949-2.847,1.76-4.343,2.502c-3.747,1.856-7.528,3.645-11.301,5.446   c-4.441,2.119-8.994,3.957-13.72,5.34c-0.554,0.161-1.137,0.611-1.916-0.013c0.289-0.25,0.534-0.536,0.841-0.718   c3.239-1.917,6.451-3.879,9.741-5.705c4.034-2.239,7.88-4.723,11.411-7.712c2.152-1.82,4.453-3.462,6.683-5.189   c6.383-4.946,12.254-10.424,17.363-16.692c1.716-2.105,3.461-4.186,5.149-6.314c1.557-1.963,2.829-4.097,3.746-6.559   c-2.051-2.741-4.026-5.495-5.924-8.507c10.141-0.728,19.994-1.435,30.033-2.155C91.822,21.194,91.405,22.586,91.051,23.986z"
+                    fill="#000000"
+                  />
+                </g>
+              </svg>
+            </Icon>
+          </Styled(Icon)>
+          <styled.div>
+            <div
+              className="a"
+            >
+              You have no entries yet.
+              <br />
+              Hit the big green button!
+            </div>
+          </styled.div>
+        </section>
+      </styled.section>
+    </section>
+  </styled.section>
+</EntryList>
+`;
+
+exports[`EntryList should render normal-state if entries are provided 1`] = `
+<EntryList
+  entryList={
+    Array [
+      EntryStore {
+        "endTime": 2017-02-14T14:59:00.000Z,
+        "id": "2342-6552-5345",
+        "projectId": "1234-5678-9012",
+        "rate": 35.5,
+        "startTime": 2017-02-14T07:23:00.000Z,
+      },
+      EntryStore {
+        "endTime": 2017-02-15T17:21:00.000Z,
+        "id": "9786-2345-1234",
+        "projectId": "1234-5678-9012",
+        "rate": 35.5,
+        "startTime": 2017-02-15T09:59:00.000Z,
+      },
+      EntryStore {
+        "endTime": 2017-02-16T19:59:00.000Z,
+        "id": "3456-3456-3244",
+        "projectId": "1234-5678-9012",
+        "rate": 35.5,
+        "startTime": 2017-02-16T10:22:00.000Z,
+      },
+      EntryStore {
+        "endTime": 2017-02-17T10:22:00.000Z,
+        "id": "5346-1234-1243",
+        "projectId": "1234-5678-9012",
+        "rate": 35.5,
+        "startTime": 2017-02-17T02:45:00.000Z,
+      },
+      EntryStore {
+        "endTime": 2017-02-14T14:59:00.000Z,
+        "id": "4567-2341-2369-7684",
+        "projectId": "2345-9384-324523",
+        "rate": 15.5,
+        "startTime": 2017-02-14T07:23:00.000Z,
+      },
+      EntryStore {
+        "endTime": 2017-02-14T14:59:00.000Z,
+        "id": "9845-6524-2435",
+        "projectId": "2345-9384-324523",
+        "rate": 100.5,
+        "startTime": 2017-02-14T07:23:00.000Z,
+      },
+    ]
+  }
+>
+  <styled.section>
+    <section
+      className="fzSavm"
+    >
+      <Component
+        duration={27360}
+        end={2017-02-14T14:59:00.000Z}
+        start={2017-02-14T07:23:00.000Z}
+        total={269.79999999999995}
+      >
+        <styled.div>
+          <div
+            className="jEImSP"
+          >
+            <Styled(BaseRow)
+              contentCells={4}
+            >
+              <BaseRow
+                className="gOOxWv"
+                contentCells={4}
+              >
+                <div
+                  className="gOOxWv"
+                >
+                  <styled.div>
+                    <div
+                      className="dzshZu"
+                    >
+                      <styled.div>
+                        <div
+                          className="iwOXrP"
+                        >
+                          Tu. 14. February 2017
+                        </div>
+                      </styled.div>
+                      <styled.div>
+                        <div
+                          className="bwPZOZ"
+                        >
+                          269,80 EUR
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        begin={true}
+                      >
+                        <div
+                          begin={true}
+                          className="lYNpw"
+                        >
+                          08:23
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        end={true}
+                      >
+                        <div
+                          className="jCERDf"
+                          end={true}
+                        >
+                          15:59
+                        </div>
+                      </styled.div>
+                      <styled.div>
+                        <div
+                          className="fCpcNg"
+                        >
+                          07:36:00
+                        </div>
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </div>
+              </BaseRow>
+            </Styled(BaseRow)>
+          </div>
+        </styled.div>
+      </Component>
+      <Component
+        duration={26520}
+        end={2017-02-15T17:21:00.000Z}
+        start={2017-02-15T09:59:00.000Z}
+        total={261.51666666666665}
+      >
+        <styled.div>
+          <div
+            className="jEImSP"
+          >
+            <Styled(BaseRow)
+              contentCells={4}
+            >
+              <BaseRow
+                className="gOOxWv"
+                contentCells={4}
+              >
+                <div
+                  className="gOOxWv"
+                >
+                  <styled.div>
+                    <div
+                      className="dzshZu"
+                    >
+                      <styled.div>
+                        <div
+                          className="iwOXrP"
+                        >
+                          We. 15. February 2017
+                        </div>
+                      </styled.div>
+                      <styled.div>
+                        <div
+                          className="bwPZOZ"
+                        >
+                          261,52 EUR
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        begin={true}
+                      >
+                        <div
+                          begin={true}
+                          className="lYNpw"
+                        >
+                          10:59
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        end={true}
+                      >
+                        <div
+                          className="jCERDf"
+                          end={true}
+                        >
+                          18:21
+                        </div>
+                      </styled.div>
+                      <styled.div>
+                        <div
+                          className="fCpcNg"
+                        >
+                          07:22:00
+                        </div>
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </div>
+              </BaseRow>
+            </Styled(BaseRow)>
+          </div>
+        </styled.div>
+      </Component>
+      <Component
+        duration={34620}
+        end={2017-02-16T19:59:00.000Z}
+        start={2017-02-16T10:22:00.000Z}
+        total={341.39166666666665}
+      >
+        <styled.div>
+          <div
+            className="jEImSP"
+          >
+            <Styled(BaseRow)
+              contentCells={4}
+            >
+              <BaseRow
+                className="gOOxWv"
+                contentCells={4}
+              >
+                <div
+                  className="gOOxWv"
+                >
+                  <styled.div>
+                    <div
+                      className="dzshZu"
+                    >
+                      <styled.div>
+                        <div
+                          className="iwOXrP"
+                        >
+                          Th. 16. February 2017
+                        </div>
+                      </styled.div>
+                      <styled.div>
+                        <div
+                          className="bwPZOZ"
+                        >
+                          341,39 EUR
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        begin={true}
+                      >
+                        <div
+                          begin={true}
+                          className="lYNpw"
+                        >
+                          11:22
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        end={true}
+                      >
+                        <div
+                          className="jCERDf"
+                          end={true}
+                        >
+                          20:59
+                        </div>
+                      </styled.div>
+                      <styled.div>
+                        <div
+                          className="fCpcNg"
+                        >
+                          09:37:00
+                        </div>
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </div>
+              </BaseRow>
+            </Styled(BaseRow)>
+          </div>
+        </styled.div>
+      </Component>
+      <Component
+        duration={27420}
+        end={2017-02-17T10:22:00.000Z}
+        start={2017-02-17T02:45:00.000Z}
+        total={270.39166666666665}
+      >
+        <styled.div>
+          <div
+            className="jEImSP"
+          >
+            <Styled(BaseRow)
+              contentCells={4}
+            >
+              <BaseRow
+                className="gOOxWv"
+                contentCells={4}
+              >
+                <div
+                  className="gOOxWv"
+                >
+                  <styled.div>
+                    <div
+                      className="dzshZu"
+                    >
+                      <styled.div>
+                        <div
+                          className="iwOXrP"
+                        >
+                          Fr. 17. February 2017
+                        </div>
+                      </styled.div>
+                      <styled.div>
+                        <div
+                          className="bwPZOZ"
+                        >
+                          270,39 EUR
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        begin={true}
+                      >
+                        <div
+                          begin={true}
+                          className="lYNpw"
+                        >
+                          03:45
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        end={true}
+                      >
+                        <div
+                          className="jCERDf"
+                          end={true}
+                        >
+                          11:22
+                        </div>
+                      </styled.div>
+                      <styled.div>
+                        <div
+                          className="fCpcNg"
+                        >
+                          07:37:00
+                        </div>
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </div>
+              </BaseRow>
+            </Styled(BaseRow)>
+          </div>
+        </styled.div>
+      </Component>
+      <Component
+        duration={27360}
+        end={2017-02-14T14:59:00.000Z}
+        start={2017-02-14T07:23:00.000Z}
+        total={117.8}
+      >
+        <styled.div>
+          <div
+            className="jEImSP"
+          >
+            <Styled(BaseRow)
+              contentCells={4}
+            >
+              <BaseRow
+                className="gOOxWv"
+                contentCells={4}
+              >
+                <div
+                  className="gOOxWv"
+                >
+                  <styled.div>
+                    <div
+                      className="dzshZu"
+                    >
+                      <styled.div>
+                        <div
+                          className="iwOXrP"
+                        >
+                          Tu. 14. February 2017
+                        </div>
+                      </styled.div>
+                      <styled.div>
+                        <div
+                          className="bwPZOZ"
+                        >
+                          117,80 EUR
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        begin={true}
+                      >
+                        <div
+                          begin={true}
+                          className="lYNpw"
+                        >
+                          08:23
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        end={true}
+                      >
+                        <div
+                          className="jCERDf"
+                          end={true}
+                        >
+                          15:59
+                        </div>
+                      </styled.div>
+                      <styled.div>
+                        <div
+                          className="fCpcNg"
+                        >
+                          07:36:00
+                        </div>
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </div>
+              </BaseRow>
+            </Styled(BaseRow)>
+          </div>
+        </styled.div>
+      </Component>
+      <Component
+        duration={27360}
+        end={2017-02-14T14:59:00.000Z}
+        start={2017-02-14T07:23:00.000Z}
+        total={763.8}
+      >
+        <styled.div>
+          <div
+            className="jEImSP"
+          >
+            <Styled(BaseRow)
+              contentCells={4}
+            >
+              <BaseRow
+                className="gOOxWv"
+                contentCells={4}
+              >
+                <div
+                  className="gOOxWv"
+                >
+                  <styled.div>
+                    <div
+                      className="dzshZu"
+                    >
+                      <styled.div>
+                        <div
+                          className="iwOXrP"
+                        >
+                          Tu. 14. February 2017
+                        </div>
+                      </styled.div>
+                      <styled.div>
+                        <div
+                          className="bwPZOZ"
+                        >
+                          763,80 EUR
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        begin={true}
+                      >
+                        <div
+                          begin={true}
+                          className="lYNpw"
+                        >
+                          08:23
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        end={true}
+                      >
+                        <div
+                          className="jCERDf"
+                          end={true}
+                        >
+                          15:59
+                        </div>
+                      </styled.div>
+                      <styled.div>
+                        <div
+                          className="fCpcNg"
+                        >
+                          07:36:00
+                        </div>
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </div>
+              </BaseRow>
+            </Styled(BaseRow)>
+          </div>
+        </styled.div>
+      </Component>
+    </section>
+  </styled.section>
+</EntryList>
+`;

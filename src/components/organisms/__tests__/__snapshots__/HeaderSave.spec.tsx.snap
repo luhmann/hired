@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderSave should render 1`] = `
+<styled.header>
+  <Styled(Component)
+    clickHandler={[Function]}
+    text="Cancel"
+  />
+  <styled.h1>
+    New Project
+  </styled.h1>
+  <Styled(Component)
+    clickHandler={[Function]}
+    text="Save"
+  />
+</styled.header>
+`;

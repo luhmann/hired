@@ -59,7 +59,7 @@ export const MOCK_ENTRIES = [
     projectId: '2345-9384-324523'
   }),
   Object.freeze({
-    id: '2342-6552-5345',
+    id: '9845-6524-2435',
     startTime: +new Date(2017, 1, 14, 8, 23),
     endTime: +new Date(2017, 1, 14, 15, 59),
     rate: 100.50,

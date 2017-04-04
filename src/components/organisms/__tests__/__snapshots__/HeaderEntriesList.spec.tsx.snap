@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderEntriesList should render 1`] = `
+<styled.header>
+  <Styled(WithRoute[BaseLink])
+    routeName="PROJECT_LIST"
+  >
+    <Styled(Icon) />
+  </Styled(WithRoute[BaseLink])>
+  <styled.h1>
+    ACME Inc.
+  </styled.h1>
+  <div>
+     
+  </div>
+</styled.header>
+`;
