@@ -25,7 +25,9 @@
     "scripts",
     "acceptance-tests",
     "webpack",
-    "jest"
+    "jest",
+    "**/__mocks__/*.ts",
+    "**/*.spec.ts"
   ],
   "types": [
     "typePatches"

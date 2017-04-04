@@ -27,16 +27,16 @@ class FirebaseRepository {
     return this.app.database().ref(`${uid}/projects`)
   }
 
-  authenticate = (uid: string = 'me') => {
-    return fetch(`http://localhost:8000/auth/${uid}`)
-      .then((res) => res.json())
-      .then((json: any) => firebase.auth().signInWithCustomToken(json.token))
-      .then(() => (true))
-      .catch((error) => {
-        // tslint:disable-next-line
-        console.log('Failure in auth, check it', error)
-        return Promise.reject('Error in firebase request')
-      })
+  authenticate = async(uid: string = 'me') => {
+    try {
+      let response = await fetch(`http://localhost:8000/auth/${uid}`)
+      let parsed = await response.json()
+      return await firebase.auth().signInWithCustomToken(parsed.token)
+    } catch (error) {
+      // tslint:disable-next-line
+      console.log('Failure in auth, check it', error)
+      return false
+    }
   }
 }
 
@@ -45,7 +45,7 @@ export default FirebaseRepository
 export interface StorageEntryInterface {
   id: string,
   startTime: number
-  endTime: number|null,
+  endTime: number|null, // endTime has to be null to better store in firebase
   rate: number,
   projectId: string
 }

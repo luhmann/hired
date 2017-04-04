@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Entry should omit the endDate if not provided 1`] = `
+<Component
+  duration={9060}
+  start={2015-02-01T09:22:00.000Z}
+  total={50.33333333333333}
+>
+  <styled.div>
+    <div
+      className="jEImSP"
+    >
+      <Styled(BaseRow)
+        contentCells={4}
+      >
+        <BaseRow
+          className="gOOxWv"
+          contentCells={4}
+        >
+          <div
+            className="gOOxWv"
+          >
+            <styled.div>
+              <div
+                className="dzshZu"
+              >
+                <styled.div>
+                  <div
+                    className="iwOXrP"
+                  >
+                    Su. 01. February 2015
+                  </div>
+                </styled.div>
+                <styled.div>
+                  <div
+                    className="bwPZOZ"
+                  >
+                    50,33 EUR
+                  </div>
+                </styled.div>
+                <styled.div
+                  begin={true}
+                >
+                  <div
+                    begin={true}
+                    className="lYNpw"
+                  >
+                    10:22
+                  </div>
+                </styled.div>
+                <styled.div
+                  end={true}
+                >
+                  <div
+                    className="jCERDf"
+                    end={true}
+                  />
+                </styled.div>
+                <styled.div>
+                  <div
+                    className="fCpcNg"
+                  >
+                    02:31:00
+                  </div>
+                </styled.div>
+              </div>
+            </styled.div>
+          </div>
+        </BaseRow>
+      </Styled(BaseRow)>
+    </div>
+  </styled.div>
+</Component>
+`;
+
+exports[`Component: Entry should render 1`] = `
+<Component
+  duration={9060}
+  end={2015-02-01T11:53:00.000Z}
+  start={2015-02-01T09:22:00.000Z}
+  total={50.33333333333333}
+>
+  <styled.div>
+    <div
+      className="jEImSP"
+    >
+      <Styled(BaseRow)
+        contentCells={4}
+      >
+        <BaseRow
+          className="gOOxWv"
+          contentCells={4}
+        >
+          <div
+            className="gOOxWv"
+          >
+            <styled.div>
+              <div
+                className="dzshZu"
+              >
+                <styled.div>
+                  <div
+                    className="iwOXrP"
+                  >
+                    Su. 01. February 2015
+                  </div>
+                </styled.div>
+                <styled.div>
+                  <div
+                    className="bwPZOZ"
+                  >
+                    50,33 EUR
+                  </div>
+                </styled.div>
+                <styled.div
+                  begin={true}
+                >
+                  <div
+                    begin={true}
+                    className="lYNpw"
+                  >
+                    10:22
+                  </div>
+                </styled.div>
+                <styled.div
+                  end={true}
+                >
+                  <div
+                    className="jCERDf"
+                    end={true}
+                  >
+                    12:53
+                  </div>
+                </styled.div>
+                <styled.div>
+                  <div
+                    className="fCpcNg"
+                  >
+                    02:31:00
+                  </div>
+                </styled.div>
+              </div>
+            </styled.div>
+          </div>
+        </BaseRow>
+      </Styled(BaseRow)>
+    </div>
+  </styled.div>
+</Component>
+`;

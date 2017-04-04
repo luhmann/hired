@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { cells, color } from '../../styles/style-utils'
 import ArrowIcon from '../../assets/icons/Arrow'
 import EntryListStore from '../../stores/entryListStore'
-import { EntryStore } from '../../stores/entryStore'
+import EntryStore from '../../stores/entryStore'
 import Entry from '../molecules/Entry'
 
 interface EntryListProps {

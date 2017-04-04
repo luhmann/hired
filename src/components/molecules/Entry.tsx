@@ -38,7 +38,7 @@ export const Duration = styled(GlobalDuration)`
 export interface EntryProps {
   className?: string
   start: Date
-  end: Date
+  end?: Date
   duration: number
   total: number
 }

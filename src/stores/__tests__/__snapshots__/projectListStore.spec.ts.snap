@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectListStore should add projects 1`] = `
+Object {
+  "1234-5678-9012": Object {
+    "description": "A really cool project",
+    "id": "1234-5678-9012",
+    "name": "Foo Industries Redesign",
+    "standardHours": 8,
+    "standardRate": 20,
+  },
+}
+`;
+
+exports[`ProjectListStore should add projects 2`] = `
+Object {
+  "1234-5678-9012": Object {
+    "description": "A really cool project",
+    "id": "1234-5678-9012",
+    "name": "Foo Industries Redesign",
+    "standardHours": 8,
+    "standardRate": 20,
+  },
+  "2345-9384-324523": Object {
+    "description": "Doc is annoying",
+    "id": "2345-9384-324523",
+    "name": "ACME Inc.",
+    "standardHours": 6,
+    "standardRate": 120,
+  },
+}
+`;
+
+exports[`ProjectListStore should add projects 3`] = `
+Object {
+  "1234-5678-9012": Object {
+    "description": "A really cool project",
+    "id": "1234-5678-9012",
+    "name": "Foo Industries Redesign",
+    "standardHours": 8,
+    "standardRate": 20,
+  },
+  "2345-9384-324523": Object {
+    "description": "Doc is annoying",
+    "id": "2345-9384-324523",
+    "name": "ACME Inc.",
+    "standardHours": 6,
+    "standardRate": 120,
+  },
+  "9876-6554-5123": Object {
+    "description": "I am Batman",
+    "id": "9876-6554-5123",
+    "name": "Wayne Industries",
+    "standardHours": 24,
+    "standardRate": 523,
+  },
+}
+`;
+
+exports[`ProjectListStore should add projects 4`] = `
+Array [
+  Array [
+    Object {
+      "1234-5678-9012": Object {
+        "description": "A really cool project",
+        "id": "1234-5678-9012",
+        "name": "Foo Industries Redesign",
+        "standardHours": 8,
+        "standardRate": 20,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "1234-5678-9012": Object {
+        "description": "A really cool project",
+        "id": "1234-5678-9012",
+        "name": "Foo Industries Redesign",
+        "standardHours": 8,
+        "standardRate": 20,
+      },
+      "2345-9384-324523": Object {
+        "description": "Doc is annoying",
+        "id": "2345-9384-324523",
+        "name": "ACME Inc.",
+        "standardHours": 6,
+        "standardRate": 120,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "1234-5678-9012": Object {
+        "description": "A really cool project",
+        "id": "1234-5678-9012",
+        "name": "Foo Industries Redesign",
+        "standardHours": 8,
+        "standardRate": 20,
+      },
+      "2345-9384-324523": Object {
+        "description": "Doc is annoying",
+        "id": "2345-9384-324523",
+        "name": "ACME Inc.",
+        "standardHours": 6,
+        "standardRate": 120,
+      },
+      "9876-6554-5123": Object {
+        "description": "I am Batman",
+        "id": "9876-6554-5123",
+        "name": "Wayne Industries",
+        "standardHours": 24,
+        "standardRate": 523,
+      },
+    },
+  ],
+]
+`;
+
+exports[`ProjectListStore should hydrate from data structure 1`] = `
+Object {
+  "1234-5678-9012": Object {
+    "description": "A really cool project",
+    "id": "1234-5678-9012",
+    "name": "Foo Industries Redesign",
+    "standardHours": 8,
+    "standardRate": 20,
+  },
+  "2345-9384-324523": Object {
+    "description": "Doc is annoying",
+    "id": "2345-9384-324523",
+    "name": "ACME Inc.",
+    "standardHours": 6,
+    "standardRate": 120,
+  },
+  "9876-6554-5123": Object {
+    "description": "I am Batman",
+    "id": "9876-6554-5123",
+    "name": "Wayne Industries",
+    "standardHours": 24,
+    "standardRate": 523,
+  },
+}
+`;

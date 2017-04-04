@@ -4,7 +4,7 @@ import { observer, inject } from 'mobx-react'
 
 import '../styles/globals.ts'
 import RootStore from '../stores/rootStore'
-import { ROUTE_NAMES } from '../lib/router'
+import { ROUTE_NAMES } from '../stores/routerStore'
 
 import Bootstrap from './Bootstrap'
 import Error from './Error'

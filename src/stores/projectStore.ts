@@ -1,6 +1,6 @@
 import { observable, computed } from 'mobx'
 
-import EntryListStore from './entryListStore'
+import RootStore from './rootStore'
 
 class ProjectStore {
   readonly id: string
@@ -8,17 +8,18 @@ class ProjectStore {
   standardRate: number
   description: string
   standardHours: number
-  entryListStore: EntryListStore
+  
+  private rootStore: RootStore 
 
   constructor(
-    entryListStore: EntryListStore,
+    rootStore: RootStore,
     id: string,
     name: string,
     standardRate: number,
     description: string = '',
     standardHours: number = 8
   ) {
-    this.entryListStore = entryListStore
+    this.rootStore = rootStore 
     this.id = id
     this.name = name
     this.standardRate = standardRate
@@ -27,7 +28,7 @@ class ProjectStore {
   }
 
   @computed get totalRevenue() {
-    return this.entryListStore
+    return this.rootStore.entryListStore
       .getEntriesForProject(this.id)
       .reduce((previousValue, entry) => (previousValue + entry.total), 0)
   }
@@ -49,7 +50,7 @@ export interface ProjectInterface {
   name: string
   standardRate: number
   description: string
-  totalRevenue: number
+  standardHours: number
 }
 
 export default ProjectStore

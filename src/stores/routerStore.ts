@@ -1,9 +1,11 @@
-/// <reference path="customTypings.d.ts"/>
+/// <reference path="../lib/customTypings.d.ts"/>
 
-import RootStore from '../stores/rootStore'
 import Router5, { RouterInterface, loggerPlugin } from 'router5'
 import browserPlugin from 'router5/plugins/browser'
 import listenersPlugin from 'router5/plugins/listeners'
+
+import { isDev } from '../lib/env'
+import { RootStore } from './'
 
 const ROUTE_NAMES = {
   projectList: 'PROJECT_LIST',
@@ -26,9 +28,10 @@ interface RouterStateInterface {
   path: string
 }
 
-class Router {
-  rootStore: RootStore
+class RouterStore {
   instance: RouterInterface
+
+  private rootStore: RootStore
 
   constructor(rootStore: RootStore) {
     this.rootStore = rootStore
@@ -46,7 +49,8 @@ class Router {
     this.instance.usePlugin(browserPlugin({
       useHash: false
     }))
-    this.instance.usePlugin(loggerPlugin)
+
+    isDev() && this.instance.usePlugin(loggerPlugin)
     this.instance.usePlugin(listenersPlugin())
 
     this.instance.addListener((toState: RouterStateInterface, fromState: RouterStateInterface) => {
@@ -69,11 +73,16 @@ class Router {
     this.instance.start()
   }
 
-  navigate(route: string): Function {
-    return this.instance.navigate(route)
+  navigate(route: string, routeParams?: Object): Function {
+    return this.instance.navigate(route, routeParams, (err: { code: string }) => {
+      if (err) {
+        isDev() && console.error(err)
+        this.rootStore.uiStore.setError(true)
+      }
+    })
   }
 
 }
 
 export { ROUTE_NAMES }
-export default Router
+export default RouterStore

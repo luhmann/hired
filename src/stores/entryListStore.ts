@@ -4,18 +4,35 @@ import * as uuid from 'uuid'
 
 import { StorageEntryInterface } from '../storage/firebaseRepository'
 import RootStore from './rootStore'
-import { EntryStore } from './entryStore'
+import EntryStore from './entryStore'
 
 class EntryListStore {
   @observable entries: EntryStore[] = []
   @observable active: EntryStore | null = null
 
-  rootStore: RootStore
+  private rootStore: RootStore
 
   constructor(rootStore: RootStore) {
     this.rootStore = rootStore
 
     this.setupSync()
+  }
+
+  getEntriesForProject(projectId: string): EntryStore[] {
+    return this.entries.filter((entry: EntryStore) => (entry.projectId === projectId))
+  }
+
+  getFinishedEntriesForProject(projectId: string): EntryStore[] {
+    return this.getEntriesForProject(projectId).filter((entry: EntryStore) => (!entry.running))
+  }
+
+  @computed get toStorage() {
+    return this.entries.reduce(
+      (map, entry) => (
+        Object.assign({}, map, { [entry.id]: entry.toStorage })
+      ),
+      {}
+    )
   }
 
   @action
@@ -45,23 +62,6 @@ class EntryListStore {
       this.active.stopTimer()
       this.active = null
     }
-  }
-
-  getEntriesForProject(projectId: string): EntryStore[] {
-    return this.entries.filter((entry: EntryStore) => (entry.projectId === projectId))
-  }
-
-  getFinishedEntriesForProject(projectId: string): EntryStore[] {
-    return this.getEntriesForProject(projectId).filter((entry: EntryStore) => (!entry.running))
-  }
-
-  @computed get toStorage() {
-    return this.entries.reduce(
-      (map, entry) => (
-        Object.assign({}, map, { [entry.id]: entry.toStorage })
-      ),
-      {}
-    )
   }
 
   @action.bound

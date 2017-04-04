@@ -30,7 +30,7 @@ class EntryStore {
     endTime,
     rate = STANDARD_RATE,
     projectId
-  }: { id?: string, startTime?: number, endTime?: number | null, rate: number, projectId: string }) {
+  }: { id?: string, startTime?: number, endTime?: number | null, rate?: number, projectId: string }) {
     this.id = id
 
     if (startTime) {
@@ -41,9 +41,9 @@ class EntryStore {
       this.endTime = new Date(endTime)
     }
 
-    if (startTime && !endTime) {
-      this.startTimer(this.startTime)
-    }
+    // if (startTime && !endTime) {
+    //   this.startTimer(this.startTime)
+    // }
 
     this.rate = rate
 
@@ -51,7 +51,7 @@ class EntryStore {
   }
 
   @computed get running() {
-    return !this.endTime
+    return !!this.startTime && !this.endTime
   }
 
   @computed get duration() {
@@ -60,18 +60,8 @@ class EntryStore {
     return (duration > 0) ? duration : 0
   }
 
-  @computed get total() {
+  @computed get total(): number {
     return (this.rate / 3600) * this.duration
-  }
-
-  @action
-  startTimer(start: Date = new Date()) {
-    this.startTime = start
-  }
-
-  @action
-  stopTimer(end: Date = new Date()) {
-    this.endTime = end
   }
 
   @computed get toStorage(): StorageEntryInterface {
@@ -84,6 +74,15 @@ class EntryStore {
     }
   }
 
+  @action
+  startTimer(start: Date = new Date()) {
+    this.startTime = start
+  }
+
+  @action
+  stopTimer(end: Date = new Date()) {
+    this.endTime = end
+  }
 }
 
-export { EntryStore }
+export default EntryStore

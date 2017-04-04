@@ -2,12 +2,11 @@ import * as React from 'react'
 import { observer } from 'mobx-react'
 import styled from 'styled-components'
 
-import { ProjectInterface } from '../stores/projectStore'
-import RootStore from '../stores/rootStore'
-import { ROUTE_NAMES } from '../lib/router'
+import { ProjectStore, RootStore } from '../stores/'
+import { ROUTE_NAMES } from '../stores/routerStore'
 import { formatCurrency } from '../lib/currency'
 
-import { color } from '../styles/style-utils'
+import { color, maxWidthContainer } from '../styles/style-utils'
 import { Row } from '../components/atoms/Containers'
 import { Total as GlobalTotal } from '../components/atoms/Text'
 import { gridCell } from '../styles/style-utils'
@@ -15,8 +14,7 @@ import { RowLink } from '../components/atoms/Links'
 import ProjectListHeader from '../components/organisms/HeaderProjectList'
 
 const Root = styled.section`
-  background-color: ${color.gray.g_50};
-  min-height: 100vh;
+  ${ maxWidthContainer() }
 `
 
 const ProjectListRoot = styled.main`
@@ -28,7 +26,7 @@ const Total = styled(GlobalTotal)`
 `
 
 interface ProjectListProps {
-  projects: ProjectInterface[]
+  projects: ProjectStore[]
   rootStore: RootStore
 }
 

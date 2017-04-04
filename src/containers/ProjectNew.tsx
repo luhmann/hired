@@ -1,8 +1,11 @@
 import * as React from 'react'
 import { inject, observer } from 'mobx-react'
+import styled from 'styled-components'
 
-import RootStore from '../stores/rootStore'
-import { ROUTE_NAMES } from '../lib/router'
+import { color, maxWidthContainer } from '../styles/style-utils'
+
+import { RootStore } from '../stores/'
+import { ROUTE_NAMES } from '../stores/routerStore'
 
 import InputTextWithLabel from '../components/molecules/InputTextWithLabel'
 import InputNumberWithLabel from '../components/molecules/InputNumberWithLabel'
@@ -17,6 +20,14 @@ interface NewProjectState {
   rate: number
   description?: string
 }
+
+const Root = styled.div`
+  ${ maxWidthContainer() }
+`
+
+const Form = styled.section`
+  background-color: ${color.white};
+`
 
 @inject('rootStore')
 @observer
@@ -45,25 +56,25 @@ class NewProject extends React.Component<NewProjectProps, NewProjectState> {
   saveHandler(event: React.MouseEvent<any>) {
     if (this.props.rootStore) {
       this.props.rootStore.projectListStore.add(this.state.name, this.state.rate, this.state.description)
-      this.props.rootStore.router.navigate(ROUTE_NAMES.projectList)
+      this.props.rootStore.routerStore.navigate(ROUTE_NAMES.projectList)
     }
   }
 
   cancelHandler(event: React.MouseEvent<any>) {
     if (this.props.rootStore) {
-      this.props.rootStore.router.navigate(ROUTE_NAMES.projectList)
+      this.props.rootStore.routerStore.navigate(ROUTE_NAMES.projectList)
     }
   }
 
   render() {
     return (
-      <div>
+      <Root>
         <HeaderSave
           cancelHandler={this.cancelHandler}
           saveHandler={this.saveHandler}
           title="Add Project"
         />
-        <section>
+        <Form>
           <InputTextWithLabel
             id="project-name"
             label="Name"
@@ -83,8 +94,8 @@ class NewProject extends React.Component<NewProjectProps, NewProjectState> {
             placeholder="Description is optional"
             changeHandler={this.changeHandler('description')}
           />
-        </section>
-      </div>
+        </Form>
+      </Root>
     )
   }
 }
