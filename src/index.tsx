@@ -19,7 +19,7 @@ window['rootStore'] = rootStore
 const rootEl = document.getElementById('root') as HTMLElement
 
 ReactDOM.render(
-  <Provider rootStore={rootStore} repository={repository}>
+  <Provider rootStore={rootStore}>
     <RouterProvider router={rootStore.routerStore.instance}>
       <App />
     </RouterProvider>

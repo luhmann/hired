@@ -50,7 +50,7 @@ describe('ProjectListStore', () => {
   it('should return the current project', () => {
     rootStoreMock.uiStore.showProject('2345-9384-324523')
     subject.hydrate(MOCK_PROJECTS)
-    
+
     expect(subject.currentProject.toStorage).toEqual(MOCK_PROJECTS[1])
   })
 
@@ -58,5 +58,17 @@ describe('ProjectListStore', () => {
     subject.hydrate(MOCK_PROJECTS)
 
     expect(subject.getById('2345-9384-324523').toStorage).toEqual(MOCK_PROJECTS[1])
+  })
+
+  it('should determine that a project with known id exists', () => {
+    subject.hydrate(MOCK_PROJECTS)
+
+    expect(subject.hasProject('2345-9384-324523')).toBe(true)
+  })
+
+  it('should determine that a project by an unknown id does not exist', () => {
+    subject.hydrate(MOCK_PROJECTS)
+
+    expect(subject.hasProject('1234')).toBe(false)
   })
 })

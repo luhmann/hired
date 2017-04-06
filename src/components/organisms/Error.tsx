@@ -2,8 +2,8 @@ import * as React from 'react'
 import * as ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import styled from 'styled-components'
 
-import { cells, center, color } from '../styles/style-utils'
-import SkullIcon from '../assets/icons/Skull'
+import { cells, center, color } from '../../styles/style-utils'
+import SkullIcon from '../../assets/icons/Skull'
 
 const Root = styled.div`
   ${ center()}

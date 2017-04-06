@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bootstrap should render 1`] = `
+<Bootstrap>
+  <ReactCSSTransitionGroup
+    transitionAppear={true}
+    transitionAppearTimeout={500}
+    transitionEnter={true}
+    transitionEnterTimeout={500}
+    transitionLeave={true}
+    transitionLeaveTimeout={500}
+    transitionName="entry"
+  >
+    <ReactTransitionGroup
+      childFactory={[Function]}
+      component="span"
+      transitionAppear={true}
+      transitionAppearTimeout={500}
+      transitionEnter={true}
+      transitionEnterTimeout={500}
+      transitionLeave={true}
+      transitionLeaveTimeout={500}
+      transitionName="entry"
+    >
+      <span>
+        <ReactCSSTransitionGroupChild
+          appear={true}
+          appearTimeout={500}
+          enter={true}
+          enterTimeout={500}
+          leave={true}
+          leaveTimeout={500}
+          name="entry"
+        >
+          <styled.div>
+            <div
+              className="dEKQPY"
+            >
+              <Component>
+                <styled.div>
+                  <div
+                    className="jTdryN"
+                  >
+                    <styled.div>
+                      <div
+                        className="mFYa"
+                      />
+                    </styled.div>
+                     Loading…
+                  </div>
+                </styled.div>
+              </Component>
+            </div>
+          </styled.div>
+        </ReactCSSTransitionGroupChild>
+      </span>
+    </ReactTransitionGroup>
+  </ReactCSSTransitionGroup>
+</Bootstrap>
+`;

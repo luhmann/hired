@@ -6,8 +6,7 @@ import '../styles/globals.ts'
 import RootStore from '../stores/rootStore'
 import { ROUTE_NAMES } from '../stores/routerStore'
 
-import Bootstrap from './Bootstrap'
-import Error from './Error'
+import { Bootstrap, Error } from '../components/organisms/'
 import ProjectList from './ProjectList'
 import Project from './Project'
 import ProjectNew from './ProjectNew'
@@ -30,16 +29,19 @@ class App extends React.Component<AppProps, {}> {
             />
           )
         case (ROUTE_NAMES.projectOverview):
-          return <Project />
+          if (this.props.rootStore.uiStore.currentView.projectId) {
+            return <Project id={this.props.rootStore.uiStore.currentView.projectId} />
+          }
+          break
         case (ROUTE_NAMES.projectNew):
           return <ProjectNew />
         default:
-          return <Error />
+          break
       }
-    } else {
-      return <Error />
     }
 
+    // NOTE: default in all remaining cases
+    return <Error />
   }
 
   render() {

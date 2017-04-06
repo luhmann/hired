@@ -1,14 +1,23 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
+import { RouterProvider } from 'react-router5'
 
 import { FirebaseRepository } from '../../storage/'
 import { RootStore } from '../../stores/'
-import App from '../App'
+import { App } from '../'
 
-// FIXME: Test is not done yet
-xit('renders without crashing', async () => {
-  const repository = new FirebaseRepository()
-  const store = await new RootStore(repository, 'me')
-  const div = document.createElement('div')
-  ReactDOM.render(<App rootStore={store} />, div)
+
+describe('App', () => {
+  it('renders without crashing', async () => {
+    const repository = new FirebaseRepository()
+    const store = new RootStore(repository, 'me')
+    const div = document.createElement('div')
+    ReactDOM.render(
+      <RouterProvider router={store.routerStore.instance}>
+        <App rootStore={store} />
+      </RouterProvider>,
+      div
+    )
+  })
+
 })

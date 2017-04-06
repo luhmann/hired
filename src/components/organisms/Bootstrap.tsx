@@ -2,8 +2,8 @@ import * as React from 'react'
 import * as ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import styled from 'styled-components'
 
-import { center, color } from '../styles/style-utils'
-import { Loading } from '../components/atoms/Indicators'
+import { center, color } from '../../styles/style-utils'
+import { Loading } from '../atoms/Indicators'
 
 const Root = styled.div`
   ${ center() }

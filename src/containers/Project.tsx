@@ -5,10 +5,8 @@ import { observer, inject } from 'mobx-react'
 import RootStore from '../stores/rootStore'
 
 import { cells, color, maxWidth, maxWidthContainer} from '../styles/style-utils'
-import ActiveEntry from '../components/molecules/ActiveEntry'
-import ClockIn from '../components/molecules/ClockIn'
-import EntryList from '../components/organisms/EntryList'
-import Error from './Error'
+import { ActiveEntry, ClockIn } from '../components/molecules/'
+import { EntryList, Error } from '../components/organisms/'
 import HeaderEntriesList from '../components/organisms/HeaderEntriesList'
 
 const Root = styled.section`
@@ -24,31 +22,32 @@ const Root = styled.section`
   ` : ''}
 `
 
-interface ProjectProps {
+export interface ProjectProps {
   rootStore?: RootStore
+  id: string
 }
 
 @inject('rootStore')
 @observer
 class Project extends React.Component<ProjectProps, {}> {
   render() {
-    if (!this.props.rootStore || !this.props.rootStore.uiStore.currentView.projectId) {
+    if (!this.props.rootStore || !this.props.rootStore.projectListStore.hasProject(this.props.id)) {
       return <Error />
     }
 
     const hasRunningTimer = !!this.props.rootStore.entryListStore.active &&
-      this.props.rootStore.entryListStore.active.projectId === this.props.rootStore.uiStore.currentView.projectId
+      this.props.rootStore.entryListStore.active.projectId === this.props.id
 
     const activeEntry = (hasRunningTimer) ? this.props.rootStore.entryListStore.active : null
 
     const entryListForProject = this.props.rootStore.entryListStore
-      .getEntriesForProject(this.props.rootStore.uiStore.currentView.projectId)
+      .getEntriesForProject(this.props.id)
 
     return (
       <Root hasRunningTimer={hasRunningTimer}>
         <HeaderEntriesList
           project={
-            this.props.rootStore.projectListStore.getById(this.props.rootStore.uiStore.currentView.projectId).name
+            this.props.rootStore.projectListStore.getById(this.props.id).name
           }
         />
         <ClockIn

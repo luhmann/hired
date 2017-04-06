@@ -52,6 +52,10 @@ class ProjectListStore {
     return this.projects.filter((item) => (item.id === this.rootStore.uiStore.currentView.projectId))[0]
   }
 
+  hasProject(id: string): Boolean {
+    return !!this.projects.filter((item) => (item.id === id)).length
+  }
+
   getById(id: string): ProjectStore {
     return this.projects.filter((item) => (item.id === id))[0]
   }
