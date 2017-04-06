@@ -4,8 +4,8 @@ import { useStrict } from 'mobx'
 import { Provider } from 'mobx-react'
 import { RouterProvider } from 'react-router5'
 
-import RootStore from './stores/rootStore'
-import FirebaseRepository from './storage/firebaseRepository'
+import { RootStore } from './stores/'
+import { FirebaseRepository } from './storage/'
 
 import App from './containers/App'
 
