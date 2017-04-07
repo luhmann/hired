@@ -6,7 +6,7 @@ import RootStore from '../stores/rootStore'
 
 import { cells, color, maxWidth, maxWidthContainer} from '../styles/style-utils'
 import { ActiveEntry, ClockIn } from '../components/molecules/'
-import { EntryList, Error } from '../components/organisms/'
+import { EntryList } from '../components/organisms/'
 import HeaderEntriesList from '../components/organisms/HeaderEntriesList'
 
 const Root = styled.section`
@@ -32,7 +32,8 @@ export interface ProjectProps {
 class Project extends React.Component<ProjectProps, {}> {
   render() {
     if (!this.props.rootStore || !this.props.rootStore.projectListStore.hasProject(this.props.id)) {
-      return <Error />
+      this.props.rootStore && this.props.rootStore.uiStore.setError(true)
+      return null
     }
 
     const hasRunningTimer = !!this.props.rootStore.entryListStore.active &&

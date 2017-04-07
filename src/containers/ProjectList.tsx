@@ -2,7 +2,7 @@ import * as React from 'react'
 import { observer } from 'mobx-react'
 import styled from 'styled-components'
 
-import { ProjectStore, RootStore } from '../stores/'
+import { ProjectStore } from '../stores/'
 import { ROUTE_NAMES } from '../stores/routerStore'
 import { formatCurrency } from '../lib/currency'
 
@@ -27,7 +27,6 @@ const Total = styled(GlobalTotal)`
 
 interface ProjectListProps {
   projects: ProjectStore[]
-  rootStore: RootStore
 }
 
 @observer
@@ -38,6 +37,10 @@ class ProjectList extends React.Component<ProjectListProps, {}> {
   }
 
   render() {
+    if (!this.props.projects.length) {
+      return null
+    }
+
     return (
       <Root>
         <ProjectListHeader />
