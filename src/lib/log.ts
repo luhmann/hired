@@ -20,10 +20,10 @@ const warn = (...args: any[]): void => {
 }
 
 const error = (...args: any[]): void => {
-  if(isDev()) {
+  if (isDev()) {
     console.error(args)
   } else {
-    //TODO: implement error-logger
+    // TODO: implement error-logger
   }
 
 }
