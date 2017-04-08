@@ -31,9 +31,13 @@ class RootStore {
   @action.bound
   async fetchData() {
     try {
-      await this.userStore.authenticated
+      const authenticated = await this.userStore.authenticate()
+      if (authenticated === false) {
+        this.uiStore.setError(true)
+      }
+
       const snapshot = await this.repository.database(this.userStore.uid).once('value')
-      const data = snapshot.val()
+      const data = snapshot.val() || {}
 
       if (data.projects) {
         this.projectListStore.hydrate(values(data.projects))

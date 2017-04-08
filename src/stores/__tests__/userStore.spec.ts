@@ -18,25 +18,27 @@ describe('UserStore', () => {
 
   it('should authenticate', async () => {
     // given
-    setCustomTokenMock(true)
+    setCustomTokenMock({ uid: 'me' })
+    const subject = new UserStore(rootStoreMock, 'me')
 
     // when
-    const subject = new UserStore(rootStoreMock, 'me')
+    await subject.authenticate()
 
     // then
     expect(subject.uid).toBe('me')
-    expect(await subject.authenticated).toEqual(true)
+    expect(subject.authenticated).toEqual(true)
     expect(firebaseSignInWithCustomTokenMock.mock.calls.length).toBe(2)
   })
 
   it('should hold error if authentication fails', async () => {
     // given
-    setCustomTokenMock(false)
-
-    // when
+    setCustomTokenMock({ uid: 'foo' })
     const subject = new UserStore(rootStoreMock, 'me')
 
+    // when
+    await subject.authenticate()
+
     // then
-    expect(await subject.authenticated).toBe(false)
+    expect(subject.authenticated).toBe(false)
   })
 })

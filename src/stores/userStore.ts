@@ -3,7 +3,7 @@ import { observable, action } from 'mobx'
 import RootStore from './rootStore'
 
 class UserStore {
-  @observable authenticated: Promise<boolean>
+  @observable authenticated: boolean
   uid: string
 
   private rootStore: RootStore
@@ -11,14 +11,12 @@ class UserStore {
   constructor(rootStore: RootStore, uid: string) {
     this.rootStore = rootStore
     this.uid = uid
-
-    this.authenticate()
-    // this.authenticated = Promise.resolve(true)
   }
 
   @action.bound
-  authenticate() {
-    this.authenticated = this.rootStore.repository.authenticate(this.uid)
+  async authenticate() {
+    const response = await this.rootStore.repository.authenticate(this.uid)
+    this.authenticated = (response.uid === this.uid)
 
     return this.authenticated
   }
