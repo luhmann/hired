@@ -11,7 +11,7 @@ import InputTextWithLabel from '../components/molecules/InputTextWithLabel'
 import InputNumberWithLabel from '../components/molecules/InputNumberWithLabel'
 import HeaderSave from '../components/organisms/HeaderSave'
 
-interface NewProjectProps {
+export interface NewProjectProps {
   rootStore?: RootStore
 }
 
@@ -55,7 +55,7 @@ class NewProject extends React.Component<NewProjectProps, NewProjectState> {
 
   saveHandler(event: React.MouseEvent<any>) {
     if (this.props.rootStore) {
-      this.props.rootStore.projectListStore.add(this.state.name, this.state.rate, this.state.description)
+      this.props.rootStore.projectListStore.add(this.state.name, Number(this.state.rate), this.state.description)
       this.props.rootStore.routerStore.navigate(ROUTE_NAMES.projectList)
     }
   }

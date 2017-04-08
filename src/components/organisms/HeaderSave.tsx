@@ -20,9 +20,9 @@ const SaveButton = styled(TextButton)`
 
 const HeaderSave = ({ title, cancelHandler, saveHandler}: HeaderSaveProps) => (
   <DistributedHeader>
-    <CancelButton text="Cancel" clickHandler={cancelHandler} />
+    <CancelButton text="Cancel" clickHandler={cancelHandler} data-t-target="CancelButton"/>
     <HeaderTitle>{title}</HeaderTitle>
-    <SaveButton text="Save" clickHandler={saveHandler} />
+    <SaveButton text="Save" clickHandler={saveHandler} data-t-target="SaveButton" />
   </DistributedHeader>
 )
 

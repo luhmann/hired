@@ -1,0 +1,969 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectNew should render 1`] = `
+<Provider
+  rootStore={
+    RootStore {
+      "entryListStore": EntryListStore {
+        "active": null,
+        "entries": Array [],
+        "rootStore": [Circular],
+      },
+      "projectListStore": ProjectListStore {
+        "projects": Array [],
+        "rootStore": [Circular],
+      },
+      "repository": FirebaseRepository {
+        "app": Object {
+          "database": [Function],
+        },
+        "authenticate": [Function],
+        "config": Object {
+          "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+          "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+          "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+          "messagingSenderId": "282276589695",
+          "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+        },
+      },
+      "routerStore": RouterStore {
+        "instance": Object {
+          "add": [Function],
+          "addEventListener": [Function],
+          "addListener": [Function],
+          "addNode": [Function],
+          "addNodeListener": [Function],
+          "addRouteListener": [Function],
+          "areStatesDescendants": [Function],
+          "areStatesEqual": [Function],
+          "buildPath": [Function],
+          "buildState": [Function],
+          "buildUrl": [Function],
+          "canActivate": [Function],
+          "canDeactivate": [Function],
+          "cancel": [Function],
+          "clearCanDeactivate": [Function],
+          "clearMiddleware": [Function],
+          "clone": [Function],
+          "executeFactory": [Function],
+          "getDependencies": [Function],
+          "getLifecycleFactories": [Function],
+          "getLifecycleFunctions": [Function],
+          "getListeners": [Function],
+          "getMiddlewareFactories": [Function],
+          "getMiddlewareFunctions": [Function],
+          "getOptions": [Function],
+          "getPlugins": [Function],
+          "getState": [Function],
+          "hasPlugin": [Function],
+          "invokeEventListeners": [Function],
+          "isActive": [Function],
+          "isStarted": [Function],
+          "makeNotFoundState": [Function],
+          "makeState": [Function],
+          "matchPath": [Function],
+          "matchUrl": [Function],
+          "navigate": [Function],
+          "navigateToDefault": [Function],
+          "removeEventListener": [Function],
+          "removeListener": [Function],
+          "removeNodeListener": [Function],
+          "removeRouteListener": [Function],
+          "replaceHistoryState": [Function],
+          "rootNode": RouteNode {
+            "absolute": false,
+            "children": Array [
+              RouteNode {
+                "absolute": false,
+                "children": Array [],
+                "name": "PROJECT_NEW",
+                "parent": [Circular],
+                "parser": Path {
+                  "hasMatrixParams": false,
+                  "hasQueryParams": false,
+                  "hasSpatParam": false,
+                  "hasUrlParams": false,
+                  "params": Array [],
+                  "path": "/project/new",
+                  "queryParams": Array [],
+                  "queryParamsBr": Array [],
+                  "source": "\\\\/project\\\\/new",
+                  "spatParams": Array [],
+                  "tokens": Array [
+                    Object {
+                      "match": "/",
+                      "otherVal": Array [],
+                      "regex": /\\\\//,
+                      "type": "delimiter",
+                      "val": Array [
+                        "/",
+                      ],
+                    },
+                    Object {
+                      "match": "project",
+                      "otherVal": Array [],
+                      "regex": /project/,
+                      "type": "fragment",
+                      "val": Array [
+                        "project",
+                      ],
+                    },
+                    Object {
+                      "match": "/",
+                      "otherVal": Array [],
+                      "regex": /\\\\//,
+                      "type": "delimiter",
+                      "val": Array [
+                        "/",
+                      ],
+                    },
+                    Object {
+                      "match": "new",
+                      "otherVal": Array [],
+                      "regex": /new/,
+                      "type": "fragment",
+                      "val": Array [
+                        "new",
+                      ],
+                    },
+                  ],
+                  "urlParams": Array [],
+                },
+                "path": "/project/new",
+              },
+              RouteNode {
+                "absolute": false,
+                "children": Array [],
+                "name": "PROJECT_OVERVIEW",
+                "parent": [Circular],
+                "parser": Path {
+                  "hasMatrixParams": false,
+                  "hasQueryParams": false,
+                  "hasSpatParam": false,
+                  "hasUrlParams": true,
+                  "params": Array [
+                    "projectId",
+                  ],
+                  "path": "/project/:projectId",
+                  "queryParams": Array [],
+                  "queryParamsBr": Array [],
+                  "source": "\\\\/project\\\\/([a-zA-Z0-9-_.~%':]+)",
+                  "spatParams": Array [],
+                  "tokens": Array [
+                    Object {
+                      "match": "/",
+                      "otherVal": Array [],
+                      "regex": /\\\\//,
+                      "type": "delimiter",
+                      "val": Array [
+                        "/",
+                      ],
+                    },
+                    Object {
+                      "match": "project",
+                      "otherVal": Array [],
+                      "regex": /project/,
+                      "type": "fragment",
+                      "val": Array [
+                        "project",
+                      ],
+                    },
+                    Object {
+                      "match": "/",
+                      "otherVal": Array [],
+                      "regex": /\\\\//,
+                      "type": "delimiter",
+                      "val": Array [
+                        "/",
+                      ],
+                    },
+                    Object {
+                      "match": ":projectId",
+                      "otherVal": Array [
+                        undefined,
+                        undefined,
+                      ],
+                      "regex": /\\(\\[a-zA-Z0-9-_\\.~%':\\]\\+\\)/,
+                      "type": "url-parameter",
+                      "val": Array [
+                        "projectId",
+                      ],
+                    },
+                  ],
+                  "urlParams": Array [
+                    "projectId",
+                  ],
+                },
+                "path": "/project/:projectId",
+              },
+              RouteNode {
+                "absolute": false,
+                "children": Array [],
+                "name": "PROJECT_LIST",
+                "parent": [Circular],
+                "parser": Path {
+                  "hasMatrixParams": false,
+                  "hasQueryParams": false,
+                  "hasSpatParam": false,
+                  "hasUrlParams": false,
+                  "params": Array [],
+                  "path": "/",
+                  "queryParams": Array [],
+                  "queryParamsBr": Array [],
+                  "source": "\\\\/",
+                  "spatParams": Array [],
+                  "tokens": Array [
+                    Object {
+                      "match": "/",
+                      "otherVal": Array [],
+                      "regex": /\\\\//,
+                      "type": "delimiter",
+                      "val": Array [
+                        "/",
+                      ],
+                    },
+                  ],
+                  "urlParams": Array [],
+                },
+                "path": "/",
+              },
+            ],
+            "name": "",
+            "parent": undefined,
+            "parser": null,
+            "path": "",
+          },
+          "setDependencies": [Function],
+          "setDependency": [Function],
+          "setOption": [Function],
+          "setRootPath": [Function],
+          "setState": [Function],
+          "start": [Function],
+          "stop": [Function],
+          "transitionToState": [Function],
+          "urlToPath": [Function],
+          "useMiddleware": [Function],
+          "usePlugin": [Function],
+        },
+        "navigate": [Function],
+        "rootStore": [Circular],
+      },
+      "uiStore": UiStore {
+        "currentView": Object {
+          "name": "PROJECT_LIST",
+        },
+        "hasError": false,
+        "isLoaded": false,
+      },
+      "userStore": UserStore {
+        "authenticated": Promise {},
+        "rootStore": [Circular],
+        "uid": "me",
+      },
+    }
+  }
+>
+  <RouterProvider
+    router={
+      Object {
+        "add": [Function],
+        "addEventListener": [Function],
+        "addListener": [Function],
+        "addNode": [Function],
+        "addNodeListener": [Function],
+        "addRouteListener": [Function],
+        "areStatesDescendants": [Function],
+        "areStatesEqual": [Function],
+        "buildPath": [Function],
+        "buildState": [Function],
+        "buildUrl": [Function],
+        "canActivate": [Function],
+        "canDeactivate": [Function],
+        "cancel": [Function],
+        "clearCanDeactivate": [Function],
+        "clearMiddleware": [Function],
+        "clone": [Function],
+        "executeFactory": [Function],
+        "getDependencies": [Function],
+        "getLifecycleFactories": [Function],
+        "getLifecycleFunctions": [Function],
+        "getListeners": [Function],
+        "getMiddlewareFactories": [Function],
+        "getMiddlewareFunctions": [Function],
+        "getOptions": [Function],
+        "getPlugins": [Function],
+        "getState": [Function],
+        "hasPlugin": [Function],
+        "invokeEventListeners": [Function],
+        "isActive": [Function],
+        "isStarted": [Function],
+        "makeNotFoundState": [Function],
+        "makeState": [Function],
+        "matchPath": [Function],
+        "matchUrl": [Function],
+        "navigate": [Function],
+        "navigateToDefault": [Function],
+        "removeEventListener": [Function],
+        "removeListener": [Function],
+        "removeNodeListener": [Function],
+        "removeRouteListener": [Function],
+        "replaceHistoryState": [Function],
+        "rootNode": RouteNode {
+          "absolute": false,
+          "children": Array [
+            RouteNode {
+              "absolute": false,
+              "children": Array [],
+              "name": "PROJECT_NEW",
+              "parent": [Circular],
+              "parser": Path {
+                "hasMatrixParams": false,
+                "hasQueryParams": false,
+                "hasSpatParam": false,
+                "hasUrlParams": false,
+                "params": Array [],
+                "path": "/project/new",
+                "queryParams": Array [],
+                "queryParamsBr": Array [],
+                "source": "\\\\/project\\\\/new",
+                "spatParams": Array [],
+                "tokens": Array [
+                  Object {
+                    "match": "/",
+                    "otherVal": Array [],
+                    "regex": /\\\\//,
+                    "type": "delimiter",
+                    "val": Array [
+                      "/",
+                    ],
+                  },
+                  Object {
+                    "match": "project",
+                    "otherVal": Array [],
+                    "regex": /project/,
+                    "type": "fragment",
+                    "val": Array [
+                      "project",
+                    ],
+                  },
+                  Object {
+                    "match": "/",
+                    "otherVal": Array [],
+                    "regex": /\\\\//,
+                    "type": "delimiter",
+                    "val": Array [
+                      "/",
+                    ],
+                  },
+                  Object {
+                    "match": "new",
+                    "otherVal": Array [],
+                    "regex": /new/,
+                    "type": "fragment",
+                    "val": Array [
+                      "new",
+                    ],
+                  },
+                ],
+                "urlParams": Array [],
+              },
+              "path": "/project/new",
+            },
+            RouteNode {
+              "absolute": false,
+              "children": Array [],
+              "name": "PROJECT_OVERVIEW",
+              "parent": [Circular],
+              "parser": Path {
+                "hasMatrixParams": false,
+                "hasQueryParams": false,
+                "hasSpatParam": false,
+                "hasUrlParams": true,
+                "params": Array [
+                  "projectId",
+                ],
+                "path": "/project/:projectId",
+                "queryParams": Array [],
+                "queryParamsBr": Array [],
+                "source": "\\\\/project\\\\/([a-zA-Z0-9-_.~%':]+)",
+                "spatParams": Array [],
+                "tokens": Array [
+                  Object {
+                    "match": "/",
+                    "otherVal": Array [],
+                    "regex": /\\\\//,
+                    "type": "delimiter",
+                    "val": Array [
+                      "/",
+                    ],
+                  },
+                  Object {
+                    "match": "project",
+                    "otherVal": Array [],
+                    "regex": /project/,
+                    "type": "fragment",
+                    "val": Array [
+                      "project",
+                    ],
+                  },
+                  Object {
+                    "match": "/",
+                    "otherVal": Array [],
+                    "regex": /\\\\//,
+                    "type": "delimiter",
+                    "val": Array [
+                      "/",
+                    ],
+                  },
+                  Object {
+                    "match": ":projectId",
+                    "otherVal": Array [
+                      undefined,
+                      undefined,
+                    ],
+                    "regex": /\\(\\[a-zA-Z0-9-_\\.~%':\\]\\+\\)/,
+                    "type": "url-parameter",
+                    "val": Array [
+                      "projectId",
+                    ],
+                  },
+                ],
+                "urlParams": Array [
+                  "projectId",
+                ],
+              },
+              "path": "/project/:projectId",
+            },
+            RouteNode {
+              "absolute": false,
+              "children": Array [],
+              "name": "PROJECT_LIST",
+              "parent": [Circular],
+              "parser": Path {
+                "hasMatrixParams": false,
+                "hasQueryParams": false,
+                "hasSpatParam": false,
+                "hasUrlParams": false,
+                "params": Array [],
+                "path": "/",
+                "queryParams": Array [],
+                "queryParamsBr": Array [],
+                "source": "\\\\/",
+                "spatParams": Array [],
+                "tokens": Array [
+                  Object {
+                    "match": "/",
+                    "otherVal": Array [],
+                    "regex": /\\\\//,
+                    "type": "delimiter",
+                    "val": Array [
+                      "/",
+                    ],
+                  },
+                ],
+                "urlParams": Array [],
+              },
+              "path": "/",
+            },
+          ],
+          "name": "",
+          "parent": undefined,
+          "parser": null,
+          "path": "",
+        },
+        "setDependencies": [Function],
+        "setDependency": [Function],
+        "setOption": [Function],
+        "setRootPath": [Function],
+        "setState": [Function],
+        "start": [Function],
+        "stop": [Function],
+        "transitionToState": [Function],
+        "urlToPath": [Function],
+        "useMiddleware": [Function],
+        "usePlugin": [Function],
+      }
+    }
+  >
+    <inject-NewProject-with-rootStore>
+      <NewProject
+        rootStore={
+          RootStore {
+            "entryListStore": EntryListStore {
+              "active": null,
+              "entries": Array [],
+              "rootStore": [Circular],
+            },
+            "projectListStore": ProjectListStore {
+              "projects": Array [],
+              "rootStore": [Circular],
+            },
+            "repository": FirebaseRepository {
+              "app": Object {
+                "database": [Function],
+              },
+              "authenticate": [Function],
+              "config": Object {
+                "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                "messagingSenderId": "282276589695",
+                "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+              },
+            },
+            "routerStore": RouterStore {
+              "instance": Object {
+                "add": [Function],
+                "addEventListener": [Function],
+                "addListener": [Function],
+                "addNode": [Function],
+                "addNodeListener": [Function],
+                "addRouteListener": [Function],
+                "areStatesDescendants": [Function],
+                "areStatesEqual": [Function],
+                "buildPath": [Function],
+                "buildState": [Function],
+                "buildUrl": [Function],
+                "canActivate": [Function],
+                "canDeactivate": [Function],
+                "cancel": [Function],
+                "clearCanDeactivate": [Function],
+                "clearMiddleware": [Function],
+                "clone": [Function],
+                "executeFactory": [Function],
+                "getDependencies": [Function],
+                "getLifecycleFactories": [Function],
+                "getLifecycleFunctions": [Function],
+                "getListeners": [Function],
+                "getMiddlewareFactories": [Function],
+                "getMiddlewareFunctions": [Function],
+                "getOptions": [Function],
+                "getPlugins": [Function],
+                "getState": [Function],
+                "hasPlugin": [Function],
+                "invokeEventListeners": [Function],
+                "isActive": [Function],
+                "isStarted": [Function],
+                "makeNotFoundState": [Function],
+                "makeState": [Function],
+                "matchPath": [Function],
+                "matchUrl": [Function],
+                "navigate": [Function],
+                "navigateToDefault": [Function],
+                "removeEventListener": [Function],
+                "removeListener": [Function],
+                "removeNodeListener": [Function],
+                "removeRouteListener": [Function],
+                "replaceHistoryState": [Function],
+                "rootNode": RouteNode {
+                  "absolute": false,
+                  "children": Array [
+                    RouteNode {
+                      "absolute": false,
+                      "children": Array [],
+                      "name": "PROJECT_NEW",
+                      "parent": [Circular],
+                      "parser": Path {
+                        "hasMatrixParams": false,
+                        "hasQueryParams": false,
+                        "hasSpatParam": false,
+                        "hasUrlParams": false,
+                        "params": Array [],
+                        "path": "/project/new",
+                        "queryParams": Array [],
+                        "queryParamsBr": Array [],
+                        "source": "\\\\/project\\\\/new",
+                        "spatParams": Array [],
+                        "tokens": Array [
+                          Object {
+                            "match": "/",
+                            "otherVal": Array [],
+                            "regex": /\\\\//,
+                            "type": "delimiter",
+                            "val": Array [
+                              "/",
+                            ],
+                          },
+                          Object {
+                            "match": "project",
+                            "otherVal": Array [],
+                            "regex": /project/,
+                            "type": "fragment",
+                            "val": Array [
+                              "project",
+                            ],
+                          },
+                          Object {
+                            "match": "/",
+                            "otherVal": Array [],
+                            "regex": /\\\\//,
+                            "type": "delimiter",
+                            "val": Array [
+                              "/",
+                            ],
+                          },
+                          Object {
+                            "match": "new",
+                            "otherVal": Array [],
+                            "regex": /new/,
+                            "type": "fragment",
+                            "val": Array [
+                              "new",
+                            ],
+                          },
+                        ],
+                        "urlParams": Array [],
+                      },
+                      "path": "/project/new",
+                    },
+                    RouteNode {
+                      "absolute": false,
+                      "children": Array [],
+                      "name": "PROJECT_OVERVIEW",
+                      "parent": [Circular],
+                      "parser": Path {
+                        "hasMatrixParams": false,
+                        "hasQueryParams": false,
+                        "hasSpatParam": false,
+                        "hasUrlParams": true,
+                        "params": Array [
+                          "projectId",
+                        ],
+                        "path": "/project/:projectId",
+                        "queryParams": Array [],
+                        "queryParamsBr": Array [],
+                        "source": "\\\\/project\\\\/([a-zA-Z0-9-_.~%':]+)",
+                        "spatParams": Array [],
+                        "tokens": Array [
+                          Object {
+                            "match": "/",
+                            "otherVal": Array [],
+                            "regex": /\\\\//,
+                            "type": "delimiter",
+                            "val": Array [
+                              "/",
+                            ],
+                          },
+                          Object {
+                            "match": "project",
+                            "otherVal": Array [],
+                            "regex": /project/,
+                            "type": "fragment",
+                            "val": Array [
+                              "project",
+                            ],
+                          },
+                          Object {
+                            "match": "/",
+                            "otherVal": Array [],
+                            "regex": /\\\\//,
+                            "type": "delimiter",
+                            "val": Array [
+                              "/",
+                            ],
+                          },
+                          Object {
+                            "match": ":projectId",
+                            "otherVal": Array [
+                              undefined,
+                              undefined,
+                            ],
+                            "regex": /\\(\\[a-zA-Z0-9-_\\.~%':\\]\\+\\)/,
+                            "type": "url-parameter",
+                            "val": Array [
+                              "projectId",
+                            ],
+                          },
+                        ],
+                        "urlParams": Array [
+                          "projectId",
+                        ],
+                      },
+                      "path": "/project/:projectId",
+                    },
+                    RouteNode {
+                      "absolute": false,
+                      "children": Array [],
+                      "name": "PROJECT_LIST",
+                      "parent": [Circular],
+                      "parser": Path {
+                        "hasMatrixParams": false,
+                        "hasQueryParams": false,
+                        "hasSpatParam": false,
+                        "hasUrlParams": false,
+                        "params": Array [],
+                        "path": "/",
+                        "queryParams": Array [],
+                        "queryParamsBr": Array [],
+                        "source": "\\\\/",
+                        "spatParams": Array [],
+                        "tokens": Array [
+                          Object {
+                            "match": "/",
+                            "otherVal": Array [],
+                            "regex": /\\\\//,
+                            "type": "delimiter",
+                            "val": Array [
+                              "/",
+                            ],
+                          },
+                        ],
+                        "urlParams": Array [],
+                      },
+                      "path": "/",
+                    },
+                  ],
+                  "name": "",
+                  "parent": undefined,
+                  "parser": null,
+                  "path": "",
+                },
+                "setDependencies": [Function],
+                "setDependency": [Function],
+                "setOption": [Function],
+                "setRootPath": [Function],
+                "setState": [Function],
+                "start": [Function],
+                "stop": [Function],
+                "transitionToState": [Function],
+                "urlToPath": [Function],
+                "useMiddleware": [Function],
+                "usePlugin": [Function],
+              },
+              "navigate": [Function],
+              "rootStore": [Circular],
+            },
+            "uiStore": UiStore {
+              "currentView": Object {
+                "name": "PROJECT_LIST",
+              },
+              "hasError": false,
+              "isLoaded": false,
+            },
+            "userStore": UserStore {
+              "authenticated": Promise {},
+              "rootStore": [Circular],
+              "uid": "me",
+            },
+          }
+        }
+      >
+        <styled.div>
+          <div
+            className="hqgYzb"
+          >
+            <HeaderSave
+              cancelHandler={[Function]}
+              saveHandler={[Function]}
+              title="Add Project"
+            >
+              <styled.header>
+                <header
+                  className="eBvrzp"
+                >
+                  <Styled(Component)
+                    clickHandler={[Function]}
+                    data-t-target="CancelButton"
+                    text="Cancel"
+                  >
+                    <Component
+                      className="dZUSMd"
+                      clickHandler={[Function]}
+                      data-t-target="CancelButton"
+                      text="Cancel"
+                    >
+                      <styled.button
+                        className="dZUSMd"
+                        data-t-target="CancelButton"
+                        onClick={[Function]}
+                      >
+                        <button
+                          className="dZUSMd hrUFRC"
+                          data-t-target="CancelButton"
+                          onClick={[Function]}
+                        >
+                          Cancel
+                        </button>
+                      </styled.button>
+                    </Component>
+                  </Styled(Component)>
+                  <styled.h1>
+                    <h1
+                      className="ecGOWQ"
+                    >
+                      Add Project
+                    </h1>
+                  </styled.h1>
+                  <Styled(Component)
+                    clickHandler={[Function]}
+                    data-t-target="SaveButton"
+                    text="Save"
+                  >
+                    <Component
+                      className="kBiKOu"
+                      clickHandler={[Function]}
+                      data-t-target="SaveButton"
+                      text="Save"
+                    >
+                      <styled.button
+                        className="kBiKOu"
+                        data-t-target="SaveButton"
+                        onClick={[Function]}
+                      >
+                        <button
+                          className="kBiKOu hrUFRC"
+                          data-t-target="SaveButton"
+                          onClick={[Function]}
+                        >
+                          Save
+                        </button>
+                      </styled.button>
+                    </Component>
+                  </Styled(Component)>
+                </header>
+              </styled.header>
+            </HeaderSave>
+            <styled.section>
+              <section
+                className="jEImSP"
+              >
+                <InputTextWithLabel
+                  changeHandler={[Function]}
+                  id="project-name"
+                  label="Name"
+                  placeholder="Project name is required"
+                >
+                  <Styled(BaseRow)>
+                    <BaseRow
+                      className="dHOzQD"
+                    >
+                      <div
+                        className="dHOzQD"
+                      >
+                        <styled.label
+                          htmlFor="project-name"
+                        >
+                          <label
+                            className="fPhlMm"
+                            htmlFor="project-name"
+                          >
+                            Name
+                          </label>
+                        </styled.label>
+                        <styled.input
+                          id="project-name"
+                          onChange={[Function]}
+                          placeholder="Project name is required"
+                          type="text"
+                        >
+                          <input
+                            className="iERWm"
+                            id="project-name"
+                            onChange={[Function]}
+                            placeholder="Project name is required"
+                            type="text"
+                          />
+                        </styled.input>
+                      </div>
+                    </BaseRow>
+                  </Styled(BaseRow)>
+                </InputTextWithLabel>
+                <InputTextWithLabel
+                  changeHandler={[Function]}
+                  id="standard-rate"
+                  label="Rate"
+                  placeholder="Earnings per hour"
+                  unit="EUR"
+                >
+                  <Styled(BaseRow)>
+                    <BaseRow
+                      className="dHOzQD"
+                    >
+                      <div
+                        className="dHOzQD"
+                      >
+                        <styled.label
+                          htmlFor="standard-rate"
+                        >
+                          <label
+                            className="fPhlMm"
+                            htmlFor="standard-rate"
+                          >
+                            Rate
+                          </label>
+                        </styled.label>
+                        <styled.input
+                          id="standard-rate"
+                          onChange={[Function]}
+                          placeholder="Earnings per hour"
+                          type="number"
+                        >
+                          <input
+                            className="gGJqti"
+                            id="standard-rate"
+                            onChange={[Function]}
+                            placeholder="Earnings per hour"
+                            type="number"
+                          />
+                        </styled.input>
+                        <styled.div>
+                          <div
+                            className="dlMZJJ"
+                          >
+                            EUR
+                          </div>
+                        </styled.div>
+                      </div>
+                    </BaseRow>
+                  </Styled(BaseRow)>
+                </InputTextWithLabel>
+                <InputTextWithLabel
+                  changeHandler={[Function]}
+                  id="description"
+                  label="Description"
+                  placeholder="Description is optional"
+                >
+                  <Styled(BaseRow)>
+                    <BaseRow
+                      className="dHOzQD"
+                    >
+                      <div
+                        className="dHOzQD"
+                      >
+                        <styled.label
+                          htmlFor="description"
+                        >
+                          <label
+                            className="fPhlMm"
+                            htmlFor="description"
+                          >
+                            Description
+                          </label>
+                        </styled.label>
+                        <styled.input
+                          id="description"
+                          onChange={[Function]}
+                          placeholder="Description is optional"
+                          type="text"
+                        >
+                          <input
+                            className="iERWm"
+                            id="description"
+                            onChange={[Function]}
+                            placeholder="Description is optional"
+                            type="text"
+                          />
+                        </styled.input>
+                      </div>
+                    </BaseRow>
+                  </Styled(BaseRow)>
+                </InputTextWithLabel>
+              </section>
+            </styled.section>
+          </div>
+        </styled.div>
+      </NewProject>
+    </inject-NewProject-with-rootStore>
+  </RouterProvider>
+</Provider>
+`;

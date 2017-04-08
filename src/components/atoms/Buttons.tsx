@@ -71,6 +71,8 @@ interface TextButtonProps {
   clickHandler: React.EventHandler<any>
 }
 
-export const TextButton = ({text, clickHandler, className}: TextButtonProps) => (
-  <StyledTextButton className={className} onClick={clickHandler}>{text}</StyledTextButton>
+export const TextButton = ({text, clickHandler, className, ...attrs}: TextButtonProps) => (
+  <StyledTextButton className={className} onClick={clickHandler} {...attrs}>
+    {text}
+  </StyledTextButton>
 )

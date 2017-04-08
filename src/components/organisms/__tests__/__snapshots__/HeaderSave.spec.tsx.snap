@@ -4,6 +4,7 @@ exports[`HeaderSave should render 1`] = `
 <styled.header>
   <Styled(Component)
     clickHandler={[Function]}
+    data-t-target="CancelButton"
     text="Cancel"
   />
   <styled.h1>
@@ -11,6 +12,7 @@ exports[`HeaderSave should render 1`] = `
   </styled.h1>
   <Styled(Component)
     clickHandler={[Function]}
+    data-t-target="SaveButton"
     text="Save"
   />
 </styled.header>

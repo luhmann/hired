@@ -25,7 +25,6 @@ class App extends React.Component<AppProps, {}> {
           return (
             <ProjectList
               projects={this.props.rootStore.projectListStore.projects}
-              rootStore={this.props.rootStore}
             />
           )
         case (ROUTE_NAMES.projectOverview):
