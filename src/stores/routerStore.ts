@@ -4,6 +4,7 @@ import Router5, { RouterInterface, loggerPlugin } from 'router5'
 import browserPlugin from 'router5/plugins/browser'
 import listenersPlugin from 'router5/plugins/listeners'
 
+import * as log from '../lib/log'
 import { isDev } from '../lib/env'
 import { RootStore } from './'
 
@@ -76,7 +77,7 @@ class RouterStore {
   navigate(route: string, routeParams?: Object): Function {
     return this.instance.navigate(route, routeParams, (err: { code: string }) => {
       if (err) {
-        isDev() && console.error(err)
+        log.error('[Router]: Error while trying to navigate to route', err)
         this.rootStore.uiStore.setError(true)
       }
     })

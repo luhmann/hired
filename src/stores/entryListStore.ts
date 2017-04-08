@@ -2,6 +2,7 @@ import { observable, action, computed, reaction } from 'mobx'
 import { sortBy } from 'lodash'
 import * as uuid from 'uuid'
 
+import * as log from '../lib/log'
 import { StorageEntryInterface } from '../storage/firebaseRepository'
 import RootStore from './rootStore'
 import EntryStore from './entryStore'
@@ -90,7 +91,12 @@ class EntryListStore {
       () => this.toStorage,
       (entries) => {
         if (entries) {
-          this.rootStore.repository.entries(this.rootStore.userStore.uid).set(entries)
+          try {
+            this.rootStore.repository.entries(this.rootStore.userStore.uid).set(entries)
+          } catch (error) {
+            log.error('[EntryListStore]: Error while trying to push data', error)
+          }
+
         }
       }
     )

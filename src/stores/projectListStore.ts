@@ -1,6 +1,7 @@
 import { observable, action, computed, reaction } from 'mobx'
 import * as uuid from 'uuid'
 
+import * as log from '../lib/log'
 import RootStore from './rootStore'
 import ProjectStore, { ProjectInterface } from './projectStore'
 
@@ -74,7 +75,12 @@ class ProjectListStore {
       () => this.toStorage,
       (projects) => {
         if (projects) {
-          this.rootStore.repository.projects(this.rootStore.userStore.uid).set(projects)
+          try {
+            this.rootStore.repository.projects(this.rootStore.userStore.uid).set(projects)
+          } catch (error) {
+            log.error('[ProjectListStore]: Error while trying to push data', error)
+          }
+          
         }
       }
     )

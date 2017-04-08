@@ -1,6 +1,6 @@
 import { observable, action } from 'mobx'
 const values = require('object.values')
-import { isDev } from '../lib/env'
+import * as log from '../lib/log'
 
 import EntryListStore from './entryListStore'
 import ProjectListStore from './projectListStore'
@@ -45,7 +45,7 @@ class RootStore {
 
       this.uiStore.setLoaded(true)
     } catch (error) {
-      isDev() && console.error('Error while fetching initial data occured', error)
+      log.error('[RootStore]: Error while fetching initial', error)
       this.uiStore.setError(true)
     }
   }
