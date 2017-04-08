@@ -4,6 +4,7 @@ import Error from './Error'
 import HeaderEntriesList from './HeaderEntriesList'
 import HeaderProjectList from './HeaderProjectList'
 import HeaderSave from './HeaderSave'
+import ProjectList from './ProjectList'
 
 export {
   Bootstrap,
@@ -11,5 +12,6 @@ export {
   Error,
   HeaderEntriesList,
   HeaderProjectList,
-  HeaderSave
+  HeaderSave,
+  ProjectList
 }

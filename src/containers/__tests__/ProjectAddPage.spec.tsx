@@ -8,9 +8,9 @@ import { ROUTE_NAMES } from '../../stores/routerStore'
 import { FirebaseRepository } from '../../storage/'
 import { RootStore } from '../../stores/'
 
-import { ProjectNew } from '../'
+import { ProjectAddPage } from '../'
 
-describe('ProjectNew', () => {
+describe('ProjectAddPage', () => {
   const TEST_DATA = {
     name: 'Foo Computers Inc.',
     standardRate: 20.50,
@@ -28,7 +28,7 @@ describe('ProjectNew', () => {
     const subject = mount(
       <Provider rootStore={rootStore}>
         <RouterProvider router={rootStore.routerStore.instance}>
-          <ProjectNew />
+          <ProjectAddPage />
         </RouterProvider>
       </Provider>
     )
@@ -40,7 +40,7 @@ describe('ProjectNew', () => {
     const subject = mount(
       <Provider rootStore={rootStore}>
         <RouterProvider router={rootStore.routerStore.instance}>
-          <ProjectNew />
+          <ProjectAddPage />
         </RouterProvider>
       </Provider>
     )
@@ -60,7 +60,7 @@ describe('ProjectNew', () => {
     const subject = mount(
       <Provider rootStore={rootStore}>
         <RouterProvider router={rootStore.routerStore.instance}>
-          <ProjectNew />
+          <ProjectAddPage />
         </RouterProvider>
       </Provider>
     )

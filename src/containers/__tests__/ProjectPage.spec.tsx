@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Provider } from 'mobx-react'
 import { RouterProvider } from 'react-router5'
 import { mount } from 'enzyme'
 
@@ -6,9 +7,9 @@ import { MOCK_PROJECTS, MOCK_ENTRIES } from '../../../test/mockData'
 import { FirebaseRepository } from '../../storage/'
 import { RootStore } from '../../stores/'
 
-import { ProjectList } from '../'
+import { ProjectPage } from '../'
 
-describe('ProjectList', () => {
+describe('ProjectPage', () => {
   let rootStore: RootStore
 
   beforeEach(() => {
@@ -16,22 +17,28 @@ describe('ProjectList', () => {
     rootStore = new RootStore(repository, 'me')
   })
 
-  it('should render nothing if an empty array is passed', () => {
+  it('should render an error if an invalid projectId is provided', () => {
     const subject = mount(
-      <ProjectList projects={[]} />
+      <Provider rootStore={rootStore}>
+        <RouterProvider router={rootStore.routerStore.instance}>
+          <ProjectPage id="foo" />
+        </RouterProvider>
+      </Provider>
     )
 
-    expect(subject.html()).toBeNull()
+    expect(subject).toMatchSnapshot()
   })
 
-  it('should render a project list if provided', () => {
+  it('should render an existing project', () => {
     rootStore.projectListStore.hydrate(MOCK_PROJECTS)
     rootStore.entryListStore.hydrate(MOCK_ENTRIES)
 
     const subject = mount(
-      <RouterProvider router={rootStore.routerStore.instance}>
-        <ProjectList projects={rootStore.projectListStore.projects} />
-      </RouterProvider>
+      <Provider rootStore={rootStore}>
+        <RouterProvider router={rootStore.routerStore.instance}>
+          <ProjectPage id="1234-5678-9012" />
+        </RouterProvider>
+      </Provider>
     )
 
     expect(subject).toMatchSnapshot()

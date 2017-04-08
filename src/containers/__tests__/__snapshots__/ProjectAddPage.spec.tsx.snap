@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProjectNew should render 1`] = `
+exports[`ProjectAddPage should render 1`] = `
 <Provider
   rootStore={
     RootStore {
@@ -256,7 +256,6 @@ exports[`ProjectNew should render 1`] = `
         "isLoaded": false,
       },
       "userStore": UserStore {
-        "authenticated": Promise {},
         "rootStore": [Circular],
         "uid": "me",
       },
@@ -485,8 +484,8 @@ exports[`ProjectNew should render 1`] = `
       }
     }
   >
-    <inject-NewProject-with-rootStore>
-      <NewProject
+    <inject-ProjectAddPage-with-rootStore>
+      <ProjectAddPage
         rootStore={
           RootStore {
             "entryListStore": EntryListStore {
@@ -741,7 +740,6 @@ exports[`ProjectNew should render 1`] = `
               "isLoaded": false,
             },
             "userStore": UserStore {
-              "authenticated": Promise {},
               "rootStore": [Circular],
               "uid": "me",
             },
@@ -962,8 +960,8 @@ exports[`ProjectNew should render 1`] = `
             </styled.section>
           </div>
         </styled.div>
-      </NewProject>
-    </inject-NewProject-with-rootStore>
+      </ProjectAddPage>
+    </inject-ProjectAddPage-with-rootStore>
   </RouterProvider>
 </Provider>
 `;

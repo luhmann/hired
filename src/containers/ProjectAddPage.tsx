@@ -31,7 +31,7 @@ const Form = styled.section`
 
 @inject('rootStore')
 @observer
-class NewProject extends React.Component<NewProjectProps, NewProjectState> {
+class ProjectAddPage extends React.Component<NewProjectProps, NewProjectState> {
 
   constructor(props: NewProjectProps) {
     super(props)
@@ -100,4 +100,4 @@ class NewProject extends React.Component<NewProjectProps, NewProjectState> {
   }
 }
 
-export default NewProject
+export default ProjectAddPage

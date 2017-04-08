@@ -1,11 +1,11 @@
 import App from './App'
-import Project from './Project'
-import ProjectList from './ProjectList'
-import ProjectNew from './ProjectNew'
+import ProjectPage from './ProjectPage'
+import ProjectListPage from './ProjectListPage'
+import ProjectAddPage from './ProjectAddPage'
 
 export {
   App,
-  Project,
-  ProjectList,
-  ProjectNew
+  ProjectPage,
+  ProjectListPage,
+  ProjectAddPage
 }

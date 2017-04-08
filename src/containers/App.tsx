@@ -7,9 +7,11 @@ import RootStore from '../stores/rootStore'
 import { ROUTE_NAMES } from '../stores/routerStore'
 
 import { Bootstrap, Error } from '../components/organisms/'
-import ProjectList from './ProjectList'
-import Project from './Project'
-import ProjectNew from './ProjectNew'
+import {
+  ProjectAddPage,
+  ProjectListPage,
+  ProjectPage
+} from './'
 
 interface AppProps {
   rootStore?: RootStore
@@ -23,17 +25,17 @@ class App extends React.Component<AppProps, {}> {
       switch (this.props.rootStore.uiStore.currentView.name) {
         case (ROUTE_NAMES.projectList):
           return (
-            <ProjectList
+            <ProjectListPage
               projects={this.props.rootStore.projectListStore.projects}
             />
           )
         case (ROUTE_NAMES.projectOverview):
           if (this.props.rootStore.uiStore.currentView.projectId) {
-            return <Project id={this.props.rootStore.uiStore.currentView.projectId} />
+            return <ProjectPage id={this.props.rootStore.uiStore.currentView.projectId} />
           }
           break
         case (ROUTE_NAMES.projectNew):
-          return <ProjectNew />
+          return <ProjectAddPage />
         default:
           break
       }

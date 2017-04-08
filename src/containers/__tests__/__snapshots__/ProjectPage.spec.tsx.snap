@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Project should render an error if an invalid projectId is provided 1`] = `
+exports[`ProjectPage should render an error if an invalid projectId is provided 1`] = `
 <Provider
   rootStore={
     RootStore {
@@ -255,7 +255,6 @@ exports[`Project should render an error if an invalid projectId is provided 1`] 
         "isLoaded": false,
       },
       "userStore": UserStore {
-        "authenticated": Promise {},
         "rootStore": [Circular],
         "uid": "me",
       },
@@ -742,7 +741,6 @@ exports[`Project should render an error if an invalid projectId is provided 1`] 
               "isLoaded": false,
             },
             "userStore": UserStore {
-              "authenticated": Promise {},
               "rootStore": [Circular],
               "uid": "me",
             },
@@ -754,7 +752,7 @@ exports[`Project should render an error if an invalid projectId is provided 1`] 
 </Provider>
 `;
 
-exports[`Project should render an existing project 1`] = `
+exports[`ProjectPage should render an existing project 1`] = `
 <Provider
   rootStore={
     RootStore {
@@ -1077,7 +1075,6 @@ exports[`Project should render an existing project 1`] = `
         "isLoaded": false,
       },
       "userStore": UserStore {
-        "authenticated": Promise {},
         "rootStore": [Circular],
         "uid": "me",
       },
@@ -1632,7 +1629,6 @@ exports[`Project should render an existing project 1`] = `
               "isLoaded": false,
             },
             "userStore": UserStore {
-              "authenticated": Promise {},
               "rootStore": [Circular],
               "uid": "me",
             },
