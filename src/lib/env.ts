@@ -1,7 +1,7 @@
 const env = process.env
 const DEV_MODE_IDENTIFIER = 'development'
 
-const BACKEND_BASE_URL = 
+const BACKEND_BASE_URL =
   `${env.REACT_APP_BACKEND_PROTOCOL}://${env.REACT_APP_BACKEND_HOST}:${env.REACT_APP_BACKEND_PORT}`
 
 const backendUrl = (fragment: string): string => {
