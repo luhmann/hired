@@ -1,13 +1,16 @@
 import * as firebase from 'firebase'
+import * as log from '../lib/log'
+
+import { backendUrl } from '../lib/env'
 
 class FirebaseRepository {
-  private config = {
+  private config = Object.freeze({
     apiKey: 'AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI',
     authDomain: 'mobx-time-tracking-cbeca.firebaseapp.com',
     databaseURL: 'https://mobx-time-tracking-cbeca.firebaseio.com',
     storageBucket: 'mobx-time-tracking-cbeca.appspot.com',
     messagingSenderId: '282276589695'
-  }
+  })
 
   private app: firebase.app.App
 
@@ -29,12 +32,11 @@ class FirebaseRepository {
 
   authenticate = async(uid: string = 'me') => {
     try {
-      let response = await fetch(`http://localhost:8000/auth/${uid}`)
+      let response = await fetch(backendUrl(`/auth/${uid}`))
       let parsed = await response.json()
       return await firebase.auth().signInWithCustomToken(parsed.token)
     } catch (error) {
-      // tslint:disable-next-line
-      console.log('Failure in auth, check it', error)
+      log.error('[Storage]: Failure during authentication', error)
       return false
     }
   }
