@@ -5,11 +5,11 @@ import { backendUrl } from '../lib/env'
 
 class FirebaseRepository {
   private config = Object.freeze({
-    apiKey: 'AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI',
-    authDomain: 'mobx-time-tracking-cbeca.firebaseapp.com',
-    databaseURL: 'https://mobx-time-tracking-cbeca.firebaseio.com',
-    storageBucket: 'mobx-time-tracking-cbeca.appspot.com',
-    messagingSenderId: '282276589695'
+    apiKey: `${process.env.FB_API_KEY}`,
+    authDomain: `${process.env.FB_AUTH_DOMAIN}`,
+    databaseURL: `${process.env.FB_DATABASE_URL}`,
+    storageBucket: `${process.env.FB_STORAGE_BUCKET}`,
+    messagingSenderId: `${process.env.FB_MESSAGING_SENDER_ID}`
   })
 
   private app: firebase.app.App
