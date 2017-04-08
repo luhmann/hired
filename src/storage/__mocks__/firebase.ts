@@ -35,7 +35,7 @@ const setFirebaseValMock = (returnValue: object) => {
   firebaseValMock = jest.fn(() => returnValue)
 }
 
-const setCustomTokenMock = (returnValue: boolean) => {
+const setCustomTokenMock = (returnValue: object) => {
   firebaseSignInWithCustomTokenMock = jest.fn(() => returnValue)
 }
 
