@@ -94,6 +94,7 @@
     "start:client": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
+    "test:acceptance": "npm run test -- --testPathPattern=test/acceptance",
     "start:server": "node ./server/bin/www",
     "lint:css": "stylelint \"./src/components/**/*.tsx\""
   },
