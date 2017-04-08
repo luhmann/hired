@@ -2,7 +2,7 @@ import * as React from 'react'
 import { mount } from 'enzyme'
 
 import { EntryStore } from '../../../stores'
-import { MOCK_ENTRIES } from '../../../test/mockData'
+import { MOCK_ENTRIES } from '../../../../test/mockData'
 
 import { EntryList } from '../'
 

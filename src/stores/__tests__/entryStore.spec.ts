@@ -1,7 +1,7 @@
 import * as mobx from 'mobx'
 
 import { EntryStore } from '../'
-import { MOCK_ENTRIES } from '../../test/mockData'
+import { MOCK_ENTRIES } from '../../../test/mockData'
 
 describe('EntryStore', () => {
   let subject: EntryStore

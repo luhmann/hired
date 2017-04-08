@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Provider } from 'mobx-react'
 import { RouterProvider } from 'react-router5'
 import { mount } from 'enzyme'
-import { enterText } from '../../test/util'
+import { enterText } from '../../../test/util'
 
 import { ROUTE_NAMES } from '../../stores/routerStore'
 import { FirebaseRepository } from '../../storage/'

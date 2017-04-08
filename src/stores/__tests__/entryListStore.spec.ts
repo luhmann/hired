@@ -5,7 +5,7 @@ import { firebaseSetMock } from '../../storage/__mocks__/firebase'
 import FirebaseRepository from '../../storage/firebaseRepository'
 import { RootStore, EntryListStore } from '../'
 
-import { MOCK_ENTRIES } from '../../test/mockData'
+import { MOCK_ENTRIES } from '../../../test/mockData'
 
 describe('EntryListStore', () => {
   let rootStoreMock: RootStore

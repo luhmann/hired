@@ -2,7 +2,7 @@ import * as React from 'react'
 import { RouterProvider } from 'react-router5'
 import { mount } from 'enzyme'
 
-import { MOCK_PROJECTS, MOCK_ENTRIES } from '../../test/mockData'
+import { MOCK_PROJECTS, MOCK_ENTRIES } from '../../../test/mockData'
 import { FirebaseRepository } from '../../storage/'
 import { RootStore } from '../../stores/'
 

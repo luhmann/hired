@@ -1,6 +1,6 @@
 import * as mobx from 'mobx'
 
-import { MOCK_PROJECTS } from '../../test/mockData'
+import { MOCK_PROJECTS } from '../../../test/mockData'
 import { firebaseSetMock } from '../../storage/__mocks__/firebase'
 
 import FirebaseRepository from '../../storage/firebaseRepository'

@@ -4,7 +4,7 @@ import FirebaseRepository from '../../storage/firebaseRepository'
 import RootStore from '../rootStore'
 import ProjectStore from '../projectStore'
 
-import { MOCK_PROJECTS } from '../../test/mockData'
+import { MOCK_PROJECTS } from '../../../test/mockData'
 
 describe('ProjectStore', () => {
   const TEST_DATA = MOCK_PROJECTS[0]
