@@ -26,8 +26,9 @@
     "acceptance-tests",
     "webpack",
     "jest",
-    "**/__mocks__/*.ts",
-    "**/*.spec.ts"
+    "src/test",
+    "**/__mocks__/*",
+    "**/*.spec.*"
   ],
   "types": [
     "typePatches"
