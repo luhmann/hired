@@ -2,7 +2,7 @@ import * as fetchMock from 'fetch-mock'
 
 fetchMock.get('http://localhost:8000/auth/me', {token: '1234-5678'})
 
-let firebaseSignInWithCustomTokenMock = jest.fn(() => true)
+let firebaseSignInWithCustomTokenMock = jest.fn(() => ({ uid: 'me' }))
 let firebaseValMock = jest.fn(() => ({}))
 const firebaseSetMock = jest.fn()
 

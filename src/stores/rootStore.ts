@@ -33,7 +33,7 @@ class RootStore {
     try {
       const authenticated = await this.userStore.authenticate()
       if (authenticated === false) {
-        this.uiStore.setError(true)
+        throw new Error('Could not authenticate')
       }
 
       const snapshot = await this.repository.database(this.userStore.uid).once('value')
