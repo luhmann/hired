@@ -4,7 +4,6 @@ import { Provider } from 'mobx-react'
 import { RouterProvider } from 'react-router5'
 
 import { createRootStore, enterText } from '../util'
-import { firebaseValMock } from '../../src/storage/__mocks__/firebase'
 
 import { ROUTE_NAMES } from '../../src/stores/routerStore'
 import { FirebaseRepository } from '../../src/storage'

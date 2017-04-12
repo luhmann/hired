@@ -42,6 +42,7 @@ class ClockIn extends React.Component<ClockInProps, {}> {
           success={(!this.props.running)}
           error={(!!this.props.running)}
           onClick={(!this.props.running) ? this.startEntry : this.stopEntry}
+          data-t-target="ClockInButton"
         >
           {`Clock ${(this.props.running ? 'Out' : 'In')}`}
         </ClockInButton>

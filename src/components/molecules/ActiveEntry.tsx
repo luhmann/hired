@@ -51,7 +51,7 @@ const ActiveEntry = observer(({ start, duration, standardHours, total }: ActiveE
     transitionAppear={true}
     transitionAppearTimeout={500}
   >
-    <Root key="activeEntry">
+    <Root key="activeEntry" data-t-target="ActiveEntry">
       <Row contentCells={4}>
         <Container>
           <StyledFinishInfo startTime={start} workHours={standardHours} />

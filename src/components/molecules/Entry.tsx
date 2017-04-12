@@ -44,7 +44,7 @@ export interface EntryProps {
 }
 
 const Entry = observer(({ start, end, duration, total }: EntryProps) => (
-  <Root>
+  <Root data-t-target="Entry">
     <Row contentCells={4}>
       <Container>
         <Day>
