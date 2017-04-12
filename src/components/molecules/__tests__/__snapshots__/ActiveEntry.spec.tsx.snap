@@ -37,9 +37,12 @@ exports[`ActiveEntry should render 1`] = `
           leaveTimeout={500}
           name="entry"
         >
-          <styled.div>
+          <styled.div
+            data-t-target="ActiveEntry"
+          >
             <div
               className="bUPhYf"
+              data-t-target="ActiveEntry"
             >
               <Styled(BaseRow)
                 contentCells={4}

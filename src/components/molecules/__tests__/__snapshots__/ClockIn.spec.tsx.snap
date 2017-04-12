@@ -11,12 +11,14 @@ exports[`ClockIn should render in idle-state 1`] = `
       className="frIlRZ"
     >
       <styled.button
+        data-t-target="ClockInButton"
         error={false}
         onClick={[Function]}
         success={true}
       >
         <button
           className="hvWpBV"
+          data-t-target="ClockInButton"
           onClick={[Function]}
         >
           Clock In
@@ -38,12 +40,14 @@ exports[`ClockIn should render in running-state 1`] = `
       className="frIlRZ"
     >
       <styled.button
+        data-t-target="ClockInButton"
         error={true}
         onClick={[Function]}
         success={false}
       >
         <button
           className="etMWMq"
+          data-t-target="ClockInButton"
           onClick={[Function]}
         >
           Clock Out

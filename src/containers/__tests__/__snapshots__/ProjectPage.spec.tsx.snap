@@ -1949,12 +1949,14 @@ exports[`ProjectPage should render an existing project 1`] = `
                   className="frIlRZ"
                 >
                   <styled.button
+                    data-t-target="ClockInButton"
                     error={false}
                     onClick={[Function]}
                     success={true}
                   >
                     <button
                       className="hvWpBV"
+                      data-t-target="ClockInButton"
                       onClick={[Function]}
                     >
                       Clock In
@@ -2007,9 +2009,12 @@ exports[`ProjectPage should render an existing project 1`] = `
                     start={2017-02-17T02:45:00.000Z}
                     total={270.39166666666665}
                   >
-                    <styled.div>
+                    <styled.div
+                      data-t-target="Entry"
+                    >
                       <div
                         className="jEImSP"
+                        data-t-target="Entry"
                       >
                         <Styled(BaseRow)
                           contentCells={4}
@@ -2080,9 +2085,12 @@ exports[`ProjectPage should render an existing project 1`] = `
                     start={2017-02-16T10:22:00.000Z}
                     total={341.39166666666665}
                   >
-                    <styled.div>
+                    <styled.div
+                      data-t-target="Entry"
+                    >
                       <div
                         className="jEImSP"
+                        data-t-target="Entry"
                       >
                         <Styled(BaseRow)
                           contentCells={4}
@@ -2153,9 +2161,12 @@ exports[`ProjectPage should render an existing project 1`] = `
                     start={2017-02-15T09:59:00.000Z}
                     total={261.51666666666665}
                   >
-                    <styled.div>
+                    <styled.div
+                      data-t-target="Entry"
+                    >
                       <div
                         className="jEImSP"
+                        data-t-target="Entry"
                       >
                         <Styled(BaseRow)
                           contentCells={4}
@@ -2226,9 +2237,12 @@ exports[`ProjectPage should render an existing project 1`] = `
                     start={2017-02-14T07:23:00.000Z}
                     total={269.79999999999995}
                   >
-                    <styled.div>
+                    <styled.div
+                      data-t-target="Entry"
+                    >
                       <div
                         className="jEImSP"
+                        data-t-target="Entry"
                       >
                         <Styled(BaseRow)
                           contentCells={4}

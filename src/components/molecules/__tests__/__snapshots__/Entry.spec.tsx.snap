@@ -6,9 +6,12 @@ exports[`Component: Entry should omit the endDate if not provided 1`] = `
   start={2015-02-01T09:22:00.000Z}
   total={50.33333333333333}
 >
-  <styled.div>
+  <styled.div
+    data-t-target="Entry"
+  >
     <div
       className="jEImSP"
+      data-t-target="Entry"
     >
       <Styled(BaseRow)
         contentCells={4}
@@ -80,9 +83,12 @@ exports[`Component: Entry should render 1`] = `
   start={2015-02-01T09:22:00.000Z}
   total={50.33333333333333}
 >
-  <styled.div>
+  <styled.div
+    data-t-target="Entry"
+  >
     <div
       className="jEImSP"
+      data-t-target="Entry"
     >
       <Styled(BaseRow)
         contentCells={4}
