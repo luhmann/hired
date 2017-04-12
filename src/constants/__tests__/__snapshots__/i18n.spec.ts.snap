@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`i18n should return the correct string for an existing key 1`] = `"You do not have entries so far. Hit the big green button!"`;

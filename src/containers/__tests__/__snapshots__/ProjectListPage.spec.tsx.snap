@@ -2647,7 +2647,11 @@ exports[`ProjectListPage should render a project list if provided 1`] = `
                             href="/project/1234-5678-9012"
                             onClick={[Function]}
                           >
-                            Foo Industries Redesign
+                            <span
+                              data-t-target="Project"
+                            >
+                              Foo Industries Redesign
+                            </span>
                             <styled.div>
                               <div
                                 className="cHEqmR"
@@ -2940,7 +2944,11 @@ exports[`ProjectListPage should render a project list if provided 1`] = `
                             href="/project/2345-9384-324523"
                             onClick={[Function]}
                           >
-                            ACME Inc.
+                            <span
+                              data-t-target="Project"
+                            >
+                              ACME Inc.
+                            </span>
                             <styled.div>
                               <div
                                 className="cHEqmR"
@@ -3233,7 +3241,11 @@ exports[`ProjectListPage should render a project list if provided 1`] = `
                             href="/project/9876-6554-5123"
                             onClick={[Function]}
                           >
-                            Wayne Industries
+                            <span
+                              data-t-target="Project"
+                            >
+                              Wayne Industries
+                            </span>
                             <styled.div>
                               <div
                                 className="cHEqmR"

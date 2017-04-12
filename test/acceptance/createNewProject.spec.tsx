@@ -3,19 +3,20 @@ import { mount } from 'enzyme'
 import { Provider } from 'mobx-react'
 import { RouterProvider } from 'react-router5'
 
-import { createRootStore } from '../util'
+import { createRootStore, enterText } from '../util'
 import { firebaseValMock } from '../../src/storage/__mocks__/firebase'
 
+import { ROUTE_NAMES } from '../../src/stores/routerStore'
 import { FirebaseRepository } from '../../src/storage'
 import { RootStore } from '../../src/stores/'
 
 import { App } from '../../src/containers'
 
-describe('GIVEN: a user navigates to the project overview page', () => {
+describe('A user should be able to create a new project', () => {
   let rootStore: RootStore
   let subject
 
-  beforeEach(async() => {
+  beforeEach(async () => {
     jest.mock('firebase')
 
     rootStore = createRootStore()
@@ -30,13 +31,43 @@ describe('GIVEN: a user navigates to the project overview page', () => {
     await rootStore.fetchData()
   })
 
-  describe('AND: the project list is empty', () => {
-    it('empty-notification should be displayed', () => {
-      // WHEN: the user hits the url
-      rootStore.uiStore.showProjectList()
+  describe('GIVEN: a user navigates to the project overview page', () => {
 
-      // THEN
-      expect(subject.find('EmptyList').length).toBe(1)
+    describe('AND: the project list is empty', () => {
+      it('empty-notification should be displayed', () => {
+        // WHEN: the user hits the url
+        rootStore.uiStore.showProjectList()
+
+        // THEN
+        expect(subject.find('EmptyList').length).toBe(1)
+      })
+    })
+  })
+
+  describe('GIVEN: a user is on the add-project-page', () => {
+    beforeEach(() => {
+      rootStore.routerStore.navigate(ROUTE_NAMES.projectNew)
+    })
+
+    it('should create a new project', () => {
+      const TEST_DATA = {
+        name: 'Foo Computers Inc.',
+        standardRate: 20.50,
+        description: 'A very cool project'
+      }
+
+      // WHEN: the user fills out the form
+      enterText(subject.find('#project-name'), TEST_DATA.name)
+      enterText(subject.find('#standard-rate'), TEST_DATA.standardRate)
+      enterText(subject.find('#description'), TEST_DATA.description)
+
+      // AND: presses the save-button
+      subject.find('[data-t-target="SaveButton"]').simulate('click')
+
+      // THEN: the user should see a new project in the project-list
+      expect(rootStore.uiStore.currentView.name).toBe(ROUTE_NAMES.projectList)
+      expect(subject.find('[data-t-target="Project"]').length).toBe(1)
+      expect(subject.find('[data-t-target="Project"]').text()).toContain(TEST_DATA.name)
     })
   })
 })

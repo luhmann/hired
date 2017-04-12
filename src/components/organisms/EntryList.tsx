@@ -2,7 +2,7 @@ import * as React from 'react'
 import { observer } from 'mobx-react'
 import styled from 'styled-components'
 
-import { translate } from '../../lib/i18n'
+import { translate } from '../../constants/i18n'
 
 import EntryStore from '../../stores/entryStore'
 import { Entry, EmptyList } from '../molecules/'

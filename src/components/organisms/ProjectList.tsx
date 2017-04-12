@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { ProjectStore } from '../../stores/'
 import { ROUTE_NAMES } from '../../stores/routerStore'
 import { formatCurrency } from '../../lib/currency'
-import { translate } from '../../lib/i18n'
+import { translate } from '../../constants/i18n'
 
 import { color, gridCell } from '../../styles/style-utils'
 import { Row } from '../../components/atoms/Containers'
@@ -34,7 +34,7 @@ const ProjectList = observer(({ projects }: ProjectListProps) => {
           projects.map((project: ProjectStore, index: number) => (
             <Row contentCells={4} key={index}>
               <RowLink routeName={ROUTE_NAMES.projectOverview} routeParams={{ projectId: project.id }} >
-                {project.name}
+                <span data-t-target="Project">{project.name}</span>
                 <Total>{formatCurrency(project.totalRevenue)}</Total>
               </RowLink>
             </Row>

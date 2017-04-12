@@ -1,6 +1,7 @@
 import { get } from 'lodash'
 
-import * as log from './log'
+import { isDev } from '../lib/env'
+import * as log from '../lib/log'
 
 const translationMap = Object.freeze({
   entryList: {
@@ -18,7 +19,7 @@ const translate = (key: string): string  => {
     log.error('[i18n]: Could not find translation for key', key)
   }
 
-  return translation || ''
+  return translation || (isDev() ? `[MISSING TRANSLATION FOR KEY ${key}]` : '')
 }
 
 export {
