@@ -14,10 +14,10 @@ Accepted
 * Realtime capability would be a nice touch as we could update running timers across a range of devices instantly
 * This is a personal project so we are unlikely to have any issues with scaling as the number of users will probably
 remain at one
+* Firebase offers a simple NoSQL-style realtime database with a suitable free-tier
 
 ## Decision
 
-* Firebase offers a simple NoSQL-style realtime database with a suitable free-tier
 * We are using Firebase
 
 ## Consequences
@@ -26,4 +26,5 @@ remain at one
 * undefined values will not be saved
 * Data should be saved in a normalized form: https://firebase.google.com/docs/database/web/structure-data
 * Make sure you understand access-rights: https://firebase.google.com/docs/database/security/
-* Install and use [firebase-cli](https://firebase.google.com/docs/database/web/structure-data)
+* Install and use [firebase-cli](https://firebase.google.com/docs/database/web/structure-data), it offers better
+usability than the web-app (at least at the time of writing)
