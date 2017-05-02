@@ -9,8 +9,8 @@ Accepted
 ## Context
 
 * Maintaining a design system is a superior approach to keep a user interface consistent and extensible.
-* Composing user-interface-elements from more basic parts is a good functional approach in-line with reacts own design philosophy
-* Brad Frosts [atomic design](http://bradfrost.com/blog/post/atomic-web-design/) is one of the most mature approaches for designing and keeping a design system.
+* Composing user-interface-elements from more basic parts is a good functional approach that is in line with Reacts own design-philosophy
+* Brad Frost's [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/) is one of the more mature approaches for designing and maintaining a design system.
 
 ## Decision
 
