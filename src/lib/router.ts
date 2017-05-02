@@ -6,18 +6,13 @@ import listenersPlugin from 'router5/plugins/listeners'
 
 import * as log from '../lib/log'
 import { isDev } from '../lib/env'
-import { RootStore } from './'
-
-const ROUTE_NAMES = {
-  projectList: 'PROJECT_LIST',
-  projectOverview: 'PROJECT_OVERVIEW',
-  projectNew: 'PROJECT_NEW'
-}
+import { RootStore } from '../stores/'
+import { VIEW_NAMES } from '../stores/uiStore'
 
 const ROUTES = [
-  { name: ROUTE_NAMES.projectList, path: '/' },
-  { name: ROUTE_NAMES.projectOverview, path: '/project/:projectId' },
-  { name: ROUTE_NAMES.projectNew, path: '/project/new' },
+  { name: VIEW_NAMES.projectList, path: '/' },
+  { name: VIEW_NAMES.projectOverview, path: '/project/:projectId' },
+  { name: VIEW_NAMES.projectNew, path: '/project/new' },
 ]
 
 interface RouterStateInterface {
@@ -29,7 +24,7 @@ interface RouterStateInterface {
   path: string
 }
 
-class RouterStore {
+class Router {
   instance: RouterInterface
 
   private rootStore: RootStore
@@ -51,19 +46,20 @@ class RouterStore {
       useHash: false
     }))
 
+    // tslint:disable-next-line
     isDev() && this.instance.usePlugin(loggerPlugin)
     this.instance.usePlugin(listenersPlugin())
 
     this.instance.addListener((toState: RouterStateInterface, fromState: RouterStateInterface) => {
       this.rootStore.uiStore.setError(false)
       switch (toState.name) {
-        case (ROUTE_NAMES.projectList):
+        case (VIEW_NAMES.projectList):
           this.rootStore.uiStore.showProjectList()
           break
-        case (ROUTE_NAMES.projectOverview):
+        case (VIEW_NAMES.projectOverview):
           this.rootStore.uiStore.showProject(toState.params.projectId)
           break
-        case (ROUTE_NAMES.projectNew):
+        case (VIEW_NAMES.projectNew):
           this.rootStore.uiStore.showNewProject()
           break
         default:
@@ -85,5 +81,5 @@ class RouterStore {
 
 }
 
-export { ROUTE_NAMES }
-export default RouterStore
+export { VIEW_NAMES }
+export default Router

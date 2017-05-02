@@ -5,23 +5,26 @@ import { RouterProvider } from 'react-router5'
 
 import { createRootStore, enterText } from '../util'
 
-import { ROUTE_NAMES } from '../../src/stores/routerStore'
+import { VIEW_NAMES } from '../../src/stores/uiStore'
 import { FirebaseRepository } from '../../src/storage'
 import { RootStore } from '../../src/stores/'
+import Router from '../../src/lib/router'
 
 import { App } from '../../src/containers'
 
 describe('A user should be able to create a new project', () => {
   let rootStore: RootStore
+  let router: Router
   let subject
 
   beforeEach(async () => {
     jest.mock('firebase')
 
     rootStore = createRootStore()
+    router = new Router(rootStore)
     subject = mount(
-      <Provider rootStore={rootStore}>
-        <RouterProvider router={rootStore.routerStore.instance}>
+      <Provider rootStore={rootStore} router={router}>
+        <RouterProvider router={router.instance}>
           <App rootStore={rootStore} />
         </RouterProvider>
       </Provider>
@@ -45,7 +48,7 @@ describe('A user should be able to create a new project', () => {
 
   describe('GIVEN: a user is on the add-project-page', () => {
     beforeEach(() => {
-      rootStore.routerStore.navigate(ROUTE_NAMES.projectNew)
+      router.navigate(VIEW_NAMES.projectNew)
     })
 
     it('should create a new project', () => {
@@ -64,7 +67,7 @@ describe('A user should be able to create a new project', () => {
       subject.find('[data-t-target="SaveButton"]').simulate('click')
 
       // THEN: the user should see a new project in the project-list
-      expect(rootStore.uiStore.currentView.name).toBe(ROUTE_NAMES.projectList)
+      expect(rootStore.uiStore.currentView.name).toBe(VIEW_NAMES.projectList)
       expect(subject.find('[data-t-target="Project"]').length).toBe(1)
       expect(subject.find('[data-t-target="Project"]').text()).toContain(TEST_DATA.name)
     })

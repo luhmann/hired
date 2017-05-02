@@ -7,14 +7,12 @@ import ProjectListStore from './projectListStore'
 import UserStore from './userStore'
 import UiStore from './uiStore'
 import FirebaseRepository from '../storage/firebaseRepository'
-import RouterStore from './routerStore'
 
 class RootStore {
   @observable entryListStore: EntryListStore
   @observable projectListStore: ProjectListStore
   @observable userStore: UserStore
   @observable uiStore: UiStore
-  routerStore: RouterStore
   repository: FirebaseRepository
 
   constructor(repository: FirebaseRepository, uid: string) {
@@ -23,7 +21,6 @@ class RootStore {
     this.entryListStore = new EntryListStore(this)
     this.projectListStore = new ProjectListStore(this)
     this.uiStore = new UiStore()
-    this.routerStore = new RouterStore(this)
 
     this.fetchData()
   }

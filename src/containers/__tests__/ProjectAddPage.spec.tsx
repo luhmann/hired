@@ -1,12 +1,12 @@
 import * as React from 'react'
-import { Provider } from 'mobx-react'
 import { RouterProvider } from 'react-router5'
 import { mount } from 'enzyme'
 import { enterText } from '../../../test/util'
 
-import { ROUTE_NAMES } from '../../stores/routerStore'
+import { VIEW_NAMES } from '../../stores/uiStore'
 import { FirebaseRepository } from '../../storage/'
 import { RootStore } from '../../stores/'
+import Router from '../../lib/router'
 
 import { ProjectAddPage } from '../'
 
@@ -17,20 +17,20 @@ describe('ProjectAddPage', () => {
     description: 'A very cool project'
   }
   let rootStore: RootStore
+  let router: Router
 
   beforeEach(() => {
     const repository = new FirebaseRepository()
     rootStore = new RootStore(repository, 'me')
-    rootStore.routerStore.navigate = jest.fn()
+    router = new Router(rootStore)
+    router.navigate = jest.fn()
   })
 
   it('should render', () => {
     const subject = mount(
-      <Provider rootStore={rootStore}>
-        <RouterProvider router={rootStore.routerStore.instance}>
-          <ProjectAddPage />
-        </RouterProvider>
-      </Provider>
+      <RouterProvider router={router.instance}>
+        <ProjectAddPage rootStore={rootStore} router={router} />
+      </RouterProvider>
     )
 
     expect(subject).toMatchSnapshot()
@@ -38,11 +38,9 @@ describe('ProjectAddPage', () => {
 
   it('should save a new project', () => {
     const subject = mount(
-      <Provider rootStore={rootStore}>
-        <RouterProvider router={rootStore.routerStore.instance}>
-          <ProjectAddPage />
-        </RouterProvider>
-      </Provider>
+      <RouterProvider router={router.instance}>
+        <ProjectAddPage rootStore={rootStore} router={router} />
+      </RouterProvider>
     )
 
     enterText(subject.find('#project-name'), TEST_DATA.name)
@@ -53,19 +51,17 @@ describe('ProjectAddPage', () => {
 
     expect(rootStore.projectListStore.projects.length).toBe(1)
     expect(rootStore.projectListStore.projects[0].toStorage).toMatchObject(TEST_DATA)
-    expect(rootStore.routerStore.navigate.mock.calls[0][0]).toEqual(ROUTE_NAMES.projectList)
+    expect(router.navigate.mock.calls[0][0]).toEqual(VIEW_NAMES.projectList)
   })
 
   it('should cancel creating a new project', () => {
     const subject = mount(
-      <Provider rootStore={rootStore}>
-        <RouterProvider router={rootStore.routerStore.instance}>
-          <ProjectAddPage />
-        </RouterProvider>
-      </Provider>
+      <RouterProvider router={router.instance}>
+        <ProjectAddPage rootStore={rootStore} router={router} />
+      </RouterProvider>
     )
 
     subject.find('[data-t-target="CancelButton"]').simulate('click')
-    expect(rootStore.routerStore.navigate.mock.calls[0][0]).toEqual(ROUTE_NAMES.projectList)
+    expect(router.navigate.mock.calls[0][0]).toEqual(VIEW_NAMES.projectList)
   })
 })

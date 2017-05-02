@@ -7,20 +7,23 @@ import { MOCK_PROJECTS, MOCK_ENTRIES } from '../mockData'
 import { createRootStore } from '../util'
 import { FirebaseRepository } from '../../src/storage'
 import { RootStore } from '../../src/stores/'
+import Router from '../../src/lib/router'
 
 import { App } from '../../src/containers'
 
 describe('A user should be able to create new time entries', () => {
   let rootStore: RootStore
+  let router: Router
   let subject
 
   beforeEach(async () => {
     jest.mock('firebase')
 
     rootStore = createRootStore()
+    router = new Router(rootStore)
     subject = mount(
       <Provider rootStore={rootStore}>
-        <RouterProvider router={rootStore.routerStore.instance}>
+        <RouterProvider router={router.instance}>
           <App rootStore={rootStore} />
         </RouterProvider>
       </Provider>

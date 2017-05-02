@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RouterStore should initialize 1`] = `
+exports[`Router should initialize 1`] = `
 Object {
   "add": [Function],
   "addEventListener": [Function],

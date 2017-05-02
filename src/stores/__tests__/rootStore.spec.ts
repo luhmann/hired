@@ -6,9 +6,9 @@ import {
   ProjectListStore,
   UiStore,
   RootStore,
-  RouterStore,
   UserStore
 } from '../'
+import Router from '../../lib/router'
 
 describe('RootStore', () => {
   let firebaseRepositoryMock: FirebaseRepository
@@ -26,7 +26,6 @@ describe('RootStore', () => {
     expect(subject.entryListStore).toBeInstanceOf(EntryListStore)
     expect(subject.projectListStore).toBeInstanceOf(ProjectListStore)
     expect(subject.uiStore).toBeInstanceOf(UiStore)
-    expect(subject.routerStore).toBeInstanceOf(RouterStore)
   })
 
   it('should set uiState to loaded if there is no error', async () => {

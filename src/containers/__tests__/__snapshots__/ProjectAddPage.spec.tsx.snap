@@ -1,32 +1,268 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProjectAddPage should render 1`] = `
-<Provider
-  rootStore={
-    RootStore {
-      "entryListStore": EntryListStore {
-        "active": null,
-        "entries": Array [],
-        "rootStore": [Circular],
+<RouterProvider
+  router={
+    Object {
+      "add": [Function],
+      "addEventListener": [Function],
+      "addListener": [Function],
+      "addNode": [Function],
+      "addNodeListener": [Function],
+      "addRouteListener": [Function],
+      "areStatesDescendants": [Function],
+      "areStatesEqual": [Function],
+      "buildPath": [Function],
+      "buildState": [Function],
+      "buildUrl": [Function],
+      "canActivate": [Function],
+      "canDeactivate": [Function],
+      "cancel": [Function],
+      "clearCanDeactivate": [Function],
+      "clearMiddleware": [Function],
+      "clone": [Function],
+      "executeFactory": [Function],
+      "getDependencies": [Function],
+      "getLifecycleFactories": [Function],
+      "getLifecycleFunctions": [Function],
+      "getListeners": [Function],
+      "getMiddlewareFactories": [Function],
+      "getMiddlewareFunctions": [Function],
+      "getOptions": [Function],
+      "getPlugins": [Function],
+      "getState": [Function],
+      "hasPlugin": [Function],
+      "invokeEventListeners": [Function],
+      "isActive": [Function],
+      "isStarted": [Function],
+      "makeNotFoundState": [Function],
+      "makeState": [Function],
+      "matchPath": [Function],
+      "matchUrl": [Function],
+      "navigate": [Function],
+      "navigateToDefault": [Function],
+      "removeEventListener": [Function],
+      "removeListener": [Function],
+      "removeNodeListener": [Function],
+      "removeRouteListener": [Function],
+      "replaceHistoryState": [Function],
+      "rootNode": RouteNode {
+        "absolute": false,
+        "children": Array [
+          RouteNode {
+            "absolute": false,
+            "children": Array [],
+            "name": "PROJECT_NEW",
+            "parent": [Circular],
+            "parser": Path {
+              "hasMatrixParams": false,
+              "hasQueryParams": false,
+              "hasSpatParam": false,
+              "hasUrlParams": false,
+              "params": Array [],
+              "path": "/project/new",
+              "queryParams": Array [],
+              "queryParamsBr": Array [],
+              "source": "\\\\/project\\\\/new",
+              "spatParams": Array [],
+              "tokens": Array [
+                Object {
+                  "match": "/",
+                  "otherVal": Array [],
+                  "regex": /\\\\//,
+                  "type": "delimiter",
+                  "val": Array [
+                    "/",
+                  ],
+                },
+                Object {
+                  "match": "project",
+                  "otherVal": Array [],
+                  "regex": /project/,
+                  "type": "fragment",
+                  "val": Array [
+                    "project",
+                  ],
+                },
+                Object {
+                  "match": "/",
+                  "otherVal": Array [],
+                  "regex": /\\\\//,
+                  "type": "delimiter",
+                  "val": Array [
+                    "/",
+                  ],
+                },
+                Object {
+                  "match": "new",
+                  "otherVal": Array [],
+                  "regex": /new/,
+                  "type": "fragment",
+                  "val": Array [
+                    "new",
+                  ],
+                },
+              ],
+              "urlParams": Array [],
+            },
+            "path": "/project/new",
+          },
+          RouteNode {
+            "absolute": false,
+            "children": Array [],
+            "name": "PROJECT_OVERVIEW",
+            "parent": [Circular],
+            "parser": Path {
+              "hasMatrixParams": false,
+              "hasQueryParams": false,
+              "hasSpatParam": false,
+              "hasUrlParams": true,
+              "params": Array [
+                "projectId",
+              ],
+              "path": "/project/:projectId",
+              "queryParams": Array [],
+              "queryParamsBr": Array [],
+              "source": "\\\\/project\\\\/([a-zA-Z0-9-_.~%':]+)",
+              "spatParams": Array [],
+              "tokens": Array [
+                Object {
+                  "match": "/",
+                  "otherVal": Array [],
+                  "regex": /\\\\//,
+                  "type": "delimiter",
+                  "val": Array [
+                    "/",
+                  ],
+                },
+                Object {
+                  "match": "project",
+                  "otherVal": Array [],
+                  "regex": /project/,
+                  "type": "fragment",
+                  "val": Array [
+                    "project",
+                  ],
+                },
+                Object {
+                  "match": "/",
+                  "otherVal": Array [],
+                  "regex": /\\\\//,
+                  "type": "delimiter",
+                  "val": Array [
+                    "/",
+                  ],
+                },
+                Object {
+                  "match": ":projectId",
+                  "otherVal": Array [
+                    undefined,
+                    undefined,
+                  ],
+                  "regex": /\\(\\[a-zA-Z0-9-_\\.~%':\\]\\+\\)/,
+                  "type": "url-parameter",
+                  "val": Array [
+                    "projectId",
+                  ],
+                },
+              ],
+              "urlParams": Array [
+                "projectId",
+              ],
+            },
+            "path": "/project/:projectId",
+          },
+          RouteNode {
+            "absolute": false,
+            "children": Array [],
+            "name": "PROJECT_LIST",
+            "parent": [Circular],
+            "parser": Path {
+              "hasMatrixParams": false,
+              "hasQueryParams": false,
+              "hasSpatParam": false,
+              "hasUrlParams": false,
+              "params": Array [],
+              "path": "/",
+              "queryParams": Array [],
+              "queryParamsBr": Array [],
+              "source": "\\\\/",
+              "spatParams": Array [],
+              "tokens": Array [
+                Object {
+                  "match": "/",
+                  "otherVal": Array [],
+                  "regex": /\\\\//,
+                  "type": "delimiter",
+                  "val": Array [
+                    "/",
+                  ],
+                },
+              ],
+              "urlParams": Array [],
+            },
+            "path": "/",
+          },
+        ],
+        "name": "",
+        "parent": undefined,
+        "parser": null,
+        "path": "",
       },
-      "projectListStore": ProjectListStore {
-        "projects": Array [],
-        "rootStore": [Circular],
-      },
-      "repository": FirebaseRepository {
-        "app": Object {
-          "database": [Function],
+      "setDependencies": [Function],
+      "setDependency": [Function],
+      "setOption": [Function],
+      "setRootPath": [Function],
+      "setState": [Function],
+      "start": [Function],
+      "stop": [Function],
+      "transitionToState": [Function],
+      "urlToPath": [Function],
+      "useMiddleware": [Function],
+      "usePlugin": [Function],
+    }
+  }
+>
+  <inject-inject-ProjectAddPage-with-router-with-rootStore
+    rootStore={
+      RootStore {
+        "entryListStore": EntryListStore {
+          "active": null,
+          "entries": Array [],
+          "rootStore": [Circular],
         },
-        "authenticate": [Function],
-        "config": Object {
-          "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-          "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-          "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-          "messagingSenderId": "282276589695",
-          "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+        "projectListStore": ProjectListStore {
+          "projects": Array [],
+          "rootStore": [Circular],
         },
-      },
-      "routerStore": RouterStore {
+        "repository": FirebaseRepository {
+          "app": Object {
+            "database": [Function],
+          },
+          "authenticate": [Function],
+          "config": Object {
+            "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+            "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+            "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+            "messagingSenderId": "282276589695",
+            "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+          },
+        },
+        "uiStore": UiStore {
+          "currentView": Object {
+            "name": "PROJECT_LIST",
+          },
+          "hasError": false,
+          "isLoaded": false,
+        },
+        "userStore": UserStore {
+          "rootStore": [Circular],
+          "uid": "me",
+        },
+      }
+    }
+    router={
+      Router {
         "instance": Object {
           "add": [Function],
           "addEventListener": [Function],
@@ -246,245 +482,341 @@ exports[`ProjectAddPage should render 1`] = `
           "usePlugin": [Function],
         },
         "navigate": [Function],
-        "rootStore": [Circular],
-      },
-      "uiStore": UiStore {
-        "currentView": Object {
-          "name": "PROJECT_LIST",
-        },
-        "hasError": false,
-        "isLoaded": false,
-      },
-      "userStore": UserStore {
-        "rootStore": [Circular],
-        "uid": "me",
-      },
-    }
-  }
->
-  <RouterProvider
-    router={
-      Object {
-        "add": [Function],
-        "addEventListener": [Function],
-        "addListener": [Function],
-        "addNode": [Function],
-        "addNodeListener": [Function],
-        "addRouteListener": [Function],
-        "areStatesDescendants": [Function],
-        "areStatesEqual": [Function],
-        "buildPath": [Function],
-        "buildState": [Function],
-        "buildUrl": [Function],
-        "canActivate": [Function],
-        "canDeactivate": [Function],
-        "cancel": [Function],
-        "clearCanDeactivate": [Function],
-        "clearMiddleware": [Function],
-        "clone": [Function],
-        "executeFactory": [Function],
-        "getDependencies": [Function],
-        "getLifecycleFactories": [Function],
-        "getLifecycleFunctions": [Function],
-        "getListeners": [Function],
-        "getMiddlewareFactories": [Function],
-        "getMiddlewareFunctions": [Function],
-        "getOptions": [Function],
-        "getPlugins": [Function],
-        "getState": [Function],
-        "hasPlugin": [Function],
-        "invokeEventListeners": [Function],
-        "isActive": [Function],
-        "isStarted": [Function],
-        "makeNotFoundState": [Function],
-        "makeState": [Function],
-        "matchPath": [Function],
-        "matchUrl": [Function],
-        "navigate": [Function],
-        "navigateToDefault": [Function],
-        "removeEventListener": [Function],
-        "removeListener": [Function],
-        "removeNodeListener": [Function],
-        "removeRouteListener": [Function],
-        "replaceHistoryState": [Function],
-        "rootNode": RouteNode {
-          "absolute": false,
-          "children": Array [
-            RouteNode {
-              "absolute": false,
-              "children": Array [],
-              "name": "PROJECT_NEW",
-              "parent": [Circular],
-              "parser": Path {
-                "hasMatrixParams": false,
-                "hasQueryParams": false,
-                "hasSpatParam": false,
-                "hasUrlParams": false,
-                "params": Array [],
-                "path": "/project/new",
-                "queryParams": Array [],
-                "queryParamsBr": Array [],
-                "source": "\\\\/project\\\\/new",
-                "spatParams": Array [],
-                "tokens": Array [
-                  Object {
-                    "match": "/",
-                    "otherVal": Array [],
-                    "regex": /\\\\//,
-                    "type": "delimiter",
-                    "val": Array [
-                      "/",
-                    ],
-                  },
-                  Object {
-                    "match": "project",
-                    "otherVal": Array [],
-                    "regex": /project/,
-                    "type": "fragment",
-                    "val": Array [
-                      "project",
-                    ],
-                  },
-                  Object {
-                    "match": "/",
-                    "otherVal": Array [],
-                    "regex": /\\\\//,
-                    "type": "delimiter",
-                    "val": Array [
-                      "/",
-                    ],
-                  },
-                  Object {
-                    "match": "new",
-                    "otherVal": Array [],
-                    "regex": /new/,
-                    "type": "fragment",
-                    "val": Array [
-                      "new",
-                    ],
-                  },
-                ],
-                "urlParams": Array [],
-              },
-              "path": "/project/new",
+        "rootStore": RootStore {
+          "entryListStore": EntryListStore {
+            "active": null,
+            "entries": Array [],
+            "rootStore": [Circular],
+          },
+          "projectListStore": ProjectListStore {
+            "projects": Array [],
+            "rootStore": [Circular],
+          },
+          "repository": FirebaseRepository {
+            "app": Object {
+              "database": [Function],
             },
-            RouteNode {
-              "absolute": false,
-              "children": Array [],
-              "name": "PROJECT_OVERVIEW",
-              "parent": [Circular],
-              "parser": Path {
-                "hasMatrixParams": false,
-                "hasQueryParams": false,
-                "hasSpatParam": false,
-                "hasUrlParams": true,
-                "params": Array [
-                  "projectId",
-                ],
-                "path": "/project/:projectId",
-                "queryParams": Array [],
-                "queryParamsBr": Array [],
-                "source": "\\\\/project\\\\/([a-zA-Z0-9-_.~%':]+)",
-                "spatParams": Array [],
-                "tokens": Array [
-                  Object {
-                    "match": "/",
-                    "otherVal": Array [],
-                    "regex": /\\\\//,
-                    "type": "delimiter",
-                    "val": Array [
-                      "/",
-                    ],
-                  },
-                  Object {
-                    "match": "project",
-                    "otherVal": Array [],
-                    "regex": /project/,
-                    "type": "fragment",
-                    "val": Array [
-                      "project",
-                    ],
-                  },
-                  Object {
-                    "match": "/",
-                    "otherVal": Array [],
-                    "regex": /\\\\//,
-                    "type": "delimiter",
-                    "val": Array [
-                      "/",
-                    ],
-                  },
-                  Object {
-                    "match": ":projectId",
-                    "otherVal": Array [
-                      undefined,
-                      undefined,
-                    ],
-                    "regex": /\\(\\[a-zA-Z0-9-_\\.~%':\\]\\+\\)/,
-                    "type": "url-parameter",
-                    "val": Array [
-                      "projectId",
-                    ],
-                  },
-                ],
-                "urlParams": Array [
-                  "projectId",
-                ],
-              },
-              "path": "/project/:projectId",
+            "authenticate": [Function],
+            "config": Object {
+              "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+              "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+              "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+              "messagingSenderId": "282276589695",
+              "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
             },
-            RouteNode {
-              "absolute": false,
-              "children": Array [],
+          },
+          "uiStore": UiStore {
+            "currentView": Object {
               "name": "PROJECT_LIST",
-              "parent": [Circular],
-              "parser": Path {
-                "hasMatrixParams": false,
-                "hasQueryParams": false,
-                "hasSpatParam": false,
-                "hasUrlParams": false,
-                "params": Array [],
-                "path": "/",
-                "queryParams": Array [],
-                "queryParamsBr": Array [],
-                "source": "\\\\/",
-                "spatParams": Array [],
-                "tokens": Array [
-                  Object {
-                    "match": "/",
-                    "otherVal": Array [],
-                    "regex": /\\\\//,
-                    "type": "delimiter",
-                    "val": Array [
-                      "/",
-                    ],
-                  },
-                ],
-                "urlParams": Array [],
-              },
-              "path": "/",
             },
-          ],
-          "name": "",
-          "parent": undefined,
-          "parser": null,
-          "path": "",
+            "hasError": false,
+            "isLoaded": false,
+          },
+          "userStore": UserStore {
+            "rootStore": [Circular],
+            "uid": "me",
+          },
         },
-        "setDependencies": [Function],
-        "setDependency": [Function],
-        "setOption": [Function],
-        "setRootPath": [Function],
-        "setState": [Function],
-        "start": [Function],
-        "stop": [Function],
-        "transitionToState": [Function],
-        "urlToPath": [Function],
-        "useMiddleware": [Function],
-        "usePlugin": [Function],
       }
     }
   >
-    <inject-ProjectAddPage-with-rootStore>
+    <inject-ProjectAddPage-with-router
+      rootStore={
+        RootStore {
+          "entryListStore": EntryListStore {
+            "active": null,
+            "entries": Array [],
+            "rootStore": [Circular],
+          },
+          "projectListStore": ProjectListStore {
+            "projects": Array [],
+            "rootStore": [Circular],
+          },
+          "repository": FirebaseRepository {
+            "app": Object {
+              "database": [Function],
+            },
+            "authenticate": [Function],
+            "config": Object {
+              "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+              "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+              "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+              "messagingSenderId": "282276589695",
+              "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+            },
+          },
+          "uiStore": UiStore {
+            "currentView": Object {
+              "name": "PROJECT_LIST",
+            },
+            "hasError": false,
+            "isLoaded": false,
+          },
+          "userStore": UserStore {
+            "rootStore": [Circular],
+            "uid": "me",
+          },
+        }
+      }
+      router={
+        Router {
+          "instance": Object {
+            "add": [Function],
+            "addEventListener": [Function],
+            "addListener": [Function],
+            "addNode": [Function],
+            "addNodeListener": [Function],
+            "addRouteListener": [Function],
+            "areStatesDescendants": [Function],
+            "areStatesEqual": [Function],
+            "buildPath": [Function],
+            "buildState": [Function],
+            "buildUrl": [Function],
+            "canActivate": [Function],
+            "canDeactivate": [Function],
+            "cancel": [Function],
+            "clearCanDeactivate": [Function],
+            "clearMiddleware": [Function],
+            "clone": [Function],
+            "executeFactory": [Function],
+            "getDependencies": [Function],
+            "getLifecycleFactories": [Function],
+            "getLifecycleFunctions": [Function],
+            "getListeners": [Function],
+            "getMiddlewareFactories": [Function],
+            "getMiddlewareFunctions": [Function],
+            "getOptions": [Function],
+            "getPlugins": [Function],
+            "getState": [Function],
+            "hasPlugin": [Function],
+            "invokeEventListeners": [Function],
+            "isActive": [Function],
+            "isStarted": [Function],
+            "makeNotFoundState": [Function],
+            "makeState": [Function],
+            "matchPath": [Function],
+            "matchUrl": [Function],
+            "navigate": [Function],
+            "navigateToDefault": [Function],
+            "removeEventListener": [Function],
+            "removeListener": [Function],
+            "removeNodeListener": [Function],
+            "removeRouteListener": [Function],
+            "replaceHistoryState": [Function],
+            "rootNode": RouteNode {
+              "absolute": false,
+              "children": Array [
+                RouteNode {
+                  "absolute": false,
+                  "children": Array [],
+                  "name": "PROJECT_NEW",
+                  "parent": [Circular],
+                  "parser": Path {
+                    "hasMatrixParams": false,
+                    "hasQueryParams": false,
+                    "hasSpatParam": false,
+                    "hasUrlParams": false,
+                    "params": Array [],
+                    "path": "/project/new",
+                    "queryParams": Array [],
+                    "queryParamsBr": Array [],
+                    "source": "\\\\/project\\\\/new",
+                    "spatParams": Array [],
+                    "tokens": Array [
+                      Object {
+                        "match": "/",
+                        "otherVal": Array [],
+                        "regex": /\\\\//,
+                        "type": "delimiter",
+                        "val": Array [
+                          "/",
+                        ],
+                      },
+                      Object {
+                        "match": "project",
+                        "otherVal": Array [],
+                        "regex": /project/,
+                        "type": "fragment",
+                        "val": Array [
+                          "project",
+                        ],
+                      },
+                      Object {
+                        "match": "/",
+                        "otherVal": Array [],
+                        "regex": /\\\\//,
+                        "type": "delimiter",
+                        "val": Array [
+                          "/",
+                        ],
+                      },
+                      Object {
+                        "match": "new",
+                        "otherVal": Array [],
+                        "regex": /new/,
+                        "type": "fragment",
+                        "val": Array [
+                          "new",
+                        ],
+                      },
+                    ],
+                    "urlParams": Array [],
+                  },
+                  "path": "/project/new",
+                },
+                RouteNode {
+                  "absolute": false,
+                  "children": Array [],
+                  "name": "PROJECT_OVERVIEW",
+                  "parent": [Circular],
+                  "parser": Path {
+                    "hasMatrixParams": false,
+                    "hasQueryParams": false,
+                    "hasSpatParam": false,
+                    "hasUrlParams": true,
+                    "params": Array [
+                      "projectId",
+                    ],
+                    "path": "/project/:projectId",
+                    "queryParams": Array [],
+                    "queryParamsBr": Array [],
+                    "source": "\\\\/project\\\\/([a-zA-Z0-9-_.~%':]+)",
+                    "spatParams": Array [],
+                    "tokens": Array [
+                      Object {
+                        "match": "/",
+                        "otherVal": Array [],
+                        "regex": /\\\\//,
+                        "type": "delimiter",
+                        "val": Array [
+                          "/",
+                        ],
+                      },
+                      Object {
+                        "match": "project",
+                        "otherVal": Array [],
+                        "regex": /project/,
+                        "type": "fragment",
+                        "val": Array [
+                          "project",
+                        ],
+                      },
+                      Object {
+                        "match": "/",
+                        "otherVal": Array [],
+                        "regex": /\\\\//,
+                        "type": "delimiter",
+                        "val": Array [
+                          "/",
+                        ],
+                      },
+                      Object {
+                        "match": ":projectId",
+                        "otherVal": Array [
+                          undefined,
+                          undefined,
+                        ],
+                        "regex": /\\(\\[a-zA-Z0-9-_\\.~%':\\]\\+\\)/,
+                        "type": "url-parameter",
+                        "val": Array [
+                          "projectId",
+                        ],
+                      },
+                    ],
+                    "urlParams": Array [
+                      "projectId",
+                    ],
+                  },
+                  "path": "/project/:projectId",
+                },
+                RouteNode {
+                  "absolute": false,
+                  "children": Array [],
+                  "name": "PROJECT_LIST",
+                  "parent": [Circular],
+                  "parser": Path {
+                    "hasMatrixParams": false,
+                    "hasQueryParams": false,
+                    "hasSpatParam": false,
+                    "hasUrlParams": false,
+                    "params": Array [],
+                    "path": "/",
+                    "queryParams": Array [],
+                    "queryParamsBr": Array [],
+                    "source": "\\\\/",
+                    "spatParams": Array [],
+                    "tokens": Array [
+                      Object {
+                        "match": "/",
+                        "otherVal": Array [],
+                        "regex": /\\\\//,
+                        "type": "delimiter",
+                        "val": Array [
+                          "/",
+                        ],
+                      },
+                    ],
+                    "urlParams": Array [],
+                  },
+                  "path": "/",
+                },
+              ],
+              "name": "",
+              "parent": undefined,
+              "parser": null,
+              "path": "",
+            },
+            "setDependencies": [Function],
+            "setDependency": [Function],
+            "setOption": [Function],
+            "setRootPath": [Function],
+            "setState": [Function],
+            "start": [Function],
+            "stop": [Function],
+            "transitionToState": [Function],
+            "urlToPath": [Function],
+            "useMiddleware": [Function],
+            "usePlugin": [Function],
+          },
+          "navigate": [Function],
+          "rootStore": RootStore {
+            "entryListStore": EntryListStore {
+              "active": null,
+              "entries": Array [],
+              "rootStore": [Circular],
+            },
+            "projectListStore": ProjectListStore {
+              "projects": Array [],
+              "rootStore": [Circular],
+            },
+            "repository": FirebaseRepository {
+              "app": Object {
+                "database": [Function],
+              },
+              "authenticate": [Function],
+              "config": Object {
+                "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                "messagingSenderId": "282276589695",
+                "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+              },
+            },
+            "uiStore": UiStore {
+              "currentView": Object {
+                "name": "PROJECT_LIST",
+              },
+              "hasError": false,
+              "isLoaded": false,
+            },
+            "userStore": UserStore {
+              "rootStore": [Circular],
+              "uid": "me",
+            },
+          },
+        }
+      }
+    >
       <ProjectAddPage
         rootStore={
           RootStore {
@@ -510,228 +842,6 @@ exports[`ProjectAddPage should render 1`] = `
                 "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
               },
             },
-            "routerStore": RouterStore {
-              "instance": Object {
-                "add": [Function],
-                "addEventListener": [Function],
-                "addListener": [Function],
-                "addNode": [Function],
-                "addNodeListener": [Function],
-                "addRouteListener": [Function],
-                "areStatesDescendants": [Function],
-                "areStatesEqual": [Function],
-                "buildPath": [Function],
-                "buildState": [Function],
-                "buildUrl": [Function],
-                "canActivate": [Function],
-                "canDeactivate": [Function],
-                "cancel": [Function],
-                "clearCanDeactivate": [Function],
-                "clearMiddleware": [Function],
-                "clone": [Function],
-                "executeFactory": [Function],
-                "getDependencies": [Function],
-                "getLifecycleFactories": [Function],
-                "getLifecycleFunctions": [Function],
-                "getListeners": [Function],
-                "getMiddlewareFactories": [Function],
-                "getMiddlewareFunctions": [Function],
-                "getOptions": [Function],
-                "getPlugins": [Function],
-                "getState": [Function],
-                "hasPlugin": [Function],
-                "invokeEventListeners": [Function],
-                "isActive": [Function],
-                "isStarted": [Function],
-                "makeNotFoundState": [Function],
-                "makeState": [Function],
-                "matchPath": [Function],
-                "matchUrl": [Function],
-                "navigate": [Function],
-                "navigateToDefault": [Function],
-                "removeEventListener": [Function],
-                "removeListener": [Function],
-                "removeNodeListener": [Function],
-                "removeRouteListener": [Function],
-                "replaceHistoryState": [Function],
-                "rootNode": RouteNode {
-                  "absolute": false,
-                  "children": Array [
-                    RouteNode {
-                      "absolute": false,
-                      "children": Array [],
-                      "name": "PROJECT_NEW",
-                      "parent": [Circular],
-                      "parser": Path {
-                        "hasMatrixParams": false,
-                        "hasQueryParams": false,
-                        "hasSpatParam": false,
-                        "hasUrlParams": false,
-                        "params": Array [],
-                        "path": "/project/new",
-                        "queryParams": Array [],
-                        "queryParamsBr": Array [],
-                        "source": "\\\\/project\\\\/new",
-                        "spatParams": Array [],
-                        "tokens": Array [
-                          Object {
-                            "match": "/",
-                            "otherVal": Array [],
-                            "regex": /\\\\//,
-                            "type": "delimiter",
-                            "val": Array [
-                              "/",
-                            ],
-                          },
-                          Object {
-                            "match": "project",
-                            "otherVal": Array [],
-                            "regex": /project/,
-                            "type": "fragment",
-                            "val": Array [
-                              "project",
-                            ],
-                          },
-                          Object {
-                            "match": "/",
-                            "otherVal": Array [],
-                            "regex": /\\\\//,
-                            "type": "delimiter",
-                            "val": Array [
-                              "/",
-                            ],
-                          },
-                          Object {
-                            "match": "new",
-                            "otherVal": Array [],
-                            "regex": /new/,
-                            "type": "fragment",
-                            "val": Array [
-                              "new",
-                            ],
-                          },
-                        ],
-                        "urlParams": Array [],
-                      },
-                      "path": "/project/new",
-                    },
-                    RouteNode {
-                      "absolute": false,
-                      "children": Array [],
-                      "name": "PROJECT_OVERVIEW",
-                      "parent": [Circular],
-                      "parser": Path {
-                        "hasMatrixParams": false,
-                        "hasQueryParams": false,
-                        "hasSpatParam": false,
-                        "hasUrlParams": true,
-                        "params": Array [
-                          "projectId",
-                        ],
-                        "path": "/project/:projectId",
-                        "queryParams": Array [],
-                        "queryParamsBr": Array [],
-                        "source": "\\\\/project\\\\/([a-zA-Z0-9-_.~%':]+)",
-                        "spatParams": Array [],
-                        "tokens": Array [
-                          Object {
-                            "match": "/",
-                            "otherVal": Array [],
-                            "regex": /\\\\//,
-                            "type": "delimiter",
-                            "val": Array [
-                              "/",
-                            ],
-                          },
-                          Object {
-                            "match": "project",
-                            "otherVal": Array [],
-                            "regex": /project/,
-                            "type": "fragment",
-                            "val": Array [
-                              "project",
-                            ],
-                          },
-                          Object {
-                            "match": "/",
-                            "otherVal": Array [],
-                            "regex": /\\\\//,
-                            "type": "delimiter",
-                            "val": Array [
-                              "/",
-                            ],
-                          },
-                          Object {
-                            "match": ":projectId",
-                            "otherVal": Array [
-                              undefined,
-                              undefined,
-                            ],
-                            "regex": /\\(\\[a-zA-Z0-9-_\\.~%':\\]\\+\\)/,
-                            "type": "url-parameter",
-                            "val": Array [
-                              "projectId",
-                            ],
-                          },
-                        ],
-                        "urlParams": Array [
-                          "projectId",
-                        ],
-                      },
-                      "path": "/project/:projectId",
-                    },
-                    RouteNode {
-                      "absolute": false,
-                      "children": Array [],
-                      "name": "PROJECT_LIST",
-                      "parent": [Circular],
-                      "parser": Path {
-                        "hasMatrixParams": false,
-                        "hasQueryParams": false,
-                        "hasSpatParam": false,
-                        "hasUrlParams": false,
-                        "params": Array [],
-                        "path": "/",
-                        "queryParams": Array [],
-                        "queryParamsBr": Array [],
-                        "source": "\\\\/",
-                        "spatParams": Array [],
-                        "tokens": Array [
-                          Object {
-                            "match": "/",
-                            "otherVal": Array [],
-                            "regex": /\\\\//,
-                            "type": "delimiter",
-                            "val": Array [
-                              "/",
-                            ],
-                          },
-                        ],
-                        "urlParams": Array [],
-                      },
-                      "path": "/",
-                    },
-                  ],
-                  "name": "",
-                  "parent": undefined,
-                  "parser": null,
-                  "path": "",
-                },
-                "setDependencies": [Function],
-                "setDependency": [Function],
-                "setOption": [Function],
-                "setRootPath": [Function],
-                "setState": [Function],
-                "start": [Function],
-                "stop": [Function],
-                "transitionToState": [Function],
-                "urlToPath": [Function],
-                "useMiddleware": [Function],
-                "usePlugin": [Function],
-              },
-              "navigate": [Function],
-              "rootStore": [Circular],
-            },
             "uiStore": UiStore {
               "currentView": Object {
                 "name": "PROJECT_LIST",
@@ -742,6 +852,264 @@ exports[`ProjectAddPage should render 1`] = `
             "userStore": UserStore {
               "rootStore": [Circular],
               "uid": "me",
+            },
+          }
+        }
+        router={
+          Router {
+            "instance": Object {
+              "add": [Function],
+              "addEventListener": [Function],
+              "addListener": [Function],
+              "addNode": [Function],
+              "addNodeListener": [Function],
+              "addRouteListener": [Function],
+              "areStatesDescendants": [Function],
+              "areStatesEqual": [Function],
+              "buildPath": [Function],
+              "buildState": [Function],
+              "buildUrl": [Function],
+              "canActivate": [Function],
+              "canDeactivate": [Function],
+              "cancel": [Function],
+              "clearCanDeactivate": [Function],
+              "clearMiddleware": [Function],
+              "clone": [Function],
+              "executeFactory": [Function],
+              "getDependencies": [Function],
+              "getLifecycleFactories": [Function],
+              "getLifecycleFunctions": [Function],
+              "getListeners": [Function],
+              "getMiddlewareFactories": [Function],
+              "getMiddlewareFunctions": [Function],
+              "getOptions": [Function],
+              "getPlugins": [Function],
+              "getState": [Function],
+              "hasPlugin": [Function],
+              "invokeEventListeners": [Function],
+              "isActive": [Function],
+              "isStarted": [Function],
+              "makeNotFoundState": [Function],
+              "makeState": [Function],
+              "matchPath": [Function],
+              "matchUrl": [Function],
+              "navigate": [Function],
+              "navigateToDefault": [Function],
+              "removeEventListener": [Function],
+              "removeListener": [Function],
+              "removeNodeListener": [Function],
+              "removeRouteListener": [Function],
+              "replaceHistoryState": [Function],
+              "rootNode": RouteNode {
+                "absolute": false,
+                "children": Array [
+                  RouteNode {
+                    "absolute": false,
+                    "children": Array [],
+                    "name": "PROJECT_NEW",
+                    "parent": [Circular],
+                    "parser": Path {
+                      "hasMatrixParams": false,
+                      "hasQueryParams": false,
+                      "hasSpatParam": false,
+                      "hasUrlParams": false,
+                      "params": Array [],
+                      "path": "/project/new",
+                      "queryParams": Array [],
+                      "queryParamsBr": Array [],
+                      "source": "\\\\/project\\\\/new",
+                      "spatParams": Array [],
+                      "tokens": Array [
+                        Object {
+                          "match": "/",
+                          "otherVal": Array [],
+                          "regex": /\\\\//,
+                          "type": "delimiter",
+                          "val": Array [
+                            "/",
+                          ],
+                        },
+                        Object {
+                          "match": "project",
+                          "otherVal": Array [],
+                          "regex": /project/,
+                          "type": "fragment",
+                          "val": Array [
+                            "project",
+                          ],
+                        },
+                        Object {
+                          "match": "/",
+                          "otherVal": Array [],
+                          "regex": /\\\\//,
+                          "type": "delimiter",
+                          "val": Array [
+                            "/",
+                          ],
+                        },
+                        Object {
+                          "match": "new",
+                          "otherVal": Array [],
+                          "regex": /new/,
+                          "type": "fragment",
+                          "val": Array [
+                            "new",
+                          ],
+                        },
+                      ],
+                      "urlParams": Array [],
+                    },
+                    "path": "/project/new",
+                  },
+                  RouteNode {
+                    "absolute": false,
+                    "children": Array [],
+                    "name": "PROJECT_OVERVIEW",
+                    "parent": [Circular],
+                    "parser": Path {
+                      "hasMatrixParams": false,
+                      "hasQueryParams": false,
+                      "hasSpatParam": false,
+                      "hasUrlParams": true,
+                      "params": Array [
+                        "projectId",
+                      ],
+                      "path": "/project/:projectId",
+                      "queryParams": Array [],
+                      "queryParamsBr": Array [],
+                      "source": "\\\\/project\\\\/([a-zA-Z0-9-_.~%':]+)",
+                      "spatParams": Array [],
+                      "tokens": Array [
+                        Object {
+                          "match": "/",
+                          "otherVal": Array [],
+                          "regex": /\\\\//,
+                          "type": "delimiter",
+                          "val": Array [
+                            "/",
+                          ],
+                        },
+                        Object {
+                          "match": "project",
+                          "otherVal": Array [],
+                          "regex": /project/,
+                          "type": "fragment",
+                          "val": Array [
+                            "project",
+                          ],
+                        },
+                        Object {
+                          "match": "/",
+                          "otherVal": Array [],
+                          "regex": /\\\\//,
+                          "type": "delimiter",
+                          "val": Array [
+                            "/",
+                          ],
+                        },
+                        Object {
+                          "match": ":projectId",
+                          "otherVal": Array [
+                            undefined,
+                            undefined,
+                          ],
+                          "regex": /\\(\\[a-zA-Z0-9-_\\.~%':\\]\\+\\)/,
+                          "type": "url-parameter",
+                          "val": Array [
+                            "projectId",
+                          ],
+                        },
+                      ],
+                      "urlParams": Array [
+                        "projectId",
+                      ],
+                    },
+                    "path": "/project/:projectId",
+                  },
+                  RouteNode {
+                    "absolute": false,
+                    "children": Array [],
+                    "name": "PROJECT_LIST",
+                    "parent": [Circular],
+                    "parser": Path {
+                      "hasMatrixParams": false,
+                      "hasQueryParams": false,
+                      "hasSpatParam": false,
+                      "hasUrlParams": false,
+                      "params": Array [],
+                      "path": "/",
+                      "queryParams": Array [],
+                      "queryParamsBr": Array [],
+                      "source": "\\\\/",
+                      "spatParams": Array [],
+                      "tokens": Array [
+                        Object {
+                          "match": "/",
+                          "otherVal": Array [],
+                          "regex": /\\\\//,
+                          "type": "delimiter",
+                          "val": Array [
+                            "/",
+                          ],
+                        },
+                      ],
+                      "urlParams": Array [],
+                    },
+                    "path": "/",
+                  },
+                ],
+                "name": "",
+                "parent": undefined,
+                "parser": null,
+                "path": "",
+              },
+              "setDependencies": [Function],
+              "setDependency": [Function],
+              "setOption": [Function],
+              "setRootPath": [Function],
+              "setState": [Function],
+              "start": [Function],
+              "stop": [Function],
+              "transitionToState": [Function],
+              "urlToPath": [Function],
+              "useMiddleware": [Function],
+              "usePlugin": [Function],
+            },
+            "navigate": [Function],
+            "rootStore": RootStore {
+              "entryListStore": EntryListStore {
+                "active": null,
+                "entries": Array [],
+                "rootStore": [Circular],
+              },
+              "projectListStore": ProjectListStore {
+                "projects": Array [],
+                "rootStore": [Circular],
+              },
+              "repository": FirebaseRepository {
+                "app": Object {
+                  "database": [Function],
+                },
+                "authenticate": [Function],
+                "config": Object {
+                  "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                  "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                  "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                  "messagingSenderId": "282276589695",
+                  "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                },
+              },
+              "uiStore": UiStore {
+                "currentView": Object {
+                  "name": "PROJECT_LIST",
+                },
+                "hasError": false,
+                "isLoaded": false,
+              },
+              "userStore": UserStore {
+                "rootStore": [Circular],
+                "uid": "me",
+              },
             },
           }
         }
@@ -961,7 +1329,7 @@ exports[`ProjectAddPage should render 1`] = `
           </div>
         </styled.div>
       </ProjectAddPage>
-    </inject-ProjectAddPage-with-rootStore>
-  </RouterProvider>
-</Provider>
+    </inject-ProjectAddPage-with-router>
+  </inject-inject-ProjectAddPage-with-router-with-rootStore>
+</RouterProvider>
 `;

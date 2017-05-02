@@ -4,6 +4,7 @@ import { RouterProvider } from 'react-router5'
 
 import { FirebaseRepository } from '../../storage/'
 import { RootStore } from '../../stores/'
+import Router from '../../lib/router'
 import { App } from '../'
 
 
@@ -11,9 +12,10 @@ describe('App', () => {
   it('renders without crashing', async () => {
     const repository = new FirebaseRepository()
     const store = new RootStore(repository, 'me')
+    const router = new Router(store)
     const div = document.createElement('div')
     ReactDOM.render(
-      <RouterProvider router={store.routerStore.instance}>
+      <RouterProvider router={router.instance}>
         <App rootStore={store} />
       </RouterProvider>,
       div

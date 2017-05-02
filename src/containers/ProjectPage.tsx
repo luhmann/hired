@@ -32,6 +32,7 @@ export interface ProjectProps {
 class Project extends React.Component<ProjectProps, {}> {
   render() {
     if (!this.props.rootStore || !this.props.rootStore.projectListStore.hasProject(this.props.id)) {
+      // tslint:disable-next-line
       this.props.rootStore && this.props.rootStore.uiStore.setError(true)
       return null
     }

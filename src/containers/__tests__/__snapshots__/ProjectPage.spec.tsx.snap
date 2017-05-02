@@ -1,1318 +1,1084 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProjectPage should render an error if an invalid projectId is provided 1`] = `
-<Provider
-  rootStore={
-    RootStore {
-      "entryListStore": EntryListStore {
-        "active": null,
-        "entries": Array [],
-        "rootStore": [Circular],
-      },
-      "projectListStore": ProjectListStore {
-        "projects": Array [],
-        "rootStore": [Circular],
-      },
-      "repository": FirebaseRepository {
-        "app": Object {
-          "database": [Function],
-        },
-        "authenticate": [Function],
-        "config": Object {
-          "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-          "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-          "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-          "messagingSenderId": "282276589695",
-          "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
-        },
-      },
-      "routerStore": RouterStore {
-        "instance": Object {
-          "add": [Function],
-          "addEventListener": [Function],
-          "addListener": [Function],
-          "addNode": [Function],
-          "addNodeListener": [Function],
-          "addRouteListener": [Function],
-          "areStatesDescendants": [Function],
-          "areStatesEqual": [Function],
-          "buildPath": [Function],
-          "buildState": [Function],
-          "buildUrl": [Function],
-          "canActivate": [Function],
-          "canDeactivate": [Function],
-          "cancel": [Function],
-          "clearCanDeactivate": [Function],
-          "clearMiddleware": [Function],
-          "clone": [Function],
-          "executeFactory": [Function],
-          "getDependencies": [Function],
-          "getLifecycleFactories": [Function],
-          "getLifecycleFunctions": [Function],
-          "getListeners": [Function],
-          "getMiddlewareFactories": [Function],
-          "getMiddlewareFunctions": [Function],
-          "getOptions": [Function],
-          "getPlugins": [Function],
-          "getState": [Function],
-          "hasPlugin": [Function],
-          "invokeEventListeners": [Function],
-          "isActive": [Function],
-          "isStarted": [Function],
-          "makeNotFoundState": [Function],
-          "makeState": [Function],
-          "matchPath": [Function],
-          "matchUrl": [Function],
-          "navigate": [Function],
-          "navigateToDefault": [Function],
-          "removeEventListener": [Function],
-          "removeListener": [Function],
-          "removeNodeListener": [Function],
-          "removeRouteListener": [Function],
-          "replaceHistoryState": [Function],
-          "rootNode": RouteNode {
+<RouterProvider
+  router={
+    Object {
+      "add": [Function],
+      "addEventListener": [Function],
+      "addListener": [Function],
+      "addNode": [Function],
+      "addNodeListener": [Function],
+      "addRouteListener": [Function],
+      "areStatesDescendants": [Function],
+      "areStatesEqual": [Function],
+      "buildPath": [Function],
+      "buildState": [Function],
+      "buildUrl": [Function],
+      "canActivate": [Function],
+      "canDeactivate": [Function],
+      "cancel": [Function],
+      "clearCanDeactivate": [Function],
+      "clearMiddleware": [Function],
+      "clone": [Function],
+      "executeFactory": [Function],
+      "getDependencies": [Function],
+      "getLifecycleFactories": [Function],
+      "getLifecycleFunctions": [Function],
+      "getListeners": [Function],
+      "getMiddlewareFactories": [Function],
+      "getMiddlewareFunctions": [Function],
+      "getOptions": [Function],
+      "getPlugins": [Function],
+      "getState": [Function],
+      "hasPlugin": [Function],
+      "invokeEventListeners": [Function],
+      "isActive": [Function],
+      "isStarted": [Function],
+      "makeNotFoundState": [Function],
+      "makeState": [Function],
+      "matchPath": [Function],
+      "matchUrl": [Function],
+      "navigate": [Function],
+      "navigateToDefault": [Function],
+      "removeEventListener": [Function],
+      "removeListener": [Function],
+      "removeNodeListener": [Function],
+      "removeRouteListener": [Function],
+      "replaceHistoryState": [Function],
+      "rootNode": RouteNode {
+        "absolute": false,
+        "children": Array [
+          RouteNode {
             "absolute": false,
-            "children": Array [
-              RouteNode {
-                "absolute": false,
-                "children": Array [],
-                "name": "PROJECT_NEW",
-                "parent": [Circular],
-                "parser": Path {
-                  "hasMatrixParams": false,
-                  "hasQueryParams": false,
-                  "hasSpatParam": false,
-                  "hasUrlParams": false,
-                  "params": Array [],
-                  "path": "/project/new",
-                  "queryParams": Array [],
-                  "queryParamsBr": Array [],
-                  "source": "\\\\/project\\\\/new",
-                  "spatParams": Array [],
-                  "tokens": Array [
-                    Object {
-                      "match": "/",
-                      "otherVal": Array [],
-                      "regex": /\\\\//,
-                      "type": "delimiter",
-                      "val": Array [
-                        "/",
-                      ],
-                    },
-                    Object {
-                      "match": "project",
-                      "otherVal": Array [],
-                      "regex": /project/,
-                      "type": "fragment",
-                      "val": Array [
-                        "project",
-                      ],
-                    },
-                    Object {
-                      "match": "/",
-                      "otherVal": Array [],
-                      "regex": /\\\\//,
-                      "type": "delimiter",
-                      "val": Array [
-                        "/",
-                      ],
-                    },
-                    Object {
-                      "match": "new",
-                      "otherVal": Array [],
-                      "regex": /new/,
-                      "type": "fragment",
-                      "val": Array [
-                        "new",
-                      ],
-                    },
-                  ],
-                  "urlParams": Array [],
-                },
-                "path": "/project/new",
-              },
-              RouteNode {
-                "absolute": false,
-                "children": Array [],
-                "name": "PROJECT_OVERVIEW",
-                "parent": [Circular],
-                "parser": Path {
-                  "hasMatrixParams": false,
-                  "hasQueryParams": false,
-                  "hasSpatParam": false,
-                  "hasUrlParams": true,
-                  "params": Array [
-                    "projectId",
-                  ],
-                  "path": "/project/:projectId",
-                  "queryParams": Array [],
-                  "queryParamsBr": Array [],
-                  "source": "\\\\/project\\\\/([a-zA-Z0-9-_.~%':]+)",
-                  "spatParams": Array [],
-                  "tokens": Array [
-                    Object {
-                      "match": "/",
-                      "otherVal": Array [],
-                      "regex": /\\\\//,
-                      "type": "delimiter",
-                      "val": Array [
-                        "/",
-                      ],
-                    },
-                    Object {
-                      "match": "project",
-                      "otherVal": Array [],
-                      "regex": /project/,
-                      "type": "fragment",
-                      "val": Array [
-                        "project",
-                      ],
-                    },
-                    Object {
-                      "match": "/",
-                      "otherVal": Array [],
-                      "regex": /\\\\//,
-                      "type": "delimiter",
-                      "val": Array [
-                        "/",
-                      ],
-                    },
-                    Object {
-                      "match": ":projectId",
-                      "otherVal": Array [
-                        undefined,
-                        undefined,
-                      ],
-                      "regex": /\\(\\[a-zA-Z0-9-_\\.~%':\\]\\+\\)/,
-                      "type": "url-parameter",
-                      "val": Array [
-                        "projectId",
-                      ],
-                    },
-                  ],
-                  "urlParams": Array [
-                    "projectId",
+            "children": Array [],
+            "name": "PROJECT_NEW",
+            "parent": [Circular],
+            "parser": Path {
+              "hasMatrixParams": false,
+              "hasQueryParams": false,
+              "hasSpatParam": false,
+              "hasUrlParams": false,
+              "params": Array [],
+              "path": "/project/new",
+              "queryParams": Array [],
+              "queryParamsBr": Array [],
+              "source": "\\\\/project\\\\/new",
+              "spatParams": Array [],
+              "tokens": Array [
+                Object {
+                  "match": "/",
+                  "otherVal": Array [],
+                  "regex": /\\\\//,
+                  "type": "delimiter",
+                  "val": Array [
+                    "/",
                   ],
                 },
-                "path": "/project/:projectId",
-              },
-              RouteNode {
-                "absolute": false,
-                "children": Array [],
-                "name": "PROJECT_LIST",
-                "parent": [Circular],
-                "parser": Path {
-                  "hasMatrixParams": false,
-                  "hasQueryParams": false,
-                  "hasSpatParam": false,
-                  "hasUrlParams": false,
-                  "params": Array [],
-                  "path": "/",
-                  "queryParams": Array [],
-                  "queryParamsBr": Array [],
-                  "source": "\\\\/",
-                  "spatParams": Array [],
-                  "tokens": Array [
-                    Object {
-                      "match": "/",
-                      "otherVal": Array [],
-                      "regex": /\\\\//,
-                      "type": "delimiter",
-                      "val": Array [
-                        "/",
-                      ],
-                    },
+                Object {
+                  "match": "project",
+                  "otherVal": Array [],
+                  "regex": /project/,
+                  "type": "fragment",
+                  "val": Array [
+                    "project",
                   ],
-                  "urlParams": Array [],
                 },
-                "path": "/",
-              },
-            ],
-            "name": "",
-            "parent": undefined,
-            "parser": null,
-            "path": "",
+                Object {
+                  "match": "/",
+                  "otherVal": Array [],
+                  "regex": /\\\\//,
+                  "type": "delimiter",
+                  "val": Array [
+                    "/",
+                  ],
+                },
+                Object {
+                  "match": "new",
+                  "otherVal": Array [],
+                  "regex": /new/,
+                  "type": "fragment",
+                  "val": Array [
+                    "new",
+                  ],
+                },
+              ],
+              "urlParams": Array [],
+            },
+            "path": "/project/new",
           },
-          "setDependencies": [Function],
-          "setDependency": [Function],
-          "setOption": [Function],
-          "setRootPath": [Function],
-          "setState": [Function],
-          "start": [Function],
-          "stop": [Function],
-          "transitionToState": [Function],
-          "urlToPath": [Function],
-          "useMiddleware": [Function],
-          "usePlugin": [Function],
-        },
-        "rootStore": [Circular],
+          RouteNode {
+            "absolute": false,
+            "children": Array [],
+            "name": "PROJECT_OVERVIEW",
+            "parent": [Circular],
+            "parser": Path {
+              "hasMatrixParams": false,
+              "hasQueryParams": false,
+              "hasSpatParam": false,
+              "hasUrlParams": true,
+              "params": Array [
+                "projectId",
+              ],
+              "path": "/project/:projectId",
+              "queryParams": Array [],
+              "queryParamsBr": Array [],
+              "source": "\\\\/project\\\\/([a-zA-Z0-9-_.~%':]+)",
+              "spatParams": Array [],
+              "tokens": Array [
+                Object {
+                  "match": "/",
+                  "otherVal": Array [],
+                  "regex": /\\\\//,
+                  "type": "delimiter",
+                  "val": Array [
+                    "/",
+                  ],
+                },
+                Object {
+                  "match": "project",
+                  "otherVal": Array [],
+                  "regex": /project/,
+                  "type": "fragment",
+                  "val": Array [
+                    "project",
+                  ],
+                },
+                Object {
+                  "match": "/",
+                  "otherVal": Array [],
+                  "regex": /\\\\//,
+                  "type": "delimiter",
+                  "val": Array [
+                    "/",
+                  ],
+                },
+                Object {
+                  "match": ":projectId",
+                  "otherVal": Array [
+                    undefined,
+                    undefined,
+                  ],
+                  "regex": /\\(\\[a-zA-Z0-9-_\\.~%':\\]\\+\\)/,
+                  "type": "url-parameter",
+                  "val": Array [
+                    "projectId",
+                  ],
+                },
+              ],
+              "urlParams": Array [
+                "projectId",
+              ],
+            },
+            "path": "/project/:projectId",
+          },
+          RouteNode {
+            "absolute": false,
+            "children": Array [],
+            "name": "PROJECT_LIST",
+            "parent": [Circular],
+            "parser": Path {
+              "hasMatrixParams": false,
+              "hasQueryParams": false,
+              "hasSpatParam": false,
+              "hasUrlParams": false,
+              "params": Array [],
+              "path": "/",
+              "queryParams": Array [],
+              "queryParamsBr": Array [],
+              "source": "\\\\/",
+              "spatParams": Array [],
+              "tokens": Array [
+                Object {
+                  "match": "/",
+                  "otherVal": Array [],
+                  "regex": /\\\\//,
+                  "type": "delimiter",
+                  "val": Array [
+                    "/",
+                  ],
+                },
+              ],
+              "urlParams": Array [],
+            },
+            "path": "/",
+          },
+        ],
+        "name": "",
+        "parent": undefined,
+        "parser": null,
+        "path": "",
       },
-      "uiStore": UiStore {
-        "currentView": Object {
-          "name": "PROJECT_LIST",
-        },
-        "hasError": true,
-        "isLoaded": false,
-      },
-      "userStore": UserStore {
-        "rootStore": [Circular],
-        "uid": "me",
-      },
+      "setDependencies": [Function],
+      "setDependency": [Function],
+      "setOption": [Function],
+      "setRootPath": [Function],
+      "setState": [Function],
+      "start": [Function],
+      "stop": [Function],
+      "transitionToState": [Function],
+      "urlToPath": [Function],
+      "useMiddleware": [Function],
+      "usePlugin": [Function],
     }
   }
 >
-  <RouterProvider
-    router={
-      Object {
-        "add": [Function],
-        "addEventListener": [Function],
-        "addListener": [Function],
-        "addNode": [Function],
-        "addNodeListener": [Function],
-        "addRouteListener": [Function],
-        "areStatesDescendants": [Function],
-        "areStatesEqual": [Function],
-        "buildPath": [Function],
-        "buildState": [Function],
-        "buildUrl": [Function],
-        "canActivate": [Function],
-        "canDeactivate": [Function],
-        "cancel": [Function],
-        "clearCanDeactivate": [Function],
-        "clearMiddleware": [Function],
-        "clone": [Function],
-        "executeFactory": [Function],
-        "getDependencies": [Function],
-        "getLifecycleFactories": [Function],
-        "getLifecycleFunctions": [Function],
-        "getListeners": [Function],
-        "getMiddlewareFactories": [Function],
-        "getMiddlewareFunctions": [Function],
-        "getOptions": [Function],
-        "getPlugins": [Function],
-        "getState": [Function],
-        "hasPlugin": [Function],
-        "invokeEventListeners": [Function],
-        "isActive": [Function],
-        "isStarted": [Function],
-        "makeNotFoundState": [Function],
-        "makeState": [Function],
-        "matchPath": [Function],
-        "matchUrl": [Function],
-        "navigate": [Function],
-        "navigateToDefault": [Function],
-        "removeEventListener": [Function],
-        "removeListener": [Function],
-        "removeNodeListener": [Function],
-        "removeRouteListener": [Function],
-        "replaceHistoryState": [Function],
-        "rootNode": RouteNode {
-          "absolute": false,
-          "children": Array [
-            RouteNode {
-              "absolute": false,
-              "children": Array [],
-              "name": "PROJECT_NEW",
-              "parent": [Circular],
-              "parser": Path {
-                "hasMatrixParams": false,
-                "hasQueryParams": false,
-                "hasSpatParam": false,
-                "hasUrlParams": false,
-                "params": Array [],
-                "path": "/project/new",
-                "queryParams": Array [],
-                "queryParamsBr": Array [],
-                "source": "\\\\/project\\\\/new",
-                "spatParams": Array [],
-                "tokens": Array [
-                  Object {
-                    "match": "/",
-                    "otherVal": Array [],
-                    "regex": /\\\\//,
-                    "type": "delimiter",
-                    "val": Array [
-                      "/",
-                    ],
-                  },
-                  Object {
-                    "match": "project",
-                    "otherVal": Array [],
-                    "regex": /project/,
-                    "type": "fragment",
-                    "val": Array [
-                      "project",
-                    ],
-                  },
-                  Object {
-                    "match": "/",
-                    "otherVal": Array [],
-                    "regex": /\\\\//,
-                    "type": "delimiter",
-                    "val": Array [
-                      "/",
-                    ],
-                  },
-                  Object {
-                    "match": "new",
-                    "otherVal": Array [],
-                    "regex": /new/,
-                    "type": "fragment",
-                    "val": Array [
-                      "new",
-                    ],
-                  },
-                ],
-                "urlParams": Array [],
-              },
-              "path": "/project/new",
-            },
-            RouteNode {
-              "absolute": false,
-              "children": Array [],
-              "name": "PROJECT_OVERVIEW",
-              "parent": [Circular],
-              "parser": Path {
-                "hasMatrixParams": false,
-                "hasQueryParams": false,
-                "hasSpatParam": false,
-                "hasUrlParams": true,
-                "params": Array [
-                  "projectId",
-                ],
-                "path": "/project/:projectId",
-                "queryParams": Array [],
-                "queryParamsBr": Array [],
-                "source": "\\\\/project\\\\/([a-zA-Z0-9-_.~%':]+)",
-                "spatParams": Array [],
-                "tokens": Array [
-                  Object {
-                    "match": "/",
-                    "otherVal": Array [],
-                    "regex": /\\\\//,
-                    "type": "delimiter",
-                    "val": Array [
-                      "/",
-                    ],
-                  },
-                  Object {
-                    "match": "project",
-                    "otherVal": Array [],
-                    "regex": /project/,
-                    "type": "fragment",
-                    "val": Array [
-                      "project",
-                    ],
-                  },
-                  Object {
-                    "match": "/",
-                    "otherVal": Array [],
-                    "regex": /\\\\//,
-                    "type": "delimiter",
-                    "val": Array [
-                      "/",
-                    ],
-                  },
-                  Object {
-                    "match": ":projectId",
-                    "otherVal": Array [
-                      undefined,
-                      undefined,
-                    ],
-                    "regex": /\\(\\[a-zA-Z0-9-_\\.~%':\\]\\+\\)/,
-                    "type": "url-parameter",
-                    "val": Array [
-                      "projectId",
-                    ],
-                  },
-                ],
-                "urlParams": Array [
-                  "projectId",
-                ],
-              },
-              "path": "/project/:projectId",
-            },
-            RouteNode {
-              "absolute": false,
-              "children": Array [],
-              "name": "PROJECT_LIST",
-              "parent": [Circular],
-              "parser": Path {
-                "hasMatrixParams": false,
-                "hasQueryParams": false,
-                "hasSpatParam": false,
-                "hasUrlParams": false,
-                "params": Array [],
-                "path": "/",
-                "queryParams": Array [],
-                "queryParamsBr": Array [],
-                "source": "\\\\/",
-                "spatParams": Array [],
-                "tokens": Array [
-                  Object {
-                    "match": "/",
-                    "otherVal": Array [],
-                    "regex": /\\\\//,
-                    "type": "delimiter",
-                    "val": Array [
-                      "/",
-                    ],
-                  },
-                ],
-                "urlParams": Array [],
-              },
-              "path": "/",
-            },
-          ],
-          "name": "",
-          "parent": undefined,
-          "parser": null,
-          "path": "",
+  <inject-Project-with-rootStore
+    id="foo"
+    rootStore={
+      RootStore {
+        "entryListStore": EntryListStore {
+          "active": null,
+          "entries": Array [],
+          "rootStore": [Circular],
         },
-        "setDependencies": [Function],
-        "setDependency": [Function],
-        "setOption": [Function],
-        "setRootPath": [Function],
-        "setState": [Function],
-        "start": [Function],
-        "stop": [Function],
-        "transitionToState": [Function],
-        "urlToPath": [Function],
-        "useMiddleware": [Function],
-        "usePlugin": [Function],
+        "projectListStore": ProjectListStore {
+          "projects": Array [],
+          "rootStore": [Circular],
+        },
+        "repository": FirebaseRepository {
+          "app": Object {
+            "database": [Function],
+          },
+          "authenticate": [Function],
+          "config": Object {
+            "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+            "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+            "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+            "messagingSenderId": "282276589695",
+            "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+          },
+        },
+        "uiStore": UiStore {
+          "currentView": Object {
+            "name": "PROJECT_LIST",
+          },
+          "hasError": true,
+          "isLoaded": false,
+        },
+        "userStore": UserStore {
+          "rootStore": [Circular],
+          "uid": "me",
+        },
       }
     }
   >
-    <inject-Project-with-rootStore
+    <Project
       id="foo"
-    >
-      <Project
-        id="foo"
-        rootStore={
-          RootStore {
-            "entryListStore": EntryListStore {
-              "active": null,
-              "entries": Array [],
-              "rootStore": [Circular],
+      rootStore={
+        RootStore {
+          "entryListStore": EntryListStore {
+            "active": null,
+            "entries": Array [],
+            "rootStore": [Circular],
+          },
+          "projectListStore": ProjectListStore {
+            "projects": Array [],
+            "rootStore": [Circular],
+          },
+          "repository": FirebaseRepository {
+            "app": Object {
+              "database": [Function],
             },
-            "projectListStore": ProjectListStore {
-              "projects": Array [],
-              "rootStore": [Circular],
+            "authenticate": [Function],
+            "config": Object {
+              "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+              "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+              "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+              "messagingSenderId": "282276589695",
+              "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
             },
-            "repository": FirebaseRepository {
-              "app": Object {
-                "database": [Function],
-              },
-              "authenticate": [Function],
-              "config": Object {
-                "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-                "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-                "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-                "messagingSenderId": "282276589695",
-                "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
-              },
+          },
+          "uiStore": UiStore {
+            "currentView": Object {
+              "name": "PROJECT_LIST",
             },
-            "routerStore": RouterStore {
-              "instance": Object {
-                "add": [Function],
-                "addEventListener": [Function],
-                "addListener": [Function],
-                "addNode": [Function],
-                "addNodeListener": [Function],
-                "addRouteListener": [Function],
-                "areStatesDescendants": [Function],
-                "areStatesEqual": [Function],
-                "buildPath": [Function],
-                "buildState": [Function],
-                "buildUrl": [Function],
-                "canActivate": [Function],
-                "canDeactivate": [Function],
-                "cancel": [Function],
-                "clearCanDeactivate": [Function],
-                "clearMiddleware": [Function],
-                "clone": [Function],
-                "executeFactory": [Function],
-                "getDependencies": [Function],
-                "getLifecycleFactories": [Function],
-                "getLifecycleFunctions": [Function],
-                "getListeners": [Function],
-                "getMiddlewareFactories": [Function],
-                "getMiddlewareFunctions": [Function],
-                "getOptions": [Function],
-                "getPlugins": [Function],
-                "getState": [Function],
-                "hasPlugin": [Function],
-                "invokeEventListeners": [Function],
-                "isActive": [Function],
-                "isStarted": [Function],
-                "makeNotFoundState": [Function],
-                "makeState": [Function],
-                "matchPath": [Function],
-                "matchUrl": [Function],
-                "navigate": [Function],
-                "navigateToDefault": [Function],
-                "removeEventListener": [Function],
-                "removeListener": [Function],
-                "removeNodeListener": [Function],
-                "removeRouteListener": [Function],
-                "replaceHistoryState": [Function],
-                "rootNode": RouteNode {
-                  "absolute": false,
-                  "children": Array [
-                    RouteNode {
-                      "absolute": false,
-                      "children": Array [],
-                      "name": "PROJECT_NEW",
-                      "parent": [Circular],
-                      "parser": Path {
-                        "hasMatrixParams": false,
-                        "hasQueryParams": false,
-                        "hasSpatParam": false,
-                        "hasUrlParams": false,
-                        "params": Array [],
-                        "path": "/project/new",
-                        "queryParams": Array [],
-                        "queryParamsBr": Array [],
-                        "source": "\\\\/project\\\\/new",
-                        "spatParams": Array [],
-                        "tokens": Array [
-                          Object {
-                            "match": "/",
-                            "otherVal": Array [],
-                            "regex": /\\\\//,
-                            "type": "delimiter",
-                            "val": Array [
-                              "/",
-                            ],
-                          },
-                          Object {
-                            "match": "project",
-                            "otherVal": Array [],
-                            "regex": /project/,
-                            "type": "fragment",
-                            "val": Array [
-                              "project",
-                            ],
-                          },
-                          Object {
-                            "match": "/",
-                            "otherVal": Array [],
-                            "regex": /\\\\//,
-                            "type": "delimiter",
-                            "val": Array [
-                              "/",
-                            ],
-                          },
-                          Object {
-                            "match": "new",
-                            "otherVal": Array [],
-                            "regex": /new/,
-                            "type": "fragment",
-                            "val": Array [
-                              "new",
-                            ],
-                          },
-                        ],
-                        "urlParams": Array [],
-                      },
-                      "path": "/project/new",
-                    },
-                    RouteNode {
-                      "absolute": false,
-                      "children": Array [],
-                      "name": "PROJECT_OVERVIEW",
-                      "parent": [Circular],
-                      "parser": Path {
-                        "hasMatrixParams": false,
-                        "hasQueryParams": false,
-                        "hasSpatParam": false,
-                        "hasUrlParams": true,
-                        "params": Array [
-                          "projectId",
-                        ],
-                        "path": "/project/:projectId",
-                        "queryParams": Array [],
-                        "queryParamsBr": Array [],
-                        "source": "\\\\/project\\\\/([a-zA-Z0-9-_.~%':]+)",
-                        "spatParams": Array [],
-                        "tokens": Array [
-                          Object {
-                            "match": "/",
-                            "otherVal": Array [],
-                            "regex": /\\\\//,
-                            "type": "delimiter",
-                            "val": Array [
-                              "/",
-                            ],
-                          },
-                          Object {
-                            "match": "project",
-                            "otherVal": Array [],
-                            "regex": /project/,
-                            "type": "fragment",
-                            "val": Array [
-                              "project",
-                            ],
-                          },
-                          Object {
-                            "match": "/",
-                            "otherVal": Array [],
-                            "regex": /\\\\//,
-                            "type": "delimiter",
-                            "val": Array [
-                              "/",
-                            ],
-                          },
-                          Object {
-                            "match": ":projectId",
-                            "otherVal": Array [
-                              undefined,
-                              undefined,
-                            ],
-                            "regex": /\\(\\[a-zA-Z0-9-_\\.~%':\\]\\+\\)/,
-                            "type": "url-parameter",
-                            "val": Array [
-                              "projectId",
-                            ],
-                          },
-                        ],
-                        "urlParams": Array [
-                          "projectId",
-                        ],
-                      },
-                      "path": "/project/:projectId",
-                    },
-                    RouteNode {
-                      "absolute": false,
-                      "children": Array [],
-                      "name": "PROJECT_LIST",
-                      "parent": [Circular],
-                      "parser": Path {
-                        "hasMatrixParams": false,
-                        "hasQueryParams": false,
-                        "hasSpatParam": false,
-                        "hasUrlParams": false,
-                        "params": Array [],
-                        "path": "/",
-                        "queryParams": Array [],
-                        "queryParamsBr": Array [],
-                        "source": "\\\\/",
-                        "spatParams": Array [],
-                        "tokens": Array [
-                          Object {
-                            "match": "/",
-                            "otherVal": Array [],
-                            "regex": /\\\\//,
-                            "type": "delimiter",
-                            "val": Array [
-                              "/",
-                            ],
-                          },
-                        ],
-                        "urlParams": Array [],
-                      },
-                      "path": "/",
-                    },
-                  ],
-                  "name": "",
-                  "parent": undefined,
-                  "parser": null,
-                  "path": "",
-                },
-                "setDependencies": [Function],
-                "setDependency": [Function],
-                "setOption": [Function],
-                "setRootPath": [Function],
-                "setState": [Function],
-                "start": [Function],
-                "stop": [Function],
-                "transitionToState": [Function],
-                "urlToPath": [Function],
-                "useMiddleware": [Function],
-                "usePlugin": [Function],
-              },
-              "rootStore": [Circular],
-            },
-            "uiStore": UiStore {
-              "currentView": Object {
-                "name": "PROJECT_LIST",
-              },
-              "hasError": true,
-              "isLoaded": false,
-            },
-            "userStore": UserStore {
-              "rootStore": [Circular],
-              "uid": "me",
-            },
-          }
+            "hasError": true,
+            "isLoaded": false,
+          },
+          "userStore": UserStore {
+            "rootStore": [Circular],
+            "uid": "me",
+          },
         }
-      />
-    </inject-Project-with-rootStore>
-  </RouterProvider>
-</Provider>
+      }
+    />
+  </inject-Project-with-rootStore>
+</RouterProvider>
 `;
 
 exports[`ProjectPage should render an existing project 1`] = `
-<Provider
-  rootStore={
-    RootStore {
-      "entryListStore": EntryListStore {
-        "active": null,
-        "entries": Array [
-          EntryStore {
-            "endTime": 2017-02-17T10:22:00.000Z,
-            "id": "5346-1234-1243",
-            "projectId": "1234-5678-9012",
-            "rate": 35.5,
-            "startTime": 2017-02-17T02:45:00.000Z,
-          },
-          EntryStore {
-            "endTime": 2017-02-16T19:59:00.000Z,
-            "id": "3456-3456-3244",
-            "projectId": "1234-5678-9012",
-            "rate": 35.5,
-            "startTime": 2017-02-16T10:22:00.000Z,
-          },
-          EntryStore {
-            "endTime": 2017-02-15T17:21:00.000Z,
-            "id": "9786-2345-1234",
-            "projectId": "1234-5678-9012",
-            "rate": 35.5,
-            "startTime": 2017-02-15T09:59:00.000Z,
-          },
-          EntryStore {
-            "endTime": 2017-02-14T14:59:00.000Z,
-            "id": "9845-6524-2435",
-            "projectId": "2345-9384-324523",
-            "rate": 100.5,
-            "startTime": 2017-02-14T07:23:00.000Z,
-          },
-          EntryStore {
-            "endTime": 2017-02-14T14:59:00.000Z,
-            "id": "4567-2341-2369-7684",
-            "projectId": "2345-9384-324523",
-            "rate": 15.5,
-            "startTime": 2017-02-14T07:23:00.000Z,
-          },
-          EntryStore {
-            "endTime": 2017-02-14T14:59:00.000Z,
-            "id": "2342-6552-5345",
-            "projectId": "1234-5678-9012",
-            "rate": 35.5,
-            "startTime": 2017-02-14T07:23:00.000Z,
-          },
-        ],
-        "rootStore": [Circular],
-      },
-      "projectListStore": ProjectListStore {
-        "projects": Array [
-          ProjectStore {
-            "description": "A really cool project",
-            "id": "1234-5678-9012",
-            "name": "Foo Industries Redesign",
-            "rootStore": [Circular],
-            "standardHours": 8,
-            "standardRate": 20,
-          },
-          ProjectStore {
-            "description": "Doc is annoying",
-            "id": "2345-9384-324523",
-            "name": "ACME Inc.",
-            "rootStore": [Circular],
-            "standardHours": 6,
-            "standardRate": 120,
-          },
-          ProjectStore {
-            "description": "I am Batman",
-            "id": "9876-6554-5123",
-            "name": "Wayne Industries",
-            "rootStore": [Circular],
-            "standardHours": 24,
-            "standardRate": 523,
-          },
-        ],
-        "rootStore": [Circular],
-      },
-      "repository": FirebaseRepository {
-        "app": Object {
-          "database": [Function],
-        },
-        "authenticate": [Function],
-        "config": Object {
-          "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-          "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-          "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-          "messagingSenderId": "282276589695",
-          "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
-        },
-      },
-      "routerStore": RouterStore {
-        "instance": Object {
-          "add": [Function],
-          "addEventListener": [Function],
-          "addListener": [Function],
-          "addNode": [Function],
-          "addNodeListener": [Function],
-          "addRouteListener": [Function],
-          "areStatesDescendants": [Function],
-          "areStatesEqual": [Function],
-          "buildPath": [Function],
-          "buildState": [Function],
-          "buildUrl": [Function],
-          "canActivate": [Function],
-          "canDeactivate": [Function],
-          "cancel": [Function],
-          "clearCanDeactivate": [Function],
-          "clearMiddleware": [Function],
-          "clone": [Function],
-          "executeFactory": [Function],
-          "getDependencies": [Function],
-          "getLifecycleFactories": [Function],
-          "getLifecycleFunctions": [Function],
-          "getListeners": [Function],
-          "getMiddlewareFactories": [Function],
-          "getMiddlewareFunctions": [Function],
-          "getOptions": [Function],
-          "getPlugins": [Function],
-          "getState": [Function],
-          "hasPlugin": [Function],
-          "invokeEventListeners": [Function],
-          "isActive": [Function],
-          "isStarted": [Function],
-          "makeNotFoundState": [Function],
-          "makeState": [Function],
-          "matchPath": [Function],
-          "matchUrl": [Function],
-          "navigate": [Function],
-          "navigateToDefault": [Function],
-          "removeEventListener": [Function],
-          "removeListener": [Function],
-          "removeNodeListener": [Function],
-          "removeRouteListener": [Function],
-          "replaceHistoryState": [Function],
-          "rootNode": RouteNode {
+<RouterProvider
+  router={
+    Object {
+      "add": [Function],
+      "addEventListener": [Function],
+      "addListener": [Function],
+      "addNode": [Function],
+      "addNodeListener": [Function],
+      "addRouteListener": [Function],
+      "areStatesDescendants": [Function],
+      "areStatesEqual": [Function],
+      "buildPath": [Function],
+      "buildState": [Function],
+      "buildUrl": [Function],
+      "canActivate": [Function],
+      "canDeactivate": [Function],
+      "cancel": [Function],
+      "clearCanDeactivate": [Function],
+      "clearMiddleware": [Function],
+      "clone": [Function],
+      "executeFactory": [Function],
+      "getDependencies": [Function],
+      "getLifecycleFactories": [Function],
+      "getLifecycleFunctions": [Function],
+      "getListeners": [Function],
+      "getMiddlewareFactories": [Function],
+      "getMiddlewareFunctions": [Function],
+      "getOptions": [Function],
+      "getPlugins": [Function],
+      "getState": [Function],
+      "hasPlugin": [Function],
+      "invokeEventListeners": [Function],
+      "isActive": [Function],
+      "isStarted": [Function],
+      "makeNotFoundState": [Function],
+      "makeState": [Function],
+      "matchPath": [Function],
+      "matchUrl": [Function],
+      "navigate": [Function],
+      "navigateToDefault": [Function],
+      "removeEventListener": [Function],
+      "removeListener": [Function],
+      "removeNodeListener": [Function],
+      "removeRouteListener": [Function],
+      "replaceHistoryState": [Function],
+      "rootNode": RouteNode {
+        "absolute": false,
+        "children": Array [
+          RouteNode {
             "absolute": false,
-            "children": Array [
-              RouteNode {
-                "absolute": false,
-                "children": Array [],
-                "name": "PROJECT_NEW",
-                "parent": [Circular],
-                "parser": Path {
-                  "hasMatrixParams": false,
-                  "hasQueryParams": false,
-                  "hasSpatParam": false,
-                  "hasUrlParams": false,
-                  "params": Array [],
-                  "path": "/project/new",
-                  "queryParams": Array [],
-                  "queryParamsBr": Array [],
-                  "source": "\\\\/project\\\\/new",
-                  "spatParams": Array [],
-                  "tokens": Array [
-                    Object {
-                      "match": "/",
-                      "otherVal": Array [],
-                      "regex": /\\\\//,
-                      "type": "delimiter",
-                      "val": Array [
-                        "/",
-                      ],
-                    },
-                    Object {
-                      "match": "project",
-                      "otherVal": Array [],
-                      "regex": /project/,
-                      "type": "fragment",
-                      "val": Array [
-                        "project",
-                      ],
-                    },
-                    Object {
-                      "match": "/",
-                      "otherVal": Array [],
-                      "regex": /\\\\//,
-                      "type": "delimiter",
-                      "val": Array [
-                        "/",
-                      ],
-                    },
-                    Object {
-                      "match": "new",
-                      "otherVal": Array [],
-                      "regex": /new/,
-                      "type": "fragment",
-                      "val": Array [
-                        "new",
-                      ],
-                    },
-                  ],
-                  "urlParams": Array [],
-                },
-                "path": "/project/new",
-              },
-              RouteNode {
-                "absolute": false,
-                "children": Array [],
-                "name": "PROJECT_OVERVIEW",
-                "parent": [Circular],
-                "parser": Path {
-                  "hasMatrixParams": false,
-                  "hasQueryParams": false,
-                  "hasSpatParam": false,
-                  "hasUrlParams": true,
-                  "params": Array [
-                    "projectId",
-                  ],
-                  "path": "/project/:projectId",
-                  "queryParams": Array [],
-                  "queryParamsBr": Array [],
-                  "source": "\\\\/project\\\\/([a-zA-Z0-9-_.~%':]+)",
-                  "spatParams": Array [],
-                  "tokens": Array [
-                    Object {
-                      "match": "/",
-                      "otherVal": Array [],
-                      "regex": /\\\\//,
-                      "type": "delimiter",
-                      "val": Array [
-                        "/",
-                      ],
-                    },
-                    Object {
-                      "match": "project",
-                      "otherVal": Array [],
-                      "regex": /project/,
-                      "type": "fragment",
-                      "val": Array [
-                        "project",
-                      ],
-                    },
-                    Object {
-                      "match": "/",
-                      "otherVal": Array [],
-                      "regex": /\\\\//,
-                      "type": "delimiter",
-                      "val": Array [
-                        "/",
-                      ],
-                    },
-                    Object {
-                      "match": ":projectId",
-                      "otherVal": Array [
-                        undefined,
-                        undefined,
-                      ],
-                      "regex": /\\(\\[a-zA-Z0-9-_\\.~%':\\]\\+\\)/,
-                      "type": "url-parameter",
-                      "val": Array [
-                        "projectId",
-                      ],
-                    },
-                  ],
-                  "urlParams": Array [
-                    "projectId",
+            "children": Array [],
+            "name": "PROJECT_NEW",
+            "parent": [Circular],
+            "parser": Path {
+              "hasMatrixParams": false,
+              "hasQueryParams": false,
+              "hasSpatParam": false,
+              "hasUrlParams": false,
+              "params": Array [],
+              "path": "/project/new",
+              "queryParams": Array [],
+              "queryParamsBr": Array [],
+              "source": "\\\\/project\\\\/new",
+              "spatParams": Array [],
+              "tokens": Array [
+                Object {
+                  "match": "/",
+                  "otherVal": Array [],
+                  "regex": /\\\\//,
+                  "type": "delimiter",
+                  "val": Array [
+                    "/",
                   ],
                 },
-                "path": "/project/:projectId",
-              },
-              RouteNode {
-                "absolute": false,
-                "children": Array [],
-                "name": "PROJECT_LIST",
-                "parent": [Circular],
-                "parser": Path {
-                  "hasMatrixParams": false,
-                  "hasQueryParams": false,
-                  "hasSpatParam": false,
-                  "hasUrlParams": false,
-                  "params": Array [],
-                  "path": "/",
-                  "queryParams": Array [],
-                  "queryParamsBr": Array [],
-                  "source": "\\\\/",
-                  "spatParams": Array [],
-                  "tokens": Array [
-                    Object {
-                      "match": "/",
-                      "otherVal": Array [],
-                      "regex": /\\\\//,
-                      "type": "delimiter",
-                      "val": Array [
-                        "/",
-                      ],
-                    },
+                Object {
+                  "match": "project",
+                  "otherVal": Array [],
+                  "regex": /project/,
+                  "type": "fragment",
+                  "val": Array [
+                    "project",
                   ],
-                  "urlParams": Array [],
                 },
-                "path": "/",
-              },
-            ],
-            "name": "",
-            "parent": undefined,
-            "parser": null,
-            "path": "",
+                Object {
+                  "match": "/",
+                  "otherVal": Array [],
+                  "regex": /\\\\//,
+                  "type": "delimiter",
+                  "val": Array [
+                    "/",
+                  ],
+                },
+                Object {
+                  "match": "new",
+                  "otherVal": Array [],
+                  "regex": /new/,
+                  "type": "fragment",
+                  "val": Array [
+                    "new",
+                  ],
+                },
+              ],
+              "urlParams": Array [],
+            },
+            "path": "/project/new",
           },
-          "setDependencies": [Function],
-          "setDependency": [Function],
-          "setOption": [Function],
-          "setRootPath": [Function],
-          "setState": [Function],
-          "start": [Function],
-          "stop": [Function],
-          "transitionToState": [Function],
-          "urlToPath": [Function],
-          "useMiddleware": [Function],
-          "usePlugin": [Function],
-        },
-        "rootStore": [Circular],
+          RouteNode {
+            "absolute": false,
+            "children": Array [],
+            "name": "PROJECT_OVERVIEW",
+            "parent": [Circular],
+            "parser": Path {
+              "hasMatrixParams": false,
+              "hasQueryParams": false,
+              "hasSpatParam": false,
+              "hasUrlParams": true,
+              "params": Array [
+                "projectId",
+              ],
+              "path": "/project/:projectId",
+              "queryParams": Array [],
+              "queryParamsBr": Array [],
+              "source": "\\\\/project\\\\/([a-zA-Z0-9-_.~%':]+)",
+              "spatParams": Array [],
+              "tokens": Array [
+                Object {
+                  "match": "/",
+                  "otherVal": Array [],
+                  "regex": /\\\\//,
+                  "type": "delimiter",
+                  "val": Array [
+                    "/",
+                  ],
+                },
+                Object {
+                  "match": "project",
+                  "otherVal": Array [],
+                  "regex": /project/,
+                  "type": "fragment",
+                  "val": Array [
+                    "project",
+                  ],
+                },
+                Object {
+                  "match": "/",
+                  "otherVal": Array [],
+                  "regex": /\\\\//,
+                  "type": "delimiter",
+                  "val": Array [
+                    "/",
+                  ],
+                },
+                Object {
+                  "match": ":projectId",
+                  "otherVal": Array [
+                    undefined,
+                    undefined,
+                  ],
+                  "regex": /\\(\\[a-zA-Z0-9-_\\.~%':\\]\\+\\)/,
+                  "type": "url-parameter",
+                  "val": Array [
+                    "projectId",
+                  ],
+                },
+              ],
+              "urlParams": Array [
+                "projectId",
+              ],
+            },
+            "path": "/project/:projectId",
+          },
+          RouteNode {
+            "absolute": false,
+            "children": Array [],
+            "name": "PROJECT_LIST",
+            "parent": [Circular],
+            "parser": Path {
+              "hasMatrixParams": false,
+              "hasQueryParams": false,
+              "hasSpatParam": false,
+              "hasUrlParams": false,
+              "params": Array [],
+              "path": "/",
+              "queryParams": Array [],
+              "queryParamsBr": Array [],
+              "source": "\\\\/",
+              "spatParams": Array [],
+              "tokens": Array [
+                Object {
+                  "match": "/",
+                  "otherVal": Array [],
+                  "regex": /\\\\//,
+                  "type": "delimiter",
+                  "val": Array [
+                    "/",
+                  ],
+                },
+              ],
+              "urlParams": Array [],
+            },
+            "path": "/",
+          },
+        ],
+        "name": "",
+        "parent": undefined,
+        "parser": null,
+        "path": "",
       },
-      "uiStore": UiStore {
-        "currentView": Object {
-          "name": "PROJECT_LIST",
-        },
-        "hasError": false,
-        "isLoaded": false,
-      },
-      "userStore": UserStore {
-        "rootStore": [Circular],
-        "uid": "me",
-      },
+      "setDependencies": [Function],
+      "setDependency": [Function],
+      "setOption": [Function],
+      "setRootPath": [Function],
+      "setState": [Function],
+      "start": [Function],
+      "stop": [Function],
+      "transitionToState": [Function],
+      "urlToPath": [Function],
+      "useMiddleware": [Function],
+      "usePlugin": [Function],
     }
   }
 >
-  <RouterProvider
-    router={
-      Object {
-        "add": [Function],
-        "addEventListener": [Function],
-        "addListener": [Function],
-        "addNode": [Function],
-        "addNodeListener": [Function],
-        "addRouteListener": [Function],
-        "areStatesDescendants": [Function],
-        "areStatesEqual": [Function],
-        "buildPath": [Function],
-        "buildState": [Function],
-        "buildUrl": [Function],
-        "canActivate": [Function],
-        "canDeactivate": [Function],
-        "cancel": [Function],
-        "clearCanDeactivate": [Function],
-        "clearMiddleware": [Function],
-        "clone": [Function],
-        "executeFactory": [Function],
-        "getDependencies": [Function],
-        "getLifecycleFactories": [Function],
-        "getLifecycleFunctions": [Function],
-        "getListeners": [Function],
-        "getMiddlewareFactories": [Function],
-        "getMiddlewareFunctions": [Function],
-        "getOptions": [Function],
-        "getPlugins": [Function],
-        "getState": [Function],
-        "hasPlugin": [Function],
-        "invokeEventListeners": [Function],
-        "isActive": [Function],
-        "isStarted": [Function],
-        "makeNotFoundState": [Function],
-        "makeState": [Function],
-        "matchPath": [Function],
-        "matchUrl": [Function],
-        "navigate": [Function],
-        "navigateToDefault": [Function],
-        "removeEventListener": [Function],
-        "removeListener": [Function],
-        "removeNodeListener": [Function],
-        "removeRouteListener": [Function],
-        "replaceHistoryState": [Function],
-        "rootNode": RouteNode {
-          "absolute": false,
-          "children": Array [
-            RouteNode {
-              "absolute": false,
-              "children": Array [],
-              "name": "PROJECT_NEW",
-              "parent": [Circular],
-              "parser": Path {
-                "hasMatrixParams": false,
-                "hasQueryParams": false,
-                "hasSpatParam": false,
-                "hasUrlParams": false,
-                "params": Array [],
-                "path": "/project/new",
-                "queryParams": Array [],
-                "queryParamsBr": Array [],
-                "source": "\\\\/project\\\\/new",
-                "spatParams": Array [],
-                "tokens": Array [
-                  Object {
-                    "match": "/",
-                    "otherVal": Array [],
-                    "regex": /\\\\//,
-                    "type": "delimiter",
-                    "val": Array [
-                      "/",
-                    ],
-                  },
-                  Object {
-                    "match": "project",
-                    "otherVal": Array [],
-                    "regex": /project/,
-                    "type": "fragment",
-                    "val": Array [
-                      "project",
-                    ],
-                  },
-                  Object {
-                    "match": "/",
-                    "otherVal": Array [],
-                    "regex": /\\\\//,
-                    "type": "delimiter",
-                    "val": Array [
-                      "/",
-                    ],
-                  },
-                  Object {
-                    "match": "new",
-                    "otherVal": Array [],
-                    "regex": /new/,
-                    "type": "fragment",
-                    "val": Array [
-                      "new",
-                    ],
-                  },
-                ],
-                "urlParams": Array [],
-              },
-              "path": "/project/new",
+  <inject-Project-with-rootStore
+    id="1234-5678-9012"
+    rootStore={
+      RootStore {
+        "entryListStore": EntryListStore {
+          "active": null,
+          "entries": Array [
+            EntryStore {
+              "endTime": 2017-02-17T10:22:00.000Z,
+              "id": "5346-1234-1243",
+              "projectId": "1234-5678-9012",
+              "rate": 35.5,
+              "startTime": 2017-02-17T02:45:00.000Z,
             },
-            RouteNode {
-              "absolute": false,
-              "children": Array [],
-              "name": "PROJECT_OVERVIEW",
-              "parent": [Circular],
-              "parser": Path {
-                "hasMatrixParams": false,
-                "hasQueryParams": false,
-                "hasSpatParam": false,
-                "hasUrlParams": true,
-                "params": Array [
-                  "projectId",
-                ],
-                "path": "/project/:projectId",
-                "queryParams": Array [],
-                "queryParamsBr": Array [],
-                "source": "\\\\/project\\\\/([a-zA-Z0-9-_.~%':]+)",
-                "spatParams": Array [],
-                "tokens": Array [
-                  Object {
-                    "match": "/",
-                    "otherVal": Array [],
-                    "regex": /\\\\//,
-                    "type": "delimiter",
-                    "val": Array [
-                      "/",
-                    ],
-                  },
-                  Object {
-                    "match": "project",
-                    "otherVal": Array [],
-                    "regex": /project/,
-                    "type": "fragment",
-                    "val": Array [
-                      "project",
-                    ],
-                  },
-                  Object {
-                    "match": "/",
-                    "otherVal": Array [],
-                    "regex": /\\\\//,
-                    "type": "delimiter",
-                    "val": Array [
-                      "/",
-                    ],
-                  },
-                  Object {
-                    "match": ":projectId",
-                    "otherVal": Array [
-                      undefined,
-                      undefined,
-                    ],
-                    "regex": /\\(\\[a-zA-Z0-9-_\\.~%':\\]\\+\\)/,
-                    "type": "url-parameter",
-                    "val": Array [
-                      "projectId",
-                    ],
-                  },
-                ],
-                "urlParams": Array [
-                  "projectId",
-                ],
-              },
-              "path": "/project/:projectId",
+            EntryStore {
+              "endTime": 2017-02-16T19:59:00.000Z,
+              "id": "3456-3456-3244",
+              "projectId": "1234-5678-9012",
+              "rate": 35.5,
+              "startTime": 2017-02-16T10:22:00.000Z,
             },
-            RouteNode {
-              "absolute": false,
-              "children": Array [],
-              "name": "PROJECT_LIST",
-              "parent": [Circular],
-              "parser": Path {
-                "hasMatrixParams": false,
-                "hasQueryParams": false,
-                "hasSpatParam": false,
-                "hasUrlParams": false,
-                "params": Array [],
-                "path": "/",
-                "queryParams": Array [],
-                "queryParamsBr": Array [],
-                "source": "\\\\/",
-                "spatParams": Array [],
-                "tokens": Array [
-                  Object {
-                    "match": "/",
-                    "otherVal": Array [],
-                    "regex": /\\\\//,
-                    "type": "delimiter",
-                    "val": Array [
-                      "/",
-                    ],
-                  },
-                ],
-                "urlParams": Array [],
-              },
-              "path": "/",
+            EntryStore {
+              "endTime": 2017-02-15T17:21:00.000Z,
+              "id": "9786-2345-1234",
+              "projectId": "1234-5678-9012",
+              "rate": 35.5,
+              "startTime": 2017-02-15T09:59:00.000Z,
+            },
+            EntryStore {
+              "endTime": 2017-02-14T14:59:00.000Z,
+              "id": "9845-6524-2435",
+              "projectId": "2345-9384-324523",
+              "rate": 100.5,
+              "startTime": 2017-02-14T07:23:00.000Z,
+            },
+            EntryStore {
+              "endTime": 2017-02-14T14:59:00.000Z,
+              "id": "4567-2341-2369-7684",
+              "projectId": "2345-9384-324523",
+              "rate": 15.5,
+              "startTime": 2017-02-14T07:23:00.000Z,
+            },
+            EntryStore {
+              "endTime": 2017-02-14T14:59:00.000Z,
+              "id": "2342-6552-5345",
+              "projectId": "1234-5678-9012",
+              "rate": 35.5,
+              "startTime": 2017-02-14T07:23:00.000Z,
             },
           ],
-          "name": "",
-          "parent": undefined,
-          "parser": null,
-          "path": "",
+          "rootStore": [Circular],
         },
-        "setDependencies": [Function],
-        "setDependency": [Function],
-        "setOption": [Function],
-        "setRootPath": [Function],
-        "setState": [Function],
-        "start": [Function],
-        "stop": [Function],
-        "transitionToState": [Function],
-        "urlToPath": [Function],
-        "useMiddleware": [Function],
-        "usePlugin": [Function],
+        "projectListStore": ProjectListStore {
+          "projects": Array [
+            ProjectStore {
+              "description": "A really cool project",
+              "id": "1234-5678-9012",
+              "name": "Foo Industries Redesign",
+              "rootStore": [Circular],
+              "standardHours": 8,
+              "standardRate": 20,
+            },
+            ProjectStore {
+              "description": "Doc is annoying",
+              "id": "2345-9384-324523",
+              "name": "ACME Inc.",
+              "rootStore": [Circular],
+              "standardHours": 6,
+              "standardRate": 120,
+            },
+            ProjectStore {
+              "description": "I am Batman",
+              "id": "9876-6554-5123",
+              "name": "Wayne Industries",
+              "rootStore": [Circular],
+              "standardHours": 24,
+              "standardRate": 523,
+            },
+          ],
+          "rootStore": [Circular],
+        },
+        "repository": FirebaseRepository {
+          "app": Object {
+            "database": [Function],
+          },
+          "authenticate": [Function],
+          "config": Object {
+            "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+            "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+            "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+            "messagingSenderId": "282276589695",
+            "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+          },
+        },
+        "uiStore": UiStore {
+          "currentView": Object {
+            "name": "PROJECT_LIST",
+          },
+          "hasError": false,
+          "isLoaded": false,
+        },
+        "userStore": UserStore {
+          "rootStore": [Circular],
+          "uid": "me",
+        },
       }
     }
   >
-    <inject-Project-with-rootStore
+    <Project
       id="1234-5678-9012"
+      rootStore={
+        RootStore {
+          "entryListStore": EntryListStore {
+            "active": null,
+            "entries": Array [
+              EntryStore {
+                "endTime": 2017-02-17T10:22:00.000Z,
+                "id": "5346-1234-1243",
+                "projectId": "1234-5678-9012",
+                "rate": 35.5,
+                "startTime": 2017-02-17T02:45:00.000Z,
+              },
+              EntryStore {
+                "endTime": 2017-02-16T19:59:00.000Z,
+                "id": "3456-3456-3244",
+                "projectId": "1234-5678-9012",
+                "rate": 35.5,
+                "startTime": 2017-02-16T10:22:00.000Z,
+              },
+              EntryStore {
+                "endTime": 2017-02-15T17:21:00.000Z,
+                "id": "9786-2345-1234",
+                "projectId": "1234-5678-9012",
+                "rate": 35.5,
+                "startTime": 2017-02-15T09:59:00.000Z,
+              },
+              EntryStore {
+                "endTime": 2017-02-14T14:59:00.000Z,
+                "id": "9845-6524-2435",
+                "projectId": "2345-9384-324523",
+                "rate": 100.5,
+                "startTime": 2017-02-14T07:23:00.000Z,
+              },
+              EntryStore {
+                "endTime": 2017-02-14T14:59:00.000Z,
+                "id": "4567-2341-2369-7684",
+                "projectId": "2345-9384-324523",
+                "rate": 15.5,
+                "startTime": 2017-02-14T07:23:00.000Z,
+              },
+              EntryStore {
+                "endTime": 2017-02-14T14:59:00.000Z,
+                "id": "2342-6552-5345",
+                "projectId": "1234-5678-9012",
+                "rate": 35.5,
+                "startTime": 2017-02-14T07:23:00.000Z,
+              },
+            ],
+            "rootStore": [Circular],
+          },
+          "projectListStore": ProjectListStore {
+            "projects": Array [
+              ProjectStore {
+                "description": "A really cool project",
+                "id": "1234-5678-9012",
+                "name": "Foo Industries Redesign",
+                "rootStore": [Circular],
+                "standardHours": 8,
+                "standardRate": 20,
+              },
+              ProjectStore {
+                "description": "Doc is annoying",
+                "id": "2345-9384-324523",
+                "name": "ACME Inc.",
+                "rootStore": [Circular],
+                "standardHours": 6,
+                "standardRate": 120,
+              },
+              ProjectStore {
+                "description": "I am Batman",
+                "id": "9876-6554-5123",
+                "name": "Wayne Industries",
+                "rootStore": [Circular],
+                "standardHours": 24,
+                "standardRate": 523,
+              },
+            ],
+            "rootStore": [Circular],
+          },
+          "repository": FirebaseRepository {
+            "app": Object {
+              "database": [Function],
+            },
+            "authenticate": [Function],
+            "config": Object {
+              "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+              "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+              "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+              "messagingSenderId": "282276589695",
+              "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+            },
+          },
+          "uiStore": UiStore {
+            "currentView": Object {
+              "name": "PROJECT_LIST",
+            },
+            "hasError": false,
+            "isLoaded": false,
+          },
+          "userStore": UserStore {
+            "rootStore": [Circular],
+            "uid": "me",
+          },
+        }
+      }
     >
-      <Project
-        id="1234-5678-9012"
-        rootStore={
-          RootStore {
-            "entryListStore": EntryListStore {
-              "active": null,
-              "entries": Array [
+      <styled.section
+        hasRunningTimer={false}
+      >
+        <section
+          className="ftzbYm"
+        >
+          <EntriesListHeader
+            project="Foo Industries Redesign"
+          >
+            <styled.header>
+              <header
+                className="eBvrzp"
+              >
+                <Styled(WithRoute[BaseLink])
+                  routeName="PROJECT_LIST"
+                >
+                  <WithRoute[BaseLink]
+                    className="bxyqwO"
+                    routeName="PROJECT_LIST"
+                  >
+                    <BaseLink
+                      activeClassName="active"
+                      activeStrict={false}
+                      className="bxyqwO"
+                      previousRoute={null}
+                      route={
+                        Object {
+                          "meta": Object {
+                            "id": 1,
+                            "params": Object {
+                              "PROJECT_LIST": Object {},
+                            },
+                          },
+                          "name": "PROJECT_LIST",
+                          "params": Object {},
+                          "path": "/",
+                        }
+                      }
+                      routeName="PROJECT_LIST"
+                      routeOptions={Object {}}
+                      routeParams={Object {}}
+                      router={
+                        Object {
+                          "add": [Function],
+                          "addEventListener": [Function],
+                          "addListener": [Function],
+                          "addNode": [Function],
+                          "addNodeListener": [Function],
+                          "addRouteListener": [Function],
+                          "areStatesDescendants": [Function],
+                          "areStatesEqual": [Function],
+                          "buildPath": [Function],
+                          "buildState": [Function],
+                          "buildUrl": [Function],
+                          "canActivate": [Function],
+                          "canDeactivate": [Function],
+                          "cancel": [Function],
+                          "clearCanDeactivate": [Function],
+                          "clearMiddleware": [Function],
+                          "clone": [Function],
+                          "executeFactory": [Function],
+                          "getDependencies": [Function],
+                          "getLifecycleFactories": [Function],
+                          "getLifecycleFunctions": [Function],
+                          "getListeners": [Function],
+                          "getMiddlewareFactories": [Function],
+                          "getMiddlewareFunctions": [Function],
+                          "getOptions": [Function],
+                          "getPlugins": [Function],
+                          "getState": [Function],
+                          "hasPlugin": [Function],
+                          "invokeEventListeners": [Function],
+                          "isActive": [Function],
+                          "isStarted": [Function],
+                          "makeNotFoundState": [Function],
+                          "makeState": [Function],
+                          "matchPath": [Function],
+                          "matchUrl": [Function],
+                          "navigate": [Function],
+                          "navigateToDefault": [Function],
+                          "removeEventListener": [Function],
+                          "removeListener": [Function],
+                          "removeNodeListener": [Function],
+                          "removeRouteListener": [Function],
+                          "replaceHistoryState": [Function],
+                          "rootNode": RouteNode {
+                            "absolute": false,
+                            "children": Array [
+                              RouteNode {
+                                "absolute": false,
+                                "children": Array [],
+                                "name": "PROJECT_NEW",
+                                "parent": [Circular],
+                                "parser": Path {
+                                  "hasMatrixParams": false,
+                                  "hasQueryParams": false,
+                                  "hasSpatParam": false,
+                                  "hasUrlParams": false,
+                                  "params": Array [],
+                                  "path": "/project/new",
+                                  "queryParams": Array [],
+                                  "queryParamsBr": Array [],
+                                  "source": "\\\\/project\\\\/new",
+                                  "spatParams": Array [],
+                                  "tokens": Array [
+                                    Object {
+                                      "match": "/",
+                                      "otherVal": Array [],
+                                      "regex": /\\\\//,
+                                      "type": "delimiter",
+                                      "val": Array [
+                                        "/",
+                                      ],
+                                    },
+                                    Object {
+                                      "match": "project",
+                                      "otherVal": Array [],
+                                      "regex": /project/,
+                                      "type": "fragment",
+                                      "val": Array [
+                                        "project",
+                                      ],
+                                    },
+                                    Object {
+                                      "match": "/",
+                                      "otherVal": Array [],
+                                      "regex": /\\\\//,
+                                      "type": "delimiter",
+                                      "val": Array [
+                                        "/",
+                                      ],
+                                    },
+                                    Object {
+                                      "match": "new",
+                                      "otherVal": Array [],
+                                      "regex": /new/,
+                                      "type": "fragment",
+                                      "val": Array [
+                                        "new",
+                                      ],
+                                    },
+                                  ],
+                                  "urlParams": Array [],
+                                },
+                                "path": "/project/new",
+                              },
+                              RouteNode {
+                                "absolute": false,
+                                "children": Array [],
+                                "name": "PROJECT_OVERVIEW",
+                                "parent": [Circular],
+                                "parser": Path {
+                                  "hasMatrixParams": false,
+                                  "hasQueryParams": false,
+                                  "hasSpatParam": false,
+                                  "hasUrlParams": true,
+                                  "params": Array [
+                                    "projectId",
+                                  ],
+                                  "path": "/project/:projectId",
+                                  "queryParams": Array [],
+                                  "queryParamsBr": Array [],
+                                  "source": "\\\\/project\\\\/([a-zA-Z0-9-_.~%':]+)",
+                                  "spatParams": Array [],
+                                  "tokens": Array [
+                                    Object {
+                                      "match": "/",
+                                      "otherVal": Array [],
+                                      "regex": /\\\\//,
+                                      "type": "delimiter",
+                                      "val": Array [
+                                        "/",
+                                      ],
+                                    },
+                                    Object {
+                                      "match": "project",
+                                      "otherVal": Array [],
+                                      "regex": /project/,
+                                      "type": "fragment",
+                                      "val": Array [
+                                        "project",
+                                      ],
+                                    },
+                                    Object {
+                                      "match": "/",
+                                      "otherVal": Array [],
+                                      "regex": /\\\\//,
+                                      "type": "delimiter",
+                                      "val": Array [
+                                        "/",
+                                      ],
+                                    },
+                                    Object {
+                                      "match": ":projectId",
+                                      "otherVal": Array [
+                                        undefined,
+                                        undefined,
+                                      ],
+                                      "regex": /\\(\\[a-zA-Z0-9-_\\.~%':\\]\\+\\)/,
+                                      "type": "url-parameter",
+                                      "val": Array [
+                                        "projectId",
+                                      ],
+                                    },
+                                  ],
+                                  "urlParams": Array [
+                                    "projectId",
+                                  ],
+                                },
+                                "path": "/project/:projectId",
+                              },
+                              RouteNode {
+                                "absolute": false,
+                                "children": Array [],
+                                "name": "PROJECT_LIST",
+                                "parent": [Circular],
+                                "parser": Path {
+                                  "hasMatrixParams": false,
+                                  "hasQueryParams": false,
+                                  "hasSpatParam": false,
+                                  "hasUrlParams": false,
+                                  "params": Array [],
+                                  "path": "/",
+                                  "queryParams": Array [],
+                                  "queryParamsBr": Array [],
+                                  "source": "\\\\/",
+                                  "spatParams": Array [],
+                                  "tokens": Array [
+                                    Object {
+                                      "match": "/",
+                                      "otherVal": Array [],
+                                      "regex": /\\\\//,
+                                      "type": "delimiter",
+                                      "val": Array [
+                                        "/",
+                                      ],
+                                    },
+                                  ],
+                                  "urlParams": Array [],
+                                },
+                                "path": "/",
+                              },
+                            ],
+                            "name": "",
+                            "parent": undefined,
+                            "parser": null,
+                            "path": "",
+                          },
+                          "setDependencies": [Function],
+                          "setDependency": [Function],
+                          "setOption": [Function],
+                          "setRootPath": [Function],
+                          "setState": [Function],
+                          "start": [Function],
+                          "stop": [Function],
+                          "transitionToState": [Function],
+                          "urlToPath": [Function],
+                          "useMiddleware": [Function],
+                          "usePlugin": [Function],
+                        }
+                      }
+                    >
+                      <a
+                        className="bxyqwO active"
+                        href="/"
+                        onClick={[Function]}
+                      >
+                        <Styled(Icon)>
+                          <Icon
+                            className="bNJGjv"
+                          >
+                            <svg
+                              className="bNJGjv"
+                              enableBackground="new 0 0 100 100"
+                              version="1.1"
+                              viewBox="21.530000686645508 -1.218999981880188 58.04701232910156 102.03800201416016"
+                              x="0px"
+                              xmlns="http://www.w3.org/2000/svg"
+                              y="0px"
+                            >
+                              <path
+                                d="M21.53,50.809L71.688,0.651c0,0,2.685-1.87,5.285,0.73c2.604,2.601,0,4.877,0,4.877l-44.63,44.631  l42.517,42.516c0,0,2.211,2.666-0.164,5.039c-2.373,2.375-5.688,0-5.688,0L21.53,50.809z"
+                                fill="#000000"
+                              />
+                            </svg>
+                          </Icon>
+                        </Styled(Icon)>
+                      </a>
+                    </BaseLink>
+                  </WithRoute[BaseLink]>
+                </Styled(WithRoute[BaseLink])>
+                <styled.h1>
+                  <h1
+                    className="ecGOWQ"
+                  >
+                    Foo Industries Redesign
+                  </h1>
+                </styled.h1>
+                <div>
+                   
+                </div>
+              </header>
+            </styled.header>
+          </EntriesListHeader>
+          <ClockIn
+            running={false}
+            startEntry={[Function]}
+            stopEntry={[Function]}
+          >
+            <styled.div>
+              <div
+                className="frIlRZ"
+              >
+                <styled.button
+                  data-t-target="ClockInButton"
+                  error={false}
+                  onClick={[Function]}
+                  success={true}
+                >
+                  <button
+                    className="hvWpBV"
+                    data-t-target="ClockInButton"
+                    onClick={[Function]}
+                  >
+                    Clock In
+                  </button>
+                </styled.button>
+              </div>
+            </styled.div>
+          </ClockIn>
+          <EntryList
+            entryList={
+              Array [
                 EntryStore {
                   "endTime": 2017-02-17T10:22:00.000Z,
                   "id": "5346-1234-1243",
@@ -1336,984 +1102,328 @@ exports[`ProjectPage should render an existing project 1`] = `
                 },
                 EntryStore {
                   "endTime": 2017-02-14T14:59:00.000Z,
-                  "id": "9845-6524-2435",
-                  "projectId": "2345-9384-324523",
-                  "rate": 100.5,
-                  "startTime": 2017-02-14T07:23:00.000Z,
-                },
-                EntryStore {
-                  "endTime": 2017-02-14T14:59:00.000Z,
-                  "id": "4567-2341-2369-7684",
-                  "projectId": "2345-9384-324523",
-                  "rate": 15.5,
-                  "startTime": 2017-02-14T07:23:00.000Z,
-                },
-                EntryStore {
-                  "endTime": 2017-02-14T14:59:00.000Z,
                   "id": "2342-6552-5345",
                   "projectId": "1234-5678-9012",
                   "rate": 35.5,
                   "startTime": 2017-02-14T07:23:00.000Z,
                 },
-              ],
-              "rootStore": [Circular],
-            },
-            "projectListStore": ProjectListStore {
-              "projects": Array [
-                ProjectStore {
-                  "description": "A really cool project",
-                  "id": "1234-5678-9012",
-                  "name": "Foo Industries Redesign",
-                  "rootStore": [Circular],
-                  "standardHours": 8,
-                  "standardRate": 20,
-                },
-                ProjectStore {
-                  "description": "Doc is annoying",
-                  "id": "2345-9384-324523",
-                  "name": "ACME Inc.",
-                  "rootStore": [Circular],
-                  "standardHours": 6,
-                  "standardRate": 120,
-                },
-                ProjectStore {
-                  "description": "I am Batman",
-                  "id": "9876-6554-5123",
-                  "name": "Wayne Industries",
-                  "rootStore": [Circular],
-                  "standardHours": 24,
-                  "standardRate": 523,
-                },
-              ],
-              "rootStore": [Circular],
-            },
-            "repository": FirebaseRepository {
-              "app": Object {
-                "database": [Function],
-              },
-              "authenticate": [Function],
-              "config": Object {
-                "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-                "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-                "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-                "messagingSenderId": "282276589695",
-                "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
-              },
-            },
-            "routerStore": RouterStore {
-              "instance": Object {
-                "add": [Function],
-                "addEventListener": [Function],
-                "addListener": [Function],
-                "addNode": [Function],
-                "addNodeListener": [Function],
-                "addRouteListener": [Function],
-                "areStatesDescendants": [Function],
-                "areStatesEqual": [Function],
-                "buildPath": [Function],
-                "buildState": [Function],
-                "buildUrl": [Function],
-                "canActivate": [Function],
-                "canDeactivate": [Function],
-                "cancel": [Function],
-                "clearCanDeactivate": [Function],
-                "clearMiddleware": [Function],
-                "clone": [Function],
-                "executeFactory": [Function],
-                "getDependencies": [Function],
-                "getLifecycleFactories": [Function],
-                "getLifecycleFunctions": [Function],
-                "getListeners": [Function],
-                "getMiddlewareFactories": [Function],
-                "getMiddlewareFunctions": [Function],
-                "getOptions": [Function],
-                "getPlugins": [Function],
-                "getState": [Function],
-                "hasPlugin": [Function],
-                "invokeEventListeners": [Function],
-                "isActive": [Function],
-                "isStarted": [Function],
-                "makeNotFoundState": [Function],
-                "makeState": [Function],
-                "matchPath": [Function],
-                "matchUrl": [Function],
-                "navigate": [Function],
-                "navigateToDefault": [Function],
-                "removeEventListener": [Function],
-                "removeListener": [Function],
-                "removeNodeListener": [Function],
-                "removeRouteListener": [Function],
-                "replaceHistoryState": [Function],
-                "rootNode": RouteNode {
-                  "absolute": false,
-                  "children": Array [
-                    RouteNode {
-                      "absolute": false,
-                      "children": Array [],
-                      "name": "PROJECT_NEW",
-                      "parent": [Circular],
-                      "parser": Path {
-                        "hasMatrixParams": false,
-                        "hasQueryParams": false,
-                        "hasSpatParam": false,
-                        "hasUrlParams": false,
-                        "params": Array [],
-                        "path": "/project/new",
-                        "queryParams": Array [],
-                        "queryParamsBr": Array [],
-                        "source": "\\\\/project\\\\/new",
-                        "spatParams": Array [],
-                        "tokens": Array [
-                          Object {
-                            "match": "/",
-                            "otherVal": Array [],
-                            "regex": /\\\\//,
-                            "type": "delimiter",
-                            "val": Array [
-                              "/",
-                            ],
-                          },
-                          Object {
-                            "match": "project",
-                            "otherVal": Array [],
-                            "regex": /project/,
-                            "type": "fragment",
-                            "val": Array [
-                              "project",
-                            ],
-                          },
-                          Object {
-                            "match": "/",
-                            "otherVal": Array [],
-                            "regex": /\\\\//,
-                            "type": "delimiter",
-                            "val": Array [
-                              "/",
-                            ],
-                          },
-                          Object {
-                            "match": "new",
-                            "otherVal": Array [],
-                            "regex": /new/,
-                            "type": "fragment",
-                            "val": Array [
-                              "new",
-                            ],
-                          },
-                        ],
-                        "urlParams": Array [],
-                      },
-                      "path": "/project/new",
-                    },
-                    RouteNode {
-                      "absolute": false,
-                      "children": Array [],
-                      "name": "PROJECT_OVERVIEW",
-                      "parent": [Circular],
-                      "parser": Path {
-                        "hasMatrixParams": false,
-                        "hasQueryParams": false,
-                        "hasSpatParam": false,
-                        "hasUrlParams": true,
-                        "params": Array [
-                          "projectId",
-                        ],
-                        "path": "/project/:projectId",
-                        "queryParams": Array [],
-                        "queryParamsBr": Array [],
-                        "source": "\\\\/project\\\\/([a-zA-Z0-9-_.~%':]+)",
-                        "spatParams": Array [],
-                        "tokens": Array [
-                          Object {
-                            "match": "/",
-                            "otherVal": Array [],
-                            "regex": /\\\\//,
-                            "type": "delimiter",
-                            "val": Array [
-                              "/",
-                            ],
-                          },
-                          Object {
-                            "match": "project",
-                            "otherVal": Array [],
-                            "regex": /project/,
-                            "type": "fragment",
-                            "val": Array [
-                              "project",
-                            ],
-                          },
-                          Object {
-                            "match": "/",
-                            "otherVal": Array [],
-                            "regex": /\\\\//,
-                            "type": "delimiter",
-                            "val": Array [
-                              "/",
-                            ],
-                          },
-                          Object {
-                            "match": ":projectId",
-                            "otherVal": Array [
-                              undefined,
-                              undefined,
-                            ],
-                            "regex": /\\(\\[a-zA-Z0-9-_\\.~%':\\]\\+\\)/,
-                            "type": "url-parameter",
-                            "val": Array [
-                              "projectId",
-                            ],
-                          },
-                        ],
-                        "urlParams": Array [
-                          "projectId",
-                        ],
-                      },
-                      "path": "/project/:projectId",
-                    },
-                    RouteNode {
-                      "absolute": false,
-                      "children": Array [],
-                      "name": "PROJECT_LIST",
-                      "parent": [Circular],
-                      "parser": Path {
-                        "hasMatrixParams": false,
-                        "hasQueryParams": false,
-                        "hasSpatParam": false,
-                        "hasUrlParams": false,
-                        "params": Array [],
-                        "path": "/",
-                        "queryParams": Array [],
-                        "queryParamsBr": Array [],
-                        "source": "\\\\/",
-                        "spatParams": Array [],
-                        "tokens": Array [
-                          Object {
-                            "match": "/",
-                            "otherVal": Array [],
-                            "regex": /\\\\//,
-                            "type": "delimiter",
-                            "val": Array [
-                              "/",
-                            ],
-                          },
-                        ],
-                        "urlParams": Array [],
-                      },
-                      "path": "/",
-                    },
-                  ],
-                  "name": "",
-                  "parent": undefined,
-                  "parser": null,
-                  "path": "",
-                },
-                "setDependencies": [Function],
-                "setDependency": [Function],
-                "setOption": [Function],
-                "setRootPath": [Function],
-                "setState": [Function],
-                "start": [Function],
-                "stop": [Function],
-                "transitionToState": [Function],
-                "urlToPath": [Function],
-                "useMiddleware": [Function],
-                "usePlugin": [Function],
-              },
-              "rootStore": [Circular],
-            },
-            "uiStore": UiStore {
-              "currentView": Object {
-                "name": "PROJECT_LIST",
-              },
-              "hasError": false,
-              "isLoaded": false,
-            },
-            "userStore": UserStore {
-              "rootStore": [Circular],
-              "uid": "me",
-            },
-          }
-        }
-      >
-        <styled.section
-          hasRunningTimer={false}
-        >
-          <section
-            className="ftzbYm"
+              ]
+            }
           >
-            <EntriesListHeader
-              project="Foo Industries Redesign"
-            >
-              <styled.header>
-                <header
-                  className="eBvrzp"
+            <styled.section>
+              <section
+                className="fzSavm"
+              >
+                <Component
+                  duration={27420}
+                  end={2017-02-17T10:22:00.000Z}
+                  start={2017-02-17T02:45:00.000Z}
+                  total={270.39166666666665}
                 >
-                  <Styled(WithRoute[BaseLink])
-                    routeName="PROJECT_LIST"
+                  <styled.div
+                    data-t-target="Entry"
                   >
-                    <WithRoute[BaseLink]
-                      className="bxyqwO"
-                      routeName="PROJECT_LIST"
+                    <div
+                      className="jEImSP"
+                      data-t-target="Entry"
                     >
-                      <BaseLink
-                        activeClassName="active"
-                        activeStrict={false}
-                        className="bxyqwO"
-                        previousRoute={null}
-                        route={
-                          Object {
-                            "meta": Object {
-                              "id": 1,
-                              "params": Object {
-                                "PROJECT_LIST": Object {},
-                              },
-                            },
-                            "name": "PROJECT_LIST",
-                            "params": Object {},
-                            "path": "/",
-                          }
-                        }
-                        routeName="PROJECT_LIST"
-                        routeOptions={Object {}}
-                        routeParams={Object {}}
-                        router={
-                          Object {
-                            "add": [Function],
-                            "addEventListener": [Function],
-                            "addListener": [Function],
-                            "addNode": [Function],
-                            "addNodeListener": [Function],
-                            "addRouteListener": [Function],
-                            "areStatesDescendants": [Function],
-                            "areStatesEqual": [Function],
-                            "buildPath": [Function],
-                            "buildState": [Function],
-                            "buildUrl": [Function],
-                            "canActivate": [Function],
-                            "canDeactivate": [Function],
-                            "cancel": [Function],
-                            "clearCanDeactivate": [Function],
-                            "clearMiddleware": [Function],
-                            "clone": [Function],
-                            "executeFactory": [Function],
-                            "getDependencies": [Function],
-                            "getLifecycleFactories": [Function],
-                            "getLifecycleFunctions": [Function],
-                            "getListeners": [Function],
-                            "getMiddlewareFactories": [Function],
-                            "getMiddlewareFunctions": [Function],
-                            "getOptions": [Function],
-                            "getPlugins": [Function],
-                            "getState": [Function],
-                            "hasPlugin": [Function],
-                            "invokeEventListeners": [Function],
-                            "isActive": [Function],
-                            "isStarted": [Function],
-                            "makeNotFoundState": [Function],
-                            "makeState": [Function],
-                            "matchPath": [Function],
-                            "matchUrl": [Function],
-                            "navigate": [Function],
-                            "navigateToDefault": [Function],
-                            "removeEventListener": [Function],
-                            "removeListener": [Function],
-                            "removeNodeListener": [Function],
-                            "removeRouteListener": [Function],
-                            "replaceHistoryState": [Function],
-                            "rootNode": RouteNode {
-                              "absolute": false,
-                              "children": Array [
-                                RouteNode {
-                                  "absolute": false,
-                                  "children": Array [],
-                                  "name": "PROJECT_NEW",
-                                  "parent": [Circular],
-                                  "parser": Path {
-                                    "hasMatrixParams": false,
-                                    "hasQueryParams": false,
-                                    "hasSpatParam": false,
-                                    "hasUrlParams": false,
-                                    "params": Array [],
-                                    "path": "/project/new",
-                                    "queryParams": Array [],
-                                    "queryParamsBr": Array [],
-                                    "source": "\\\\/project\\\\/new",
-                                    "spatParams": Array [],
-                                    "tokens": Array [
-                                      Object {
-                                        "match": "/",
-                                        "otherVal": Array [],
-                                        "regex": /\\\\//,
-                                        "type": "delimiter",
-                                        "val": Array [
-                                          "/",
-                                        ],
-                                      },
-                                      Object {
-                                        "match": "project",
-                                        "otherVal": Array [],
-                                        "regex": /project/,
-                                        "type": "fragment",
-                                        "val": Array [
-                                          "project",
-                                        ],
-                                      },
-                                      Object {
-                                        "match": "/",
-                                        "otherVal": Array [],
-                                        "regex": /\\\\//,
-                                        "type": "delimiter",
-                                        "val": Array [
-                                          "/",
-                                        ],
-                                      },
-                                      Object {
-                                        "match": "new",
-                                        "otherVal": Array [],
-                                        "regex": /new/,
-                                        "type": "fragment",
-                                        "val": Array [
-                                          "new",
-                                        ],
-                                      },
-                                    ],
-                                    "urlParams": Array [],
-                                  },
-                                  "path": "/project/new",
-                                },
-                                RouteNode {
-                                  "absolute": false,
-                                  "children": Array [],
-                                  "name": "PROJECT_OVERVIEW",
-                                  "parent": [Circular],
-                                  "parser": Path {
-                                    "hasMatrixParams": false,
-                                    "hasQueryParams": false,
-                                    "hasSpatParam": false,
-                                    "hasUrlParams": true,
-                                    "params": Array [
-                                      "projectId",
-                                    ],
-                                    "path": "/project/:projectId",
-                                    "queryParams": Array [],
-                                    "queryParamsBr": Array [],
-                                    "source": "\\\\/project\\\\/([a-zA-Z0-9-_.~%':]+)",
-                                    "spatParams": Array [],
-                                    "tokens": Array [
-                                      Object {
-                                        "match": "/",
-                                        "otherVal": Array [],
-                                        "regex": /\\\\//,
-                                        "type": "delimiter",
-                                        "val": Array [
-                                          "/",
-                                        ],
-                                      },
-                                      Object {
-                                        "match": "project",
-                                        "otherVal": Array [],
-                                        "regex": /project/,
-                                        "type": "fragment",
-                                        "val": Array [
-                                          "project",
-                                        ],
-                                      },
-                                      Object {
-                                        "match": "/",
-                                        "otherVal": Array [],
-                                        "regex": /\\\\//,
-                                        "type": "delimiter",
-                                        "val": Array [
-                                          "/",
-                                        ],
-                                      },
-                                      Object {
-                                        "match": ":projectId",
-                                        "otherVal": Array [
-                                          undefined,
-                                          undefined,
-                                        ],
-                                        "regex": /\\(\\[a-zA-Z0-9-_\\.~%':\\]\\+\\)/,
-                                        "type": "url-parameter",
-                                        "val": Array [
-                                          "projectId",
-                                        ],
-                                      },
-                                    ],
-                                    "urlParams": Array [
-                                      "projectId",
-                                    ],
-                                  },
-                                  "path": "/project/:projectId",
-                                },
-                                RouteNode {
-                                  "absolute": false,
-                                  "children": Array [],
-                                  "name": "PROJECT_LIST",
-                                  "parent": [Circular],
-                                  "parser": Path {
-                                    "hasMatrixParams": false,
-                                    "hasQueryParams": false,
-                                    "hasSpatParam": false,
-                                    "hasUrlParams": false,
-                                    "params": Array [],
-                                    "path": "/",
-                                    "queryParams": Array [],
-                                    "queryParamsBr": Array [],
-                                    "source": "\\\\/",
-                                    "spatParams": Array [],
-                                    "tokens": Array [
-                                      Object {
-                                        "match": "/",
-                                        "otherVal": Array [],
-                                        "regex": /\\\\//,
-                                        "type": "delimiter",
-                                        "val": Array [
-                                          "/",
-                                        ],
-                                      },
-                                    ],
-                                    "urlParams": Array [],
-                                  },
-                                  "path": "/",
-                                },
-                              ],
-                              "name": "",
-                              "parent": undefined,
-                              "parser": null,
-                              "path": "",
-                            },
-                            "setDependencies": [Function],
-                            "setDependency": [Function],
-                            "setOption": [Function],
-                            "setRootPath": [Function],
-                            "setState": [Function],
-                            "start": [Function],
-                            "stop": [Function],
-                            "transitionToState": [Function],
-                            "urlToPath": [Function],
-                            "useMiddleware": [Function],
-                            "usePlugin": [Function],
-                          }
-                        }
+                      <Styled(BaseRow)
+                        contentCells={4}
                       >
-                        <a
-                          className="bxyqwO active"
-                          href="/"
-                          onClick={[Function]}
+                        <BaseRow
+                          className="gOOxWv"
+                          contentCells={4}
                         >
-                          <Styled(Icon)>
-                            <Icon
-                              className="bNJGjv"
-                            >
-                              <svg
-                                className="bNJGjv"
-                                enableBackground="new 0 0 100 100"
-                                version="1.1"
-                                viewBox="21.530000686645508 -1.218999981880188 58.04701232910156 102.03800201416016"
-                                x="0px"
-                                xmlns="http://www.w3.org/2000/svg"
-                                y="0px"
+                          <div
+                            className="gOOxWv"
+                          >
+                            <styled.div>
+                              <div
+                                className="dzshZu"
                               >
-                                <path
-                                  d="M21.53,50.809L71.688,0.651c0,0,2.685-1.87,5.285,0.73c2.604,2.601,0,4.877,0,4.877l-44.63,44.631  l42.517,42.516c0,0,2.211,2.666-0.164,5.039c-2.373,2.375-5.688,0-5.688,0L21.53,50.809z"
-                                  fill="#000000"
-                                />
-                              </svg>
-                            </Icon>
-                          </Styled(Icon)>
-                        </a>
-                      </BaseLink>
-                    </WithRoute[BaseLink]>
-                  </Styled(WithRoute[BaseLink])>
-                  <styled.h1>
-                    <h1
-                      className="ecGOWQ"
-                    >
-                      Foo Industries Redesign
-                    </h1>
-                  </styled.h1>
-                  <div>
-                     
-                  </div>
-                </header>
-              </styled.header>
-            </EntriesListHeader>
-            <ClockIn
-              running={false}
-              startEntry={[Function]}
-              stopEntry={[Function]}
-            >
-              <styled.div>
-                <div
-                  className="frIlRZ"
+                                <styled.div>
+                                  <div
+                                    className="iwOXrP"
+                                  >
+                                    Fr. 17. February 2017
+                                  </div>
+                                </styled.div>
+                                <styled.div>
+                                  <div
+                                    className="bwPZOZ"
+                                  >
+                                    270,39 EUR
+                                  </div>
+                                </styled.div>
+                                <styled.div
+                                  begin={true}
+                                >
+                                  <div
+                                    begin={true}
+                                    className="lYNpw"
+                                  >
+                                    03:45
+                                  </div>
+                                </styled.div>
+                                <styled.div
+                                  end={true}
+                                >
+                                  <div
+                                    className="jCERDf"
+                                    end={true}
+                                  >
+                                    11:22
+                                  </div>
+                                </styled.div>
+                                <styled.div>
+                                  <div
+                                    className="fCpcNg"
+                                  >
+                                    07:37:00
+                                  </div>
+                                </styled.div>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </BaseRow>
+                      </Styled(BaseRow)>
+                    </div>
+                  </styled.div>
+                </Component>
+                <Component
+                  duration={34620}
+                  end={2017-02-16T19:59:00.000Z}
+                  start={2017-02-16T10:22:00.000Z}
+                  total={341.39166666666665}
                 >
-                  <styled.button
-                    data-t-target="ClockInButton"
-                    error={false}
-                    onClick={[Function]}
-                    success={true}
+                  <styled.div
+                    data-t-target="Entry"
                   >
-                    <button
-                      className="hvWpBV"
-                      data-t-target="ClockInButton"
-                      onClick={[Function]}
+                    <div
+                      className="jEImSP"
+                      data-t-target="Entry"
                     >
-                      Clock In
-                    </button>
-                  </styled.button>
-                </div>
-              </styled.div>
-            </ClockIn>
-            <EntryList
-              entryList={
-                Array [
-                  EntryStore {
-                    "endTime": 2017-02-17T10:22:00.000Z,
-                    "id": "5346-1234-1243",
-                    "projectId": "1234-5678-9012",
-                    "rate": 35.5,
-                    "startTime": 2017-02-17T02:45:00.000Z,
-                  },
-                  EntryStore {
-                    "endTime": 2017-02-16T19:59:00.000Z,
-                    "id": "3456-3456-3244",
-                    "projectId": "1234-5678-9012",
-                    "rate": 35.5,
-                    "startTime": 2017-02-16T10:22:00.000Z,
-                  },
-                  EntryStore {
-                    "endTime": 2017-02-15T17:21:00.000Z,
-                    "id": "9786-2345-1234",
-                    "projectId": "1234-5678-9012",
-                    "rate": 35.5,
-                    "startTime": 2017-02-15T09:59:00.000Z,
-                  },
-                  EntryStore {
-                    "endTime": 2017-02-14T14:59:00.000Z,
-                    "id": "2342-6552-5345",
-                    "projectId": "1234-5678-9012",
-                    "rate": 35.5,
-                    "startTime": 2017-02-14T07:23:00.000Z,
-                  },
-                ]
-              }
-            >
-              <styled.section>
-                <section
-                  className="fzSavm"
+                      <Styled(BaseRow)
+                        contentCells={4}
+                      >
+                        <BaseRow
+                          className="gOOxWv"
+                          contentCells={4}
+                        >
+                          <div
+                            className="gOOxWv"
+                          >
+                            <styled.div>
+                              <div
+                                className="dzshZu"
+                              >
+                                <styled.div>
+                                  <div
+                                    className="iwOXrP"
+                                  >
+                                    Th. 16. February 2017
+                                  </div>
+                                </styled.div>
+                                <styled.div>
+                                  <div
+                                    className="bwPZOZ"
+                                  >
+                                    341,39 EUR
+                                  </div>
+                                </styled.div>
+                                <styled.div
+                                  begin={true}
+                                >
+                                  <div
+                                    begin={true}
+                                    className="lYNpw"
+                                  >
+                                    11:22
+                                  </div>
+                                </styled.div>
+                                <styled.div
+                                  end={true}
+                                >
+                                  <div
+                                    className="jCERDf"
+                                    end={true}
+                                  >
+                                    20:59
+                                  </div>
+                                </styled.div>
+                                <styled.div>
+                                  <div
+                                    className="fCpcNg"
+                                  >
+                                    09:37:00
+                                  </div>
+                                </styled.div>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </BaseRow>
+                      </Styled(BaseRow)>
+                    </div>
+                  </styled.div>
+                </Component>
+                <Component
+                  duration={26520}
+                  end={2017-02-15T17:21:00.000Z}
+                  start={2017-02-15T09:59:00.000Z}
+                  total={261.51666666666665}
                 >
-                  <Component
-                    duration={27420}
-                    end={2017-02-17T10:22:00.000Z}
-                    start={2017-02-17T02:45:00.000Z}
-                    total={270.39166666666665}
+                  <styled.div
+                    data-t-target="Entry"
                   >
-                    <styled.div
+                    <div
+                      className="jEImSP"
                       data-t-target="Entry"
                     >
-                      <div
-                        className="jEImSP"
-                        data-t-target="Entry"
+                      <Styled(BaseRow)
+                        contentCells={4}
                       >
-                        <Styled(BaseRow)
+                        <BaseRow
+                          className="gOOxWv"
                           contentCells={4}
                         >
-                          <BaseRow
+                          <div
                             className="gOOxWv"
-                            contentCells={4}
                           >
-                            <div
-                              className="gOOxWv"
-                            >
-                              <styled.div>
-                                <div
-                                  className="dzshZu"
-                                >
-                                  <styled.div>
-                                    <div
-                                      className="iwOXrP"
-                                    >
-                                      Fr. 17. February 2017
-                                    </div>
-                                  </styled.div>
-                                  <styled.div>
-                                    <div
-                                      className="bwPZOZ"
-                                    >
-                                      270,39 EUR
-                                    </div>
-                                  </styled.div>
-                                  <styled.div
-                                    begin={true}
+                            <styled.div>
+                              <div
+                                className="dzshZu"
+                              >
+                                <styled.div>
+                                  <div
+                                    className="iwOXrP"
                                   >
-                                    <div
-                                      begin={true}
-                                      className="lYNpw"
-                                    >
-                                      03:45
-                                    </div>
-                                  </styled.div>
-                                  <styled.div
+                                    We. 15. February 2017
+                                  </div>
+                                </styled.div>
+                                <styled.div>
+                                  <div
+                                    className="bwPZOZ"
+                                  >
+                                    261,52 EUR
+                                  </div>
+                                </styled.div>
+                                <styled.div
+                                  begin={true}
+                                >
+                                  <div
+                                    begin={true}
+                                    className="lYNpw"
+                                  >
+                                    10:59
+                                  </div>
+                                </styled.div>
+                                <styled.div
+                                  end={true}
+                                >
+                                  <div
+                                    className="jCERDf"
                                     end={true}
                                   >
-                                    <div
-                                      className="jCERDf"
-                                      end={true}
-                                    >
-                                      11:22
-                                    </div>
-                                  </styled.div>
-                                  <styled.div>
-                                    <div
-                                      className="fCpcNg"
-                                    >
-                                      07:37:00
-                                    </div>
-                                  </styled.div>
-                                </div>
-                              </styled.div>
-                            </div>
-                          </BaseRow>
-                        </Styled(BaseRow)>
-                      </div>
-                    </styled.div>
-                  </Component>
-                  <Component
-                    duration={34620}
-                    end={2017-02-16T19:59:00.000Z}
-                    start={2017-02-16T10:22:00.000Z}
-                    total={341.39166666666665}
+                                    18:21
+                                  </div>
+                                </styled.div>
+                                <styled.div>
+                                  <div
+                                    className="fCpcNg"
+                                  >
+                                    07:22:00
+                                  </div>
+                                </styled.div>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </BaseRow>
+                      </Styled(BaseRow)>
+                    </div>
+                  </styled.div>
+                </Component>
+                <Component
+                  duration={27360}
+                  end={2017-02-14T14:59:00.000Z}
+                  start={2017-02-14T07:23:00.000Z}
+                  total={269.79999999999995}
+                >
+                  <styled.div
+                    data-t-target="Entry"
                   >
-                    <styled.div
+                    <div
+                      className="jEImSP"
                       data-t-target="Entry"
                     >
-                      <div
-                        className="jEImSP"
-                        data-t-target="Entry"
+                      <Styled(BaseRow)
+                        contentCells={4}
                       >
-                        <Styled(BaseRow)
+                        <BaseRow
+                          className="gOOxWv"
                           contentCells={4}
                         >
-                          <BaseRow
+                          <div
                             className="gOOxWv"
-                            contentCells={4}
                           >
-                            <div
-                              className="gOOxWv"
-                            >
-                              <styled.div>
-                                <div
-                                  className="dzshZu"
-                                >
-                                  <styled.div>
-                                    <div
-                                      className="iwOXrP"
-                                    >
-                                      Th. 16. February 2017
-                                    </div>
-                                  </styled.div>
-                                  <styled.div>
-                                    <div
-                                      className="bwPZOZ"
-                                    >
-                                      341,39 EUR
-                                    </div>
-                                  </styled.div>
-                                  <styled.div
-                                    begin={true}
+                            <styled.div>
+                              <div
+                                className="dzshZu"
+                              >
+                                <styled.div>
+                                  <div
+                                    className="iwOXrP"
                                   >
-                                    <div
-                                      begin={true}
-                                      className="lYNpw"
-                                    >
-                                      11:22
-                                    </div>
-                                  </styled.div>
-                                  <styled.div
+                                    Tu. 14. February 2017
+                                  </div>
+                                </styled.div>
+                                <styled.div>
+                                  <div
+                                    className="bwPZOZ"
+                                  >
+                                    269,80 EUR
+                                  </div>
+                                </styled.div>
+                                <styled.div
+                                  begin={true}
+                                >
+                                  <div
+                                    begin={true}
+                                    className="lYNpw"
+                                  >
+                                    08:23
+                                  </div>
+                                </styled.div>
+                                <styled.div
+                                  end={true}
+                                >
+                                  <div
+                                    className="jCERDf"
                                     end={true}
                                   >
-                                    <div
-                                      className="jCERDf"
-                                      end={true}
-                                    >
-                                      20:59
-                                    </div>
-                                  </styled.div>
-                                  <styled.div>
-                                    <div
-                                      className="fCpcNg"
-                                    >
-                                      09:37:00
-                                    </div>
-                                  </styled.div>
-                                </div>
-                              </styled.div>
-                            </div>
-                          </BaseRow>
-                        </Styled(BaseRow)>
-                      </div>
-                    </styled.div>
-                  </Component>
-                  <Component
-                    duration={26520}
-                    end={2017-02-15T17:21:00.000Z}
-                    start={2017-02-15T09:59:00.000Z}
-                    total={261.51666666666665}
-                  >
-                    <styled.div
-                      data-t-target="Entry"
-                    >
-                      <div
-                        className="jEImSP"
-                        data-t-target="Entry"
-                      >
-                        <Styled(BaseRow)
-                          contentCells={4}
-                        >
-                          <BaseRow
-                            className="gOOxWv"
-                            contentCells={4}
-                          >
-                            <div
-                              className="gOOxWv"
-                            >
-                              <styled.div>
-                                <div
-                                  className="dzshZu"
-                                >
-                                  <styled.div>
-                                    <div
-                                      className="iwOXrP"
-                                    >
-                                      We. 15. February 2017
-                                    </div>
-                                  </styled.div>
-                                  <styled.div>
-                                    <div
-                                      className="bwPZOZ"
-                                    >
-                                      261,52 EUR
-                                    </div>
-                                  </styled.div>
-                                  <styled.div
-                                    begin={true}
+                                    15:59
+                                  </div>
+                                </styled.div>
+                                <styled.div>
+                                  <div
+                                    className="fCpcNg"
                                   >
-                                    <div
-                                      begin={true}
-                                      className="lYNpw"
-                                    >
-                                      10:59
-                                    </div>
-                                  </styled.div>
-                                  <styled.div
-                                    end={true}
-                                  >
-                                    <div
-                                      className="jCERDf"
-                                      end={true}
-                                    >
-                                      18:21
-                                    </div>
-                                  </styled.div>
-                                  <styled.div>
-                                    <div
-                                      className="fCpcNg"
-                                    >
-                                      07:22:00
-                                    </div>
-                                  </styled.div>
-                                </div>
-                              </styled.div>
-                            </div>
-                          </BaseRow>
-                        </Styled(BaseRow)>
-                      </div>
-                    </styled.div>
-                  </Component>
-                  <Component
-                    duration={27360}
-                    end={2017-02-14T14:59:00.000Z}
-                    start={2017-02-14T07:23:00.000Z}
-                    total={269.79999999999995}
-                  >
-                    <styled.div
-                      data-t-target="Entry"
-                    >
-                      <div
-                        className="jEImSP"
-                        data-t-target="Entry"
-                      >
-                        <Styled(BaseRow)
-                          contentCells={4}
-                        >
-                          <BaseRow
-                            className="gOOxWv"
-                            contentCells={4}
-                          >
-                            <div
-                              className="gOOxWv"
-                            >
-                              <styled.div>
-                                <div
-                                  className="dzshZu"
-                                >
-                                  <styled.div>
-                                    <div
-                                      className="iwOXrP"
-                                    >
-                                      Tu. 14. February 2017
-                                    </div>
-                                  </styled.div>
-                                  <styled.div>
-                                    <div
-                                      className="bwPZOZ"
-                                    >
-                                      269,80 EUR
-                                    </div>
-                                  </styled.div>
-                                  <styled.div
-                                    begin={true}
-                                  >
-                                    <div
-                                      begin={true}
-                                      className="lYNpw"
-                                    >
-                                      08:23
-                                    </div>
-                                  </styled.div>
-                                  <styled.div
-                                    end={true}
-                                  >
-                                    <div
-                                      className="jCERDf"
-                                      end={true}
-                                    >
-                                      15:59
-                                    </div>
-                                  </styled.div>
-                                  <styled.div>
-                                    <div
-                                      className="fCpcNg"
-                                    >
-                                      07:36:00
-                                    </div>
-                                  </styled.div>
-                                </div>
-                              </styled.div>
-                            </div>
-                          </BaseRow>
-                        </Styled(BaseRow)>
-                      </div>
-                    </styled.div>
-                  </Component>
-                </section>
-              </styled.section>
-            </EntryList>
-          </section>
-        </styled.section>
-      </Project>
-    </inject-Project-with-rootStore>
-  </RouterProvider>
-</Provider>
+                                    07:36:00
+                                  </div>
+                                </styled.div>
+                              </div>
+                            </styled.div>
+                          </div>
+                        </BaseRow>
+                      </Styled(BaseRow)>
+                    </div>
+                  </styled.div>
+                </Component>
+              </section>
+            </styled.section>
+          </EntryList>
+        </section>
+      </styled.section>
+    </Project>
+  </inject-Project-with-rootStore>
+</RouterProvider>
 `;

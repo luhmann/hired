@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import { ROUTE_NAMES } from '../../stores/routerStore'
+import { VIEW_NAMES } from '../../stores/uiStore'
 
 import { cells } from '../../styles/style-utils'
 import { ButtonLink } from '../molecules/Links'
@@ -16,7 +16,7 @@ const AddLink = styled(PlusIcon)`
 
 const ProjectListHeader = () => (
   <DistributedHeader>
-    <ButtonLink routeName={ROUTE_NAMES.projectNew}>
+    <ButtonLink routeName={VIEW_NAMES.projectNew}>
      <AddLink />
     </ButtonLink>
     <HeaderTitle>Projects</HeaderTitle>

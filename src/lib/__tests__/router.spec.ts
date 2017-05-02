@@ -1,18 +1,19 @@
 import { FirebaseRepository } from '../../storage/'
-import { RootStore, RouterStore } from '../'
-import { ROUTE_NAMES } from '../routerStore'
+import { RootStore } from '../../stores'
+import Router from '../router'
+import { VIEW_NAMES } from '../../stores/uiStore'
 
 import Router5 from 'router5'
 
-describe('RouterStore', () => {
+describe('Router', () => {
   let rootStore: RootStore
-  let subject: RouterStore
+  let subject: Router
 
   beforeEach(() => {
     const firebaseRepositoryMock = new FirebaseRepository()
     rootStore = new RootStore(firebaseRepositoryMock, 'me')
 
-    subject = new RouterStore(rootStore)
+    subject = new Router(rootStore)
   })
 
   it('should initialize', () => {
@@ -20,24 +21,24 @@ describe('RouterStore', () => {
   })
 
   it('should navigate to to new project screen', () => {
-    subject.navigate(ROUTE_NAMES.projectNew)
+    subject.navigate(VIEW_NAMES.projectNew)
 
     expect(rootStore.uiStore.hasError).toBe(false)
-    expect(rootStore.uiStore.currentView.name).toBe(ROUTE_NAMES.projectNew)
+    expect(rootStore.uiStore.currentView.name).toBe(VIEW_NAMES.projectNew)
   })
 
   it('should navigate to to project-list-screen', () => {
-    subject.navigate(ROUTE_NAMES.projectList)
+    subject.navigate(VIEW_NAMES.projectList)
 
     expect(rootStore.uiStore.hasError).toBe(false)
-    expect(rootStore.uiStore.currentView.name).toBe(ROUTE_NAMES.projectList)
+    expect(rootStore.uiStore.currentView.name).toBe(VIEW_NAMES.projectList)
   })
 
   it('should navigate to to project-overview-screen', () => {
-    subject.navigate(ROUTE_NAMES.projectOverview, { projectId: '1234-5678-123'})
+    subject.navigate(VIEW_NAMES.projectOverview, { projectId: '1234-5678-123'})
 
     expect(rootStore.uiStore.hasError).toBe(false)
-    expect(rootStore.uiStore.currentView.name).toBe(ROUTE_NAMES.projectOverview)
+    expect(rootStore.uiStore.currentView.name).toBe(VIEW_NAMES.projectOverview)
     expect(rootStore.uiStore.currentView.projectId).toBe('1234-5678-123')
   })
 

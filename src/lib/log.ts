@@ -1,5 +1,5 @@
 /* tslint:disable no-console */
-import { isDev, isTest } from './env'
+import { isDev } from './env'
 
 const log = (...args: any[]): void => {
   if (isDev()) {

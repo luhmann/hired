@@ -3,7 +3,7 @@ import { observer } from 'mobx-react'
 import styled from 'styled-components'
 
 import { ProjectStore } from '../../stores/'
-import { ROUTE_NAMES } from '../../stores/routerStore'
+import { VIEW_NAMES } from '../../stores/uiStore'
 import { formatCurrency } from '../../lib/currency'
 import { translate } from '../../constants/i18n'
 
@@ -33,7 +33,7 @@ const ProjectList = observer(({ projects }: ProjectListProps) => {
         {
           projects.map((project: ProjectStore, index: number) => (
             <Row contentCells={4} key={index}>
-              <RowLink routeName={ROUTE_NAMES.projectOverview} routeParams={{ projectId: project.id }} >
+              <RowLink routeName={VIEW_NAMES.projectOverview} routeParams={{ projectId: project.id }} >
                 <span data-t-target="Project">{project.name}</span>
                 <Total>{formatCurrency(project.totalRevenue)}</Total>
               </RowLink>

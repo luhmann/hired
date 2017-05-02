@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import { ROUTE_NAMES } from '../../stores/routerStore'
+import { VIEW_NAMES } from '../../stores/uiStore'
 
 import { cells } from '../../styles/style-utils'
 import { ButtonLink } from '../molecules/Links'
@@ -20,7 +20,7 @@ export interface EntriesListHeaderProps {
 
 const EntriesListHeader = ({project}: EntriesListHeaderProps) => (
   <DistributedHeader>
-    <ButtonLink routeName={ROUTE_NAMES.projectList}>
+    <ButtonLink routeName={VIEW_NAMES.projectList}>
       <BackLink />
     </ButtonLink>
     <HeaderTitle>{project}</HeaderTitle>

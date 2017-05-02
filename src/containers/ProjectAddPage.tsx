@@ -5,7 +5,8 @@ import styled from 'styled-components'
 import { color, maxWidthContainer } from '../styles/style-utils'
 
 import { RootStore } from '../stores/'
-import { ROUTE_NAMES } from '../stores/routerStore'
+import Router from '../lib/router'
+import { VIEW_NAMES } from '../stores/uiStore'
 
 import InputTextWithLabel from '../components/molecules/InputTextWithLabel'
 import InputNumberWithLabel from '../components/molecules/InputNumberWithLabel'
@@ -13,6 +14,7 @@ import HeaderSave from '../components/organisms/HeaderSave'
 
 export interface NewProjectProps {
   rootStore?: RootStore
+  router?: Router
 }
 
 interface NewProjectState {
@@ -30,6 +32,7 @@ const Form = styled.section`
 `
 
 @inject('rootStore')
+@inject('router')
 @observer
 class ProjectAddPage extends React.Component<NewProjectProps, NewProjectState> {
 
@@ -54,15 +57,15 @@ class ProjectAddPage extends React.Component<NewProjectProps, NewProjectState> {
   }
 
   saveHandler(event: React.MouseEvent<any>) {
-    if (this.props.rootStore) {
+    if (this.props.rootStore && this.props.router) {
       this.props.rootStore.projectListStore.add(this.state.name, Number(this.state.rate), this.state.description)
-      this.props.rootStore.routerStore.navigate(ROUTE_NAMES.projectList)
+      this.props.router.navigate(VIEW_NAMES.projectList)
     }
   }
 
   cancelHandler(event: React.MouseEvent<any>) {
-    if (this.props.rootStore) {
-      this.props.rootStore.routerStore.navigate(ROUTE_NAMES.projectList)
+    if (this.props.rootStore && this.props.router) {
+      this.props.router.navigate(VIEW_NAMES.projectList)
     }
   }
 
