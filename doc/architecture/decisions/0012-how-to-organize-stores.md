@@ -1,4 +1,4 @@
-# 16. How to organize stores
+# 12. How to organize stores
 
 Date: 13/04/2017
 
