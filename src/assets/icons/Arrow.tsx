@@ -1,5 +1,6 @@
 import * as React from 'react'
 
+// tslint:disable
 const Icon = ({ className }: { className?: 'string' }) => (
   <svg className={className} version="1.1" viewBox="0 0 100 125" x="0px" y="0px" xmlSpace="preserve">
     <g>
