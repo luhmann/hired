@@ -1,4 +1,4 @@
-# 12. CSS Grid without fallbacks
+# 11. CSS Grid without fallbacks
 
 Date: 13/04/2017
 

@@ -1,4 +1,4 @@
-# 7. Container-Component Pattern
+# 8. Container-Component Pattern
 
 Date: 04/04/2017
 

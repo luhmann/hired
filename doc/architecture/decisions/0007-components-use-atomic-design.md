@@ -1,4 +1,4 @@
-# 6. Components use Atomic Design
+# 7. Components use Atomic Design
 
 Date: 04/04/2017
 

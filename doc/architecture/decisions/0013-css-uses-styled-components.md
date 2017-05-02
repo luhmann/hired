@@ -1,4 +1,4 @@
-# 10. CSS uses Styled Components
+# 13. CSS uses Styled Components
 
 Date: 04/04/2017
 
