@@ -13,7 +13,7 @@ interface InputTextWithLabelProps {
   id: string
   label: string
   placeholder: string
-  changeHandler: React.EventHandler<any>
+  changeHandler: React.EventHandler<React.FormEvent<HTMLElement>>
 }
 
 const InputTextWithLabel = ({id, label, placeholder, changeHandler}: InputTextWithLabelProps) => (

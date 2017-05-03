@@ -6,8 +6,8 @@ import { DistributedHeader, HeaderTitle } from '../atoms/Headers'
 
 interface HeaderSaveProps {
   title: string
-  saveHandler: React.EventHandler<any>
-  cancelHandler: React.EventHandler<any>
+  saveHandler: React.EventHandler<React.MouseEvent<HTMLElement>>
+  cancelHandler: React.EventHandler<React.MouseEvent<HTMLElement>>
 }
 
 const CancelButton = styled(TextButton)`

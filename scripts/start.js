@@ -38,18 +38,6 @@ var DEFAULT_PORT = parseInt(process.env.PORT, 10) || 3000;
 var compiler;
 var handleCompile;
 
-// You can safely remove this after ejecting.
-// We only use this block for testing of Create React App itself:
-var isSmokeTest = process.argv.some(arg => arg.indexOf('--smoke-test') > -1);
-if (isSmokeTest) {
-  handleCompile = function (err, stats) {
-    if (err || stats.hasErrors() || stats.hasWarnings()) {
-      process.exit(1);
-    } else {
-      process.exit(0);
-    }
-  };
-}
 
 function setupCompiler(host, port, protocol) {
   // "Compiler" is a low-level interface to Webpack.
@@ -119,7 +107,7 @@ function setupCompiler(host, port, protocol) {
         console.log();
       });
       // Teach some TSLint tricks.
-      console.log('You may use special comments to disable some warnings.');      
+      console.log('You may use special comments to disable some warnings.');
       console.log('Use ' + chalk.yellow('tslint:disable-line') + ' to disable this line.');
       console.log('Use ' + chalk.yellow('tslint:disable-next-line') + ' to ignore the rules on next line.');
       console.log('Use ' + chalk.yellow('tslint:disable ') + ' to disable linting for rest of file.');

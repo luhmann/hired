@@ -68,7 +68,7 @@ const StyledTextButton = styled.button`
 interface TextButtonProps {
   className?: string
   text: string
-  clickHandler: React.EventHandler<any>
+  clickHandler: React.EventHandler<React.MouseEvent<HTMLElement>>
 }
 
 export const TextButton = ({text, clickHandler, className, ...attrs}: TextButtonProps) => (

@@ -1,25 +1,25 @@
 /* tslint:disable no-console */
 import { isDev } from './env'
 
-const log = (...args: any[]): void => {
+const log = (...args: {}[]): void => {
   if (isDev()) {
     console.log(args)
   }
 }
 
-const info = (...args: any[]): void => {
+const info = (...args: {}[]): void => {
   if (isDev()) {
     console.info(args)
   }
 }
 
-const warn = (...args: any[]): void => {
+const warn = (...args: {}[]): void => {
   if (isDev()) {
     console.warn(args)
   }
 }
 
-const error = (...args: any[]): void => {
+const error = (...args: {}[]): void => {
   if (isDev()) {
     console.error(args)
   } else {

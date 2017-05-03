@@ -50,20 +50,20 @@ class ProjectAddPage extends React.Component<NewProjectProps, NewProjectState> {
     }
   }
 
-  changeHandler(field: 'name' | 'rate' | 'description'): React.EventHandler<any> {
+  changeHandler(field: 'name' | 'rate' | 'description'): React.EventHandler<React.FormEvent<HTMLElement>> {
     return (event: React.KeyboardEvent<HTMLInputElement>) => (
       this.setState(Object.assign({}, this.state, { [field] : event.currentTarget.value}))
     )
   }
 
-  saveHandler(event: React.MouseEvent<any>) {
+  saveHandler(event: React.MouseEvent<HTMLElement>) {
     if (this.props.rootStore && this.props.router) {
       this.props.rootStore.projectListStore.add(this.state.name, Number(this.state.rate), this.state.description)
       this.props.router.navigate(VIEW_NAMES.projectList)
     }
   }
 
-  cancelHandler(event: React.MouseEvent<any>) {
+  cancelHandler(event: React.MouseEvent<HTMLElement>) {
     if (this.props.rootStore && this.props.router) {
       this.props.router.navigate(VIEW_NAMES.projectList)
     }
