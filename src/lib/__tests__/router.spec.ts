@@ -45,7 +45,6 @@ describe('Router', () => {
   it('should enter error state when navigation to wrong route was attempted', () => {
     subject.navigate('foo')
 
-
     expect(rootStore.uiStore.hasError).toBe(true)
   })
 })
