@@ -98,7 +98,7 @@
     "test:acceptance": "npm run test -- --testPathPattern=test/acceptance",
     "start:server": "node ./server/bin/www",
     "lint:css": "stylelint \"./src/components/**/*.tsx\"",
-    "prepush": "npm test"
+    "prepush": "npm test -- --coverage"
   },
   "jest": {
     "collectCoverageFrom": [
