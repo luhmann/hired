@@ -39,6 +39,7 @@
     "fs-extra": "0.30.0",
     "html-webpack-plugin": "2.24.0",
     "http-proxy-middleware": "0.17.3",
+    "husky": "^0.13.3",
     "jest": "^19.0.2",
     "json-loader": "0.5.4",
     "mobx-react-devtools": "^4.2.11",
@@ -96,7 +97,8 @@
     "test": "node scripts/test.js --env=jsdom",
     "test:acceptance": "npm run test -- --testPathPattern=test/acceptance",
     "start:server": "node ./server/bin/www",
-    "lint:css": "stylelint \"./src/components/**/*.tsx\""
+    "lint:css": "stylelint \"./src/components/**/*.tsx\"",
+    "prepush": "npm test"
   },
   "jest": {
     "collectCoverageFrom": [
