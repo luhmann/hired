@@ -1,4 +1,4 @@
-![Logo](./doc/logo.png)
+![Logo](./doc/logo_cropped.png)
 
 
 ## What is it?
