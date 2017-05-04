@@ -1,4 +1,4 @@
-![Logo](./doc/logo_cropped.png)
+![Logo](./doc/logo.png)
 
 A simple time-tracking-application which can record the times spent on different projects and calculate the earnings
 based on this.
