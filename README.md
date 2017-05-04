@@ -3,7 +3,9 @@
 A simple time-tracking-application which can record the times spent on different projects and calculate the earnings
 based on this.
 
-<Gif>
+<p align="center">
+<img src="./doc/demo.gif" />
+</p>
 
 ## Installation
 
@@ -27,4 +29,4 @@ interactions of the UI.
 
 ## Credits
 
-* Time Icon created by Richard de Vos for The Noun Project, https://thenounproject.com/term/time/6732/
+* Time Icon in logo created by Richard de Vos for "The Noun Project", https://thenounproject.com/term/time/6732/
