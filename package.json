@@ -1,9 +1,9 @@
 {
-  "name": "mobx-time-tracker",
-  "description": "A demo application showcasing different technologies",
+  "name": "Hired",
+  "description": "A simple time-tracking-app, showcasing some technologies and design approaches",
   "repository": {
     "type": "git",
-    "url": "https://github.com/luhmann/mobx-time-tracker.git"
+    "url": "https://github.com/luhmann/harvest.git"
   },
   "version": "0.1.0",
   "private": true,
@@ -92,7 +92,7 @@
     "build": "node scripts/build.js",
     "lint": "npm run lint:ts",
     "lint:ts": "tslint --config tslint.json 'src/**/*.ts' --exclude 'src/**/*.d.ts'",
-    "setup": "nvm use && yarn && npm run test:once",
+    "setup": "yarn && npm run test:once",
     "start": "npm run start:client & npm start:server",
     "start:client": "node scripts/start.js",
     "start:server": "node ./server/bin/www",
