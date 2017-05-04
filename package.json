@@ -89,15 +89,16 @@
     "uuid": "^3.0.1"
   },
   "scripts": {
+    "build": "node scripts/build.js",
+    "lint": "npm run lint:ts",
+    "lint:ts": "tslint --config tslint.json 'src/**/*.ts' --exclude 'src/**/*.d.ts'",
+    "setup": "nvm use && yarn && npm run test:once",
     "start": "npm run start:client & npm start:server",
     "start:client": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "start:server": "node ./server/bin/www",
     "test": "npm run test:once -- --watch",
     "test:once": "node scripts/test.js --env=jsdom",
     "test:acceptance": "npm run test -- --testPathPattern=test/acceptance",
-    "start:server": "node ./server/bin/www",
-    "lint": "npm run lint:ts",
-    "lint:ts": "tslint --config tslint.json 'src/**/*.ts' --exclude 'src/**/*.d.ts'",
     "prepush": "npm run lint && npm run test:once"
   },
   "jest": {
