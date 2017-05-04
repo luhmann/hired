@@ -1,5 +1,3 @@
-# MobX-Time-Tracker
-
 ![Logo](./doc/logo.png)
 
 
@@ -12,7 +10,7 @@ based on this.
 ## Installation
 
 * Install nvm
-* npm run serve - Switches to correct node-version, installs dependencies and runs tests
+* `npm run setup` - Switches to correct node-version, installs dependencies and runs tests
 
 ## Motivation
 
