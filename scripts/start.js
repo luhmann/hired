@@ -28,6 +28,11 @@ var useYarn = fs.existsSync(paths.yarnLockFile);
 var cli = useYarn ? 'yarn' : 'npm';
 var isInteractive = process.stdout.isTTY;
 
+// backend
+const backendServer = require('../server/app')
+const http = require('http')
+
+
 // Warn and crash if required files are missing
 if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
   process.exit(1);
@@ -267,7 +272,45 @@ function runDevServer(host, port, protocol) {
     }
     console.log(chalk.cyan('Starting the development server...'));
     console.log();
+
+    // openBrowser(protocol + '://' + host + ':' + port + '/');
   });
+}
+
+function runBackendServer(port) {
+  backendServer.set('port', port)
+  const server = http.createServer(backendServer)
+
+  /**
+   * Listen on provided port, on all network interfaces.
+   */
+
+  server.listen(port)
+  server.on('error', onBackendError)
+}
+
+function onBackendError(error) {
+  if (error.syscall !== 'listen') {
+    throw error
+  }
+
+  var bind = typeof port === 'string'
+    ? 'Pipe ' + port
+    : 'Port ' + port
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges')
+      process.exit(1)
+      break
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use')
+      process.exit(1)
+      break
+    default:
+      throw error
+  }
 }
 
 function run(port) {
@@ -275,6 +318,7 @@ function run(port) {
   var host = process.env.HOST || 'localhost';
   setupCompiler(host, port, protocol);
   runDevServer(host, port, protocol);
+  runBackendServer(process.env.REACT_APP_BACKEND_PORT)
 }
 
 // We attempt to use the default port but if it is busy, we offer the user to
