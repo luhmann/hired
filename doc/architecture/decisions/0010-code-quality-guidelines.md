@@ -22,4 +22,5 @@ approaches and styles some developers might prefer.
 ## Consequences
 
 * A pre-commit hook is implemented that runs the build and linter before allowing a commit in the projects repository
+* Pre-Commit hook is implemented with [husky](https://github.com/typicode/husky)
 * Code Coverage will be tracked in CI
