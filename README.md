@@ -28,6 +28,8 @@ interactions of the UI.
 ## Next steps
 * Turn it into a Progressive Web App, for better offline and mobile-support
 * Implement statistics
+* SSR
+* Prepack
 
 ## What you might wonder
 * Authentication is not meant to be real as the user is logged in without any credentials right now. This
