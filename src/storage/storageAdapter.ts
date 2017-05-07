@@ -1,5 +1,7 @@
 interface StorageReferenceInterface {
-  set(value: string): any
+  // tslint:disable-next-line
+  set(value: any): any
+  // tslint:disable-next-line
   once(eventType: string): any
 }
 

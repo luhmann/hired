@@ -19,6 +19,7 @@ class FirebaseRepository implements StorageRepositoryInterface {
     this.app = firebase.initializeApp(this.config)
   }
 
+  // tslint:disable-next-line
   reference(key: string): any {
     return this.app.database().ref(key)
   }
