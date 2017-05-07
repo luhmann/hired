@@ -6,7 +6,6 @@ import { RouterProvider } from 'react-router5'
 import { createRootStore, enterText } from '../util'
 
 import { VIEW_NAMES } from '../../src/stores/uiStore'
-import { FirebaseRepository } from '../../src/storage'
 import { RootStore } from '../../src/stores/'
 import Router from '../../src/lib/router'
 

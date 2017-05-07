@@ -92,7 +92,7 @@ class EntryListStore {
       (entries) => {
         if (entries) {
           try {
-            this.rootStore.repository.entries(this.rootStore.userStore.uid).set(entries)
+            this.rootStore.storage.entries(this.rootStore.userStore.uid).set(entries)
           } catch (error) {
             log.error('[EntryListStore]: Error while trying to push data', error)
           }

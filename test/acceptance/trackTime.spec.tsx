@@ -5,7 +5,6 @@ import { RouterProvider } from 'react-router5'
 
 import { MOCK_PROJECTS, MOCK_ENTRIES } from '../mockData'
 import { createRootStore } from '../util'
-import { FirebaseRepository } from '../../src/storage'
 import { RootStore } from '../../src/stores/'
 import Router from '../../src/lib/router'
 

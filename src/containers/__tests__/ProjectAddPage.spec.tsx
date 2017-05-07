@@ -4,7 +4,7 @@ import { mount } from 'enzyme'
 import { enterText } from '../../../test/util'
 
 import { VIEW_NAMES } from '../../stores/uiStore'
-import { FirebaseRepository } from '../../storage/'
+import { createRootStore } from '../../../test/util'
 import { RootStore } from '../../stores/'
 import Router from '../../lib/router'
 
@@ -20,8 +20,7 @@ describe('ProjectAddPage', () => {
   let router: Router
 
   beforeEach(() => {
-    const repository = new FirebaseRepository()
-    rootStore = new RootStore(repository, 'me')
+    rootStore = createRootStore()
     router = new Router(rootStore)
     router.navigate = jest.fn()
   })

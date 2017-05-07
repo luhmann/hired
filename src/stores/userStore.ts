@@ -15,7 +15,7 @@ class UserStore {
 
   @action.bound
   async authenticate() {
-    const response = await this.rootStore.repository.authenticate(this.uid)
+    const response = await this.rootStore.storage.authenticate(this.uid)
     this.authenticated = (response.uid === this.uid)
 
     return this.authenticated

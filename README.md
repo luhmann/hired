@@ -13,7 +13,7 @@ based on this.
 run `nvm use` and the node-version will be picked up from `.nvrmc`
 * Make sure you have [yarn](https://github.com/yarnpkg/yarn) installed
 * `npm run setup` - Switches to correct node-version, installs dependencies and runs tests to ensure correct setup
-* Rename `.env.sample` to `.env` and provide valid Firebase settings
+* Rename `.env.sample` to `.env` and switch `REACT_APP_STORAGE_TYPE` to `localStorage` or provide valid Firebase settings
 * `npm start` - Starts server and client
 
 ## Motivation
@@ -27,6 +27,7 @@ I use to track the time I spend on different projects.
 * My preferred way of learning new technologies is constantly rewriting the same set of applications. This is one of them.
 
 ## Next steps
+* Make entries editable
 * Turn it into a Progressive Web App, for better offline and mobile-support
 * Implement statistics
 * SSR

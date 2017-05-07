@@ -1,4 +1,4 @@
-import { FirebaseRepository } from '../../storage/'
+import { createRootStore } from '../../../test/util'
 import { RootStore } from '../../stores'
 import Router from '../router'
 import { VIEW_NAMES } from '../../stores/uiStore'
@@ -10,8 +10,7 @@ describe('Router', () => {
   let subject: Router
 
   beforeEach(() => {
-    const firebaseRepositoryMock = new FirebaseRepository()
-    rootStore = new RootStore(firebaseRepositoryMock, 'me')
+    rootStore = createRootStore()
 
     subject = new Router(rootStore)
   })

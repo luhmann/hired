@@ -1,4 +1,4 @@
-import FirebaseRepository from '../../storage/firebaseRepository'
+import { FirebaseRepository, StorageAdapter } from '../../storage/'
 import { firebaseOnceMock, setFirebaseOnceMock } from '../../storage/__mocks__/firebase'
 
 import {
@@ -11,17 +11,18 @@ import {
 import Router from '../../lib/router'
 
 describe('RootStore', () => {
-  let firebaseRepositoryMock: FirebaseRepository
+  let storageMock: StorageAdapter
   let subject: RootStore
 
   beforeEach(() => {
     firebaseOnceMock.mockClear()
-    firebaseRepositoryMock = new FirebaseRepository()
-    subject = new RootStore(firebaseRepositoryMock, 'me')
+    const firebaseRepositoryMock = new FirebaseRepository()
+    storageMock = new StorageAdapter(firebaseRepositoryMock)
+    subject = new RootStore(storageMock, 'me')
   })
 
   it('should initialize', () => {
-    expect(subject.repository).toBe(firebaseRepositoryMock)
+    expect(subject.storage).toBe(storageMock)
     expect(subject.userStore).toBeInstanceOf(UserStore)
     expect(subject.entryListStore).toBeInstanceOf(EntryListStore)
     expect(subject.projectListStore).toBeInstanceOf(ProjectListStore)

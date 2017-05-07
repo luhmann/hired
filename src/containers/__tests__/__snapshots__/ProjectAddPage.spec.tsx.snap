@@ -235,17 +235,18 @@ exports[`ProjectAddPage should render 1`] = `
           "projects": Array [],
           "rootStore": [Circular],
         },
-        "repository": FirebaseRepository {
-          "app": Object {
-            "database": [Function],
-          },
-          "authenticate": [Function],
-          "config": Object {
-            "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-            "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-            "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-            "messagingSenderId": "282276589695",
-            "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+        "storage": StorageAdapter {
+          "repository": FirebaseRepository {
+            "app": Object {
+              "database": [Function],
+            },
+            "config": Object {
+              "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+              "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+              "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+              "messagingSenderId": "282276589695",
+              "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+            },
           },
         },
         "uiStore": UiStore {
@@ -492,17 +493,18 @@ exports[`ProjectAddPage should render 1`] = `
             "projects": Array [],
             "rootStore": [Circular],
           },
-          "repository": FirebaseRepository {
-            "app": Object {
-              "database": [Function],
-            },
-            "authenticate": [Function],
-            "config": Object {
-              "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-              "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-              "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-              "messagingSenderId": "282276589695",
-              "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+          "storage": StorageAdapter {
+            "repository": FirebaseRepository {
+              "app": Object {
+                "database": [Function],
+              },
+              "config": Object {
+                "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                "messagingSenderId": "282276589695",
+                "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+              },
             },
           },
           "uiStore": UiStore {
@@ -532,17 +534,18 @@ exports[`ProjectAddPage should render 1`] = `
             "projects": Array [],
             "rootStore": [Circular],
           },
-          "repository": FirebaseRepository {
-            "app": Object {
-              "database": [Function],
-            },
-            "authenticate": [Function],
-            "config": Object {
-              "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-              "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-              "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-              "messagingSenderId": "282276589695",
-              "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+          "storage": StorageAdapter {
+            "repository": FirebaseRepository {
+              "app": Object {
+                "database": [Function],
+              },
+              "config": Object {
+                "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                "messagingSenderId": "282276589695",
+                "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+              },
             },
           },
           "uiStore": UiStore {
@@ -789,17 +792,18 @@ exports[`ProjectAddPage should render 1`] = `
               "projects": Array [],
               "rootStore": [Circular],
             },
-            "repository": FirebaseRepository {
-              "app": Object {
-                "database": [Function],
-              },
-              "authenticate": [Function],
-              "config": Object {
-                "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-                "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-                "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-                "messagingSenderId": "282276589695",
-                "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+            "storage": StorageAdapter {
+              "repository": FirebaseRepository {
+                "app": Object {
+                  "database": [Function],
+                },
+                "config": Object {
+                  "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                  "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                  "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                  "messagingSenderId": "282276589695",
+                  "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                },
               },
             },
             "uiStore": UiStore {
@@ -829,17 +833,18 @@ exports[`ProjectAddPage should render 1`] = `
               "projects": Array [],
               "rootStore": [Circular],
             },
-            "repository": FirebaseRepository {
-              "app": Object {
-                "database": [Function],
-              },
-              "authenticate": [Function],
-              "config": Object {
-                "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-                "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-                "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-                "messagingSenderId": "282276589695",
-                "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+            "storage": StorageAdapter {
+              "repository": FirebaseRepository {
+                "app": Object {
+                  "database": [Function],
+                },
+                "config": Object {
+                  "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                  "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                  "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                  "messagingSenderId": "282276589695",
+                  "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                },
               },
             },
             "uiStore": UiStore {
@@ -1086,17 +1091,18 @@ exports[`ProjectAddPage should render 1`] = `
                 "projects": Array [],
                 "rootStore": [Circular],
               },
-              "repository": FirebaseRepository {
-                "app": Object {
-                  "database": [Function],
-                },
-                "authenticate": [Function],
-                "config": Object {
-                  "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-                  "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-                  "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-                  "messagingSenderId": "282276589695",
-                  "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+              "storage": StorageAdapter {
+                "repository": FirebaseRepository {
+                  "app": Object {
+                    "database": [Function],
+                  },
+                  "config": Object {
+                    "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                    "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                    "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                    "messagingSenderId": "282276589695",
+                    "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                  },
                 },
               },
               "uiStore": UiStore {

@@ -38,17 +38,18 @@ exports[`A user should be able to create new time entries GIVEN: A user has adde
         ],
         "rootStore": [Circular],
       },
-      "repository": FirebaseRepository {
-        "app": Object {
-          "database": [Function],
-        },
-        "authenticate": [Function],
-        "config": Object {
-          "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-          "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-          "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-          "messagingSenderId": "282276589695",
-          "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+      "storage": StorageAdapter {
+        "repository": FirebaseRepository {
+          "app": Object {
+            "database": [Function],
+          },
+          "config": Object {
+            "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+            "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+            "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+            "messagingSenderId": "282276589695",
+            "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+          },
         },
       },
       "uiStore": UiStore {
@@ -326,17 +327,18 @@ exports[`A user should be able to create new time entries GIVEN: A user has adde
             ],
             "rootStore": [Circular],
           },
-          "repository": FirebaseRepository {
-            "app": Object {
-              "database": [Function],
-            },
-            "authenticate": [Function],
-            "config": Object {
-              "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-              "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-              "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-              "messagingSenderId": "282276589695",
-              "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+          "storage": StorageAdapter {
+            "repository": FirebaseRepository {
+              "app": Object {
+                "database": [Function],
+              },
+              "config": Object {
+                "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                "messagingSenderId": "282276589695",
+                "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+              },
             },
           },
           "uiStore": UiStore {
@@ -392,17 +394,18 @@ exports[`A user should be able to create new time entries GIVEN: A user has adde
               ],
               "rootStore": [Circular],
             },
-            "repository": FirebaseRepository {
-              "app": Object {
-                "database": [Function],
-              },
-              "authenticate": [Function],
-              "config": Object {
-                "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-                "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-                "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-                "messagingSenderId": "282276589695",
-                "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+            "storage": StorageAdapter {
+              "repository": FirebaseRepository {
+                "app": Object {
+                  "database": [Function],
+                },
+                "config": Object {
+                  "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                  "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                  "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                  "messagingSenderId": "282276589695",
+                  "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                },
               },
             },
             "uiStore": UiStore {
@@ -463,17 +466,18 @@ exports[`A user should be able to create new time entries GIVEN: A user has adde
                     ],
                     "rootStore": [Circular],
                   },
-                  "repository": FirebaseRepository {
-                    "app": Object {
-                      "database": [Function],
-                    },
-                    "authenticate": [Function],
-                    "config": Object {
-                      "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-                      "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-                      "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-                      "messagingSenderId": "282276589695",
-                      "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                  "storage": StorageAdapter {
+                    "repository": FirebaseRepository {
+                      "app": Object {
+                        "database": [Function],
+                      },
+                      "config": Object {
+                        "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                        "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                        "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                        "messagingSenderId": "282276589695",
+                        "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                      },
                     },
                   },
                   "uiStore": UiStore {
@@ -967,17 +971,18 @@ exports[`A user should be able to create new time entries GIVEN: The user alread
         ],
         "rootStore": [Circular],
       },
-      "repository": FirebaseRepository {
-        "app": Object {
-          "database": [Function],
-        },
-        "authenticate": [Function],
-        "config": Object {
-          "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-          "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-          "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-          "messagingSenderId": "282276589695",
-          "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+      "storage": StorageAdapter {
+        "repository": FirebaseRepository {
+          "app": Object {
+            "database": [Function],
+          },
+          "config": Object {
+            "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+            "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+            "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+            "messagingSenderId": "282276589695",
+            "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+          },
         },
       },
       "uiStore": UiStore {
@@ -1298,17 +1303,18 @@ exports[`A user should be able to create new time entries GIVEN: The user alread
             ],
             "rootStore": [Circular],
           },
-          "repository": FirebaseRepository {
-            "app": Object {
-              "database": [Function],
-            },
-            "authenticate": [Function],
-            "config": Object {
-              "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-              "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-              "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-              "messagingSenderId": "282276589695",
-              "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+          "storage": StorageAdapter {
+            "repository": FirebaseRepository {
+              "app": Object {
+                "database": [Function],
+              },
+              "config": Object {
+                "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                "messagingSenderId": "282276589695",
+                "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+              },
             },
           },
           "uiStore": UiStore {
@@ -1407,17 +1413,18 @@ exports[`A user should be able to create new time entries GIVEN: The user alread
               ],
               "rootStore": [Circular],
             },
-            "repository": FirebaseRepository {
-              "app": Object {
-                "database": [Function],
-              },
-              "authenticate": [Function],
-              "config": Object {
-                "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-                "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-                "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-                "messagingSenderId": "282276589695",
-                "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+            "storage": StorageAdapter {
+              "repository": FirebaseRepository {
+                "app": Object {
+                  "database": [Function],
+                },
+                "config": Object {
+                  "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                  "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                  "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                  "messagingSenderId": "282276589695",
+                  "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                },
               },
             },
             "uiStore": UiStore {
@@ -1521,17 +1528,18 @@ exports[`A user should be able to create new time entries GIVEN: The user alread
                     ],
                     "rootStore": [Circular],
                   },
-                  "repository": FirebaseRepository {
-                    "app": Object {
-                      "database": [Function],
-                    },
-                    "authenticate": [Function],
-                    "config": Object {
-                      "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-                      "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-                      "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-                      "messagingSenderId": "282276589695",
-                      "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                  "storage": StorageAdapter {
+                    "repository": FirebaseRepository {
+                      "app": Object {
+                        "database": [Function],
+                      },
+                      "config": Object {
+                        "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                        "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                        "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                        "messagingSenderId": "282276589695",
+                        "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                      },
                     },
                   },
                   "uiStore": UiStore {
@@ -2317,17 +2325,18 @@ exports[`A user should be able to create new time entries GIVEN: The user alread
         ],
         "rootStore": [Circular],
       },
-      "repository": FirebaseRepository {
-        "app": Object {
-          "database": [Function],
-        },
-        "authenticate": [Function],
-        "config": Object {
-          "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-          "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-          "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-          "messagingSenderId": "282276589695",
-          "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+      "storage": StorageAdapter {
+        "repository": FirebaseRepository {
+          "app": Object {
+            "database": [Function],
+          },
+          "config": Object {
+            "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+            "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+            "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+            "messagingSenderId": "282276589695",
+            "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+          },
         },
       },
       "uiStore": UiStore {
@@ -2647,17 +2656,18 @@ exports[`A user should be able to create new time entries GIVEN: The user alread
             ],
             "rootStore": [Circular],
           },
-          "repository": FirebaseRepository {
-            "app": Object {
-              "database": [Function],
-            },
-            "authenticate": [Function],
-            "config": Object {
-              "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-              "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-              "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-              "messagingSenderId": "282276589695",
-              "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+          "storage": StorageAdapter {
+            "repository": FirebaseRepository {
+              "app": Object {
+                "database": [Function],
+              },
+              "config": Object {
+                "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                "messagingSenderId": "282276589695",
+                "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+              },
             },
           },
           "uiStore": UiStore {
@@ -2755,17 +2765,18 @@ exports[`A user should be able to create new time entries GIVEN: The user alread
               ],
               "rootStore": [Circular],
             },
-            "repository": FirebaseRepository {
-              "app": Object {
-                "database": [Function],
-              },
-              "authenticate": [Function],
-              "config": Object {
-                "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-                "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-                "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-                "messagingSenderId": "282276589695",
-                "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+            "storage": StorageAdapter {
+              "repository": FirebaseRepository {
+                "app": Object {
+                  "database": [Function],
+                },
+                "config": Object {
+                  "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                  "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                  "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                  "messagingSenderId": "282276589695",
+                  "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                },
               },
             },
             "uiStore": UiStore {
@@ -2844,17 +2855,18 @@ exports[`A user should be able to create new time entries GIVEN: The user alread
                       "projects": [Circular],
                       "rootStore": [Circular],
                     },
-                    "repository": FirebaseRepository {
-                      "app": Object {
-                        "database": [Function],
-                      },
-                      "authenticate": [Function],
-                      "config": Object {
-                        "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-                        "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-                        "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-                        "messagingSenderId": "282276589695",
-                        "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                    "storage": StorageAdapter {
+                      "repository": FirebaseRepository {
+                        "app": Object {
+                          "database": [Function],
+                        },
+                        "config": Object {
+                          "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                          "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                          "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                          "messagingSenderId": "282276589695",
+                          "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                        },
                       },
                     },
                     "uiStore": UiStore {
@@ -2930,17 +2942,18 @@ exports[`A user should be able to create new time entries GIVEN: The user alread
                       "projects": [Circular],
                       "rootStore": [Circular],
                     },
-                    "repository": FirebaseRepository {
-                      "app": Object {
-                        "database": [Function],
-                      },
-                      "authenticate": [Function],
-                      "config": Object {
-                        "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-                        "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-                        "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-                        "messagingSenderId": "282276589695",
-                        "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                    "storage": StorageAdapter {
+                      "repository": FirebaseRepository {
+                        "app": Object {
+                          "database": [Function],
+                        },
+                        "config": Object {
+                          "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                          "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                          "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                          "messagingSenderId": "282276589695",
+                          "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                        },
                       },
                     },
                     "uiStore": UiStore {
@@ -3016,17 +3029,18 @@ exports[`A user should be able to create new time entries GIVEN: The user alread
                       "projects": [Circular],
                       "rootStore": [Circular],
                     },
-                    "repository": FirebaseRepository {
-                      "app": Object {
-                        "database": [Function],
-                      },
-                      "authenticate": [Function],
-                      "config": Object {
-                        "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-                        "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-                        "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-                        "messagingSenderId": "282276589695",
-                        "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                    "storage": StorageAdapter {
+                      "repository": FirebaseRepository {
+                        "app": Object {
+                          "database": [Function],
+                        },
+                        "config": Object {
+                          "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                          "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                          "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                          "messagingSenderId": "282276589695",
+                          "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                        },
                       },
                     },
                     "uiStore": UiStore {
@@ -3402,17 +3416,18 @@ exports[`A user should be able to create new time entries GIVEN: The user alread
                             "projects": [Circular],
                             "rootStore": [Circular],
                           },
-                          "repository": FirebaseRepository {
-                            "app": Object {
-                              "database": [Function],
-                            },
-                            "authenticate": [Function],
-                            "config": Object {
-                              "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-                              "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-                              "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-                              "messagingSenderId": "282276589695",
-                              "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                          "storage": StorageAdapter {
+                            "repository": FirebaseRepository {
+                              "app": Object {
+                                "database": [Function],
+                              },
+                              "config": Object {
+                                "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                                "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                                "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                                "messagingSenderId": "282276589695",
+                                "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                              },
                             },
                           },
                           "uiStore": UiStore {
@@ -3488,17 +3503,18 @@ exports[`A user should be able to create new time entries GIVEN: The user alread
                             "projects": [Circular],
                             "rootStore": [Circular],
                           },
-                          "repository": FirebaseRepository {
-                            "app": Object {
-                              "database": [Function],
-                            },
-                            "authenticate": [Function],
-                            "config": Object {
-                              "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-                              "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-                              "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-                              "messagingSenderId": "282276589695",
-                              "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                          "storage": StorageAdapter {
+                            "repository": FirebaseRepository {
+                              "app": Object {
+                                "database": [Function],
+                              },
+                              "config": Object {
+                                "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                                "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                                "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                                "messagingSenderId": "282276589695",
+                                "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                              },
                             },
                           },
                           "uiStore": UiStore {
@@ -3574,17 +3590,18 @@ exports[`A user should be able to create new time entries GIVEN: The user alread
                             "projects": [Circular],
                             "rootStore": [Circular],
                           },
-                          "repository": FirebaseRepository {
-                            "app": Object {
-                              "database": [Function],
-                            },
-                            "authenticate": [Function],
-                            "config": Object {
-                              "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
-                              "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
-                              "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
-                              "messagingSenderId": "282276589695",
-                              "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                          "storage": StorageAdapter {
+                            "repository": FirebaseRepository {
+                              "app": Object {
+                                "database": [Function],
+                              },
+                              "config": Object {
+                                "apiKey": "AIzaSyAcZ4DuQNJdoPhUgx542ra5Rf2Q7cezxHI",
+                                "authDomain": "mobx-time-tracking-cbeca.firebaseapp.com",
+                                "databaseURL": "https://mobx-time-tracking-cbeca.firebaseio.com",
+                                "messagingSenderId": "282276589695",
+                                "storageBucket": "mobx-time-tracking-cbeca.appspot.com",
+                              },
                             },
                           },
                           "uiStore": UiStore {

@@ -1,6 +1,6 @@
 import * as mobx from 'mobx'
 
-import FirebaseRepository from '../../storage/firebaseRepository'
+import { createRootStore } from '../../../test/util'
 import RootStore from '../rootStore'
 import ProjectStore from '../projectStore'
 
@@ -9,16 +9,14 @@ import { MOCK_PROJECTS } from '../../../test/mockData'
 describe('ProjectStore', () => {
   const TEST_DATA = MOCK_PROJECTS[0]
 
-  let repository: FirebaseRepository   
-  let rootStoreMock: RootStore 
+  let rootStoreMock: RootStore
   let subject: ProjectStore
 
   beforeEach(() => {
     mobx.extras.resetGlobalState()
     jest.mock('firebase')
-    
-    repository = new FirebaseRepository()
-    rootStoreMock = new RootStore(repository, 'me')
+
+    rootStoreMock = createRootStore()
 
     subject = new ProjectStore(
       rootStoreMock,

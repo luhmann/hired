@@ -1,6 +1,6 @@
 import { ReactWrapper } from 'enzyme'
 
-import { FirebaseRepository } from '../src/storage/'
+import { FirebaseRepository, StorageAdapter } from '../src/storage/'
 import { RootStore } from '../src/stores/'
 
 
@@ -12,7 +12,8 @@ const enterText = (subject: ReactWrapper<any, any>, text: any): void => {
 const createRootStore = (user: string = 'me'): RootStore => {
   jest.mock('firebase')
   const repositoryMock = new FirebaseRepository()
-  return new RootStore(repositoryMock, user)
+  const storage = new StorageAdapter(repositoryMock)
+  return new RootStore(storage, user)
 }
 
 export {

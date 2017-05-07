@@ -40,7 +40,7 @@ const Error = () => (
     <Icon />
     <Text>
       Something went terribly wrong.<br />We are very sorry for the inconvenience.<br/>
-      Talented people are already working on it
+      Talented people are already working on it.
     </Text>
   </Root>
   </ReactCSSTransitionGroup>

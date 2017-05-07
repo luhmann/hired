@@ -2,8 +2,9 @@ import * as firebase from 'firebase'
 import * as log from '../lib/log'
 
 import { backendUrl } from '../lib/env'
+import { StorageRepositoryInterface } from './storageAdapter'
 
-class FirebaseRepository {
+class FirebaseRepository implements StorageRepositoryInterface {
   private config = Object.freeze({
     apiKey: `${process.env.REACT_APP_FB_API_KEY}`,
     authDomain: `${process.env.REACT_APP_FB_AUTH_DOMAIN}`,
@@ -18,25 +19,17 @@ class FirebaseRepository {
     this.app = firebase.initializeApp(this.config)
   }
 
-  database(uid: string): firebase.database.Reference {
-    return this.app.database().ref(`${uid}`)
+  reference(key: string): any {
+    return this.app.database().ref(key)
   }
 
-  entries(uid: string): firebase.database.Reference {
-    return this.app.database().ref(`${uid}/entries`)
-  }
-
-  projects(uid: string): firebase.database.Reference {
-    return this.app.database().ref(`${uid}/projects`)
-  }
-
-  authenticate = async(uid: string = 'me') => {
+  async authenticate(uid: string = 'me') {
     try {
       let response = await fetch(backendUrl(`/auth/${uid}`))
       let parsed = await response.json()
       return await firebase.auth().signInWithCustomToken(parsed.token)
     } catch (error) {
-      log.error('[Storage]: Failure during authentication', error)
+      log.error('[Firebase Storage]: Failure during authentication', error)
       return false
     }
   }

@@ -76,11 +76,11 @@ class ProjectListStore {
       (projects) => {
         if (projects) {
           try {
-            this.rootStore.repository.projects(this.rootStore.userStore.uid).set(projects)
+            this.rootStore.storage.projects(this.rootStore.userStore.uid).set(projects)
           } catch (error) {
             log.error('[ProjectListStore]: Error while trying to push data', error)
           }
-          
+
         }
       }
     )

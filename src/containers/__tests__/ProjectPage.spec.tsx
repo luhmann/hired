@@ -3,7 +3,7 @@ import { RouterProvider } from 'react-router5'
 import { mount } from 'enzyme'
 
 import { MOCK_PROJECTS, MOCK_ENTRIES } from '../../../test/mockData'
-import { FirebaseRepository } from '../../storage/'
+import { createRootStore } from '../../../test/util'
 import { RootStore } from '../../stores/'
 import Router from '../../lib/router'
 
@@ -14,8 +14,7 @@ describe('ProjectPage', () => {
   let router: Router
 
   beforeEach(() => {
-    const repository = new FirebaseRepository()
-    rootStore = new RootStore(repository, 'me')
+    rootStore = createRootStore()
     router = new Router(rootStore)
   })
 

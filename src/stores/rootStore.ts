@@ -6,17 +6,17 @@ import EntryListStore from './entryListStore'
 import ProjectListStore from './projectListStore'
 import UserStore from './userStore'
 import UiStore from './uiStore'
-import FirebaseRepository from '../storage/firebaseRepository'
+import { StorageAdapter } from '../storage/'
 
 class RootStore {
   @observable entryListStore: EntryListStore
   @observable projectListStore: ProjectListStore
   @observable userStore: UserStore
   @observable uiStore: UiStore
-  repository: FirebaseRepository
+  storage: StorageAdapter
 
-  constructor(repository: FirebaseRepository, uid: string) {
-    this.repository = repository
+  constructor(storage: StorageAdapter, uid: string) {
+    this.storage = storage
     this.userStore = new UserStore(this, uid)
     this.entryListStore = new EntryListStore(this)
     this.projectListStore = new ProjectListStore(this)
@@ -33,7 +33,7 @@ class RootStore {
         throw new Error('Could not authenticate')
       }
 
-      const snapshot = await this.repository.database(this.userStore.uid).once('value')
+      const snapshot = await this.storage.database(this.userStore.uid).once('value')
       const data = snapshot.val() || {}
 
       if (data.projects) {

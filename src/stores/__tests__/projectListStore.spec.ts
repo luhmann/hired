@@ -3,7 +3,7 @@ import * as mobx from 'mobx'
 import { MOCK_PROJECTS } from '../../../test/mockData'
 import { firebaseSetMock } from '../../storage/__mocks__/firebase'
 
-import FirebaseRepository from '../../storage/firebaseRepository'
+import { createRootStore } from '../../../test/util'
 import { RootStore, ProjectListStore } from '../'
 
 describe('ProjectListStore', () => {
@@ -18,8 +18,7 @@ describe('ProjectListStore', () => {
     jest.mock('firebase')
     firebaseSetMock.mockReset()
 
-    const repository = new FirebaseRepository()
-    rootStoreMock = new RootStore(repository, 'me')
+    rootStoreMock = createRootStore()
 
     subject = new ProjectListStore(
       rootStoreMock
