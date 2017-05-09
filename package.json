@@ -97,7 +97,7 @@
     "start": "node scripts/start.js",
     "test": "npm run test:once -- --watch",
     "test:once": "node scripts/test.js --env=jsdom",
-    "test:coverage": "npm run test:once -- --coverage && cat ./coverage/lcov.info | coveralls",
+    "test:coverage": "npm run test:once -- --coverage && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "test:acceptance": "npm run test -- --testPathPattern=test/acceptance",
     "prepush": "npm run lint && npm run test:once"
   },
