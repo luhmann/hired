@@ -1,2 +1,4 @@
 language: node_js
+before_install:
+- export TZ=Europe/Berlin
 script: npm run test:once
