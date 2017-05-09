@@ -65,4 +65,3 @@ a login procedure would be in place.
 * "Skull"-Icon created by Giuditta Valentina Gentile for "The Noun Project", https://thenounproject.com/term/time/301856
 
 Thank you for your work!
-
