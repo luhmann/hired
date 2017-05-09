@@ -1,6 +1,6 @@
 ![Logo](./doc/logo.png)
 
-[![Build Status](https://travis-ci.org/luhmann/hired.svg?branch=master)](https://travis-ci.org/luhmann/hired) [![Coverage Status](https://coveralls.io/repos/github/luhmann/hired/badge.svg?branch=master)](https://coveralls.io/github/luhmann/hired?branch=master)
+[![Build Status](https://travis-ci.org/luhmann/hired.svg?branch=master)](https://travis-ci.org/luhmann/hired) [![Test Coverage](https://codeclimate.com/github/luhmann/hired/badges/coverage.svg)](https://codeclimate.com/github/luhmann/hired/coverage) [![Code Climate](https://codeclimate.com/github/luhmann/hired/badges/gpa.svg)](https://codeclimate.com/github/luhmann/hired)
 
 A simple time-tracking-application which can record the times spent on different projects and calculate the earnings
 based on this.
