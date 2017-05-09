@@ -91,15 +91,15 @@
   },
   "scripts": {
     "build": "node scripts/build.js",
-    "lint": "npm run lint:ts",
+    "lint": "yarn run lint:ts",
     "lint:ts": "tslint --config tslint.json 'src/**/*.ts' --exclude 'src/**/*.d.ts'",
-    "setup": "yarn && npm run test:once",
+    "setup": "yarn && yarn run test:once",
     "start": "node scripts/start.js",
-    "test": "npm run test:once -- --watch",
+    "test": "yarn run test:once -- --watch",
     "test:once": "node scripts/test.js --env=jsdom",
-    "test:coverage": "npm run test:once -- --coverage && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
-    "test:acceptance": "npm run test -- --testPathPattern=test/acceptance",
-    "prepush": "npm run lint && npm run test:once"
+    "test:coverage": "yarn run test:once -- --coverage && cat ./coverage/lcov.info | coveralls",
+    "test:acceptance": "yarn run test -- --testPathPattern=test/acceptance",
+    "prepush": "yarn run lint && yarn run test:once"
   },
   "jest": {
     "collectCoverageFrom": [
