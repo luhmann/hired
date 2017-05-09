@@ -27,6 +27,7 @@
     "chalk": "1.1.3",
     "cli-highlight": "1.1.4",
     "connect-history-api-fallback": "1.3.0",
+    "coveralls": "^2.13.1",
     "cross-spawn": "4.0.2",
     "css-loader": "0.26.1",
     "detect-port": "1.1.0",
@@ -96,6 +97,7 @@
     "start": "node scripts/start.js",
     "test": "npm run test:once -- --watch",
     "test:once": "node scripts/test.js --env=jsdom",
+    "test:coverage": "npm run test:once -- --coverage && cat ./coverage/lcov.info | coveralls",
     "test:acceptance": "npm run test -- --testPathPattern=test/acceptance",
     "prepush": "npm run lint && npm run test:once"
   },

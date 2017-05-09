@@ -1,7 +1,10 @@
 ![Logo](./doc/logo.png)
 
+[![Build Status](https://travis-ci.org/luhmann/hired.svg?branch=master)](https://travis-ci.org/luhmann/hired) [![Coverage Status](https://coveralls.io/repos/github/luhmann/hired/badge.svg?branch=master)](https://coveralls.io/github/luhmann/hired?branch=master)
+
 A simple time-tracking-application which can record the times spent on different projects and calculate the earnings
 based on this.
+
 
 <p align="center">
 <img src="./doc/demo.gif" />

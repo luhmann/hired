@@ -1,4 +1,7 @@
 language: node_js
 before_install:
 - export TZ=Europe/Berlin
-script: npm run test:once
+script: npm run test:coverage
+branches:
+  only:
+    - master
