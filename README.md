@@ -1,6 +1,6 @@
 ![Logo](./doc/logo.png)
 
-[![Build Status](https://travis-ci.org/luhmann/hired.svg?branch=master)](https://travis-ci.org/luhmann/hired) [![Test Coverage](https://codeclimate.com/github/luhmann/hired/badges/coverage.svg)](https://codeclimate.com/github/luhmann/hired/coverage) [![Code Climate](https://codeclimate.com/github/luhmann/hired/badges/gpa.svg)](https://codeclimate.com/github/luhmann/hired)
+[![Build Status](https://travis-ci.org/luhmann/hired.svg?branch=master)](https://travis-ci.org/luhmann/hired) [![Test Coverage](https://codeclimate.com/github/luhmann/hired/badges/coverage.svg)](https://codeclimate.com/github/luhmann/hired/coverage) [![Code Climate](https://codeclimate.com/github/luhmann/hired/badges/gpa.svg)](https://codeclimate.com/github/luhmann/hired) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 A simple time-tracking-application which can record the times spent on different projects and calculate the earnings
 based on this.
