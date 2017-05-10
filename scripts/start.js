@@ -28,11 +28,6 @@ var useYarn = fs.existsSync(paths.yarnLockFile);
 var cli = useYarn ? 'yarn' : 'npm';
 var isInteractive = process.stdout.isTTY;
 
-// backend
-const backendServer = require('../server/app')
-const http = require('http')
-
-
 // Warn and crash if required files are missing
 if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
   process.exit(1);
@@ -278,6 +273,9 @@ function runDevServer(host, port, protocol) {
 }
 
 function runBackendServer(port) {
+  // backend
+  const backendServer = require('../server/app')
+  const http = require('http')
   backendServer.set('port', port)
   const server = http.createServer(backendServer)
 
@@ -318,7 +316,9 @@ function run(port) {
   var host = process.env.HOST || 'localhost';
   setupCompiler(host, port, protocol);
   runDevServer(host, port, protocol);
-  runBackendServer(process.env.REACT_APP_BACKEND_PORT)
+  if (process.env.REACT_APP_STORAGE_TYPE !== 'localStorage') {
+    runBackendServer(process.env.REACT_APP_BACKEND_PORT)
+  }
 }
 
 // We attempt to use the default port but if it is busy, we offer the user to
