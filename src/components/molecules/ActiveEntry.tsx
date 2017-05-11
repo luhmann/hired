@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import * as CSSTransitionGroup from 'react-transition-group'
 import { observer } from 'mobx-react'
 import styled from 'styled-components'
 
@@ -44,7 +44,7 @@ export interface ActiveEntryProps {
 }
 
 const ActiveEntry = observer(({ start, duration, standardHours, total }: ActiveEntryProps) => (
-  <ReactCSSTransitionGroup
+  <CSSTransitionGroup
     transitionName="entry"
     transitionEnterTimeout={500}
     transitionLeaveTimeout={500}
@@ -63,7 +63,7 @@ const ActiveEntry = observer(({ start, duration, standardHours, total }: ActiveE
         </Container>
       </Row>
     </Root>
-  </ReactCSSTransitionGroup>
+  </CSSTransitionGroup>
 ))
 
 export default ActiveEntry

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import * as CSSTransitionGroup from 'react-transition-group'
 import styled from 'styled-components'
 
 import { center, color } from '../../styles/style-utils'
@@ -13,7 +13,7 @@ const Root = styled.div`
 `
 
 const Bootstrap = () => (
-  <ReactCSSTransitionGroup
+  <CSSTransitionGroup
     transitionName="entry"
     transitionEnterTimeout={500}
     transitionLeaveTimeout={500}
@@ -23,7 +23,7 @@ const Bootstrap = () => (
     <Root>
       <Loading />
     </Root>
-  </ReactCSSTransitionGroup>
+  </CSSTransitionGroup>
 )
 
 export default Bootstrap

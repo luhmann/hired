@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import * as CSSTransitionGroup from 'react-transition-group'
 import styled from 'styled-components'
 
 import { cells, center, color } from '../../styles/style-utils'
@@ -29,7 +29,7 @@ const Text = styled.div`
 `
 
 const Error = () => (
-  <ReactCSSTransitionGroup
+  <CSSTransitionGroup
     transitionName="entry"
     transitionEnterTimeout={500}
     transitionLeaveTimeout={500}
@@ -43,7 +43,7 @@ const Error = () => (
       Talented people are already working on it.
     </Text>
   </Root>
-  </ReactCSSTransitionGroup>
+  </CSSTransitionGroup>
 )
 
 export default Error
