@@ -12,7 +12,7 @@ Accepted
 setup. The combination of webdriver, selenium-server, an additional testing-framework like Protractor or Nightwatch
 and a local/remote selenium-grid makes for a lot of potential sources of error. Plus if something goes wrong in your
 testing software, such as Protractor, it can be notoriously hard to debug.
-* The [TestPyramid](https://martinfowler.com/bliki/TestPyramid.html) is a popular concept which acknowledges this
+* The [TestPyramid](https://martinfowler.com/bliki/TestPyramid.html) is a popular concept which acknowledges these
 shortcomings. It advocates having a lot of unit tests, less integration tests and only a few e2e-tests.
 
 ## Decision
