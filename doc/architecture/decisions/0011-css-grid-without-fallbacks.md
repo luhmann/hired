@@ -10,7 +10,7 @@ Accepted
 
 * [CSS Grid Layout](https://developer.mozilla.org/en/docs/Web/CSS/CSS_Grid_Layout) is a powerful layouting-method that
 is quickly gaining widespread browser-support
-* It is massively more convenient than to use than other approaches
+* It is massively more convenient to use than other approaches
 * The app currently has a very limited audience of people who are likely to all use very modern browsers, implementing
  fallbacks is costly. As we know our audience precisely we will not support older browsers.
 
