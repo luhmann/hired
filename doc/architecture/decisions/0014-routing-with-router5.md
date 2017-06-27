@@ -17,8 +17,7 @@ which changes the state within the stores.
 form the state, for more information, see: https://hackernoon.com/how-to-decouple-state-and-ui-a-k-a-you-dont-need-componentwillmount-cc90b787aa37
 * Decoupling the whole routing logic and having the state within the stores as the canonical source of truth is an
 appealing proposition and should at least be tested.
-* However changing and reacting the browsers history should be handled by a library to avoid the problems of re-implementing
-this basic and quite complex logic yourself.
+* However changing and reacting to the browsers history should be handled by a library to avoid the problems of re-implementing this basic and quite complex logic yourself.
 
 ## Decision
 
@@ -26,7 +25,7 @@ this basic and quite complex logic yourself.
 * Whenever the user navigates we update the current view within the UiStore and the UI is updated as consequence of
 this state change
 * Displaying a different url for the current view is a side-effect which will be computed from the state within the UiStore
-* We will use the [`router5`](https://github.com/router5/router5/) for managing the the browser history and reacting
+* We will use [`router5`](https://github.com/router5/router5/) for managing the browser-history and reacting
 to direct url-manipulation
 
 ## Consequences
