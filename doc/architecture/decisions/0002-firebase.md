@@ -23,7 +23,7 @@ remain at one
 ## Consequences
 
 * Firebase data is a simple json-tree
-* undefined values will not be saved
+* `undefined` values will not be saved
 * Data should be saved in a normalized form: https://firebase.google.com/docs/database/web/structure-data
 * Make sure you understand access-rights: https://firebase.google.com/docs/database/security/
 * Install and use [firebase-cli](https://firebase.google.com/docs/database/web/structure-data), it offers better
