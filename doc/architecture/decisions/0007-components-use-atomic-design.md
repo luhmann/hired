@@ -18,5 +18,5 @@ We use atomic design up to the distinction between Atoms, Molecules and Organism
 
 ## Consequences
 
-* Whenever you add a new component consider if its individual parts are already there as an atom or a molecule and use those to compose the new element or is there a preexisting element that can be easily extended to provide the additional functionality without adding to much complexity to the interface of an existing one
-* If you truly need to add a new element, try to think about in an abstract way, do not implement it just for the one use-case but think about additional types of input and potential edge-cases
+* Whenever you add a new component consider if its individual parts are already there as an atom or a molecule. Use those to compose new elements. Consider if there is there a preexisting element that can be easily extended to provide the additional functionality without adding to much complexity to its interface.
+* If you truly need to add a new element, try to think about more potential use-cases for the functionality it provides. Think about additional types of input and their potential edge-cases.
